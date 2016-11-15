@@ -1,0 +1,45 @@
+{"products": [
+	{
+		"id": 1,
+		"title": "Wedges",
+		"image": "image/black-a-remson-india-39-original-imaeff5hch5hv4zz.jpeg",
+		"price": 25,
+		"offer": 20
+	},
+	{
+		"id": 2,
+		"title": "Stylish Flat Shoes",
+		"image": "image/girlsShoes.jpg",
+		"price": 50,
+		"offer": 30
+	},
+	{
+		"id": 3,
+		"title": "Flat Shoes",
+		"image": "image/girls-womens-beautiful-fancy-flat-shoes-eid-footwear-collection-2013-by-metro-shoes-5.jpg",
+		"price": 8,
+		"offer": 5
+	},
+	{
+		"id": 4,
+		"title": "Casual Flat Sandal",
+		"image": "image/Beautiful-Flat-Sandals-For-Pakistan-Girls-for-Parties.jpeg",
+		"price": 8,
+		"offer": 5
+	},
+	{
+		"id": 5,
+		"title": "White Josmo Girls",
+		"image": "image/white-josmo-girls-ruffle-dress-shoes-toddler-youth-4.jpg",
+		"price": 10,
+		"offer": 7
+	},
+	{
+		"id": 6,
+		"title": "Girls Pink Studed",
+		"image": "image/pinkshoes.jpg",
+		"price": 2,
+		"offer": 1
+	}
+
+]}

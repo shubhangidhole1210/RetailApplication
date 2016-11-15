@@ -1,0 +1,46 @@
+
+<div ng-controller="loginCtrl">
+
+	<form name="myForm" novalidate>
+		<fieldset>
+			<div align="center">
+				<div class="loginForm">
+					<div class="form-group"
+						ng-class="{ 'has-error' : myForm.userName.$invalid && !myForm.userName.$pristine }">
+						<label>User Name</label>
+						<!-- User Name: -->
+						<input type="text" id="userName" name="userName"
+							placeholder="Enetr User name here" ng-model="username" required><br>
+					</div>
+					<!-- <span class="text-error" data-ng-show="myForm.submitted && myForm.userName.$invalid">username required</span><br/> -->
+					<div class="form-group"
+						ng-class="{ 'has-error' : myForm.password.$invalid && !myForm.password.$pristine }">
+						<label>Password:</label> <input type="password" id="Password"
+							name="Password" placeholder="Enter Password here"
+							ng-model="password" required> <br>
+					</div>
+					<!-- <span class="text-error" data-ng-show="myForm.submitted && myForm.Password.$invalid">First Name is required</span><br/> -->
+
+					<label style="color: red;">{{errorMsg}}</label>
+
+					<div class="buttons">
+						<button type="button" ng-click="login()"
+							ng-disabled="myForm.$invalid" class="btn btn-primary">Login</button>
+						<button type="button" ng-disabled="myForm.$invalid"
+							class="btn btn-primary">Cancel</button>
+						<circle-spinner ng-show="showSpinner"></circle-spinner>
+						<!-- <a href="signUp.html"><button type="button" class="button1"  ng-click="signUp()" ng-disabled="myForm.$invalid" class="btn btn-primary">Sign-Up</button></a> -->
+					</div>
+					<a href="signUp.html"><button type="button" class="button1"
+							ng-click="signUp()">Sign-Up</button></a>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</div>
+
+<div>
+	<img class="main-image-box" src="image/RetailApp.jpg"
+		alt="Trolltunga Norway">
+
+</div>

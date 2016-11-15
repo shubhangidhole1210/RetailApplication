@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="css/spinner.css" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
+    <!-- TODO Add angular-spinners.min.js to git repository and uncomment script tag below--> 
+    <!-- <script src="/bower_components/angular-spinners/dist/angular-spinners.min.js"></script> -->
+   <!--  <link href="css/bootstrap.css" rel="stylesheet" type="text/css"> -->
+    <script type="text/javascript" src="js/spinner.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+  <loading></loading>
+  <div ng-repeat="car in cars">
+  <ul>
+  <li>{{car.name}}</li>
+  </ul>
+  <button ng-click="clcikMe()" >Click me</button>
+  </div>
+</body>
+</html>

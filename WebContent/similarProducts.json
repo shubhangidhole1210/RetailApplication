@@ -1,0 +1,45 @@
+{"similarProducts": [
+	{
+		"id": 1,
+		"title": "Do Bhai Women Black Wedges",
+		"image": "image/Do-bhai-women-black-wedges.jpeg",
+		"price": 250,
+		"offer": 2.2
+	},
+	{
+		"id": 2,
+		"title": "Remson India Women",
+		"image": "image/remson-india-women-black-wedges.jpeg",
+		"price": 500,
+		"offer": 3.3
+	},
+	{
+		"id": 3,
+		"title": "Shoetopia Women Black",
+		"image": "image/shoetopia-41-original.jpeg",
+		"price": 800,
+		"offer": 4.5
+	},
+	{
+		"id": 4,
+		"title": "Silver Wedges",
+		"image": "image/multicolor-v-remson-india-37-original-imae9k66mbtywxdy.jpeg",
+		"price": 580,
+		"offer": 4.3
+	},
+	{
+		"id": 5,
+		"title": "White Josmo Girls",
+		"image": "image/grey-chocolate-gola-1-do-bhai-38-original-imaejtc4pgfwgs6c.jpeg",
+		"price": 100,
+		"offer": 2.1
+	},
+	{
+		"id": 6,
+		"title": "Remson India Womeri",
+		"image": "image/multicolor-bc-remson-india-36-original-imae9r3p7kepgqy6.jpeg",
+		"price": 200,
+		"offer": 3.1
+	}
+
+]}

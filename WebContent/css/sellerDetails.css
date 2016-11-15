@@ -1,0 +1,57 @@
+@CHARSET "ISO-8859-1";
+.rating-percent
+{
+	font-size: 30px;
+	font-weight: 800;
+}
+.rating-percentage
+{
+	padding-top: 5px;
+}
+.positive-rating
+{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.seller-review
+{
+	border-bottom:1px solid rgba(153, 153, 153, 0.19) ;
+    border-top: 1px solid rgba(153, 153, 153, 0.19);
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.seller-reviewBy
+{
+	text-decoration: underline;
+}
+
+.seller-details
+{
+	margin-left: 10%;
+	margin-right: 10%;
+	border-left: 1px solid rgba(153, 153, 153, 0.19) ;
+	border-right: 1px solid rgba(153, 153, 153, 0.19) ;
+	
+}
+.seller-review-description
+{
+	margin-left: 10%;
+}
+.positive-rating
+{
+	padding-right: 10px;
+}
+.display-next-seller-page
+{
+	padding-top: 20px;
+	margin-left: 30%;
+	/* padding-bottom: 20px; */
+	
+}
+
+.all-reviews
+{
+	
+}

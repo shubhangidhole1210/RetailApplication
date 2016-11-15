@@ -1,0 +1,45 @@
+{"sellerDetails": [
+	{
+		"id": 1,
+		"sellerReviewBy": "Sakshi",
+		"reviewDate": "21 Oct, 2016",
+		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
+		"offer": 20
+	},
+	{
+		"id": 2,
+		"sellerReviewBy": "Sayali",
+		"reviewDate": "21 Oct, 2016",
+		"reviewDescription": "Item received as described. Prompt delivery and good communication",
+		"offer": 30
+	},
+	{
+		"id": 3,
+		"sellerReviewBy": "Anushka",
+		"reviewDate": "21 Oct, 2016",
+		"reviewDescription": "delivery fast service......",
+		"offer": 5
+	},
+	{
+		"id": 4,
+		"sellerReviewBy": "Akshra",
+		"reviewDate": "21 Oct, 2016",
+		"reviewDescription": "Item received as described. Prompt delivery and good communication",
+		"offer": 5
+	},
+	{
+		"id": 5,
+		"sellerReviewBy": "Pallavi",
+		"reviewDate": "21 Oct, 2016",
+		"reviewDescription": "delivery fast service......",
+		"offer": 7
+	},
+	{
+		"id": 6,
+		"sellerReviewBy": "Sakshi",
+		"reviewDate": "21 Oct, 2016",
+		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
+		"offer": 1
+	}
+
+]}

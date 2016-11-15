@@ -1,0 +1,289 @@
+
+<div ng-controller="homeCtrl">
+<div class="home-page">
+	<div class="container">
+		<br>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+
+				<div class="item active">
+					<div class="slider-info">
+						<h3>Power Bank</h3>
+						<h3>Hurry up! Offer Limited</h3>
+					</div>
+					<img src="image/powerbank-editing.jpg" alt="Chania" width="460"
+						height="200px">
+					<div class="carousel-caption"></div>
+				</div>
+
+				<div class="item">
+					<div class="slider-info">
+						<h3>It's Diwali</h3>
+						<h3>Cracking Offer For Everyone!</h3>
+					</div>
+					<img src="image/crackers-editing.png" alt="Chania" width="460"
+						height="200px">
+					<div class="carousel-caption"></div>
+				</div>
+
+
+
+				<div class="item">
+					<div class="slider-info">
+						<h3>New Apple Laptop</h3>
+						<h3>3% Off..Hurry Up!</h3>
+					</div>
+					<img src="image/laptop-editing3.jpg" alt="Flower" width="460"
+						height="200px">
+
+				</div>
+
+				<div class="item">
+					<div class="slider-info">
+						<h3>10% Off It's Diwali</h3>
+						<h3>Hurry Up!! Offer Limited</h3>
+					</div>
+					<img src="image/free-phones-blade1-editing.jpg" alt="Flower"
+						width="460" height="200px">
+					<div class="carousel-caption"></div>
+				</div>
+
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#myCarousel" role="button"
+				data-slide="prev"> <span
+				class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a> <a class="right carousel-control" href="#myCarousel" role="button"
+				data-slide="next"> <span
+				class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+
+
+
+
+	<div class="product-container-main">
+		<div class="product-header">
+			<h3>Fashion & Lifestyle</h3>
+		</div>
+
+		<div class="arrow left">
+			<input type="button" value="&#10094"
+				onmousedown="scrollDiv('MyDiv', 3)" onmouseup="clearTimeout(timer1)" />
+		</div>
+		<div class="display-scroll" id="MyDiv">
+			<ul class="display-information">
+
+				<li ng-repeat="product in products" class="product-item">
+					<div class="display-product-info">
+						<img class="img-box" alt="{{product.title}}"
+							ng-src="{{product.image}}" ng-click="productDetails()">
+						<!-- <figcaption> -->
+						<h4 class="product-title" style="font-weight: bold;">{{product.title}}</h4>
+						<h4 class="offer-price medium">Offer:{{product.offer}} % Off</h4>
+						<h4 class="original-price" style="text-decoration: none;">Price
+							: &#8377;{{product.price}}</h4>
+						<!-- <button ng-click="addToCart(product);">Add to cart</button> -->
+						<!-- </figcaption> -->
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="arrow right">
+			<input type="button" value="&#10095"
+				onmousedown="scrollDiv('MyDiv', -4)"
+				onmouseup="clearTimeout(timer1)">
+		</div>
+	</div>
+
+	<div class="product-container-main">
+		<div class="product-header">
+			<h3>Best Selling Products</h3>
+		</div>
+		<button type="button" class="view-all">View All</button>
+		<div class="arrow left">
+			<input type="button" value="&#10094"
+				onmousedown="scrollBestProduct('MyDivBestProduct', 1)"
+				onmouseup="clearTimeout(timer1)" />
+		</div>
+		<div class="display-scroll" id="MyDivBestProduct">
+			<ul class="display-information">
+
+				<li ng-repeat="product in sellingProducts" class="product-item">
+					<div class="display-product-info">
+						<img class="img-box" alt="{{product.title}}"
+							ng-src="{{product.image}}">
+						<figcaption>
+							<h4 class="product-title" style="font-weight: bold;">{{product.title}}</h4>
+							<h4 class="offer-price medium">Offer:{{product.offer}} % Off</h4>
+							<h4 class="original-price" style="text-decoration: none;">Price
+								: &#8377;{{product.price}}</h4>
+							<!-- <button ng-click="addToCart(product);">Add to cart</button> -->
+						</figcaption>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="arrow right">
+			<input type="button" value="&#10095"
+				onmousedown="scrollBestProduct('MyDivBestProduct', -3)"
+				onmouseup="clearTimeout(timer1)">
+		</div>
+	</div>
+
+	<div class="product-container-main">
+		<div class="product-header">
+			<h3>Best Of Home & Furniture</h3>
+		</div>
+		<div class="arrow left">
+			<input type="button" value="&#10094"
+				onmousedown="scrollHomeProduct('homeProduct', 3)"
+				onmouseup="clearTimeout(timer1)" />
+		</div>
+		<div class="display-scroll" id="homeProduct">
+			<ul class="display-information">
+
+				<li ng-repeat="product in bestProduct" class="product-item">
+					<div class="display-product-info">
+						<img class="img-box" alt="{{product.title}}"
+							ng-src="{{product.image}}">
+						<figcaption>
+							<h4 class="product-title" style="font-weight: bold;">{{product.title}}</h4>
+							<h4 class="offer-price medium">{{product.price}}</h4>
+							<h4 class="original-price" style="text-decoration: none;">{{product.info}}</h4>
+							<!-- <button ng-click="addToCart(product);">Add to cart</button> -->
+						</figcaption>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="arrow right">
+			<input type="button" value="&#10095"
+				onmousedown="scrollHomeProduct('homeProduct', -3)"
+				onmouseup="clearTimeout(timer1)">
+		</div>
+	</div>
+	<div class="product-container-main">
+		<div class="product-header">
+			<h3>Best of Electronics</h3>
+		</div>
+		<button type="button" class="view-all">View All</button>
+		<div class="arrow left">
+			<input type="button" value="&#10094"
+				onmousedown="scrollElecronicProduct('electronicProduct', 3)"
+				onmouseup="clearTimeout(timer1)" />
+		</div>
+		<div class="display-scroll" id="electronicProduct">
+			<ul class="display-information">
+
+				<li ng-repeat="product in electronicProduct" class="product-item">
+					<div class="display-product-info">
+						<img class="img-box" alt="{{product.title}}"
+							ng-src="{{product.image}}">
+						<figcaption>
+							<h4 class="product-title" style="font-weight: bold;">{{product.title}}</h4>
+							<h4 class="offer-price medium">{{product.price}}</h4>
+							<h4 class="original-price" style="text-decoration: none;">{{product.info}}</h4>
+							<!-- <button ng-click="addToCart(product);">Add to cart</button> -->
+						</figcaption>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="arrow right">
+			<input type="button" value="&#10095"
+				onmousedown="scrollElecronicProduct('electronicProduct', -3)"
+				onmouseup="clearTimeout(timer1)">
+		</div>
+	</div>
+
+	<div class="product-container-main">
+		<div class="product-header">
+			<h3>Discount For You</h3>
+		</div>
+		<div class="arrow left">
+			<input type="button" value="&#10094"
+				onmousedown="scrollDiscountProduct('discountProduct', 3)"
+				onmouseup="clearTimeout(timer1)" />
+		</div>
+		<div class="display-scroll" id="discountProduct">
+			<ul class="display-information">
+
+				<li ng-repeat="product in discountProduct" class="product-item">
+					<div class="display-product-info">
+						<img class="img-box" alt="{{product.title}}"
+							ng-src="{{product.image}}">
+						<figcaption>
+							<h4 class="product-title" style="font-weight: bold;">{{product.title}}</h4>
+							<h4 class="offer-price medium">Offer:{{product.offer}} % Off</h4>
+							<h4 class="original-price" style="text-decoration: none;">{{product.info}}</h4>
+							<!-- <button ng-click="addToCart(product);">Add to cart</button> -->
+						</figcaption>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="arrow right">
+			<input type="button" value="&#10095"
+				onmousedown="scrollDiscountProduct('discountProduct', -3)"
+				onmouseup="clearTimeout(timer1)">
+		</div>
+	</div>
+	<div class="product-container-main">
+		<div class="product-header">
+			<h3>Offers For You</h3>
+		</div>
+		<button type="button" class="view-all">View All</button>
+		<div class="arrow left">
+			<input type="button" value="&#10094"
+				onmousedown="scrollOfferProduct('offerProduct', 3)"
+				onmouseup="clearTimeout(timer1)" />
+		</div>
+		<div class="display-scroll" id="offerProduct">
+			<ul class="display-information">
+
+				<li ng-repeat="product in offerProduct" class="product-item">
+					<div class="display-product-info">
+						<img class="img-box" alt="{{product.title}}"
+							ng-src="{{product.image}}">
+						<figcaption>
+							<h4 class="product-title" style="font-weight: bold;">{{product.title}}</h4>
+							<h4 class="offer-price medium">{{product.price}}</h4>
+							<h4 class="original-price" style="text-decoration: none;">{{product.info}}</h4>
+							<!-- <button ng-click="addToCart(product);">Add to cart</button> -->
+						</figcaption>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="arrow right">
+			<input type="button" value="&#10095"
+				onmousedown="scrollOfferProduct('offerProduct', -3)"
+				onmouseup="clearTimeout(timer1)">
+		</div>
+	</div>
+
+	<div ng-if="cart.length" class="shopping-cart">
+		<h3>{{cart.length}} items in cart, {{getCartPrice()}},$</h3>
+		<span class="cart-item th radius" ng-repeat="product in cart">
+			<img alt="" ng-src="{{product.image}}" title="{{product.title}}">
+			<span class="badge" ng-show="product.quantity  >1">
+				x{{product.quantity}} </span>
+		</span>
+		<button ng-click="checkout();">checkout</button>
+	</div>
+</div>
+</div>

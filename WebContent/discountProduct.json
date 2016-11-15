@@ -1,0 +1,45 @@
+{"discountProduct": [
+	{
+		"id": 1,
+		"title": "Hand Bags",
+		"image": "image/handbag.png",
+		"offer": "Min 70",
+		"info": "Great Saving!"
+	},
+	{
+		"id": 2,
+		"title": "Body and Skin Care",
+		"image": "image/body-skin-product.png",
+		"offer": "Min 60",
+		"info": "Hurry!"
+	},
+	{
+		"id": 3,
+		"title": "Home Decor",
+		"image": "image/home-decor.png",
+		"offer": "Min 50",
+		"info": "Buy Now!"
+	},
+	{
+		"id": 4,
+		"title": "Men's Casual Shoes",
+		"image": "image/mensShoes.png",
+		"offer": "Min 50",
+		"info": "Shop Now!"
+	},
+	{
+		"id": 5,
+		"title": "Men's clothing",
+		"image": "image/manVk.png",
+		"offer": "Min 50",
+		"info": "Discover now!"
+	},
+	{
+		"id": 6,
+		"title": "Women's Ethnic Wear",
+		"image": "image/Indian-Wholesale-Clothing.png",
+		"offer": "Min 50",
+		"info": "3D Cushion Cover"
+	}
+
+]}

@@ -1,0 +1,34 @@
+{"displayImages":{
+     "small_img":[
+        {
+            "imageUrl": "image/apple-iphone-6-original-small-images.jpeg"
+        },
+        {
+             "imageUrl": "image/apple-iphone-6-original-opp-small-images.jpeg"
+         },
+         {
+              "imageUrl": "image/apple-iphone-6-original-space-gray-small.jpeg"
+         },
+         {
+                "imageUrl": "image/apple-iphone-6-two-small-images.jpeg"
+         }
+          ],
+
+      "large_img":[
+       
+       {
+           "imageUrl": "image/apple-iphone-6-original-large-img.jpeg"
+       },
+       {
+            "imageUrl": "image/apple-iphone-6-original-opp-large-images.jpeg"
+       },
+       {
+           "imageUrl":   "image/apple-iphone-6-original-space-gray-large.jpeg"
+       },
+       {  
+            "imageUrl": "image/apple-iphone-6-two-large-images.jpeg"
+       }
+      
+      ]
+}
+}

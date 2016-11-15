@@ -1,0 +1,281 @@
+{
+	"productDetail": {
+		"productName": "Samsung Refrigerator 370L",
+		"brandName": "Samsung",
+		"category": "Electronics",
+		"subCategory": "Refrigerator",
+		"salePrice": "",
+		"offerPrice": "",
+		"offerDescription": "",
+		"rating": "",
+		"reviewCount": "",
+		"productId": "",
+		"productCode": "",
+		"isRetailerAssured": "",
+		"imageUrls": [
+			{
+				"imageUrl": ""
+			},
+			{
+				"imageUrl": ""
+			},
+			{
+				"imageUrl": ""
+			},
+			{
+				"imageUrl": ""
+			},
+			{
+				"imageUrl": ""
+			}
+		],
+		"EMIOptions": {
+			"minimumEMIOffer": "",
+			"emiOffers": [
+				{
+					"emiOffer": {
+						"bankName": "",
+						"emiPlans": [
+							{
+								"emiPlan": {
+									"emiHeader": "",
+									"emi": "",
+									"price": "",
+									"interest": "",
+									"totalAmountPayable": ""
+								}
+							},
+							{
+								"emiPlan": {
+									"emiHeader": "",
+									"emi": "",
+									"price": "",
+									"interest": "",
+									"totalAmountPayable": ""
+								}
+							},
+							{
+								"emiPlan": {
+									"emiHeader": "",
+									"emi": "",
+									"price": "",
+									"interest": "",
+									"totalAmountPayable": ""
+								}
+							}
+						],
+						"description": ""
+					}
+				},
+				{
+					"emiOffer": {
+						"bankName": "",
+						"emiPlans": [
+							{
+								"emiPlan": {
+									"emiHeader": "",
+									"emi": "",
+									"price": "",
+									"interest": "",
+									"totalAmountPayable": ""
+								}
+							},
+							{
+								"emiPlan": {
+									"emiHeader": "",
+									"emi": "",
+									"price": "",
+									"interest": "",
+									"totalAmountPayable": ""
+								}
+							},
+							{
+								"emiPlan": {
+									"emiHeader": "",
+									"emi": "",
+									"price": "",
+									"interest": "",
+									"totalAmountPayable": ""
+								}
+							}
+						],
+						"description": ""
+					}
+				},
+				{
+					"emiOffer": {
+						"bankName": "",
+						"emiPlans": [
+							{
+								"emiPlan": {
+									"emiHeader": "",
+									"emi": "",
+									"price": "",
+									"interest": "",
+									"totalAmountPayable": ""
+								}
+							},
+							{
+								"emiPlan": {
+									"emiHeader": "",
+									"emi": "",
+									"price": "",
+									"interest": "",
+									"totalAmountPayable": ""
+								}
+							},
+							{
+								"emiPlan": {
+									"emiHeader": "",
+									"emi": "",
+									"price": "",
+									"interest": "",
+									"totalAmountPayable": ""
+								}
+							}
+						],
+						"description": ""
+					}
+				}
+			]
+		},
+		"otherOffers": [
+			{
+				"offer": {
+					"title": "",
+					"description": ""
+				}
+			},
+			{
+				"offer": {
+					"title": "",
+					"description": ""
+				}
+			},
+			{
+				"offer": {
+					"title": "",
+					"description": ""
+				}
+			}
+		],
+		"productDescription":[
+		{
+		   "productDescriptionTitle" : "M9 Motion Coprocessor",
+		   "productDescriptionInfo"  : "The integrated M9 boosts the performance and processing capabilities of this iPhone. It ensures that Siri is always on and ready to execute your commands without hampering the battery's efficiency. It also lets you access a range of fitness-tracking features such as measuring the pace of your walk or jog by connecting to the built-in accelerometer."
+		
+		},
+		{
+		     "productDescriptionTitle" : "3D Touch",
+		     "productDescriptionInfo"  : "The iPhone 6S brings to you the new 3D touch gesture. Not only does it gauge the pressure that you apply on the screen, but also responds to it with subtle taps so you know that it is already sensing what you're suggesting. For example, if you want to edit text in your Notes, e-mails, or Messages, all you have to do is press the keyboard within these apps to convert it into a trackpad and make the required changes with precision."
+		},
+		
+		{
+		    "productDescriptionTitle" : "Quick Actions",
+		     "productDescriptionInfo"  : "You needn't go through a multi-step procedure to do the things that you do the most during the day. Click pictures or shoot videos with a simple press of the Camera icon, send a new message to a particular contact by pressing the Messages icon, press the Maps icon to drop a pin to the current location, swipe right to mark an e-mail as unread or swipe left to move it to trash."
+		}
+		
+		],
+		"productSpecifications":
+		[
+		 {
+		    "title" : "General",
+		  "specificationDetails" : [
+		    {
+		     "specificationLabel" : "Sales Package",
+		     "specificationInformation" : "Handset, Lightening Charger, Headphone"
+		     },
+		     {
+		     "specificationLabel" : "Sales Package",
+		     "specificationInformation" : "Handset, Lightening Charger, Headphone"
+		     },
+		     {
+		     "specificationLabel" : "Sales Package",
+		     "specificationInformation" : "Handset, Lightening Charger, Headphone"
+		     }
+		     ]
+		 },
+		 {
+		     "title" : "Product Details",
+		     
+		     "specificationDetails" : [
+		    {
+		     "specificationLabel" : "Sales Package",
+		     "specificationInformation" : "Handset, Lightening Charger, Headphone"
+		     },
+		     {
+		     "specificationLabel" : "Sales Package",
+		     "specificationInformation" : "Handset, Lightening Charger, Headphone"
+		     },
+		     {
+		     "specificationLabel" : "Sales Package",
+		     "specificationInformation" : "Handset, Lightening Charger, Headphone"
+		     }
+		     ]
+		 },
+		 
+		 {
+		    "title" : "Display Features",
+		      "specificationDetails" : [
+		    {
+		     "specificationLabel" : "Sales Package",
+		     "specificationInformation" : "Handset, Lightening Charger, Headphone"
+		     },
+		     {
+		     "specificationLabel" : "Sales Package",
+		     "specificationInformation" : "Handset, Lightening Charger, Headphone"
+		     },
+		     {
+		     "specificationLabel" : "Sales Package",
+		     "specificationInformation" : "Handset, Lightening Charger, Headphone"
+		     }
+		     ]
+		 }
+		   
+		],
+		
+		
+		"productFeatures":{},
+		"productRating" :{
+		               "rating" : 47000,
+		               "fiveStarCount" : 1600,
+		               "fourStarCount" : 1200,
+		               "threeStarCount": 700,
+		               "twoStarCount"  : 400,
+		               "oneStarCount"  : 800
+		           },
+		           
+		 "productReviews" :[
+		 
+		        {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		       {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		       {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		       {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     }
+		     
+		 ]         
+	}
+}

@@ -1,0 +1,431 @@
+
+<div ng-controller="productDetailsCtrl">
+	<div class="display-product-details">
+	
+ <div class="retailer-img"  id="absoluteScroll" onscroll="myFunction()">
+		<div class="side-images">
+			<div class="two-wedges-img">
+				<img alt="" src="image/apple-iphone-6-original-small-images.jpeg"
+					ng-click="changeImage('image1')" id="image1">
+
+			</div>
+			<div class="original-img">
+				<img alt=""
+					src="image/apple-iphone-6-original-opp-small-images.jpeg"
+					ng-click="changeImage('image2')" id="image2">
+
+
+
+			</div>
+			<div class="side-img">
+				<img alt=""
+					src="image/apple-iphone-6-original-space-gray-small.jpeg"
+					ng-click="changeImage('image3')" id="image3">
+			</div>
+			<div class="opp-img">
+				<img alt="" src="image/apple-iphone-6-two-small-images.jpeg"
+					ng-click="changeImage('image4')" id="image4">
+			</div>
+		</div>
+
+		<div class="product-images">
+			<div class="display-product-img">
+
+				<img ng-elevate-zoom ng-src="{{data['small_image']}}"
+					zoom-image="{{data['large_image']}}" class="product-img"
+					id="phneImg" name="phneImg" width="250px" height="300px">
+
+			</div>
+
+			<div class="display-button">
+				<button type="button" class="add-cart">ADD TO CART</button>
+				<button type="button" class="buy-now">BUY NOW</button>
+			</div>
+		</div>
+		</div>
+		
+	            
+	     	
+		
+		<!-- </div> -->
+		<div class="products-details-data" style="margin-right: 1%;">
+			<div align="justify">
+				<div style="display: flex">
+					<div class="product-info">
+						<div class="product-name">
+							<h1>Apple iPhone 6 (Space Grey, 16 GB)</h1>
+						</div>
+
+						<div class="star-rating">
+							<a ng-click="scrollTo('rating')"> 3.5 &#9734; </a>
+						</div>
+						<div class="rating-and-views">
+
+							<a ng-click="scrollTo('rating')"
+								style="text-decoration: none; cursor: pointer;">611 rating</a> <span>&</span>
+							<a ng-click="scrollTo('rating')"
+								style="text-decoration: none; cursor: pointer;">68 reviews</a>
+
+						</div>
+
+					</div>
+
+					<div class="compare-share">
+						<div class="compare" style="display: inline-block;">Compare</div>
+						<div class="share"
+							style="display: inline-block; margin-left: 15px">
+							<img alt="" src="image/ic_launcher_arrow.png" width="20px"
+								height="20px"> Share
+						</div>
+					</div>
+
+
+				</div>
+				<div class="price-product">
+					<div class="details-original-price">
+						<h3 style="font-weight: bold;">&#x20b9; 33,990</h3>
+					</div>
+					<div class="details-cut-price">&#8377; 499</div>
+					<div class="details-offer-price">41% off</div>
+				</div>
+
+
+
+				<div class="EMI-details">
+					<div class="emi-plans">
+						<img alt="" src="image/ic_action_action_perm_contact_cal.png"
+							height="28px" width="28px">
+						<div class="emi-info">
+							<span style="font-weight: bold; color: black;">EMI from</span> Rs
+							1,412/month
+						</div>
+						<a href="" class="views-plans">View Plan</a>
+					</div>
+					<div class="buy-exchange">
+						<div class="emi-plans">
+							<img alt="" src="image/ic_action_action_swap_vert_circle.png"
+								height="28px" width="28px">
+							<div class="emi-info">
+								<span>Get upto Rs.</span> <span
+									style="font-weight: bold; color: black;">20.000</span> <span>off
+									on exchange</span>
+							</div>
+							<a href="" class="views-plans">Buy witch Exchange </a>
+						</div>
+					</div>
+					<div class="special-price">
+						<div class="emi-plans">
+							<img alt="" src="image/ic_launcher.png" height="28px"
+								width="28px">
+							<div class="emi-info">
+								<span style="font-weight: bold; color: black;">Special
+									Price </span> <span>Flat Rs.7,000 Off on Apple iPhone 6</span>
+							</div>
+							<a href="" class="views-plans"> T&C </a>
+						</div>
+					</div>
+
+					<div class="bank-offer">
+						<div class="emi-plans">
+							<img alt="" src="image/ic_launcher.png" height="28px"
+								width="28px">
+							<div class="emi-info">
+								<span style="font-weight: bold; color: black;">Bank Offer</span>
+								Extra 15% Cashback* with Citi Credit and Debit Cards
+							</div>
+							<a href="" class="views-plans"> T&C </a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="delivery-report">
+					<div class="delivery">Delivery</div>
+					<div class="delivery-pincod">
+						<form action="">
+							<input type="text" placeholder="Enter Delivery Pincode"
+								class="deliveryText" style="border: none;"> <span
+								class="check">check</span>
+
+						</form>
+
+					</div>
+					<a href="" class="pincode-delivery-details"> Enter pincode for
+						delivery details </a>
+				</div>
+
+				<div class="product-color-storage-info">
+					<div class="product-color">
+						<div class="color">color</div>
+						<div class="display-colors-imgs">
+
+							<img alt="" src="image/Apple-space-grey-color.jpeg" width="60px"
+								height="55px"> <img alt=""
+								src="image/iphone-pink-color.jpg" width="60px" height="55px">
+						</div>
+					</div>
+
+
+				</div>
+				<div class="products-list">
+					<div class="products-feature">
+						<div class="feature">Feature</div>
+						<div class="feature-list">
+							<ul>
+								<li>Color:Black</li>
+								<li>Wear:Casual</li>
+								<li>Material:Satin</li>
+								<li>Heel Height:2.5 inch</li>
+								<li>Leather/Non-Leather:Non-Leather</li>
+							</ul>
+						</div>
+					</div>
+					<div class="product-services">
+						<div class="services">Services</div>
+						<div class="services-list">
+							<ul>
+								<li>Cash on Delivery available</li>
+								<li>30 days Exchange Policy</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="seller-spring">
+					<div class="seller">Seller</div>
+					<a class="springgirl" ng-click="sellerDetails()">Springgirls</a>
+				</div>
+
+				<div class="product-description">
+					<div class="description">Description</div>
+					<div class="description-info">Store more and enjoy more,
+						without using as much storage space with the Apple iPhone 6.</div>
+				</div>
+
+				<div class="product-specification">
+					<div class="specification">Specification</div>
+					<div class="general-details" style="padding-bottom: 20px"
+						ng-repeat="specification in productSpecifications">
+						<div class="general">{{specification.title}}</div>
+						<div class="type-type-for-flats">
+							<div class="product-slip-type"
+								ng-repeat="specificationDetail in specification.specificationDetails">
+								<div class="types-for-flats">{{specificationDetail.specificationLabel}}</div>
+								<div class="slip-on">{{specificationDetail.specificationInformation}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="buy-together">
+				<div class="buy-data">Buy together and save upto 33%</div>
+				<div class="display-img-together">
+					<div class="apple-original-phone">
+						<img alt=""
+							src="image/apple-iphone-6-original-imaeymdqs5gm5xkz.jpeg"
+							width="50px" height="90px" style="margin-left: 10%">
+						<div class="img-description">Apple iPhone 6</div>
+						<div class="product-img-rating">
+							<a>4.5&#9734;</a> <span>(13,0001)</span>
+						</div>
+						<div class="product-price">
+							<span class="product-original-price">&#8377;29,990</span> <span
+								class="product-offer-price">&#8377;36,990</span>
+						</div>
+						<div class="offer-product">18% off</div>
+
+					</div>
+					<div class="phone-guard" style="margin-left: 18%">
+						<img alt=""
+							src="image/unistuff-16786-2-5d-curve-edge-9h-surface-hardness-original-imaemmyyqtnyhhjz.jpeg"
+							width="90px" height="90px">
+						<div class="img-description">Apple iPhone 6</div>
+						<div class="product-img-rating">
+							<a>4.5&#9734;</a> <span>(13,0001)</span>
+						</div>
+						<div class="product-price">
+							<span class="product-original-price">&#8377;29,990</span> <span
+								class="product-offer-price">&#8377;36,990</span>
+						</div>
+						<div class="offer-product">18% off</div>
+					</div>
+					<div class="mobile-cover" style="margin-left: 18%">
+						<img alt=""
+							src="image/karpine-bakcase10775scclr-original-imaec4kx6cywzshv.jpeg"
+							width="50px" height="90px">
+						<div class="img-description">Apple iPhone 6</div>
+						<div class="product-img-rating">
+							<a>4.5&#9734;</a> <span>(13,0001)</span>
+						</div>
+						<div class="product-price">
+							<span class="product-original-price">&#8377;29,990</span> <span
+								class="product-offer-price">&#8377;36,990</span>
+						</div>
+						<div class="offer-product">18% off</div>
+					</div>
+
+				</div>
+				<hr>
+				<div class="display-product-total">
+					<div class="display-item">
+						<div class="first-item">1 Item</div>
+						<div class="product-original-price">&#8377;29,990</div>
+					</div>
+					<div class="equal-icon">&#43;</div>
+					<div class="display-item" style="margin-left: 3%">
+						<div class="first-item">2 Addins</div>
+						<div class="product-original-price">&#8377;448</div>
+					</div>
+					<div class="equal-icon">&#61;</div>
+					<div class="display-item" style="margin-left: 3%">
+						<div class="first-item">Total</div>
+						<div class="product-original-price">&#8377;30,438</div>
+					</div>
+					<button type="button" class="add-total-cart">ADD 3 ITEMS
+						TO CART</button>
+				</div>
+			</div>
+			<!-- <div ng-controller="ratingCtrl"> -->
+			<div class="product-rating">
+				<div class="product-star-rating" id="rating">
+					<span class="rating-number">4.5<img alt=""
+						src="image/ic_toggle_star.png" width="30px" height="30px"></span>
+					<div class="buy-product-rating">13037 Ratings</div>
+					<div class="buy-product-reviews">1512 Reviews</div>
+				</div>
+				<div
+					style="margin-left: 4%; padding-top: 10px; padding-bottom: 10px">
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								5 <span class="unicode-star">&#9733;</span>
+							</div>
+							<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{fiveStar}}"></div>
+							</div>
+							<!-- <div class="progress-rating-reviews" style="display: inline-block;">16000</div> -->
+						</div>
+
+					</div>
+					<div class="progress-rating">
+						<div class="first-5star-rating">
+							<span class="5*">4 <span class="unicode-star">&#9733;</span>
+							</span>
+							<!-- <span class="progress-bar-green-4"></span> -->
+							<div id="myProgress">
+								<div id="myBar1" class="myBar" style="width: {{fourStar}}"></div>
+							</div>
+							<!-- <span class="progress-rating-reviews">12000</span> -->
+						</div>
+					</div>
+
+					<div class="progress-rating">
+						<div class="first-5star-rating">
+							<span class="5*">3 <span class="unicode-star">&#9733;</span>
+							</span>
+							<!-- <span class="progress-bar-green"></span> -->
+							<div id="myProgress">
+								<div id="myBar2" class="myBar" style="width: {{threeStar}}"></div>
+							</div>
+							<!-- <span class="progress-rating-reviews">9234</span> -->
+						</div>
+					</div>
+
+					<div class="progress-rating">
+						<div class="first-5star-rating">
+							<span class="5*">2 <span class="unicode-star">&#9733;</span>
+							</span>
+							<!-- </span> <span class="progress-bar-green"></span> -->
+							<div id="myProgress">
+								<div id="myBar3" class="myBar"
+									style="background-color: #ff9f00; width: {{twoStar}}"></div>
+							</div>
+							<!-- <span class="progress-rating-reviews">7000</span> -->
+						</div>
+					</div>
+					<div class="progress-rating">
+						<div class="first-5star-rating">
+							<span class="5*">1 <span class="unicode-star">&#9733;</span>
+							</span>
+							<!-- <span class="progress-bar-green"></span> -->
+							<div id="myProgress">
+								<div id="myBar3" class="myBar"
+									style="background-color: #ff6161; width: {{oneStar}}"></div>
+							</div>
+							<!-- <span class="progress-rating-reviews">4000</span> -->
+						</div>
+					</div>
+				</div>
+				<div align="left">
+					<button type="button" class="review-button">
+						Rate and Review product</button>
+				</div>
+
+			</div>
+			<div class="customer-review" ng-repeat="review in productReviews">
+				<div style="display: flex;">
+					<a  class="customer-star-review"
+						style="background-color: #16be48; display: flex">{{review.starRating}}
+						<span class="star-white" style="vertical-align: sub;">&#9734;</span>
+					</a>
+					<div class="review-name">{{review.reviewTitle}} !!!!!!!!</div>
+				</div>
+				<div class="review-description">{{review.reviewDescription}}</div>
+				<div class="review-by">{{review.reviewBy}}</div>
+				<div class="like-unlike" style="margin-left: 80%">
+					<img alt="" src="image/ic_launcher_like.png" height="20px"
+						width="20px" class="like"> <img alt=""
+						src="image/ic_launcher_unlike.png" height="20px" width="20px"
+						class="unlike">
+				</div>
+			</div>
+
+                <div class="all-reviews" ng-click="displayAllReview()">
+                   View all 1597 reviews
+                </div>
+
+			<div class="product-details-description">
+				<div class="description-product"
+					ng-repeat="description in productDescription">
+					<div
+						style="font-size: 24px; font-weight: 500; line-height: 1; padding-bottom: 16px; color: #212121; padding-left: 15px; padding-top: 10px;">
+						{{description.productDescriptionTitle}}</div>
+					<div class="product-information">{{description.productDescriptionInfo}}</div>
+				</div>
+			</div>
+
+			<div class="payment-Authantic">
+				<img alt="" src="image/ic_action_action_verified_user.png"
+					class="payment-verified" width="35px" height="35px">
+				<div class="authantic">Safe and Secure Payments. Easy returns.
+					100% Authentic products</div>
+
+			</div>
+		</div>
+		<div id="pop-view-plans" ng-show="isLoginVisible">
+			 <div class="emi-plan-row" style="display: flex;border-bottom:1px solid rgba(153, 153, 153, 0.19)">
+			    <span style="font-size: 20px;color: #212121;">EMIs (Pay in Easy Monthly Installments)</span>
+			    <span style="font-size: 14px;cursor: pointer;margin-left: 12px;color: #2874f0;">No Cost EMI T&Cs</span>
+			 </div>	
+			 <div class="bank-emi-plans">
+			    <div style="font-size: 14px;color: #212121;font-weight: 500;padding-left: 20px;padding-top: 10px">AXIS BANK EMI PLANS</div>
+			    <div class="EMI-bank-cost" style="display: flex"">
+			       <div class="to-add-details"><img src="image/ic_plus_blue.png" height="12px" width="12px"></div>
+			       <div class="emi-no-cost" style="margin-left: 1%">3 EMIs @ No Cost</div>
+			       <div class="emi-month-cost" style="margin-left: 1%">₹11,330/month</div>
+			    </div>
+			    <div class="EMI-bank-cost" style="display: flex"">
+			       <div class="emi-no-cost" style="margin-left: 1%">6 EMIs @ No Cost</div>
+			       <div class="emi-month-cost" style="margin-left: 1%">₹5,665/month</div>
+			    </div>
+			    
+			    <div class="EMI-bank-cost" style="display: flex"">
+			       <div class="emi-no-cost" style="margin-left: 1%">6 EMIs @ No Cost</div>
+			       <div class="emi-month-cost" style="margin-left: 1%">₹5,665/month</div>
+			    </div>
+			    
+			 </div>
+			  
+			  
+	</div>
+	</div>
+	
+</div>

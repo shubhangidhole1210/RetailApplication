@@ -1,0 +1,45 @@
+{"bestProduct": [
+	{
+		"id": 1,
+		"title": "Queen Beds",
+		"image": "image/modern-platform-beds.png",
+		"price": "At rs 10,690",
+		"info": "Storage Included"
+	},
+	{
+		"id": 2,
+		"title": "Syska LED Bulbs",
+		"image": "image/syska-3-watt-led-bulb-syska-3-watt-led-bulb-1lvn7b.png",
+		"price": "minimum 40% off",
+		"info": "Energy Saving Bulbs"
+	},
+	{
+		"id": 3,
+		"title": "MasterCook & Joyo",
+		"image": "image/MasterCook.png",
+		"price": "Just Rs.299",
+		"info": "17 Pieces Container Sets"
+	},
+	{
+		"id": 4,
+		"title": "Set of 2",
+		"image": "image/door-curtain.png",
+		"price": "Under Rs.399",
+		"info": "Door Curtains"
+	},
+	{
+		"id": 5,
+		"title": "Diwali Lights",
+		"image": "image/DiwaliLights.png",
+		"price": "Extra 25% off",
+		"info": "Light Up!"
+	},
+	{
+		"id": 6,
+		"title": "Pack Of 5",
+		"image": "image/cushions-cover.png",
+		"price": "Just At Rs.499",
+		"info": "3D Cushion Cover"
+	}
+
+]}

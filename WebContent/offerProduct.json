@@ -1,0 +1,45 @@
+{"offerProduct": [
+	{
+		"id": 1,
+		"title": "Polos & T-shirts",
+		"image": "image/girls-tshirt.png",
+		"price": "Extra Rs. 80 off",
+		"info": "Explore Now!"
+	},
+	{
+		"id": 2,
+		"title": "Wall Clocks ",
+		"image": "image/french-carved-wood-wall-clock.png",
+		"price": "50%-70% Off on Wall Clocks",
+		"info": "Grab Now!"
+	},
+	{
+		"id": 3,
+		"title": "Women's Kurtas",
+		"image": "image/designer-cotton.png",
+		"price": "Extra Rs. 80 Off",
+		"info": "Shop Now!"
+	},
+	{
+		"id": 4,
+		"title": "Plain Cases & Cover",
+		"image": "image/cover-mobile.png",
+		"price": "Extra Rs. 100 Off on Design",
+		"info": "Hurry!"
+	},
+	{
+		"id": 5,
+		"title": "Glasses & Tumblers",
+		"image": "image/drinkingGlasses.png",
+		"price": "Extra 15% off on kitchen",
+		"info": "Explore Now!"
+	},
+	{
+		"id": 6,
+		"title": "Pack Of 5",
+		"image": "image/girls_tops_tunics6.png",
+		"price": "Extra Rs 80 Off on Women",
+		"info": "Grab Now!"
+	}
+
+]}

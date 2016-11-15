@@ -1,0 +1,45 @@
+{"electronicProduct": [
+	{
+		"id": 1,
+		"title": "Intel Core i3 Laptops",
+		"image": "image/laptop.png",
+		"price": "Frrom Rs.25000",
+		"info": "Upto Rs 5,000 Off on Exchange"
+	},
+	{
+		"id": 2,
+		"title": "Power Banks",
+		"image": "image/powerbank.png",
+		"price": "Under Rs.999",
+		"info": "Bestsellers"
+	},
+	{
+		"id": 3,
+		"title": "1TB Hard Disk",
+		"image": "image/Hard-Disk.png",
+		"price": "Under Rs.4299",
+		"info": "HP,WD,Soney"
+	},
+	{
+		"id": 4,
+		"title": "Apple iPads",
+		"image": "image/apple-ipad.png",
+		"price": "Min Rs. 4000 Off",
+		"info": "32 GB & 64 GB"
+	},
+	{
+		"id": 5,
+		"title": "DSLR cameras",
+		"image": "image/dslr_camera.png",
+		"price": "Extra 25% off",
+		"info": "Light Up!"
+	},
+	{
+		"id": 6,
+		"title": "HP DeskJet 2131 All in one",
+		"image": "image/printer.png",
+		"price": "image/printer.png",
+		"info": "Print|Copy|Scan"
+	}
+
+]}

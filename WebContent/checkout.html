@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="" name="checkoutForm" stripe-form="stripeCallback" ng-submit="onSubmit()" data-abide>
+<div ng-if="processing" us-spinner></div>
+<fieldset>
+<legend>Shipping information</legend>
+<div class="row">
+<label class="large-12 columns">Name
+<input type="text" ng-model="name" placeholder="Name">
+</label>
+<label class="large-12-columns">Address
+<input type="text" ng-mode="address" placeholder="Address">
+</label>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>shipping information</legend>
+<div class="row">
+<div class="large-6-columns" ng-class="{error: checkoutForm.number.$invalid}">
+<label>card information
+<input type="text" ng-model="number" name="number" payment-format="card" payment-validate="card" placeholder="card no">
+</label>
+<small class="error">invalid card number</small>
+</div>
+<div class="large-3-columns" ng-class="{error: checkoutForm.expiry.$invalid}">
+<label>Epiry
+<input type="text" ng-model="expiry" name="expiry" payment-format="expiry" payment-validate="expiry" placeholder="expiry">
+</label>
+<small class="error">invalid date</small>
+</div>
+<div class="large-3-columns" ng-class="{error: checkoutForm.cvc.$invalid}">
+<label>CVC
+<input type="text" ng-model="cvc" name="cvc" payment-format="cvc" payment-validate="cvc" placeholder="cvc">
+</label>
+<small class="error">invalid cvc</small>
+</div>
+<div class="large-12-columns">
+<strong>
+Amount to pay: {{totalAmount}}$
+</strong>
+</div>
+</div>
+</fieldset>
+<alert ng-if="stripeError" type="'alert'" close="'hideAlerts()'">
+   stripe return an error: {{stripeError}}
+ </alert>
+ 
+ <alert ng-if="stripeToken" close="hideAlerts">  
+ stripe sucessfully acquired!: {{stripeToken}}
+ </alert>
+ 
+ <div class="clearfix">
+    <div class="right">
+      <button class="cancel" ng-clcik="$dismiss()">cancel</button>
+      <button class="submit" ng-disabled="checkoutForm.$invalid">placeOrder</button>
+    </div>
+ </div>
+</form>
+</body>
+</html>

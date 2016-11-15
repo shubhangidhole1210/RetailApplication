@@ -1,0 +1,40 @@
+{"sellingProducts": [
+	{
+		"id": 1,
+		"title": "I-phone7",
+		"image": "image/iphone.jpg",
+		"price": 60
+		
+	},
+	{
+		"id": 2,
+		"title": "Samsung On7 Pro",
+		"image": "image/htc123.png",
+		"price": 20
+	},
+	{
+		"id": 3,
+		"title": "LeEco Le Max2 ",
+		"image": "image/LeEcoMax.png",
+		"price": 18
+	},
+	{
+		"id": 4,
+		"title": "HTC Desire 10 ",
+		"image": "image/lyf_water.png",
+		"price": 22
+	},
+	{
+		"id": 5,
+		"title": "Xiaomi Redmi Note 3",
+		"image": "image/mobile1.png",
+		"price": 15
+	},
+	{
+		"id": 6,
+		"title": "Oppo F1s",
+		"image": "image/oppo.png",
+		"price": 22
+	}
+
+]}
