@@ -54,7 +54,6 @@ retailApp.controller('loginCtrl', function($scope, $location, $http, $timeout,
 		displayLoginService,$rootScope) {
 	$scope.test = 'test';
 	//$scope.isLoginVisible = displayLoginService.isLoginVisible();
-	$scope.showSpinner = false;
 	$scope.cancelLogin = function(){
 		$rootScope.isLoginVisible = false;
 	};
@@ -195,9 +194,9 @@ retailApp.controller('homeCtrl', function($scope, $http,$location) {
 		$scope.offerProduct = response.offerProduct
 	});
 	
-	$http.get('slider.json').success(function(response) {
+	/*$http.get('slider.json').success(function(response) {
 		$scope.slider = response.slider
-	});
+	});*/
 	
 	
 	$scope.addCart = function(product) {
@@ -355,7 +354,7 @@ retailApp.controller('featureCtrl',function($scope)
 	        
 	});
 
-retailApp.controller('productDetailsCtrl', function($scope, $timeout,$http,$location, $anchorScroll) {
+retailApp.controller('productDetailsCtrl', function($scope, $timeout,$http,$location, $anchorScroll,displayLoginService,$rootScope) {
 
 	$http.get('displayImages.json').success(function(response) {
 		$scope.displayImages = response.displayImages.small_img
@@ -459,6 +458,18 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 	  {
 		  $location.path('/allReviews')
 	  }
+	  /*$scope.cancelLogin = function(){
+			$rootScope.isLoginVisible = false;
+		};*/
+		/*$scope.hideMe = function() {
+			$scope.show = true;
+		}*/
+		/*displayLoginService.setIsLoginVisible(false);
+		$rootScope.isLoginVisible = false;
+		$scope.isLoginVisible = function() {
+			displayLoginService.setIsLoginVisible(true);
+			$rootScope.isLoginVisible = true;
+		}*/
 });
 
 
@@ -527,17 +538,29 @@ retailApp.controller('sellerCtrl',function($scope,$http,$location)
 {
 	       $http.get('sellerDetails.json').success(function(response) {
 		      $scope.sellerDetails = response.sellerDetails
+		      $scope.currentPage = 0;
+		      $scope.pageSize = 5;
+		      for(var i=0; i<25;i++)
+		    	  {
+		    	     $scope.sellerDetails.push(i);
+		    	  }
+		      
 	   }); 
 	       
 	       $scope.sellerDetailsFunc=function()
 	   	{
 	   		$location.path('/home')
 	   	};
-	       $scope.sellerTwoDetails=function()
-		   	{
-		   		$location.path('/sellerTwoDetails')
-		   	}
 });
+
+retailApp.filter('startFrom', function() {
+    return function(input, start) {
+        start = +start; //parse to int
+        return input.slice(start);
+    }
+});
+
+
 
 retailApp.controller('sellerTwoCtrl',function($scope,$http,$location)
 {
