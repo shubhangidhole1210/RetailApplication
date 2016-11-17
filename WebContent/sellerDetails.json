@@ -1,83 +1,71 @@
 {"sellerDetails": [
 	{
-		"id": 1,
 		"sellerReviewBy": "Sakshi",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
 		"offer": 20
 	},
 	{
-		"id": 2,
 		"sellerReviewBy": "Sayali",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "Item received as described. Prompt delivery and good communication",
 		"offer": 30
 	},
 	{
-		"id": 3,
 		"sellerReviewBy": "Anushka",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "delivery fast service......",
 		"offer": 5
 	},
 	{
-		"id": 4,
 		"sellerReviewBy": "Akshra",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "Item received as described. Prompt delivery and good communication",
 		"offer": 5
 	},
 	{
-		"id": 5,
 		"sellerReviewBy": "Pallavi",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "delivery fast service......",
 		"offer": 7
 	},
 	{
-		"id": 6,
 		"sellerReviewBy": "Sakshi",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
 		"offer": 1
 	},
 	{
-		"id": 7,
 		"sellerReviewBy": "Sakshi",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "Pathetic Seller.Received an empty box and no mobile inside.",
 		"offer": 1
 	},
 	{
-		"id": 8,
 		"sellerReviewBy": "Pallavi",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "The Redmi3s Prime phone bought from this seller has software issue",
 		"offer": 1
 	},
 	{
-		"id": 10,
 		"sellerReviewBy": "Payal",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "i want black but provide me white",
 		"offer": 1
 	},
 	{
-		"id": 11,
 		"sellerReviewBy": "Sakshi",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "Item received as described. Prompt delivery and good communication.",
 		"offer": 1
 	},
 	{
-		"id": 12,
 		"sellerReviewBy": "shubhangi",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "delivery fast service.......",
 		"offer": 1
 	},
 	{
-		"id": 13,
 		"sellerReviewBy": "Sakshi",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
@@ -91,7 +79,6 @@
 		"offer": 1
 	},
 	{
-		"id": 15,
 		"sellerReviewBy": "Sakshi",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
@@ -100,6 +87,36 @@
 	{
 		"id":16,
 		"sellerReviewBy": "Sheweta",
+		"reviewDate": "21 Oct, 2016",
+		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
+		"offer": 1
+	},
+	{
+		"sellerReviewBy": "Sakshi",
+		"reviewDate": "21 Oct, 2016",
+		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
+		"offer": 1
+	},
+	{
+		"sellerReviewBy": "Anjali",
+		"reviewDate": "21 Oct, 2016",
+		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
+		"offer": 1
+	},
+	{
+		"sellerReviewBy": "Pallavi",
+		"reviewDate": "21 Oct, 2016",
+		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
+		"offer": 1
+	},
+	{
+		"sellerReviewBy": "Sayali",
+		"reviewDate": "21 Oct, 2016",
+		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
+		"offer": 1
+	},
+	{
+		"sellerReviewBy": "Sayali",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
 		"offer": 1
@@ -119,60 +136,21 @@
 		"offer": 1
 	},
 	{
-		"id": 19,
 		"sellerReviewBy": "Pallavi",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
 		"offer": 1
 	},
 	{
-		"id": 20,
 		"sellerReviewBy": "Sayali",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
 		"offer": 1
 	},
 	{
-		"id": 21,
-		"sellerReviewBy": "Anjali",
-		"reviewDate": "21 Oct, 2016",
-		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
-		"offer": 1
-	},
-	{
-		"id": 22,
-		"sellerReviewBy": "Sadhavi",
-		"reviewDate": "21 Oct, 2016",
-		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
-		"offer": 1
-	},
-	{
-		"id": 23,
-		"sellerReviewBy": "Ridhika",
-		"reviewDate": "21 Oct, 2016",
-		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
-		"offer": 1
-	},
-	{
-		"id": 24,
-		"sellerReviewBy": "Sakshi",
-		"reviewDate": "21 Oct, 2016",
-		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
-		"offer": 1
-	},
-	{
-		"id": 25,
-		"sellerReviewBy": "Anvika",
-		"reviewDate": "21 Oct, 2016",
-		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
-		"offer": 1
-	},
-	{
-		"id": 25,
-		"sellerReviewBy": "Advika",
+		"sellerReviewBy": "Sayali",
 		"reviewDate": "21 Oct, 2016",
 		"reviewDescription": "The product was delivered before time and the packaging and condition of the product was top notch.",
 		"offer": 1
 	}
-
 ]}

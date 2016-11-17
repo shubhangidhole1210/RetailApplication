@@ -1,5 +1,5 @@
-<div ng-controller="allReviewCtrl">
-<div class="allReviews">
+<div ng-controller="positiveReviewCtrl">
+   <div class="allReviews">
 <div class="rviews-with-image">
   <div class="rating-review-header" > Ratings & Reviews</div>
   <div style="display: flex">
@@ -88,21 +88,21 @@
 				<div class="display-review-total" style="margin-left: 20%">
 			  <div class="review-list">
 			    <span>Most Helpful (1949)</span>
-			    <span style="margin-left: 2%" ng-click="displayPositiveReview()">Positive (1643)</span>
-			    <span style="margin-left: 2%" ng-click="displayNegativeReview()">Negative (307)</span>
+			    <span style="margin-left: 2%">Positive (1643)</span>
+			    <span style="margin-left: 2%">Negative (307)</span>
 			    <span style="margin-left: 2%">Most Recent (1950)</span>
 			    <span style="margin-left: 2%">By Certified Buyers (1947)</span>
 			  </div>
-			  <div class="customer-review" ng-repeat="review in productReviews | startFrom:currentPage*pageSize | limitTo:pageSize">
+			  <div class="customer-review" ng-repeat="positiveReview in positiveProductReview | startFrom:currentPage*pageSize | limitTo:pageSize">
 				<div style="display: flex;">
 					<a  class="customer-star-review"
-						style="background-color: #16be48; display: flex">{{review.starRating}}
+						style="background-color: #16be48; display: flex">{{positiveReview.starRating}}
 						<span class="star-white" style="vertical-align: sub;">&#9734;</span>
 					</a>
-					<div class="review-name">{{review.reviewTitle}} !!!!!!!!</div>
+					<div class="review-name">{{positiveReview.reviewTitle}} !!!!!!!!</div>
 				</div>
-				<div class="review-description">{{review.reviewDescription}}</div>
-				<div class="review-by">{{review.reviewBy}}</div>
+				<div class="review-description">{{positiveReview.reviewDescription}}</div>
+				<div class="review-by">{{positiveReview.reviewBy}}</div>
 				<div class="like-unlike" style="margin-left: 80%">
 					<img alt="" src="image/ic_launcher_like.png" height="20px"
 						width="20px" class="like"> <img alt=""
@@ -126,6 +126,7 @@
          </div>
 			</div>
 			</div>
-			</div>
+			</div>  
+     
+    
 </div>
-

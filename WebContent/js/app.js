@@ -29,6 +29,12 @@ retailApp.config(function($routeProvider) {
 	}).when('/allReviews', {
 		templateUrl : "allReviews.html"
 
+	}).when('/positiveReview', {
+		templateUrl : "positiveReview.html"
+
+	}).when('/negativeReview', {
+		templateUrl : "negativeReview.html"
+
 	}).otherwise({
 		redirectTo : '/'
 	});
@@ -385,19 +391,19 @@ retailApp.controller('productDetailsCtrl', function($scope, $timeout,$http,$loca
 	     image.src=  document.getElementById(imageId).src;
 	}
 	
-	console.log("before product details ajax call");
+	/*console.log("before product details ajax call");*/
 	$http.get('productDetails.json').success(function(response) {
-		console.log("inside product details sucess");
+		/*console.log("inside product details sucess");*/
 		$scope.productRating = response.productDetail.productRating;
 		
-		console.log("product rating values for five star count in sucess ::"+$scope.productRating.fiveStarCount);
-		console.log("after product details ajax call");
+		/*console.log("product rating values for five star count in sucess ::"+$scope.productRating.fiveStarCount);*/
+		/*console.log("after product details ajax call");*/
 		$scope.fiveStarCount =$scope.productRating.fiveStarCount ;
 		$scope.fourStarCount= $scope.productRating.fourStarCount
 		$scope.threeStarCount=$scope.productRating.threeStarCount;
 		$scope.twoStarCount=$scope.productRating.twoStarCount;
 		$scope.oneStarCount=$scope.productRating.oneStarCount;
-		console.log("product rating values for five star count"+$scope.productRating.fiveStarCount)
+		/*console.log("product rating values for five star count"+$scope.productRating.fiveStarCount)*/
 var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,$scope.twoStarCount,$scope.oneStarCount];
 	
 		
@@ -540,11 +546,7 @@ retailApp.controller('sellerCtrl',function($scope,$http,$location)
 		      $scope.sellerDetails = response.sellerDetails
 		      $scope.currentPage = 0;
 		      $scope.pageSize = 5;
-		      for(var i=0; i<25;i++)
-		    	  {
-		    	     $scope.sellerDetails.push(i);
-		    	  }
-		      
+		     
 	   }); 
 	       
 	       $scope.sellerDetailsFunc=function()
@@ -552,17 +554,26 @@ retailApp.controller('sellerCtrl',function($scope,$http,$location)
 	   		$location.path('/home')
 	   	};
 });
-
+console.log("Before filter function")
 retailApp.filter('startFrom', function() {
     return function(input, start) {
+    	if (!input || !input.length)
+    		{
+    		  return;
+    		}
         start = +start; //parse to int
         return input.slice(start);
+        console.log("in filtter function")
     }
+   
 });
+console.log("after filter function");
 
 
 
-retailApp.controller('sellerTwoCtrl',function($scope,$http,$location)
+
+
+/*retailApp.controller('sellerTwoCtrl',function($scope,$http,$location)
 {
 	
 	 $http.get('sellerDetails.json').success(function(response) {
@@ -573,7 +584,7 @@ retailApp.controller('sellerTwoCtrl',function($scope,$http,$location)
 	   		$location.path('/home')
 	   	};
 	
-});
+});*/
 
 retailApp.controller('allReviewCtrl',function($scope,$http,$location)
 {
@@ -617,7 +628,9 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 	$scope.oneStar = $scope.oneStarCount/$scope.maximumCount * 100;
 	
 	$scope.productReviews = response.productDetail.productReviews;
-
+       
+	 $scope.currentPage = 0;
+     $scope.pageSize = 5;
 	
 	});
 	
@@ -625,6 +638,15 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 	   	{
 	   		$location.path('/productDetails')
 	   	}
+	 
+	 $scope.displayPositiveReview=function()
+	 {
+		 $location.path('/positiveReview')
+	 }
+	 $scope.displayNegativeReview=function()
+	 {
+		 $location.path('/negativeReview')
+	 }
 	
 });
 
@@ -635,12 +657,117 @@ function changeImage(imageId)
      image.src=  document.getElementById(imageId).src;
      	 
 }
-/*var scrollTop;
-function myFunction()
-{
-	if(scrollTop>147)
-		{
-		     document.getElementById("absoluteScroll").className += "retailer-image-absolute"; 
-		}
-}*/
 
+
+retailApp.controller('positiveReviewCtrl',function($scope,$http,$location)
+		{
+	$http.get('productDetails.json').success(function(response) {
+		console.log("inside product details sucess");
+		$scope.productRating = response.productDetail.productRating;
+		
+		console.log("product rating values for five star count in sucess ::"+$scope.productRating.fiveStarCount);
+		console.log("after product details ajax call");
+		$scope.fiveStarCount =$scope.productRating.fiveStarCount ;
+		$scope.fourStarCount= $scope.productRating.fourStarCount
+		$scope.threeStarCount=$scope.productRating.threeStarCount;
+		$scope.twoStarCount=$scope.productRating.twoStarCount;
+		$scope.oneStarCount=$scope.productRating.oneStarCount;
+		console.log("product rating values for five star count"+$scope.productRating.fiveStarCount)
+var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,$scope.twoStarCount,$scope.oneStarCount];
+	
+		
+	 	function calculateMaximumRating(ratingArr)
+	 {
+		var i;
+			var max;
+			 
+			 max=ratingArr[0];
+			 for(i=1;i<5;i++)
+				 {
+				      if(ratingArr[i] > max)
+				    	  {
+				    	     max = ratingArr[i];
+				    	  }
+				 
+				 }
+			 return max;
+	 };
+	 $scope.maximumCount=calculateMaximumRating(ratingArr);
+	
+	$scope.fiveStar = $scope.fiveStarCount/$scope.maximumCount * 100;
+	$scope.fourStar = $scope.fourStarCount/$scope.maximumCount * 100;
+	$scope.threeStar =$scope.threeStarCount/$scope.maximumCount * 100;  
+	$scope.twoStar = $scope.twoStarCount/$scope.maximumCount * 100;
+	$scope.oneStar = $scope.oneStarCount/$scope.maximumCount * 100;
+	
+	$scope.positiveProductReview = response.productDetail.positiveProductReview;
+       
+	 $scope.currentPage = 0;
+     $scope.pageSize = 5;
+	
+	});
+	
+	 $scope.redirectProductPage=function()
+	   	{
+	   		$location.path('/productDetails')
+	   	}
+			
+		});
+
+
+
+
+retailApp.controller('negativeReviewCtrl',function($scope,$http,$location)
+		{
+	$http.get('productDetails.json').success(function(response) {
+		console.log("inside product details sucess");
+		$scope.productRating = response.productDetail.productRating;
+		
+		console.log("product rating values for five star count in sucess ::"+$scope.productRating.fiveStarCount);
+		console.log("after product details ajax call");
+		$scope.fiveStarCount =$scope.productRating.fiveStarCount ;
+		$scope.fourStarCount= $scope.productRating.fourStarCount
+		$scope.threeStarCount=$scope.productRating.threeStarCount;
+		$scope.twoStarCount=$scope.productRating.twoStarCount;
+		$scope.oneStarCount=$scope.productRating.oneStarCount;
+		console.log("product rating values for five star count"+$scope.productRating.fiveStarCount)
+var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,$scope.twoStarCount,$scope.oneStarCount];
+	
+		
+	 	function calculateMaximumRating(ratingArr)
+	 {
+		var i;
+			var max;
+			 
+			 max=ratingArr[0];
+			 for(i=1;i<5;i++)
+				 {
+				      if(ratingArr[i] > max)
+				    	  {
+				    	     max = ratingArr[i];
+				    	  }
+				 
+				 }
+			 return max;
+	 };
+	 $scope.maximumCount=calculateMaximumRating(ratingArr);
+	
+	$scope.fiveStar = $scope.fiveStarCount/$scope.maximumCount * 100;
+	$scope.fourStar = $scope.fourStarCount/$scope.maximumCount * 100;
+	$scope.threeStar =$scope.threeStarCount/$scope.maximumCount * 100;  
+	$scope.twoStar = $scope.twoStarCount/$scope.maximumCount * 100;
+	$scope.oneStar = $scope.oneStarCount/$scope.maximumCount * 100;
+	
+	$scope.negativeProductReview = response.productDetail.negativeProductReview;
+       
+	 $scope.currentPage = 0;
+     $scope.pageSize = 5;
+	
+	});
+	
+	 $scope.redirectProductPage=function()
+	   	{
+	   		$location.path('/productDetails')
+	   	}
+			 
+		});
