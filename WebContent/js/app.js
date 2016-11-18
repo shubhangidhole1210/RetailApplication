@@ -627,10 +627,64 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 	$scope.twoStar = $scope.twoStarCount/$scope.maximumCount * 100;
 	$scope.oneStar = $scope.oneStarCount/$scope.maximumCount * 100;
 	
-	$scope.productReviews = response.productDetail.productReviews;
+	$scope.helpfulReviews = response.productDetail.helpfulReviews;
+	$scope.positiveProductReview = response.productDetail.positiveProductReview;
+	$scope.negativeProductReview = response.productDetail.negativeProductReview;
+	$scope.mostRecentReview = response.productDetail.mostRecentReview;
+	$scope.cerifiedProductReview = response.productDetail.cerifiedProductReview;
        
 	 $scope.currentPage = 0;
      $scope.pageSize = 5;
+     
+     $scope.MostHelpful=true;
+     $scope.positiveDetails=false;
+     $scope.negativeDetails=false;
+     $scope.MostRecentReview=false;
+     $scope.certifiedReview=false;
+     
+     $scope.displayHelpfulReview=function()
+     {
+    	 $scope.MostHelpful=true;
+         $scope.positiveDetails=false;
+         $scope.negativeDetails=false;
+         $scope.MostRecentReview=false;
+         $scope.certifiedReview=false;
+     }
+     
+     $scope.displayPositiveReview=function()
+     {
+    	 $scope.MostHelpful=false;
+         $scope.positiveDetails=true;
+         $scope.negativeDetails=false;
+         $scope.MostRecentReview=false;
+         $scope.certifiedReview=false;
+     }
+     
+     $scope.displayNegativeReview=function()
+     {
+    	 $scope.MostHelpful=false;
+         $scope.positiveDetails=false;
+         $scope.negativeDetails=true;
+         $scope.MostRecentReview=false;
+         $scope.certifiedReview=false;
+     }
+     $scope.displayRecentReview=function()
+     {
+    	 $scope.MostHelpful=false;
+         $scope.positiveDetails=false;
+         $scope.negativeDetails=false;
+         $scope.MostRecentReview=true;
+         $scope.certifiedReview=false;
+     }
+     
+     $scope.displayCertifiedReview=function()
+     {
+    	 $scope.MostHelpful=false;
+         $scope.positiveDetails=false;
+         $scope.negativeDetails=false;
+         $scope.MostRecentReview=true;
+         $scope.certifiedReview=false;
+     }
 	
 	});
 	
@@ -639,14 +693,14 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 	   		$location.path('/productDetails')
 	   	}
 	 
-	 $scope.displayPositiveReview=function()
+	 /*$scope.displayPositiveReview=function()
 	 {
 		 $location.path('/positiveReview')
 	 }
 	 $scope.displayNegativeReview=function()
 	 {
 		 $location.path('/negativeReview')
-	 }
+	 }*/
 	
 });
 
@@ -659,7 +713,7 @@ function changeImage(imageId)
 }
 
 
-retailApp.controller('positiveReviewCtrl',function($scope,$http,$location)
+/*retailApp.controller('positiveReviewCtrl',function($scope,$http,$location)
 		{
 	$http.get('productDetails.json').success(function(response) {
 		console.log("inside product details sucess");
@@ -713,11 +767,11 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 	   	}
 			
 		});
+*/
 
 
 
-
-retailApp.controller('negativeReviewCtrl',function($scope,$http,$location)
+/*retailApp.controller('negativeReviewCtrl',function($scope,$http,$location)
 		{
 	$http.get('productDetails.json').success(function(response) {
 		console.log("inside product details sucess");
@@ -770,4 +824,4 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 	   		$location.path('/productDetails')
 	   	}
 			 
-		});
+		});*/

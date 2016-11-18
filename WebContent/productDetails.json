@@ -245,109 +245,219 @@
 		               "oneStarCount"  : 800
 		           },
 		           
-		 "productReviews" :[
+		"productReviews" :[
 		 
 		        {
 		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Amazing Phone- Iphone 6",
+		            "reviewDescription" : "Replaced my Iphone 5s with New Iphone 6. This year again purchased my iphone from Flipkart & as always delivery was up-to the mark. ",
+		            "reviewBy" : "Prabhath MP 4 Apr, 2015"
+		     },
+		      
+		       {
+		 
 		            "starRating" : "1",
+		            "reviewTitle" : "Faulty Phone",
+		            "reviewDescription" : "I got it as part of festival offer. I cant even call since the sound is feeble. Terrible and disappointed !",
+		            "reviewBy" : "Sanoop Sukumaran13 Oct, 2016"
+		     },
+		      
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Very bad quality",
+		            "reviewDescription" : "Device was not working. The device crashed on 1 hour of usage and was not booting up. Very bad quality product from flipkart.",
+		            "reviewBy" : "Flipkart Customer 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Once an Iphone User, Always an Iphone User!!!",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		    
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Best you can get from apple",
+		            "reviewDescription" : "First impression - Very light and slim....Perfect to hold...awesome display and graphics..Gaming is smooth as butter...n got in nice packing from flipkart...Overall *****(5 star)",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "It's simply Awesome Review After 4 months",
+		            "reviewDescription" : "First of all, I like to thank flipkart for it's amazing deliver on time. I got this phone on the day it was released in INDIA. The packing was good.",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     
+		     {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Once an Iphone User, Always an Iphone User!!!",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     
+		     {
+		 
+		             "starRating" : "1",
+		            "reviewTitle" : "Pathetic purchase",
+		            "reviewDescription" : "Got a defective piece and when asked for replacement under 30 day return policy for the new replacement after 3 months of follow up. Delivery method is pathetic",
+		            "reviewBy" : "Abhijeet Jawharkar 7 Oct, 2016"
+		     },
+		    
+		     {
+		 
+		            "starRating" : "5",
 		            "reviewTitle" : "Best iPhone but Overpriced",
 		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
 		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     }
+		     
+		     
+		 ],
+		           
+		 "helpfulReviews" :[
+		 
+		        {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Amazing Phone- Iphone 6",
+		            "reviewDescription" : "Replaced my Iphone 5s with New Iphone 6. This year again purchased my iphone from Flipkart & as always delivery was up-to the mark. ",
+		            "reviewBy" : "Prabhath MP 4 Apr, 2015"
+		     },
+		       {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
 		     },
 		       {
 		 
 		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
-		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		            "reviewTitle" : "Faulty Phone",
+		            "reviewDescription" : "I got it as part of festival offer. I cant even call since the sound is feeble. Terrible and disappointed !",
+		            "reviewBy" : "Sanoop Sukumaran13 Oct, 2016"
 		     },
 		       {
-		 
-		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		             "starRating" : "5",
+		            "reviewTitle" : "It's simply Awesome Review After 4 months",
+		            "reviewDescription" : "First of all, I like to thank flipkart for it's amazing deliver on time. I got this phone on the day it was released in INDIA. The packing was good.",
 		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		           
 		     },
-		       {
+		     {
 		 
 		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewTitle" : "Very bad quality",
+		            "reviewDescription" : "Device was not working. The device crashed on 1 hour of usage and was not booting up. Very bad quality product from flipkart.",
+		            "reviewBy" : "Flipkart Customer 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Once an Iphone User, Always an Iphone User!!!",
 		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
 		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
 		     },
 		     {
 		 
-		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "starRating" : "4",
+		            "reviewTitle" : "Brand name says it all",
 		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Best you can get from apple",
+		            "reviewDescription" : "First impression - Very light and slim....Perfect to hold...awesome display and graphics..Gaming is smooth as butter...n got in nice packing from flipkart...Overall *****(5 star)",
 		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
 		     },
 		     {
 		 
-		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "starRating" : "5",
+		            "reviewTitle" : "It's simply Awesome Review After 4 months",
+		            "reviewDescription" : "First of all, I like to thank flipkart for it's amazing deliver on time. I got this phone on the day it was released in INDIA. The packing was good.",
 		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
 		     },
 		     {
 		 
-		            "starRating" : "1",
+		            "starRating" : "5",
 		            "reviewTitle" : "Best iPhone but Overpriced",
 		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
 		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
 		     },
 		     {
 		 
-		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "starRating" : "4",
+		            "reviewTitle" : "Once an Iphone User, Always an Iphone User!!!",
 		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
 		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
 		     },
 		     {
 		 
-		            "starRating" : "1",
+		            "starRating" : "5",
 		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		             "starRating" : "1",
+		            "reviewTitle" : "Pathetic purchase",
+		            "reviewDescription" : "Got a defective piece and when asked for replacement under 30 day return policy for the new replacement after 3 months of follow up. Delivery method is pathetic",
+		            "reviewBy" : "Abhijeet Jawharkar 7 Oct, 2016"
+		     },
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "3",
+		            "reviewTitle" : "Once an Iphone User, Always an Iphone User!!!",
 		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
 		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
 		     },
 		     {
 		 
-		            "starRating" : "1",
+		            "starRating" : "4",
 		            "reviewTitle" : "Best iPhone but Overpriced",
 		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
 		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
 		     },
 		     {
 		 
-		            "starRating" : "1",
+		             "starRating" : "1",
+		            "reviewTitle" : "Pathetic purchase",
+		            "reviewDescription" : "Got a defective piece and when asked for replacement under 30 day return policy for the new replacement after 3 months of follow up. Delivery method is pathetic",
+		            "reviewBy" : "Abhijeet Jawharkar 7 Oct, 2016"
+		     },
+		     {
+		 
+		            "starRating" : "5",
 		            "reviewTitle" : "Best iPhone but Overpriced",
 		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
 		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
 		     },
 		     {
 		 
-		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
-		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
-		     },
-		     {
-		 
-		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
-		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
-		     },
-		     {
-		 
-		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
-		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
-		     },
-		     {
-		 
-		            "starRating" : "1",
+		            "starRating" : "4",
 		            "reviewTitle" : "Best iPhone but Overpriced",
 		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
 		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
@@ -462,6 +572,41 @@
 		            "reviewTitle" : "Best iPhone but Overpriced",
 		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
 		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		      {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Best iPhone but Overpriced",
+		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
 		     }
 		 
 		 ],
@@ -469,64 +614,43 @@
 		     {
 		 
 		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
-		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		            "reviewTitle" : "Too expensive",
+		            "reviewDescription" : "Extremely expensive, with this amount you can get a good motorcycle at your home and believe me it will be more useful than this. Will ultimately will become outdated in next 6 months",
+		            "reviewBy" : "Pradeep Kandari 16 Dec, 2015"
 		     },
 		       {
 		 
 		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
-		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		            "reviewTitle" : "Nothing to say .bcoz this is iPhone",
+		            "reviewDescription" : "Nothing to say .bcoz this is iPhone",
+		            "reviewBy" : "hitval 13 Mar, 2016"
 		     },
 		       {
 		 
 		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
-		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		            "reviewTitle" : "As expected, Wonderful phone",
+		            "reviewDescription" : "Delivered on the dot. The packaging was perfect. Came with a 4G SIM, airtel that I used to swap my Wife's existing 3G SIM. There is not much to add about the phone. People who buy it, simply buy it.",
+		            "reviewBy" : "Flipkart Customer 3 Nov, 2016"
 		     },
 		       {
 		 
 		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewTitle" : "Apple iPhone 6s Gold 64 GB not delivered",
+		            "reviewDescription" : "I was very excited to order iPhone 6s Gold 64 GB from flipkart on date 29 March 2016, I ordered it in the morning and received a notification from Flipkart that your order is cancelled. ",
+		            "reviewBy" : "Prakash Dangar 30 Mar, 2016"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Best deal at Flipkart",
+		            "reviewDescription" : "Nice phone .got exchange on dewali offer. ......supercomnet is also trustworthy like ws retail. Sealed and 100percent genuine packing. Though shipment was delayed, happy with the product",
 		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
 		     },
 		     {
 		 
 		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
-		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
-		     },
-		     {
-		 
-		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
-		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
-		     },
-		     {
-		 
-		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
-		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
-		     },
-		     {
-		 
-		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
-		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
-		     },
-		     {
-		 
-		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewTitle" : "Very poor",
+		            "reviewDescription" : "iPhone 6s 64gb .Nice experience till now. Delivery is fast. Was not happy with packing. It could have been better.",
 		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
 		     },
 		     {
@@ -539,22 +663,43 @@
 		     {
 		 
 		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewTitle" : "Flipkart No EMI offer - a half truth!",
+		            "reviewDescription" : "The phone is great - so, the rating is not for the phone. Even the delivery, packaging etc were okay. However, the phone was purchased under the so-called 'No EMI cost' offer which actually spoiled the entire experience. Flipkart claims that it gives you a discount of the entire EMI cost upfront which is only a half-truth. It doesn't show you the entire cost and gives only partial discount by making a fraudulent claim. There is no transparency in which portion they refund and which they do no...",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Worst experience ever!",
+		            "reviewDescription" : "Not a good phone, very expensive as per the experience. And battery performance is very bad in it.",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "You get everything in android",
+		            "reviewDescription" : "You get everything in android in fraction of price",
 		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
 		     },
 		     {
 		 
 		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewTitle" : "Hated it!",
+		            "reviewDescription" : "This is very expansive...",
 		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
 		     },
 		     {
 		 
 		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewTitle" : "Waste of money!",
+		            "reviewDescription" : "Before you bye beware of the malpractices by flipkart they are fraud they wil send you chinese products with same colur and format you will never get to know its a corrupt corporate.",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Just wow!",
+		            "reviewDescription" : "Dont purchase it using EMI option,the bank wpuld charge you and though flipkart says its a no cost emi,it wouldn't help you.",
 		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
 		     },
 		     {
@@ -567,10 +712,333 @@
 		     {
 		 
 		            "starRating" : "1",
-		            "reviewTitle" : "Best iPhone but Overpriced",
-		            "reviewDescription" : "Everything is good about this iPhone except its Price :( People out there waiting for this iPhone including me from a very long time but unable to buy this due its over-price. I hope Apple India will realise this and soon bring its price down and will see some happy customers :) Cheers to those who are enjoying there brand new iPhone 6s (y)",
+		            "reviewTitle" : "too expensive",
+		            "reviewDescription" : "i'll add 20 to 25 k and i'll buy luxury phone why should i buy this phone which cost 15k more then old model of his ",
+		            "reviewBy" : "Prabhath MP 4 Apr, 2015"
+		     },
+		      {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Flipkart No EMI offer - a half truth!",
+		            "reviewDescription" : "The phone is great - so, the rating is not for the phone. Even the delivery, packaging etc were okay. However, the phone was purchased under the so-called 'No EMI cost' offer which actually spoiled the entire experience. Flipkart claims that it gives you a discount of the entire EMI cost upfront which is only a half-truth. It doesn't show you the entire cost and gives only partial discount by making a fraudulent claim. There is no transparency in which portion they refund and which they do no...",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Worst experience ever!",
+		            "reviewDescription" : "Not a good phone, very expensive as per the experience. And battery performance is very bad in it.",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "You get everything in android",
+		            "reviewDescription" : "You get everything in android in fraction of price",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Hated it!",
+		            "reviewDescription" : "This is very expansive...",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Waste of money!",
+		            "reviewDescription" : "Before you bye beware of the malpractices by flipkart they are fraud they wil send you chinese products with same colur and format you will never get to know its a corrupt corporate.",
 		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
 		     }
+		 
+		 ],
+		 
+		  "mostRecentReview" : [
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Perfect product!",
+		            "reviewDescription" : "Best",
+		            "reviewBy" : "Pradeep Kandari 16 Dec, 2015"
+		     },
+		       {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Super!",
+		            "reviewDescription" : "It is the best phone i have ever bought. Amazing features and good performance. Iphone is best. If anyone ask for review, i would say go for it.",
+		            "reviewBy" : "hitval 13 Mar, 2016"
+		     },
+		       {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Donât waste your money",
+		            "reviewDescription" : "Expensive",
+		            "reviewBy" : "Flipkart Customer 3 Nov, 2016"
+		     },
+		       {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Apple iPhone 6s Gold 64 GB not delivered",
+		            "reviewDescription" : "I was very excited to order iPhone 6s Gold 64 GB from flipkart on date 29 March 2016, I ordered it in the morning and received a notification from Flipkart that your order is cancelled. ",
+		            "reviewBy" : "Prakash Dangar 30 Mar, 2016"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Useless product",
+		            "reviewDescription" : "Too expensive",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "2",
+		            "reviewTitle" : "Hanging within 6 months",
+		            "reviewDescription" : "I bought through Flipkart and it's hanging within 6 months. I really wondered whether the seller is selling defected product or there is actual problem in 6s.",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Must buy!",
+		            "reviewDescription" : "Experience with flipkart is better than others",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Iphone fan",
+		            "reviewDescription" : "Best phone ever...",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Worst experience ever!",
+		            "reviewDescription" : "Not a good phone, very expensive as per the experience. And battery performance is very bad in it.",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "You get everything in android",
+		            "reviewDescription" : "You get everything in android in fraction of price",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "3",
+		            "reviewTitle" : "Best deal at Flipkart",
+		            "reviewDescription" : "Nice phone .got exchange on dewali offer. ......supercomnet is also trustworthy like ws retail. Sealed and 100percent genuine packing. Though shipment was delayed, happy with the product",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Perfect product!",
+		            "reviewDescription" : "Awsm product from flipkart",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Just wow!",
+		            "reviewDescription" : "Fabulous!.",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Highly recommended",
+		            "reviewDescription" : "Awesome product. Delivery on time",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Good product",
+		            "reviewDescription" : "Awesome product i bought it and received before expecting day and its genune apple product with apple india warrenty m happy with ma new phone thanks flipkart",
+		            "reviewBy" : "Prabhath MP 4 Apr, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "2",
+		            "reviewTitle" : "Hanging within 6 months",
+		            "reviewDescription" : "I bought through Flipkart and it's hanging within 6 months. I really wondered whether the seller is selling defected product or there is actual problem in 6s.",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Must buy!",
+		            "reviewDescription" : "Experience with flipkart is better than others",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Iphone fan",
+		            "reviewDescription" : "Best phone ever...",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Worst experience ever!",
+		            "reviewDescription" : "Not a good phone, very expensive as per the experience. And battery performance is very bad in it.",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "You get everything in android",
+		            "reviewDescription" : "You get everything in android in fraction of price",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     }
+		 
+		 ],
+		  "cerifiedProductReview" : [
+		     {
+		 
+		            "starRating" : "3",
+		            "reviewTitle" : "Perfect product!",
+		            "reviewDescription" : "Best",
+		            "reviewBy" : "Pradeep Kandari 16 Dec, 2015"
+		     },
+		       {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Super!",
+		            "reviewDescription" : "It is the best phone i have ever bought. Amazing features and good performance. Iphone is best. If anyone ask for review, i would say go for it.",
+		            "reviewBy" : "hitval 13 Mar, 2016"
+		     },
+		       {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Donât waste your money",
+		            "reviewDescription" : "Expensive",
+		            "reviewBy" : "Flipkart Customer 3 Nov, 2016"
+		     },
+		       {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Apple iPhone 6s Gold 64 GB not delivered",
+		            "reviewDescription" : "I was very excited to order iPhone 6s Gold 64 GB from flipkart on date 29 March 2016, I ordered it in the morning and received a notification from Flipkart that your order is cancelled. ",
+		            "reviewBy" : "Prakash Dangar 30 Mar, 2016"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Useless product",
+		            "reviewDescription" : "Too expensive",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "2",
+		            "reviewTitle" : "Hanging within 6 months",
+		            "reviewDescription" : "I bought through Flipkart and it's hanging within 6 months. I really wondered whether the seller is selling defected product or there is actual problem in 6s.",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Must buy!",
+		            "reviewDescription" : "Experience with flipkart is better than others",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Iphone fan",
+		            "reviewDescription" : "Best phone ever...",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Worst experience ever!",
+		            "reviewDescription" : "Not a good phone, very expensive as per the experience. And battery performance is very bad in it.",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "You get everything in android",
+		            "reviewDescription" : "You get everything in android in fraction of price",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "3",
+		            "reviewTitle" : "Best deal at Flipkart",
+		            "reviewDescription" : "Nice phone .got exchange on dewali offer. ......supercomnet is also trustworthy like ws retail. Sealed and 100percent genuine packing. Though shipment was delayed, happy with the product",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Perfect product!",
+		            "reviewDescription" : "Awsm product from flipkart",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Just wow!",
+		            "reviewDescription" : "Fabulous!.",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Highly recommended",
+		            "reviewDescription" : "Awesome product. Delivery on time",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "5",
+		            "reviewTitle" : "Good product",
+		            "reviewDescription" : "Awesome product i bought it and received before expecting day and its genune apple product with apple india warrenty m happy with ma new phone thanks flipkart",
+		            "reviewBy" : "Prabhath MP 4 Apr, 2015"
+		     },
+		      {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Iphone fan",
+		            "reviewDescription" : "Best phone ever...",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "Worst experience ever!",
+		            "reviewDescription" : "Not a good phone, very expensive as per the experience. And battery performance is very bad in it.",
+		            "reviewBy" : "Nitish kumar 17 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "1",
+		            "reviewTitle" : "You get everything in android",
+		            "reviewDescription" : "You get everything in android in fraction of price",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "3",
+		            "reviewTitle" : "Best deal at Flipkart",
+		            "reviewDescription" : "Nice phone .got exchange on dewali offer. ......supercomnet is also trustworthy like ws retail. Sealed and 100percent genuine packing. Though shipment was delayed, happy with the product",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     },
+		     {
+		 
+		            "starRating" : "4",
+		            "reviewTitle" : "Perfect product!",
+		            "reviewDescription" : "Awsm product from flipkart",
+		            "reviewBy" : "Nitish kumar 12 Oct, 2015"
+		     }
+		     
 		 
 		 ]
 	}
