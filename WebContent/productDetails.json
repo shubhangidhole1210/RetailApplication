@@ -34,104 +34,104 @@
 			"emiOffers": [
 				{
 					"emiOffer": {
-						"bankName": "",
+						"bankName": "Axis Bank"	,
 						"emiPlans": [
 							{
 								"emiPlan": {
-									"emiHeader": "",
-									"emi": "",
-									"price": "",
-									"interest": "",
-									"totalAmountPayable": ""
+									"emiHeader": "3 EMIs @ 12% pa",
+									"emi": "₹11,558/month",
+									"price": "33,000",
+									"interest": "682",
+									"totalAmountPayable": "33,682"
 								}
 							},
 							{
 								"emiPlan": {
-									"emiHeader": "",
-									"emi": "",
-									"price": "",
-									"interest": "",
-									"totalAmountPayable": ""
+									"emiHeader": "3 EMIs @ 12% pa",
+									"emi": "₹11,558/month",
+									"price": "33,000",
+									"interest": "682",
+									"totalAmountPayable": "33,682"
 								}
 							},
 							{
 								"emiPlan": {
-									"emiHeader": "",
-									"emi": "",
-									"price": "",
-									"interest": "",
-									"totalAmountPayable": ""
-								}
+									"emiHeader": "3 EMIs @ 12% pa",
+									"emi": "₹11,558/month",
+									"price": "33,000",
+									"interest": "682",
+									"totalAmountPayable": "33,682"
 							}
+						}
 						],
 						"description": ""
 					}
 				},
 				{
 					"emiOffer": {
-						"bankName": "",
+						"bankName": "Citibank",
 						"emiPlans": [
 							{
 								"emiPlan": {
-									"emiHeader": "",
-									"emi": "",
-									"price": "",
-									"interest": "",
-									"totalAmountPayable": ""
-								}
-							},
-							{
-								"emiPlan": {
-									"emiHeader": "",
-									"emi": "",
-									"price": "",
-									"interest": "",
-									"totalAmountPayable": ""
-								}
-							},
-							{
-								"emiPlan": {
-									"emiHeader": "",
-									"emi": "",
-									"price": "",
-									"interest": "",
-									"totalAmountPayable": ""
-								}
+									"emiHeader": "3 EMIs @ 12% pa",
+									"emi": "₹11,558/month",
+									"price": "33,000",
+									"interest": "682",
+									"totalAmountPayable": "33,682"
 							}
+							},
+							{
+							"emiPlan": {
+									"emiHeader": "3 EMIs @ 12% pa",
+									"emi": "₹11,558/month",
+									"price": "33,000",
+									"interest": "682",
+									"totalAmountPayable": "33,682"
+							}
+							},
+							{
+							"emiPlan": {
+									"emiHeader": "3 EMIs @ 12% pa",
+									"emi": "₹11,558/month",
+									"price": "33,000",
+									"interest": "682",
+									"totalAmountPayable": "33,682"
+							}
+						}
 						],
 						"description": ""
 					}
 				},
 				{
 					"emiOffer": {
-						"bankName": "",
+						"bankName": "HDFC Bank",
 						"emiPlans": [
 							{
 								"emiPlan": {
-									"emiHeader": "",
-									"emi": "",
-									"price": "",
-									"interest": "",
-									"totalAmountPayable": ""
-								}
+									"emiHeader": "3 EMIs @ 12% pa",
+									"emi": "₹11,558/month",
+									"price": "33,000",
+									"interest": "682",
+									"totalAmountPayable": "33,682"
+							}
+						},
+							{
+								"emiPlan": {
+									"emiHeader": "3 EMIs @ 12% pa",
+									"emi": "₹11,558/month",
+									"price": "33,000",
+									"interest": "682",
+									"totalAmountPayable": "33,682"
+							}
 							},
 							{
 								"emiPlan": {
-									"emiHeader": "",
-									"emi": "",
-									"price": "",
-									"interest": "",
-									"totalAmountPayable": ""
-								}
-							},
-							{
-								"emiPlan": {
-									"emiHeader": "",
-									"emi": "",
-									"price": "",
-									"interest": "",
-									"totalAmountPayable": ""
-								}
+									"emiHeader": "3 EMIs @ 12% pa",
+									"emi": "₹11,558/month",
+									"price": "33,000",
+									"interest": "682",
+									"totalAmountPayable": "33,682"
+							}
 							}
 						],
 						"description": ""

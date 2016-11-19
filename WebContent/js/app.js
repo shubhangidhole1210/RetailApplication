@@ -437,8 +437,17 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 	
 	$scope.productDescription = response.productDetail.productDescription;
 	
+	$scope.EMIOptions = response.productDetail.EMIOptions;
+	
+	$scope.displayEmiPlan= function(index)
+	{
+		console.log("index : " + index);
+		
+		$scope.selecteEMIOffer = $scope.EMIOptions.emiOffers[index].emiOffer;
+	}
+	
 	});
-	  
+	$scope.selecteEMIOffer = {};
 	
 	
 	
@@ -464,18 +473,21 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 	  {
 		  $location.path('/allReviews')
 	  }
-	  /*$scope.cancelLogin = function(){
-			$rootScope.isLoginVisible = false;
+	 /* $scope.cancelLogin = function(){
+			$scope.isLoginVisible = false;
 		};*/
-		/*$scope.hideMe = function() {
-			$scope.show = true;
-		}*/
-		/*displayLoginService.setIsLoginVisible(false);
-		$rootScope.isLoginVisible = false;
-		$scope.isLoginVisible = function() {
-			displayLoginService.setIsLoginVisible(true);
-			$rootScope.isLoginVisible = true;
-		}*/
+	  $scope.isViewPlansVisible = false;
+	  
+		$scope.hideViewPlans = function() {
+			$scope.isViewPlansVisible = false;
+		
+		}
+		
+		$scope.displayViewPlans=function()
+		{
+			$scope.isViewPlansVisible = true;
+		}
+		
 });
 
 

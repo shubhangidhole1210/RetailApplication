@@ -1316,3 +1316,58 @@
     display: inline-block;
     height: 100%;
 }
+
+#pop-TermsCondition
+{
+	width: 100%;
+   height: 100%;
+   position: fixed;
+   z-index: 700;
+   bottom: 0;
+   padding: 10px;
+   background: rgba(16, 12, 12, 0.49);
+	
+}
+
+.TermCondition-container
+{
+	width: 100%;
+    height: 80%;
+    text-align: center;
+    max-height: 500px;
+}
+
+.viewplan-form
+{
+	background: white;
+    width: 800px;
+    margin: 0 auto;
+    padding: 50px 50px;
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+   
+}
+
+.bank-list
+{
+	padding: 16px 0 16px 30px;
+	overflow-y: scroll;
+    width: 250px;
+    height: 80%;
+ 
+   	
+}
+
+.india-bank
+{
+	padding-top: 40px;
+}
+
+/* .bank-name-list
+{
+	overflow-y: scroll;
+    width: 250px;
+    height: 80%;
+} */
+
