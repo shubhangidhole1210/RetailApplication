@@ -87,6 +87,8 @@
 					</div>
 					<div class="details-cut-price">&#8377; 499</div>
 					<div class="details-offer-price">41% off</div>
+					<img alt="" src="image/assured_img.png" width="80px" style="margin-left: 2%">
+					<img alt="" src="image/ic_launcher_question_mark.png" width="20px" height="20px" ng-click="displayAssured()">
 				</div>
 
 
@@ -111,7 +113,7 @@
 									style="font-weight: bold; color: black;">20.000</span> <span>off
 									on exchange</span>
 							</div>
-							<a href="" class="views-plans">Buy witch Exchange </a>
+							<a href="" class="views-plans"onclick="displayPin()">Buy witch Exchange </a>
 						</div>
 					</div>
 					<div class="special-price">
@@ -122,7 +124,7 @@
 								<span style="font-weight: bold; color: black;">Special
 									Price </span> <span>Flat Rs.7,000 Off on Apple iPhone 6</span>
 							</div>
-							<a href="" class="views-plans"> T&C </a>
+							<a href="" class="views-plans" ng-click="displayTermsAndCondition()"> T&C </a>
 						</div>
 					</div>
 
@@ -134,7 +136,7 @@
 								<span style="font-weight: bold; color: black;">Bank Offer</span>
 								Extra 15% Cashback* with Citi Credit and Debit Cards
 							</div>
-							<a href="" class="views-plans"> T&C </a>
+							<a href="" class="views-plans" ng-click="displayTerms()"> T&C </a>
 						</div>
 					</div>
 				</div>
@@ -145,7 +147,7 @@
 						<form action="">
 							<input type="text" placeholder="Enter Delivery Pincode"
 								class="deliveryText" style="border: none;"> <span
-								class="check">check</span>
+								class="check" id="pinode">check</span>
 
 						</form>
 
@@ -356,7 +358,7 @@
 					</div>
 				</div>
 				<div align="left">
-					<button type="button" class="review-button">
+					<button type="button" class="review-button" ng-click="dsiplaySignup()">
 						Rate and Review product</button>
 				</div>
 
@@ -373,9 +375,9 @@
 				<div class="review-by">{{review.reviewBy}}</div>
 				<div class="like-unlike" style="margin-left: 80%">
 					<img alt="" src="image/ic_launcher_like.png" height="20px"
-						width="20px" class="like"> <img alt=""
+						width="20px" class="like" ng-click="dsiplaySignup()"> <img alt=""
 						src="image/ic_launcher_unlike.png" height="20px" width="20px"
-						class="unlike">
+						class="unlike" ng-click="dsiplaySignup()" >
 				</div>
 			</div>
 
@@ -412,7 +414,7 @@
 <div class="viewplan" >
   <div class="emi-plan-row" style="display: flex;border-bottom:1px solid rgba(153, 153, 153, 0.19)">
 			    <span style="font-size: 20px;color: #212121;">EMIs (Pay in Easy Monthly Installments)</span>
-			    <span style="font-size: 14px;cursor: pointer;margin-left: 90px;color: #2874f0;">EMI With Interest T&Cs</span>
+			    <span style="font-size: 14px;cursor: pointer;margin-left: 90px;color: #2874f0;" ng-click="displayEMICondition()">EMI With Interest T&Cs</span>
 			 </div>	
 			 <div class="display-all-bank-details" style="display: flex">
 			 <div align="left">
@@ -424,8 +426,8 @@
 			     </div>
 			 </div>
 			 </div>
-			 
-			<!--  <div class="bank-emi-plans">
+			 <div ng-show="emiPlans">
+			 <div class="bank-emi-plans">
 			    <div style="font-size: 14px;color: #212121;font-weight: 500;padding-left: 20px;padding-top: 10px">{{selecteEMIOffer.bankName}} EMI PLANS</div>
 			    <div class="all-records" ng-repeat="emiPlan in selecteEMIOffer.emiPlans ">
 			    <div class="EMI-bank-cost" style="display: -webkit-box;">
@@ -449,26 +451,22 @@
 			         
 			    </div>
 			    </div>
-			    
-			    
-			    
-			 </div> -->
+			 </div>
+			 </div>
 			 
-			 
+			 <div ng-show="termsCondition">
 			 <div class="EMi-terms-condition">
-			    <div style="font-size: 14px;color: #212121;font-weight:bold;">EMI Details</div>
-			    <div class="all-records">
+			    <div style="font-size: 14px;color: #212121;font-weight:bold;text-align: left;" >EMI Details</div>
+			    <div class="all-records" ng-repeat="termsCondition in EMITermsCondition">
 			         <div class="display-terms-condition">
-			              <div class="terms-and-condition">Select your preferred EMI option at the time of payment.</div>
-			              <div class="terms-and-condition">Final EMI is calculated on the total value of your order at the time of payment.</div>
-			              <div class="terms-and-condition">The Bank charges annual interest rates according to the reducing monthly balance. In the monthly reducing cycle, the principal is reduced with every EMI and the interest is calculated on the outstanding balance.</div>
+			              <div class="terms-and-condition">{{termsCondition.TermsCondition}}</div>
 			         </div>
 			   
 			    </div>
 			    
 			 </div>
 			 
-			 
+			 </div>
 			 </div>
 			 
 
@@ -480,34 +478,100 @@
 <button class="cancel" ng-click="hideViewPlans()">&#10006;</button>
 </div>
 </div>
-<div id="pop-TermsCondition" ng-show="isLoginVisible">
 
-<div class="TermCondition-container" >
+<div id="popTermsCondition" style="padding-top: 375px;padding-left: 260px" ng-show="isTermsAndConditionVisible" >
 
- <form class="login-form" name="myForm"  novalidate>
+<div class="TermsAndCondition-container">
+
+ <form class="TermsAndCondition-form" name="myForm"  novalidate>
 <fieldset>
-<div align="center">
-<div class="loginForm">
-   <div class="terms-condition">
-     <div class="offer-details">
-        <div style="font-weight: bold;color: black;margin-right: 210px;font-size: 13px">Offer Details:</div>
-        <div class="offer-details-list" style="color: black;margin-right: 20px">
-           <div style="text-align: justify;font-size: 11px;padding-top: 10px">Under this Offer, Axis Bank Buzz Credit Cardholders will get 5% instant discount on all products sold on Flipkart.com, m.flipkart.com & mAPP (Offer). Offer is also applicable on payments made through EMI on Axis Bank Buzz Credit Cards</div>
-            <div style="text-align: justify;font-size: 11px;padding-top: 20px">There is no minimum cart amount to avail this Offer. The maximum discount that can be availed per card is Rs.200 per month</div>
-            <div style="text-align: justify;font-size: 11px;padding-top: 20px" >The Offer is valid from 3rd November 2016  (00:00 HRS) to 30th November 2016 (23:59 HRS) (Offer Period), unless extended by Axis Bank and Flipkart Internet Private Limited (Flipkart) by mutual consent in writing      </div>
-        </div>
-     </div>
-   </div>
+<div>
+<div class="terms" ng-repeat="terms in TermsAndCondition" >
+    <div class="condition">{{terms.condition}}</div>
+    
+</div>
+</div>
 
+</fieldset>
+</form>
+<button class="cancel" ng-click="hideTermsAnsCondition()">&#10006;</button>
+</div>
+</div>
+
+
+<div id="popUpTermsCondition" style="padding-top: 420px;padding-left: 280px" ng-show="isTermsVisible">
+
+<div class="terms-container">
+
+ <form class="Terms-form" name="myForm"  novalidate>
+<fieldset>
+<div>
+<div class="terms-cond-scroll" style="padding-bottom: 15px" >
+<div class="offer-details">
+   <div align="left" style="font-weight: bold;">Offer Details:- </div>
+   <div class="Offers-product">Under this Offer, Axis Bank Buzz Credit Cardholders will get 5% instant discount on all products sold on Flipkart.com, m.flipkart.com & mAPP (Offer). Offer is also applicable on payments made through EMI on Axis Bank Buzz Credit Cards    </div>
+   <div class="Offers-product">There is no minimum cart amount to avail this Offer. The maximum discount that can be availed per card is Rs.200 per month</div>
+   <div class="Offers-product">The Offer is valid from 3rd November 2016  (00:00 HRS) to 30th November 2016 (23:59 HRS) (Offer Period), unless extended by Axis Bank and Flipkart Internet Private Limited (Flipkart) by mutual consent in writing </div>
+   <div class="Offers-product">The Offer is NOT applicable on the purchase of Gold Coins.</div>
+</div>
+<div class="">
+<div align="left" style="font-weight: bold; padding-top: 20px">Terms and Conditions:  </div>
+  <div class="Offers-product">The Offer is applicable on orders placed through Flipkart.com, m.flipkart.com & Flipkarts Mobile Application </div>
+  <div class="Offers-product">The Offer is not applicable in the event of partial payments made through gift vouchers or Flipkart Wallet </div>
+  <div class="Offers-product">14% rate of interest will be applicable on monthly reducing balance for EMI transactions on Axis Bank Buzz Credit Card</div>
+</div>
+  <div class="">
+  <div align="left" style="font-weight: bold; padding-top: 20px">Detailed Terms & Conditions:-</div>
+  <div class="Offers-product">The Offer will be calculated on the final cart amount</div>
+  <div class="Offers-product">The Offer is not applicable for cash on delivery transaction and card on delivery transaction</div>
+  <div class="Offers-product">The Offer will not be applicable on gift wrap or premium delivery charges</div>
+  <div class="Offers-product">Axis Bank Buzz credit cardholder (Cardholder) will have to make the payment of the entire cart value with their Axis Bank Buzz credit Cards only to avail this Offer   </div>
+  <div class="Offers-product">In case if there is an existing discount available on the purchased product on flipkart.com, Cardholder will be eligible for an additional 5% discount over and above the existing offer on flipkart.com, subject to all the other conditions being fulfilled</div>
+  <div class="Offers-product">The participation is voluntary and any purchase on Flipkarts platform using Axis Bank Buzz Credit Card shall be deemed as acceptance of the terms and conditions mentioned herein        </div>
+  </div>
 
 </div>
 </div>
 
 </fieldset>
 </form>
-<button class="cancel" ng-click="cancelLogin();resetLoginData()">&#10006;</button>
+<button class="cancel" ng-click="hideTerms()">&#10006;</button>
 </div>
 </div>
+
+
+<div id="popAssured" style="padding-top: 300px;padding-left: 320px" ng-show="isAssuredVisible" >
+
+<div class="popAssured-container">
+
+ <form class="assured-form" name="myForm"  novalidate>
+<fieldset>
+<div style="background: linear-gradient(90deg,#0c54b8 0,#2874f0 55%,#1ca7f1);">
+  <img alt="" src="image/assured_img.png"  class="assured-img">
+</div>
+   <div align="center" class="quality-speed">Seal of Quality & Speed</div>
+   <div class="quality-checks" style="display: flex;padding-top: 20px">
+      <img alt="" src="image/fa-callout-shield_f2ee9a.png" width="50px" height="50px" style="margin-left: 15px">
+       <div class="6-quality-checks" style="margin-left: 8%">
+          <div align="left" style="font-weight: bold;">6 Quality Checks</div>
+          <div align="left" >You get exactly what you ordered</div>
+       </div>
+   </div>
+   
+    <div class="quality-checks" style="display: flex;padding-top: 20px">
+      <img alt="" src="image/fa-callout-rocket.png" width="50px" height="50px" style="margin-left: 15px">
+       <div class="6-quality-checks" style="margin-left: 8%">
+          <div align="left" style="font-weight: bold;">Fast & Free Shipping</div>
+          <div align="left" >Lakhs of products delivered within 2-4 days & Free Delivery*</div>
+       </div>
+   </div>
+   
+</fieldset>
+</form>
+<button class="cancel" ng-click="hideAssured()">&#10006;</button>
+</div>
+</div>
+
 
 
 	</div>

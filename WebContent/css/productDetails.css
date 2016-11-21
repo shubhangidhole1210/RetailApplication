@@ -1371,3 +1371,148 @@
     height: 80%;
 } */
 
+.terms-and-condition
+{
+	text-align: justify;
+	padding-top: 20px;
+	font-size: 13px;
+}
+.display-terms-condition
+{
+	margin-left: 4%;
+}
+
+#popTermsCondition
+{
+	width: 100%;
+   height: 100%;
+   position: fixed;
+   z-index: 700;
+   bottom: 0;
+   padding: 10px;
+   background: rgba(16, 12, 12, 0.49);
+}
+
+.TermsAndCondition-container
+{
+	width: 100%;
+    height: 80%;
+    text-align: center;
+    max-height: 500px;
+}
+
+.TermsAndCondition-form
+{
+	background: white;
+    width: 500px;
+    margin: 0 auto;
+    padding-top:10px;
+    padding-left:15px;
+    overflow: hidden;
+    display: inline-block;
+    height: 29%;
+}
+
+.condition
+{
+	text-align: justify;
+	font-size: 13px;
+	padding-top: 15px;
+}
+
+
+#popUpTermsCondition
+{
+	width: 100%;
+   height: 100%;
+   position: fixed;
+   z-index: 700;
+   bottom: 0;
+   padding: 10px;
+   background: rgba(16, 12, 12, 0.49)
+}
+
+.terms-container
+{
+		width: 100%;
+    height: 80%;
+    text-align: center;
+    max-height: 500px;
+}
+
+.Terms-form
+{
+	background: white;
+    width: 650px;
+    margin: 0 auto;
+   padding-top:10px;
+    padding-left:15px;
+    padding-right:10px;
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+}
+
+.offer-details
+{
+	
+}
+.Offers-product
+{
+	text-align: justify;
+	font-size: 13px;
+	padding-top: 12px;
+	
+}
+.terms-cond-scroll
+{
+	overflow-y: scroll;
+	height: 100%;
+}
+
+#popAssured
+{
+	width: 100%;
+   height: 100%;
+   position: fixed;
+   z-index: 700;
+   bottom: 0;
+   padding: 10px;
+   background: rgba(16, 12, 12, 0.49)
+}
+.popAssured-container
+{
+		width: 100%;
+    height: 60%;
+    text-align: center;
+    max-height: 500px;
+}
+
+.assured-form
+{
+	background: #ffffff;
+    width: 270px;
+    margin: 0 auto;
+     padding:5px;
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+}
+
+.assured-img
+{
+	width: 170px;
+	height: 80px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.quality-speed
+{
+	font-size: 18px;
+	padding-top: 10px;
+}
+
+.6-quality-checks
+{
+	
+}

@@ -1040,6 +1040,71 @@
 		     }
 		     
 		 
+		 ],
+		 
+		 
+		 "EMITermsCondition" :[
+		 
+		        {
+		 
+		            "id" : 1,
+		            "TermsCondition" : "Select your preferred EMI option at the time of payment."
+		     },
+		      
+		       {
+		 
+		              "id" : 2,
+		            "TermsCondition" : "Final EMI is calculated on the total value of your order at the time of payment."
+
+		     },
+		      
+		     {
+		 
+		              "id" : 3,
+		            "TermsCondition" : "The Bank charges annual interest rates according to the reducing monthly balance. In the monthly reducing cycle, the principal is reduced with every EMI and the interest is calculated on the outstanding balance.."
+
+		     },
+		     {
+		 
+		              "id" : 4,
+		            "TermsCondition" : "The minimum order value to avail the EMI payment option is Rs 4,000.."
+
+		     },
+		    
+		     {
+		 
+		             "id" : 5,
+		            "TermsCondition" : "This option is available only when the cart contains items from a single seller."
+
+		     },
+		     {
+		 
+		            "id" : 6,
+		            "TermsCondition" : "In case of any kind of refund in an EMI transaction, interest already billed in a particular transaction will not be refundable under any circumstances.."
+
+		     }
+		     
+		    
+		 ],
+		 
+		 "TermsAndCondition" :
+		 [
+		    {
+		       "condition" : "This offer is valid until stocks last or till the offer ends."
+		    },
+		    
+		    {
+		       "condition" : "Final Price is inclusive of the offer."
+		    },
+		    
+		    {
+		         "condition" : "Offer is applicable on select products and brands."
+		    }
+		     
+		 
 		 ]
+		 
+		 
+		 
 	}
 }
