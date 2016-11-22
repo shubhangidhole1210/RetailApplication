@@ -547,6 +547,24 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 			$scope.isAssuredVisible=true;
 		}
 		
+		$scope.isShareVisible=false;
+		$scope.hideShare = function()
+		{
+			$scope.isShareVisible=false;
+		}
+		
+		$scope.displayShare= function()
+		{
+			$scope.isShareVisible=true;
+		}
+		
+		$scope.isEmiDetailsVisible= false;
+		
+		$scope.displayEmiDetails = function()
+		{
+			$scope.isEmiDetailsVisible= true;
+		}
+		
 });
 
 
@@ -611,7 +629,8 @@ retailApp.controller('cartDetailsCtrl',function($scope,$http)
 	
 });
 
-retailApp.controller('sellerCtrl',function($scope,$http,$location)
+retailApp.controller('sellerCtrl',function($scope,$http,$location,$timeout,
+		displayLoginService,$rootScope)
 {
 	       $http.get('sellerDetails.json').success(function(response) {
 		      $scope.sellerDetails = response.sellerDetails
@@ -636,6 +655,49 @@ retailApp.filter('startFrom', function() {
         return input.slice(start);
         console.log("in filtter function")
     }
+    
+    $http.get('productDetails.json').success(function(response) {
+		console.log("inside product details sucess");
+		$scope.productRating = response.productDetail.productRating;
+		
+		console.log("product rating values for five star count in sucess ::"+$scope.productRating.fiveStarCount);
+		console.log("after product details ajax call");
+		$scope.fiveStarCount =$scope.productRating.fiveStarCount ;
+		$scope.fourStarCount= $scope.productRating.fourStarCount
+		$scope.threeStarCount=$scope.productRating.threeStarCount;
+		$scope.twoStarCount=$scope.productRating.twoStarCount;
+		$scope.oneStarCount=$scope.productRating.oneStarCount;
+		console.log("product rating values for five star count"+$scope.productRating.fiveStarCount)
+var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,$scope.twoStarCount,$scope.oneStarCount];
+	
+		
+	 	function calculateMaximumRating(ratingArr)
+	 {
+		var i;
+			var max;
+			 
+			 max=ratingArr[0];
+			 for(i=1;i<5;i++)
+				 {
+				      if(ratingArr[i] > max)
+				    	  {
+				    	     max = ratingArr[i];
+				    	  }
+				 
+				 }
+			 return max;
+	 };
+	 $scope.maximumCount=calculateMaximumRating(ratingArr);
+	
+	$scope.fiveStar = $scope.fiveStarCount/$scope.maximumCount * 100;
+	$scope.fourStar = $scope.fourStarCount/$scope.maximumCount * 100;
+	$scope.threeStar =$scope.threeStarCount/$scope.maximumCount * 100;  
+	$scope.twoStar = $scope.twoStarCount/$scope.maximumCount * 100;
+	$scope.oneStar = $scope.oneStarCount/$scope.maximumCount * 100;
+    
+    });
+    
+    
    
 });
 console.log("after filter function");

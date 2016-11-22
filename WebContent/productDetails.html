@@ -73,11 +73,31 @@
 					<div class="compare-share">
 						<div class="compare" style="display: inline-block;">Compare</div>
 						<div class="share"
-							style="display: inline-block; margin-left: 15px">
+							style="display: inline-block; margin-left: 15px" ng-click="displayShare()">
 							<img alt="" src="image/ic_launcher_arrow.png" width="20px"
 								height="20px"> Share
 						</div>
 					</div>
+<div id="popShare" style="padding-top: 45px;padding-left: 10%" ng-show="isShareVisible" ng-click="hideShare()">
+
+<div class="share-container">
+
+ <form class="share-form" name="myForm"  novalidate>
+<fieldset>
+<div class="social-media-images-share" style="padding-top: 20px">
+ 
+<span>
+ <a href="https://twitter.com/"> <img alt="" src="image/tweet-logo.jpg" width="70px" height="50px" ></a>
+ <a href="https://www.youtube.com/"><img alt="" src="image/youtube_online_social_media-128.png" width="70px" height="50px"></a>
+ <a href="https://www.facebook.com/"> <img alt="" src="image/facebook-icon-preview-1.png" width="150px" height="100px" style="padding-top: 40px"></a>
+</span>
+</div>
+
+</fieldset>
+</form>
+<!-- <button class="cancel" ng-click="hideShare()">&#10006;</button> -->
+</div>
+</div>
 
 
 				</div>
@@ -127,6 +147,24 @@
 							<a href="" class="views-plans" ng-click="displayTermsAndCondition()"> T&C </a>
 						</div>
 					</div>
+<div id="popTermsCondition" style="padding-top: 220px;padding-right: " ng-show="isTermsAndConditionVisible" ng-click="hideTermsAnsCondition()" >
+
+<div class="TermsAndCondition-container">
+
+ <form class="TermsAndCondition-form" name="myForm"  novalidate>
+<fieldset>
+<div>
+<div class="terms" ng-repeat="terms in TermsAndCondition" >
+    <div class="condition">{{terms.condition}}</div>
+    
+</div>
+</div>
+
+</fieldset>
+</form>
+<!-- <button class="cancel" ng-click="hideTermsAnsCondition()">&#10006;</button> -->
+</div>
+</div>
 
 					<div class="bank-offer">
 						<div class="emi-plans">
@@ -300,61 +338,58 @@
 						<div class="first-5star-rating" style="vertical-align: sub;">
 							<div class="5*">
 								5 <span class="unicode-star">&#9733;</span>
-							</div>
-							<div id="myProgress" style="display: inline-block;">
+								<div id="myProgress" style="display: inline-block;">
 								<div id="myBar" class="myBar" style="width: {{fiveStar}}"></div>
 							</div>
-							<!-- <div class="progress-rating-reviews" style="display: inline-block;">16000</div> -->
+							</div>
 						</div>
 
 					</div>
 					<div class="progress-rating">
-						<div class="first-5star-rating">
-							<span class="5*">4 <span class="unicode-star">&#9733;</span>
-							</span>
-							<!-- <span class="progress-bar-green-4"></span> -->
-							<div id="myProgress">
-								<div id="myBar1" class="myBar" style="width: {{fourStar}}"></div>
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								4 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{fourStar}}"></div>
 							</div>
-							<!-- <span class="progress-rating-reviews">12000</span> -->
+							</div>
 						</div>
+
 					</div>
 
 					<div class="progress-rating">
-						<div class="first-5star-rating">
-							<span class="5*">3 <span class="unicode-star">&#9733;</span>
-							</span>
-							<!-- <span class="progress-bar-green"></span> -->
-							<div id="myProgress">
-								<div id="myBar2" class="myBar" style="width: {{threeStar}}"></div>
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								3 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{threeStar}}"></div>
 							</div>
-							<!-- <span class="progress-rating-reviews">9234</span> -->
+							</div>
 						</div>
+
 					</div>
 
 					<div class="progress-rating">
-						<div class="first-5star-rating">
-							<span class="5*">2 <span class="unicode-star">&#9733;</span>
-							</span>
-							<!-- </span> <span class="progress-bar-green"></span> -->
-							<div id="myProgress">
-								<div id="myBar3" class="myBar"
-									style="background-color: #ff9f00; width: {{twoStar}}"></div>
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								2 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="background-color: #ff9f00;width: {{twoStar}}"></div>
 							</div>
-							<!-- <span class="progress-rating-reviews">7000</span> -->
+							</div>
 						</div>
+
 					</div>
 					<div class="progress-rating">
-						<div class="first-5star-rating">
-							<span class="5*">1 <span class="unicode-star">&#9733;</span>
-							</span>
-							<!-- <span class="progress-bar-green"></span> -->
-							<div id="myProgress">
-								<div id="myBar3" class="myBar"
-									style="background-color: #ff6161; width: {{oneStar}}"></div>
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								1 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="background-color: #ff6161;width: {{oneStar}}"></div>
 							</div>
-							<!-- <span class="progress-rating-reviews">4000</span> -->
+							</div>
 						</div>
+
 					</div>
 				</div>
 				<div align="left">
@@ -431,11 +466,11 @@
 			    <div style="font-size: 14px;color: #212121;font-weight: 500;padding-left: 20px;padding-top: 10px">{{selecteEMIOffer.bankName}} EMI PLANS</div>
 			    <div class="all-records" ng-repeat="emiPlan in selecteEMIOffer.emiPlans ">
 			    <div class="EMI-bank-cost" style="display: -webkit-box;">
-			       <div class="to-add-details"><img src="image/ic_plus_blue.png" height="12px" width="12px"></div>
+			       <div class="to-add-details"><img src="image/ic_plus_blue.png" height="12px" width="12px" ng-click="displayEmiDetails()"></div>
 			       <div class="emi-no-cost" style="margin-left: 1%">{{emiPlan.emiPlan.emiHeader}}</div>
 			       <div class="emi-month-cost" style="margin-left: 50%">{{emiPlan.emiPlan.emi}}</div>
 			    </div>
-			    <div class="emi-bank-details">
+			    <div class="emi-bank-details" ng-show="isEmiDetailsVisible">
 			         <div class="emi-price" style="display: flex;margin-left: 18%">
 			           <div >Price Rs.</div>
 			           <div align="right">{{emiPlan.emiPlan.price}}</div>
@@ -475,11 +510,11 @@
 
 </fieldset>
 </form>
-<button class="cancel" ng-click="hideViewPlans()">&#10006;</button>
+<button class="cancel" ng-click="hideViewPlans()" style="color: black;">&#10006;</button>
 </div>
 </div>
 
-<div id="popTermsCondition" style="padding-top: 375px;padding-left: 260px" ng-show="isTermsAndConditionVisible" >
+<!-- <div id="popTermsCondition" style="padding-left: 260px;padding-top: 400px" ng-show="isTermsAndConditionVisible" ng-click="hideTermsAnsCondition()" >
 
 <div class="TermsAndCondition-container">
 
@@ -496,10 +531,10 @@
 </form>
 <button class="cancel" ng-click="hideTermsAnsCondition()">&#10006;</button>
 </div>
-</div>
+</div> -->
 
 
-<div id="popUpTermsCondition" style="padding-top: 420px;padding-left: 280px" ng-show="isTermsVisible">
+<div id="popUpTermsCondition" style="padding-top: 250px;padding-left: 360px" ng-show="isTermsVisible" ng-click="hideTerms()">
 
 <div class="terms-container">
 
@@ -535,12 +570,12 @@
 
 </fieldset>
 </form>
-<button class="cancel" ng-click="hideTerms()">&#10006;</button>
+<!-- <button class="cancel" ng-click="hideTerms()">&#10006;</button> -->
 </div>
 </div>
 
 
-<div id="popAssured" style="padding-top: 300px;padding-left: 320px" ng-show="isAssuredVisible" >
+<div id="popAssured" style="padding-top: 130px;padding-left: 440px" ng-show="isAssuredVisible" ng-click="hideAssured()">
 
 <div class="popAssured-container">
 
@@ -568,9 +603,31 @@
    
 </fieldset>
 </form>
-<button class="cancel" ng-click="hideAssured()">&#10006;</button>
+<!-- <button class="cancel" ng-click="hideAssured()">&#10006;</button> -->
 </div>
 </div>
+
+
+<!-- <div id="popShare" style="padding-top: 220px;padding-left: 70%" ng-show="isShareVisible" ng-click="hideShare()">
+
+<div class="share-container">
+
+ <form class="share-form" name="myForm"  novalidate>
+<fieldset>
+<div class="social-media-images-share" style="padding-top: 20px">
+ 
+<span>
+ <a href="https://twitter.com/"> <img alt="" src="image/tweet-logo.jpg" width="70px" height="50px" ></a>
+ <a href="https://www.youtube.com/"><img alt="" src="image/youtube_online_social_media-128.png" width="70px" height="50px"></a>
+ <a href="https://www.facebook.com/"> <img alt="" src="image/facebook-icon-preview-1.png" width="150px" height="100px" style="padding-top: 40px"></a>
+</span>
+</div>
+
+</fieldset>
+</form>
+<button class="cancel" ng-click="hideShare()">&#10006;</button>
+</div>
+</div> -->
 
 
 

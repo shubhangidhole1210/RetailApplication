@@ -593,8 +593,10 @@
 {
 	display: inline-block;
 	margin-left: 5px;
+	cursor: pointer;
+	font-weight: bold;
 }
-.views-plans a
+.views-plans a:HOVER
 {
 	text-decoration: none;
 }
@@ -1081,7 +1083,7 @@
   /* width: 100%; */
   height: 6px;
   /* background-color: #ddd; */
-   margin-left: 100%;
+/*    margin-left: 100%; */
  
 }
 
@@ -1295,7 +1297,6 @@
    z-index: 700;
    bottom: 0;
    padding: 10px;
-   background: rgba(16, 12, 12, 0.49);
    
 }
 
@@ -1315,6 +1316,7 @@
     overflow: hidden;
     display: inline-block;
     height: 100%;
+      box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
 }
 
 #pop-TermsCondition
@@ -1325,7 +1327,7 @@
    z-index: 700;
    bottom: 0;
    padding: 10px;
-   background: rgba(16, 12, 12, 0.49);
+   /* background: rgba(16, 12, 12, 0.49); */
 	
 }
 
@@ -1346,6 +1348,7 @@
     overflow: hidden;
     display: inline-block;
     height: 100%;
+      box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
    
 }
 
@@ -1386,11 +1389,11 @@
 {
 	width: 100%;
    height: 100%;
-   position: fixed;
-   z-index: 700;
+   position: absolute;
+  /*  z-index: 700; */
    bottom: 0;
    padding: 10px;
-   background: rgba(16, 12, 12, 0.49);
+   /* background: rgba(16, 12, 12, 0.49); */
 }
 
 .TermsAndCondition-container
@@ -1404,13 +1407,15 @@
 .TermsAndCondition-form
 {
 	background: white;
-    width: 500px;
+    width: 400px;
     margin: 0 auto;
     padding-top:10px;
     padding-left:15px;
     overflow: hidden;
     display: inline-block;
     height: 29%;
+   
+      box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
 }
 
 .condition
@@ -1425,11 +1430,10 @@
 {
 	width: 100%;
    height: 100%;
-   position: fixed;
-   z-index: 700;
+   position: absolute;
    bottom: 0;
    padding: 10px;
-   background: rgba(16, 12, 12, 0.49)
+   /* background: rgba(16, 12, 12, 0.49) */
 }
 
 .terms-container
@@ -1451,12 +1455,10 @@
     overflow: hidden;
     display: inline-block;
     height: 100%;
+     box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
 }
 
-.offer-details
-{
-	
-}
+
 .Offers-product
 {
 	text-align: justify;
@@ -1474,16 +1476,15 @@
 {
 	width: 100%;
    height: 100%;
-   position: fixed;
-   z-index: 700;
+   position: absolute;
    bottom: 0;
    padding: 10px;
-   background: rgba(16, 12, 12, 0.49)
+  /*  background: rgba(16, 12, 12, 0.49) */
 }
 .popAssured-container
 {
 		width: 100%;
-    height: 60%;
+    height: 40%;
     text-align: center;
     max-height: 500px;
 }
@@ -1496,7 +1497,8 @@
      padding:5px;
     overflow: hidden;
     display: inline-block;
-    height: 100%;
+  /*   height: 100%; */
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
 }
 
 .assured-img
@@ -1512,7 +1514,42 @@
 	padding-top: 10px;
 }
 
-.6-quality-checks
+#popShare
+{
+	width: 100%;
+   height: 100%;
+   position:absolute;
+   /* background: rgba(16, 12, 12, 0.49); */
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
+   
+}
+
+.share-container
+{
+	width: 100%;
+    height: 15%;
+    text-align: center;
+    max-height: 500px;
+   top: 500px;
+      
+     
+}
+
+.share-form
 {
 	
+	background: white;
+    width: 250px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: inline-block;
+    height: 20%;
+     box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
+ 
+}
+
+.social-media-images-share
+{
+	overflow-y: scroll;
+	height: 100%;
 }
