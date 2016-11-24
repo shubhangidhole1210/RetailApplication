@@ -46,7 +46,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
 
-
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
 
 </head>
 <body ng-app="retailApp" >
@@ -70,7 +70,7 @@
 		<div class="app-header">
 			<div class="app-icon"></div>
 			<h1>Retailer</h1>
-			<input type="text" ng-model="searchBox" placeholder="Search for Products,Brands and More" class="textBox">
+			<div></div><input type="text" ng-model="searchString" placeholder="Search for Products,Brands and More" class="textBox" ng-click="displaySearch()">
 			<button class="searchBox-button" type="submit"><i class="glyphicon glyphicon-search"></i></button>
 			<button ng-click="cartDetails()">
 
@@ -78,6 +78,18 @@
 			CART
 			<span class="cart-show-icon">0</span>
 			</button>
+		</div>
+		
+		<div>
+		<ul >
+			
+			
+			<li ng-repeat="i in items | searchFor:searchString" ng-hide="isSearch" ">
+				
+				<p ng-click="displaySearchProducts()">{{i.title}}</p>
+				
+			</li>
+		</ul>
 		</div>
     </div>
 </div>

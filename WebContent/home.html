@@ -75,7 +75,7 @@
 
 
 
-	<div class="product-container-main">
+	<div class="product-container-main" >
 		<div class="product-header">
 			<h3>Fashion & Lifestyle</h3>
 		</div>
@@ -87,10 +87,10 @@
 		<div class="display-scroll" id="MyDiv">
 			<ul class="display-information">
 
-				<li ng-repeat="product in products" class="product-item">
+				<li ng-repeat="product in products" class="product-item" ng-click="productDetails()">
 					<div class="display-product-info">
 						<img class="img-box" alt="{{product.title}}"
-							ng-src="{{product.image}}" ng-click="productDetails()">
+							ng-src="{{product.image}}" >
 						<!-- <figcaption> -->
 						<h4 class="product-title" style="font-weight: bold;">{{product.title}}</h4>
 						<h4 class="offer-price medium">Offer:{{product.offer}} % Off</h4>
@@ -122,7 +122,7 @@
 		<div class="display-scroll" id="MyDivBestProduct">
 			<ul class="display-information">
 
-				<li ng-repeat="product in sellingProducts" class="product-item">
+				<li ng-repeat="product in sellingProducts" class="product-item" ng-click="displaySearchProducts()">
 					<div class="display-product-info">
 						<img class="img-box" alt="{{product.title}}"
 							ng-src="{{product.image}}">

@@ -29,11 +29,8 @@ retailApp.config(function($routeProvider) {
 	}).when('/allReviews', {
 		templateUrl : "allReviews.html"
 
-	}).when('/positiveReview', {
-		templateUrl : "positiveReview.html"
-
-	}).when('/negativeReview', {
-		templateUrl : "negativeReview.html"
+	}).when('/searchProduct', {
+		templateUrl : "searchProduct.html"
 
 	}).otherwise({
 		redirectTo : '/'
@@ -241,9 +238,9 @@ retailApp.controller('homeCtrl', function($scope, $http,$location) {
 		$location.path('/productDetails')
 	}
 	
-	$scope.displayAllReview = function()
+	$scope.displaySearchProducts=function()
 	{
-		$location.path('/productDetails')
+		$location.path('/searchProduct');
 	}
 	
 });
@@ -315,6 +312,7 @@ retailApp.controller('CheckoutCtrl', function($scope, $totalAmount) {
 		$scope.stripeError = null;
 		$scope.stripeToken = null;
 	};
+	
 
 });
 
@@ -453,6 +451,11 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 		
 	}
 	
+	$scope.orig = angular.copy($scope.EMIOptions);
+	 $scope.resetData = function() {
+	     $scope.EMIOptions = angular.copy($scope.orig);
+	  };
+	
 	});
 	$scope.selecteEMIOffer = {};
 	
@@ -565,6 +568,25 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 			$scope.isEmiDetailsVisible= true;
 		}
 		
+		$scope.hideEmiDetails = function()
+		{
+			$scope.isEmiDetailsVisible= false;
+		}
+		
+		
+		$scope.scrollBar = function(id) {
+		    $location.hash(id);
+		    console.log($location.hash());
+		    $anchorScroll();
+		  };
+		  
+		  $scope.emiDetails= true;
+		  $scope.toggleCustom = function() {
+	            $scope.emiDetails = $scope.emiDetails === false ? true: false;
+		  };
+		  
+		  
+		
 });
 
 
@@ -613,16 +635,95 @@ function scrollSimilarProduct(divId, depl)
 	  timer1 = setTimeout('scrollDiv("'+divId+'", '+depl+')', 4);
 }
 
+retailApp.filter('searchFor', function(){
+
+	// All filters must return a function. The first parameter
+	// is the data that is to be filtered, and the second is an
+	// argument that may be passed with a colon (searchFor:searchString)
+
+	return function(arr, searchString){
+
+		if(!searchString){
+			return arr;
+		}
+
+		var result = [];
+
+		searchString = searchString.toLowerCase();
+
+		// Using the forEach helper method to loop through the array
+		angular.forEach(arr, function(item){
+
+			if(item.title.toLowerCase().indexOf(searchString) !== -1){
+				result.push(item);
+			}
+
+		});
+
+		return result;
+	};
+
+});
+
+
+
 retailApp.controller('headerCtrl',function($scope,$location)
 {
 	$scope.cartDetails=function()
 	{
 		$location.path('/cartDetails')
 	}
+	
+	$scope.items = [
+	        		{
+	        			url: 'http://www.tutorialspoint.com/android/',
+	        			title: 'i-phone 7s',
+	        			image: 'http://www.tutorialspoint.com/android/images/android-mini-logo.jpg'
+	        		},
+	        		{
+	        			url: 'http://www.tutorialspoint.com/angularjs/',
+	        			title: 'iphone 7',
+	        			image: 'http://www.tutorialspoint.com/angularjs/images/angularjs-mini-logo.jpg'
+	        		},
+	        		{
+	        			url: 'http://www.tutorialspoint.com/html5/',
+	        			title: 'iPhone 6',
+	        			image: 'http://www.tutorialspoint.com/html5/images/html5-mini-logo.jpg'
+	        		},
+	        		{
+	        			url: 'http://www.tutorialspoint.com/css/',
+	        			title: 'moto',
+	        			image: 'http://www.tutorialspoint.com/css/images/css-mini-logo.jpg'
+	        		},
+	        		{
+	        			url: 'http://www.tutorialspoint.com/java/',
+	        			title: 'Nokia',
+	        			image: 'http://www.tutorialspoint.com/java/images/java-mini-logo.jpg'
+	        		},
+	        		{
+	        			url: 'http://www.tutorialspoint.com/joomla/',
+	        			title: 'Asus',
+	        			image: 'http://www.tutorialspoint.com/joomla/images/joomla-mini-logo.jpg'
+	        		},
+	        		{
+	        			url: 'http://www.tutorialspoint.com/html/',
+	        			title: 'sony ',
+	        			image: 'http://www.tutorialspoint.com/html/images/html-mini-logo.jpg'
+	        		}
+	        	];
+	
+	   $scope.isSearch=true;
+	   $scope.displaySearch= function()
+	   {
+		   $scope.isSearch = $scope.isSearch === false ? true: false;
+	   }
+	   
+	   /*$scope.displaySearchProducts=function()
+		{
+			$location.path('/searchProduct');
+		}*/
+	
 });
-
-
-
 
 retailApp.controller('cartDetailsCtrl',function($scope,$http)
 {
@@ -632,31 +733,16 @@ retailApp.controller('cartDetailsCtrl',function($scope,$http)
 retailApp.controller('sellerCtrl',function($scope,$http,$location,$timeout,
 		displayLoginService,$rootScope)
 {
-	       $http.get('sellerDetails.json').success(function(response) {
+	       /*$http.get('sellerDetails.json').success(function(response) {
 		      $scope.sellerDetails = response.sellerDetails
 		      $scope.currentPage = 0;
 		      $scope.pageSize = 5;
 		     
-	   }); 
-	       
-	       $scope.sellerDetailsFunc=function()
-	   	{
-	   		$location.path('/home')
-	   	};
-});
-console.log("Before filter function")
-retailApp.filter('startFrom', function() {
-    return function(input, start) {
-    	if (!input || !input.length)
-    		{
-    		  return;
-    		}
-        start = +start; //parse to int
-        return input.slice(start);
-        console.log("in filtter function")
-    }
-    
-    $http.get('productDetails.json').success(function(response) {
+	   }); */
+	
+	
+	
+	$http.get('productDetails.json').success(function(response) {
 		console.log("inside product details sucess");
 		$scope.productRating = response.productDetail.productRating;
 		
@@ -694,8 +780,32 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 	$scope.threeStar =$scope.threeStarCount/$scope.maximumCount * 100;  
 	$scope.twoStar = $scope.twoStarCount/$scope.maximumCount * 100;
 	$scope.oneStar = $scope.oneStarCount/$scope.maximumCount * 100;
+	
+	$scope.sellerDetails = response.productDetail.sellerDetails;
+       
+	 $scope.currentPage = 0;
+     $scope.pageSize = 5;
+	});
+	
+	
+	       
+	       $scope.sellerDetailsFunc=function()
+	   	{
+	   		$location.path('/home')
+	   	};
+});
+console.log("Before filter function")
+retailApp.filter('startFrom', function() {
+    return function(input, start) {
+    	if (!input || !input.length)
+    		{
+    		  return;
+    		}
+        start = +start; //parse to int
+        return input.slice(start);
+        console.log("in filtter function")
+    }
     
-    });
     
     
    
@@ -832,3 +942,38 @@ function displayPin()
 {
 	 document.getElementById("pinode").focus();
 	}
+
+
+/*$(document).ready(function() {
+	// Show or hide the sticky footer button
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 200) {
+			$('.go-top').fadeIn(200);
+		} else {
+			$('.go-top').fadeOut(200);
+		}
+	});
+	
+	// Animate the scroll to top
+	$('.go-top').click(function(event) {
+		event.preventDefault();
+		
+		$('ng-controller').animate({scrollTop: 0}, 300);
+	})
+});*/
+
+$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.goto').fadeIn();
+        } else {
+            $('.goto').fadeOut();
+        }
+    });
+
+});
+
+retailApp.controller('searchProductCtrl',function($scope)
+		{
+		
+		});

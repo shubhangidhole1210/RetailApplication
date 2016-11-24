@@ -1293,10 +1293,14 @@
 	
    width: 100%;
    height: 100%;
-   position: fixed;
-   z-index: 700;
+   position: absolute;
    bottom: 0;
    padding: 10px;
+   background: rgba(16, 12, 12, 0.49);
+    webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out;
    
 }
 
@@ -1306,6 +1310,10 @@
     height: 80%;
     text-align: center;
     max-height: 500px;
+     webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out;
 }
 .viewPlan-form
 {
@@ -1394,6 +1402,10 @@
    bottom: 0;
    padding: 10px;
    /* background: rgba(16, 12, 12, 0.49); */
+    webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out;
 }
 
 .TermsAndCondition-container
@@ -1402,6 +1414,10 @@
     height: 80%;
     text-align: center;
     max-height: 500px;
+     webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out;
 }
 
 .TermsAndCondition-form
@@ -1433,6 +1449,10 @@
    position: absolute;
    bottom: 0;
    padding: 10px;
+    webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out;
    /* background: rgba(16, 12, 12, 0.49) */
 }
 
@@ -1442,6 +1462,9 @@
     height: 80%;
     text-align: center;
     max-height: 500px;
+     webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
 }
 
 .Terms-form
@@ -1480,6 +1503,11 @@
    bottom: 0;
    padding: 10px;
   /*  background: rgba(16, 12, 12, 0.49) */
+  webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out;
+    
 }
 .popAssured-container
 {
@@ -1487,6 +1515,10 @@
     height: 40%;
     text-align: center;
     max-height: 500px;
+      webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out;
 }
 
 .assured-form
@@ -1521,6 +1553,11 @@
    position:absolute;
    /* background: rgba(16, 12, 12, 0.49); */
     box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
+   webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out;
+    
    
 }
 
@@ -1531,6 +1568,11 @@
     text-align: center;
     max-height: 500px;
    top: 500px;
+   webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out;
+  
       
      
 }
@@ -1552,4 +1594,17 @@
 {
 	overflow-y: scroll;
 	height: 100%;
+}
+
+.goto
+{
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	text-decoration: none;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 12px;
+	padding: 1em;
+	display: none;
 }
