@@ -1,0 +1,673 @@
+
+   <div ng-controller="searchProductCtrl">
+      <div class="search-products" style="display: flex">
+         <div class="filters-product">
+              <div style="padding-bottom: 12px;border-bottom: 1px solid #f0f0f0;padding: 16px;font-size: 14px;color: #212121;font-weight: bold;">Filters</div>
+              <div class="categories">
+              <div style="font-size: 12px;font-weight: 700" >
+                CATEGORIES 
+              </div>
+              <div style="padding: 5px 0;color: #878787"> < Mobiles & Accessories</div>
+                 <div style="padding: 5px 0;color: #212121;font-weight: 600;">Mobiles</div>
+              
+              </div>
+              <div class="Price-filter">
+                 <div style="font-size: 13px; font-weight: 600;">PRICE</div>
+                 <rzslider rz-slider-model="slider.minValue"
+          rz-slider-high="slider.maxValue"
+          rz-slider-options="slider.options"></rzslider>
+                
+                 
+               <div class="drop-down-price">  
+            <input type="number" ng-model="slider.minValue" class="minValueSelection"/>
+              <div style="padding-left: 10px;padding-right: 10px">to</div>
+            <input type="number" ng-model="slider.maxValue" class="maxValueSelection" />
+            </div>
+                 
+              </div>
+              
+              <div class="assured-check">
+                 <span><input type="checkbox"  ng-click="CheckBoxChanged()"></span>
+                 <span><img alt="" src="image/assured_img.png" width="82px" height="25px" style="padding-left: 10px"></span>
+                 <span><img alt="" src="image/ic_launcher_question_mark.png" width="40px" height="20px" style="padding-left: 15px"></span>
+              </div>
+              <div class="Brand">
+                 <div>
+                 <div ng-repeat="searchItem in filter">
+                  <span style="font-size: 13px; font-weight: 600;" >{{searchItem.filtertype}}</span>
+                  <span style="font-size: 13px; font-weight: 600; padding-left: 145px"><img alt="" src="image/ic_launcher_upper_bracket.png" width="20px" height="20px" ng-click="hiddenDiv = !hiddenDiv">
+                  </span>
+                  <div class="sub-brand" ng-repeat="searchItemDetails in searchItem.itemList " ng-show="hiddenDiv">
+                     <span><input type="checkbox"></span>
+                     <span class="brand-name" >{{searchItemDetails.itemName}}</span>
+                  </div>
+                  </div>
+                  
+         </div>
+         
+      </div>
+      <div class="product-help">
+      <div align="center">
+        <div style="font-size: 14px;cursor: pointer;">Need help?</div>
+        <div style="font-size: 18px;color: #2874f0;">Help me decide></div>
+        <img alt="" src="image/buying-guide-illustration_48642c.png" style="padding-top: 7px">
+      </div>  
+      </div>
+      </div>
+      <div class="show-filter-products">
+      <div class="filter-product-header" style="border-bottom: 1px solid #f0f0f0; ">
+      <div class="filter-product-header-one-sided">
+         <div class="show-filter-products-row1">
+           <span style="font-size: 12px; color: #878787;padding-left: 4px;cursor: pointer;" ng-click="backToHome()">Home</span>
+           <span style="font-size: 12px; color: #878787;padding-left: 4px;cursor: pointer"> > </span>
+           <span style="font-size: 12px; color: #878787; padding-left: 4px;cursor: pointer;">Mobile & Accessories</span>
+           <span style="font-size: 12px; color: #878787;padding-left: 4px;cursor: pointer;">Mobiles</span>
+         </div>
+         <div style="font-size: 20px; font-weight: 500;margin-top: 4px">Showing 1 – 60 of 108 results for "iphone 7"</div>
+         <div class="display-price-list">
+            <div style="font-weight: 600">Sort By</div>
+            <a class="list-price" ng-click="displayRelevance()">Relevance</a>
+            <a class="list-price" ng-click="displayPopularity()">Popularity</a>
+            <a class="list-price" ng-click="displayLowPrice()">Price -- Low to High</a>
+            <a class="list-price" ng-click="displayLowPrice()">Price -- High to Low</a>
+            <a class="list-price" ng-click="displayNewest()">Newest First</a>
+         </div>
+         </div>
+        
+         </div>
+       
+         <div class="filter-products-dscription" ng-repeat= "filterProducts in phoneDetails" ng-show="isrelevance" >
+         <div style="display: flex;padding-left:60px;">
+             <div><img alt="" src="{{filterProducts.productImg}}" width="100px" height="200px" ng-click="backToProductDeatils()" style="cursor: pointer;"></div>
+             <div><img alt="" src="image/ic_launcher_heart.png" width="20px" height="20px" class="heart-shape-img" ng-click="dsiplaySignup()"></div>
+             <div class="filter-sub-product-description">
+                <div class="name-of-phone" ng-click="backToProductDeatils()">{{filterProducts.phoneType}}</div>
+                <div class="filter-rating" style="padding-top: 3px">
+                   <span style="background-color: #16be48;color: white; padding-right:5px;padding-left:5px;border-radius: 3px;width: 100%;padding-top:2px;padding-bottom: 2px " ng-mouseover="showPopover()" ng-mouseleave="hidePopover()"><a style="color: white; padding-right:5px;padding-left:5px;font-size: 12px">4&#9734;</a> </span>
+                    <span style="color:     color: #878787;font-weight: 500;padding-left: 5px;cursor: pointer;" ng-click="backToProductDeatils()">2,783 rating & 989 Reviews</span>
+                    
+                </div>
+                <div class="list-filter-product-details" ng-repeat="phonefeatures in filterProducts.phoneFeature">
+                   <div class="list-out-filter-products" ng-click="backToProductDeatils()">{{phonefeatures.FeatureName}}</div>
+                    
+                </div>
+             </div>
+             <div style="margin-left: 25%">
+               <div class="assured-price" style="display: flex">
+               <div style="font-size: 25px;font-weight: 500;cursor: pointer;" ng-click="backToProductDeatils()">&#8377;{{filterProducts.productPrice}}</div>
+               <img alt="" src="image/assured_img.png" width="80px" height="25px;" style="padding-left: 10px">
+               </div>
+               <div style="font-weight: 600;cursor: pointer;" ng-click="backToProductDeatils()">Exchanging discount upto &#8377;23,500 </div>
+               <div style="color: #16be48;font-weight: 600;padding-top: 30px;cursor: pointer;" ng-click="backToProductDeatils()">Offers</div>
+                <div style="font-weight: 500;padding-top: 10px;cursor: pointer;" ng-click="backToProductDeatils()">No Cost EMI</div>
+             </div>
+             </div>
+             <div class="" style="display: flex;padding-left:35px;padding-top: 12px">
+                 <input type="checkbox" width="100%">
+                 <div style="padding-left: 10px">Add to Compare</div>
+             </div>
+<div id="popRatingReview" style="padding-top: 170px;" ng-show="popoverIsVisible" >
+
+<div class="RatingReview-container">
+
+ <form class="RatingReview-form" name="myForm"  novalidate>
+<fieldset>
+<div class="positive-rating">
+                 <div class="positive-rating1" style="padding-left: 10px">
+                    <div class="rating-percentage">
+                       <span class="rating-percent">77%</span>
+                       <span style="padding-left: 5px;vertical-align: super;">Positive</span>
+                    </div>
+                    <div style="font-size: 15px">Based on 147,040 ratings</div>
+                 </div>
+                <div
+					style="margin-left: 4%; padding-top: 10px; padding-bottom: 10px">
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								5 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{fiveStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								4 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{fourStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								3 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{threeStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								2 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="background-color: #ff9f00;width: {{twoStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								1 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="background-color: #ff6161;width: {{oneStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+				
+          </div>
+   
+   
+    
+   
+</fieldset>
+</form>
+
+</div>
+</div>
+             
+        </div>
+         <div class="filter-products-dscription" ng-repeat= "PopularfilterProducts in popularityPhoneDetails" ng-show="isPopularity" >
+         <div style="display: flex;padding-left:60px;">
+             <div><img alt="" src="{{PopularfilterProducts.PopularproductImg}}" width="100px" height="200px" ng-click="backToProductDeatils()" style="cursor: pointer;"></div>
+             <div><img alt="" src="image/ic_launcher_heart.png" width="20px" height="20px" class="heart-shape-img" ng-click="dsiplaySignup()"></div>
+             <div class="filter-sub-product-description">
+                <div class="name-of-phone" ng-click="backToProductDeatils()">{{PopularfilterProducts.popularphoneType}}</div>
+                <div class="filter-rating" style="padding-top: 3px">
+                   <span style="background-color: #16be48;color: white; padding-right:5px;padding-left:5px;border-radius: 3px;width: 100%;padding-top:2px;padding-bottom: 2px " ng-mouseover="showPopover()" ng-mouseleave="hidePopover()"><a style="color: white; padding-right:5px;padding-left:5px;font-size: 12px">{{PopularfilterProducts.popularProductRating}}&#9734;</a> </span>
+                    <span style="color:     color: #878787;font-weight: 500;padding-left: 5px;cursor: pointer;" ng-click="backToProductDeatils()">{{PopularfilterProducts.populalProductReview}}</span>
+                    
+                </div>
+                <div class="list-filter-product-details" ng-repeat="Popularphonefeatures in PopularfilterProducts.PopularphoneFeature">
+                   <div class="list-out-filter-products" ng-click="backToProductDeatils()">{{Popularphonefeatures.PopularFeatureName}}</div>
+                    
+                </div>
+             </div>
+             <div style="margin-left: 25%">
+               <div class="assured-price" style="display: flex">
+               <div style="font-size: 25px;font-weight: 500;cursor: pointer;" ng-click="backToProductDeatils()">&#8377;{{PopularfilterProducts.PopularproductPrice}}</div>
+               <img alt="" src="image/assured_img.png" width="80px" height="25px;" style="padding-left: 10px">
+               </div>
+               <div style="font-weight: 600;cursor: pointer;" ng-click="backToProductDeatils()">Exchanging discount upto &#8377;{{PopularfilterProducts.popularProductExchanging}}</div>
+               
+             </div>
+             </div>
+             <div class="" style="display: flex;padding-left:35px;padding-top: 12px">
+                 <input type="checkbox" width="100%">
+                 <div style="padding-left: 10px">Add to Compare</div>
+             </div>
+
+
+<div id="popRatingReview" style="padding-top: 170px;" ng-show="popoverIsVisible" >
+
+<div class="RatingReview-container">
+
+ <form class="RatingReview-form" name="myForm"  novalidate>
+<fieldset>
+<div class="positive-rating">
+                 <div class="positive-rating1" style="padding-left: 10px">
+                    <div class="rating-percentage">
+                       <span class="rating-percent">77%</span>
+                       <span style="padding-left: 5px;vertical-align: super;">Positive</span>
+                    </div>
+                    <div style="font-size: 15px">Based on 147,040 ratings</div>
+                 </div>
+                <div
+					style="margin-left: 4%; padding-top: 10px; padding-bottom: 10px">
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								5 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{fiveStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								4 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{fourStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								3 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{threeStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								2 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="background-color: #ff9f00;width: {{twoStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								1 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="background-color: #ff6161;width: {{oneStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+				
+          </div>
+   
+   
+    
+   
+</fieldset>
+</form>
+
+</div>
+</div>
+             
+        </div>
+         <div class="filter-products-dscription" ng-repeat= "lowPriceProducts in lowPricePhoneDetails" ng-show="islowPrice" >
+         <div style="display: flex;padding-left:60px;">
+             <div><img alt="" src="{{lowPriceProducts.lowPriceproductImg}}" width="100px" height="200px" ng-click="backToProductDeatils()" style="cursor: pointer;"></div>
+             <div><img alt="" src="image/ic_launcher_heart.png" width="20px" height="20px" class="heart-shape-img" ng-click="dsiplaySignup()"></div>
+             <div class="filter-sub-product-description">
+                <div class="name-of-phone" ng-click="backToProductDeatils()">{{lowPriceProducts.lowPricephoneType}}</div>
+                <div class="filter-rating" style="padding-top: 3px">
+                   <span style="background-color: #16be48;color: white; padding-right:5px;padding-left:5px;border-radius: 3px;width: 100%;padding-top:2px;padding-bottom: 2px " ng-mouseover="showPopover()" ng-mouseleave="hidePopover()"><a style="color: white; padding-right:5px;padding-left:5px;font-size: 12px">{{lowPriceProducts.lowPriceProductRating}}&#9734;</a> </span>
+                    <span style="color:     color: #878787;font-weight: 500;padding-left: 5px;cursor: pointer;" ng-click="backToProductDeatils()">{{lowPriceProducts.lowPriceProductReview}}</span>
+                    
+                </div>
+                <div class="list-filter-product-details" ng-repeat="lowPricefeatures in lowPriceProducts.lowPricephoneFeature">
+                   <div class="list-out-filter-products" ng-click="backToProductDeatils()">{{lowPricefeatures.lowPriceFeatureName}}</div>
+                    
+                </div>
+             </div>
+             <div style="margin-left: 25%">
+               <div class="assured-price" style="display: flex">
+               <div style="font-size: 25px;font-weight: 500;cursor: pointer;" ng-click="backToProductDeatils()">&#8377;{{lowPriceProducts.lowPriceproductPrice}}</div>
+               <img alt="" src="image/assured_img.png" width="80px" height="25px;" style="padding-left: 10px">
+               </div>
+               <div style="font-weight: 600;cursor: pointer;" ng-click="backToProductDeatils()">Exchanging discount upto &#8377;{{lowPriceProducts.lowPriceProductExchanging}} </div>
+             </div>
+             </div>
+             <div class="" style="display: flex;padding-left:35px;padding-top: 12px">
+                 <input type="checkbox" width="100%">
+                 <div style="padding-left: 10px">Add to Compare</div>
+             </div>
+<div id="popRatingReview" style="padding-top: 170px;" ng-show="popoverIsVisible" >
+
+<div class="RatingReview-container">
+
+ <form class="RatingReview-form" name="myForm"  novalidate>
+<fieldset>
+<div class="positive-rating">
+                 <div class="positive-rating1" style="padding-left: 10px">
+                    <div class="rating-percentage">
+                       <span class="rating-percent">77%</span>
+                       <span style="padding-left: 5px;vertical-align: super;">Positive</span>
+                    </div>
+                    <div style="font-size: 15px">Based on 147,040 ratings</div>
+                 </div>
+                <div
+					style="margin-left: 4%; padding-top: 10px; padding-bottom: 10px">
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								5 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{fiveStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								4 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{fourStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								3 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{threeStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								2 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="background-color: #ff9f00;width: {{twoStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								1 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="background-color: #ff6161;width: {{oneStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+				
+          </div>
+   
+   
+    
+   
+</fieldset>
+</form>
+
+</div>
+</div>
+             
+        </div>
+        
+        
+         <div class="filter-products-dscription" ng-repeat= "highPriceProducts in highPricePhoneDetails" ng-show="isHighPrice" >
+         <div style="display: flex;padding-left:60px;">
+             <div><img alt="" src="{{highPriceProducts.highPriceproductImg}}" width="100px" height="200px" ng-click="backToProductDeatils()" style="cursor: pointer;"></div>
+             <div><img alt="" src="image/ic_launcher_heart.png" width="20px" height="20px" class="heart-shape-img" ng-click="dsiplaySignup()"></div>
+             <div class="filter-sub-product-description">
+                <div class="name-of-phone" ng-click="backToProductDeatils()">{{highPriceProducts.highPricephoneType}}</div>
+                <div class="filter-rating" style="padding-top: 3px">
+                   <span style="background-color: #16be48;color: white; padding-right:5px;padding-left:5px;border-radius: 3px;width: 100%;padding-top:2px;padding-bottom: 2px " ng-mouseover="showPopover()" ng-mouseleave="hidePopover()"><a style="color: white; padding-right:5px;padding-left:5px;font-size: 12px">{{highPriceProducts.highPriceProductRating}}&#9734;</a> </span>
+                    <span style="color:     color: #878787;font-weight: 500;padding-left: 5px;cursor: pointer;" ng-click="backToProductDeatils()">{{highPriceProducts.highPriceProductReview}}</span>
+                    
+                </div>
+                <div class="list-filter-product-details" ng-repeat="highPricefeatures in highPriceProducts.highPricephoneFeature">
+                   <div class="list-out-filter-products" ng-click="backToProductDeatils()">{{highPricefeatures.highPriceFeatureName}}</div>
+                    
+                </div>
+             </div>
+             <div style="margin-left: 25%">
+               <div class="assured-price" style="display: flex">
+               <div style="font-size: 25px;font-weight: 500;cursor: pointer;" ng-click="backToProductDeatils()">&#8377;{{highPriceProducts.highPriceproductPrice}}</div>
+               <img alt="" src="image/assured_img.png" width="80px" height="25px;" style="padding-left: 10px">
+               </div>
+               <div style="font-weight: 600;cursor: pointer;" ng-click="backToProductDeatils()">Exchanging discount upto &#8377;{{highPriceProducts.highPriceProductExchanging}} </div>
+             </div>
+             </div>
+             <div class="" style="display: flex;padding-left:35px;padding-top: 12px">
+                 <input type="checkbox" width="100%">
+                 <div style="padding-left: 10px">Add to Compare</div>
+             </div>
+<div id="popRatingReview" style="padding-top: 170px;" ng-show="popoverIsVisible" >
+
+<div class="RatingReview-container">
+
+ <form class="RatingReview-form" name="myForm"  novalidate>
+<fieldset>
+<div class="positive-rating">
+                 <div class="positive-rating1" style="padding-left: 10px">
+                    <div class="rating-percentage">
+                       <span class="rating-percent">77%</span>
+                       <span style="padding-left: 5px;vertical-align: super;">Positive</span>
+                    </div>
+                    <div style="font-size: 15px">Based on 147,040 ratings</div>
+                 </div>
+                <div
+					style="margin-left: 4%; padding-top: 10px; padding-bottom: 10px">
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								5 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{fiveStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								4 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{fourStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								3 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{threeStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								2 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="background-color: #ff9f00;width: {{twoStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								1 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="background-color: #ff6161;width: {{oneStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+				
+          </div>
+   
+   
+    
+   
+</fieldset>
+</form>
+
+</div>
+</div>
+             
+        </div>
+        
+        
+        <div class="filter-products-dscription" ng-repeat= "newestProducts in newestFirstPhoneDetails" ng-show="isnewest" >
+         <div style="display: flex;padding-left:60px;">
+             <div><img alt="" src="{{newestProducts.newestFirstproductImg}}" width="100px" height="200px" ng-click="backToProductDeatils()" style="cursor: pointer;"></div>
+             <div><img alt="" src="image/ic_launcher_heart.png" width="20px" height="20px" class="heart-shape-img" ng-click="dsiplaySignup()"></div>
+             <div class="filter-sub-product-description">
+                <div class="name-of-phone" ng-click="backToProductDeatils()">{{newestProducts.newestFirstPricephoneType}}</div>
+                <div class="filter-rating" style="padding-top: 3px">
+                   <span style="background-color: #16be48;color: white; padding-right:5px;padding-left:5px;border-radius: 3px;width: 100%;padding-top:2px;padding-bottom: 2px " ng-mouseover="showPopover()" ng-mouseleave="hidePopover()"><a style="color: white; padding-right:5px;padding-left:5px;font-size: 12px">{{newestProducts.newestFirsteProductRating}}&#9734;</a> </span>
+                    <span style="color:     color: #878787;font-weight: 500;padding-left: 5px;cursor: pointer;" ng-click="backToProductDeatils()">{{newestProducts.newestFirstProductReview}}</span>
+                    
+                </div>
+                <div class="list-filter-product-details" ng-repeat="newestfeatures in newestProducts.newestFirstphoneFeature">
+                   <div class="list-out-filter-products" ng-click="backToProductDeatils()">{{newestfeatures.newestFirstFeatureName}}</div>
+                    
+                </div>
+             </div>
+             <div style="margin-left: 25%">
+               <div class="assured-price" style="display: flex">
+               <div style="font-size: 25px;font-weight: 500;cursor: pointer;" ng-click="backToProductDeatils()">&#8377;{{newestProducts.highPriceproductPrice}}</div>
+               <img alt="" src="image/assured_img.png" width="80px" height="25px;" style="padding-left: 10px">
+               </div>
+               <div style="font-weight: 600;cursor: pointer;" ng-click="backToProductDeatils()">Exchanging discount upto &#8377;{{newestProducts.highPriceProductExchanging}} </div>
+             </div>
+             </div>
+             <div class="" style="display: flex;padding-left:35px;padding-top: 12px">
+                 <input type="checkbox" width="100%">
+                 <div style="padding-left: 10px">Add to Compare</div>
+             </div>
+<div id="popRatingReview" style="padding-top: 170px;" ng-show="popoverIsVisible" >
+
+<div class="RatingReview-container">
+
+ <form class="RatingReview-form" name="myForm"  novalidate>
+<fieldset>
+<div class="positive-rating">
+                 <div class="positive-rating1" style="padding-left: 10px">
+                    <div class="rating-percentage">
+                       <span class="rating-percent">77%</span>
+                       <span style="padding-left: 5px;vertical-align: super;">Positive</span>
+                    </div>
+                    <div style="font-size: 15px">Based on 147,040 ratings</div>
+                 </div>
+                <div
+					style="margin-left: 4%; padding-top: 10px; padding-bottom: 10px">
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								5 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{fiveStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								4 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{fourStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								3 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="width: {{threeStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								2 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="background-color: #ff9f00;width: {{twoStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="progress-rating">
+						<div class="first-5star-rating" style="vertical-align: sub;">
+							<div class="5*">
+								1 <span class="unicode-star">&#9733;</span>
+								<div id="myProgress" style="display: inline-block;">
+								<div id="myBar" class="myBar" style="background-color: #ff6161;width: {{oneStar}}"></div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+				
+          </div>
+   
+   
+    
+   
+</fieldset>
+</form>
+
+</div>
+</div>
+             
+        </div>
+        
+      </div>
+		
+	</div>
+	
+   </div>

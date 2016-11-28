@@ -3,7 +3,7 @@
 	<div class="display-product-details" id="goToFront">
 	
  <div class="retailer-img"  id="absoluteScroll" onscroll="myFunction()">
- <div>helooooooooo</div>
+ 
 		<div class="side-images">
 			<div class="two-wedges-img">
 				<img alt="" src="image/apple-iphone-6-original-small-images.jpeg"
@@ -467,20 +467,20 @@
 			    <div style="font-size: 14px;color: #212121;font-weight: 500;padding-left: 20px;padding-top: 10px" >{{selecteEMIOffer.bankName}} EMI PLANS</div>
 			    <div class="all-records" ng-repeat="emiPlan in selecteEMIOffer.emiPlans ">
 			    <div class="EMI-bank-cost" style="display: -webkit-box;">
-			       <div class="to-add-details"><img src="image/ic_plus_blue.png" height="12px" width="12px" ng-click="toggleCustom()"></div>
+			       <div class="to-add-details"><img src="image/ic_plus_blue.png" height="12px" width="12px" ng-click="hiddenDiv = !hiddenDiv"></div>
 			       <div class="emi-no-cost" style="margin-left: 1%">{{emiPlan.emiPlan.emiHeader}}</div>
 			       <div class="emi-month-cost" style="margin-left: 50%">{{emiPlan.emiPlan.emi}}</div>
 			    </div>
 			    <div class="emi-bank-details">
-			         <div class="emi-price" style="display: flex;margin-left: 18%" ng-hide="emiDetails" >
+			         <div class="emi-price" style="display: flex;margin-left: 18%" ng-show="hiddenDiv" >
 			           <div >Price Rs.</div>
 			           <div align="right" >{{emiPlan.emiPlan.price}}</div>
 			         </div>
-			         <div class="emi-price" style="display: flex; margin-left: 18%;padding-top: 10px" ng-hide="emiDetails">
+			         <div class="emi-price" style="display: flex; margin-left: 18%;padding-top: 10px" ng-show="hiddenDiv">
 			           <div >Intrest Paid</div>
 			           <div align="right">+{{emiPlan.emiPlan.interest}}</div>
 			         </div>
-			         <div class="emi-price" style="display: flex; margin-left: 18%;padding-top: 10px" ng-hide="emiDetails">
+			         <div class="emi-price" style="display: flex; margin-left: 18%;padding-top: 10px" ng-show="hiddenDiv">
 			           <div >Total Amount</div>
 			           <div align="right">+{{emiPlan.emiPlan.totalAmountPayable}}</div>
 			         </div>
@@ -604,7 +604,7 @@
    
 </fieldset>
 </form>
-<!-- <button class="cancel" ng-click="hideAssured()">&#10006;</button> -->
+
 </div>
 </div>
 

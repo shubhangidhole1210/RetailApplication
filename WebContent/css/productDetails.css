@@ -1608,3 +1608,162 @@
 	padding: 1em;
 	display: none;
 }
+.filters-product
+{
+	width: 260px;
+      padding-top:10px;
+      padding-left:10px;
+      box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
+}
+
+.categories
+{
+	border-bottom: 1px solid #f0f0f0;
+    padding: 16px;
+}
+
+.Price-filter
+{
+	border-bottom: 1px solid #f0f0f0;
+    padding: 16px;
+}
+
+.drop-down-price
+{
+	display: flex;
+	padding-top: 7px;
+}
+
+.assured-check
+{
+	border-bottom: 1px solid #f0f0f0;
+    padding: 16px;
+}
+
+.Brand
+{
+	border-bottom: 1px solid #f0f0f0;
+    padding: 16px;
+}
+.brand-name
+{
+	padding-left: 8px;
+    vertical-align: super;
+}
+.sub-brand
+{
+	padding-top: 7px;
+}
+.minValueSelection
+{
+	width: 70%;
+}
+.maxValueSelection
+{
+	width: 70%;
+}
+.show-filter-products
+{
+	 padding-top:10px;
+      padding-left:10px;
+      width: 100%;
+      
+}
+.display-price-list
+{
+	display: flex;
+	padding-top:13px;
+    
+    padding-bottom: 5px;
+}
+
+.list-price
+{
+	padding-left: 1%;
+	color: black;
+}
+.list-price a :HOVER  {
+	text-decoration: none;
+	color: black;
+}
+.filter-products-dscription
+{
+	padding-top: 15px;
+	
+	border-bottom: 1px solid #f0f0f0;
+	padding-bottom: 10px;
+}
+.heart-shape-img
+{
+	margin-left: 10%;
+}
+.name-of-phone
+{
+	font-weight: 500;
+	font-size: 18px;
+	cursor: pointer;
+}
+.filter-sub-product-description
+{
+	padding-left: 30px;
+	padding-top: 10px;
+}
+.list-filter-product-details
+{
+	padding-top: 4px;
+}
+.list-out-filter-products
+{
+	font-weight: 400px;
+	font-size: 13px;
+	padding-top: 3px;
+	cursor: pointer;
+}
+.product-help
+{
+	padding-top: 8px;
+}
+
+#popRatingReview
+{
+	width: 50%;
+   height: 100%;
+   position: absolute;
+   bottom: 0;
+   padding: 10px;
+  /*  background: rgba(16, 12, 12, 0.49) */
+  webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out;
+    
+}
+.RatingReview-container
+{
+		width: 100%;
+    height: 40%;
+    text-align: center;
+    max-height: 500px;
+      webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out;
+}
+
+.RatingReview-form
+{
+	background: #ffffff;
+    width: 320px;
+    margin: 0 auto;
+     padding:5px;
+    overflow: hidden;
+    display: inline-block;
+  /*   height: 100%; */
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
+}
+
+.home-filter :HOVER {
+	color: blue !important;
+	
+	
+}

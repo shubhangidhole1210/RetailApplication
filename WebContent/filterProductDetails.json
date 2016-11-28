@@ -1,0 +1,530 @@
+{
+    "phoneDetails":[
+    {
+     "productImg" : "image/apple-iphone-6-original-imaeymdqs5gm5xkz.jpeg",
+    "phoneType" : "Apple iPhone 7(Black,32 GB)",
+    "productPrice" : "70,000",
+       "phoneFeature" :
+       [
+           {
+             "id" :1,
+             "FeatureName": "128GB ROM"
+           },
+           {
+              "id" :2,
+             "FeatureName": "4.7 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "FeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "FeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "FeatureName": "1 Year Manufacture Warranty"
+           }
+       ]
+    
+    },
+    
+    {
+        "productImg" : "image/apple-iphone-7-na-original-imaemze2hhhzz2xh.jpeg",
+         "phoneType" : "Apple iPhone 7(Gold 32 GB)",
+         "productPrice" : "60,000",
+         "phoneFeature" :
+       [
+           {
+             "id" :1,
+             "FeatureName": "32GB ROM"
+           },
+           {
+              "id" :2,
+             "FeatureName": "4.7 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "FeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "FeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "FeatureName": "1 Year Manufacture Warranty"
+           }
+       ]
+         
+         
+    },
+      {
+        "productImg" : "image/apple-iphone-7-rose-gold.jpeg",
+         "phoneType" : "Apple iPhone 7(Rose Gold, 32 GB)",
+         "productPrice" : "58,900",
+         "phoneFeature" :
+       [
+           {
+             "id" :1,
+             "FeatureName": "32GB ROM"
+           },
+           {
+              "id" :2,
+             "FeatureName": "4.7 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "FeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "FeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "FeatureName": "1 Year Manufacture Warranty"
+           }
+       ]
+         
+         
+    },
+    {
+        "productImg" : "image/apple-iphone-7-na-jet-black.jpeg",
+         "phoneType" : "Apple iPhone 7(Jet Black,256 GB)",
+         "productPrice" : "80,000",
+         "phoneFeature" :
+       [
+           {
+             "id" :1,
+             "FeatureName": "32GB ROM"
+           },
+           {
+              "id" :2,
+             "FeatureName": "4.7 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "FeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "FeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "FeatureName": "1 Year Manufacture Warranty"
+           }
+       ]
+         
+         
+    }
+     
+       
+     
+    ],
+    
+    "popularityPhoneDetails" :[
+    {
+       "PopularproductImg" : "image/apple-iphone-6-original-imaeymdqs5gm5xkz.jpeg",   
+       "popularphoneType" : "Apple iPhone 7(Black,32 GB)",
+       "PopularproductPrice" : "70,000",
+       "popularProductExchanging":"22,000",
+       "popularProductRating": "4.4",
+       "populalProductReview" :"2,783 rating & 989 Reviews",
+       "PopularphoneFeature" :
+       [
+           {
+             "id" :1,
+             "PopularFeatureName": "128GB ROM"
+           },
+           {
+              "id" :2,
+             "PopularFeatureName": "4.7 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "PopularFeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "PopularFeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "PopularFeatureName": "1 Year Manufacture Warranty"
+           }
+       ]
+    },
+    
+    {
+       "PopularproductImg" : "image/apple-iphone-7-na-jet-black.jpeg",   
+       "popularphoneType" : "Apple iPhone 7 Plus(Jet Black,128 GB)",
+       "PopularproductPrice" : "82,000",
+       "popularProductExchanging":"20,000",
+       "popularProductRating": "4.8",
+       "populalProductReview" :"757 rating & 238 Reviews",
+       "PopularphoneFeature" :
+       [
+           {
+             "id" :1,
+             "PopularFeatureName": "128GB ROM"
+           },
+           {
+              "id" :2,
+             "PopularFeatureName": "5.5 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "PopularFeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "PopularFeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "PopularFeatureName": "1 Year Manufacture Warranty"
+           }
+       ]
+    },
+    
+    {
+       "PopularproductImg" : "image/apple-iphone-5s-original-silver.jpeg",   
+       "popularphoneType" : "Apple iPhone 5s(Silver,16 GB)",
+       "PopularproductPrice" : "20,999",
+       "popularProductExchanging":"15,000",
+       "popularProductRating": "4.3",
+       "populalProductReview" :"25,000 rating & 23,654Reviews",
+       "PopularphoneFeature" :
+       [
+           {
+             "id" :1,
+             "PopularFeatureName": "128GB ROM"
+           },
+           {
+              "id" :2,
+             "PopularFeatureName": "5.5 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "PopularFeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "PopularFeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "PopularFeatureName": "1 Year Manufacture Warranty"
+           }
+       ]
+    }
+    
+    
+    
+    ],
+     "lowPricePhoneDetails" :[
+    {
+       "lowPriceproductImg" : "image/apple-iphone-4s-black.jpeg",   
+       "lowPricephoneType" : "Apple iPhone 4S (Black,8 GB)",
+       "lowPriceproductPrice" : "14,197",
+       "lowPriceProductExchanging":"689/month",
+       "lowPriceProductRating": "4.1",
+       "lowPriceProductReview" :"2,783 rating & 989 Reviews",
+       "lowPricephoneFeature" :
+       [
+           {
+             "id" :1,
+             "lowPriceFeatureName": "8GB ROM"
+           },
+           {
+              "id" :2,
+             "lowPriceFeatureName": "3.5 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "lowPriceFeatureName": "8MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "lowPriceFeatureName": "Lihium-Lon Battery"
+           },
+           {
+               "id" :5,
+             "lowPriceFeatureName": "1 Year for mobile accesories"
+           }
+       ]
+    },
+    
+     {
+       "lowPriceproductImg" : "image/apple-iphone-4s-white.jpeg",   
+       "lowPricephoneType" : "Apple iPhone 4s (White,8 GB)",
+       "lowPriceproductPrice" : "14,190",
+       "lowPriceProductExchanging":"689/month",
+       "lowPriceProductRating": "4.1",
+       "lowPriceProductReview" :"2,783 rating & 989 Reviews",
+       "lowPricephoneFeature" :
+       [
+           {
+             "id" :1,
+             "lowPriceFeatureName": "128GB ROM"
+           },
+           {
+              "id" :2,
+             "lowPriceFeatureName": "4.7 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "lowPriceFeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "lowPriceFeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "lowPriceFeatureName": "1 Year Manufacture Warranty"
+           }
+       ]
+    },
+    
+    {
+       "lowPriceproductImg" : "image/apple-iphone-6-original-imaeymdqs5gm5xkz.jpeg",   
+       "lowPricephoneType" : "Apple iPhone 4s (Black,8 GB)",
+       "lowPriceproductPrice" : "14,200",
+       "lowPriceProductExchanging":"689/month",
+       "lowPriceProductRating": "4.1",
+       "lowPriceProductReview" :"2,783 rating & 989 Reviews",
+       "lowPricephoneFeature" :
+       [
+           {
+             "id" :1,
+             "lowPriceFeatureName": "128GB ROM"
+           },
+           {
+              "id" :2,
+             "lowPriceFeatureName": "4.7 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "lowPriceFeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "lowPriceFeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "lowPriceFeatureName": "1 Year Manufacture Warranty"
+           }
+       ]
+    }
+    
+    
+    
+    ],
+     "highPricePhoneDetails" :[
+    {
+       "highPriceproductImg" : "image/apple-iphone-7-rose-gold.jpeg",   
+       "highPricephoneType" : "Apple iPhone 7plus (Black,128 GB)",
+       "highPriceproductPrice" : "82,000",
+       "highPriceProductExchanging":"4314/month",
+       "highPriceProductRating": "4.7",
+       "highPriceProductReview" :"2,783 rating & 989 Reviews",
+       "highPricephoneFeature" :
+       [
+           {
+             "id" :1,
+             "highPriceFeatureName": "128GB ROM"
+           },
+           {
+              "id" :2,
+             "highPriceFeatureName": "5.5 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "highPriceFeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "highPriceFeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "highPriceFeatureName": "1 Year manufacture warranty "
+           }
+       ]
+    },
+    
+     {
+       "highPriceproductImg" : "image/apple-iphone-7-rose-gold.jpeg",   
+       "highPricephoneType" : "Apple iPhone 7 (Black,256 GB)",
+       "highPriceproductPrice" : "80,000",
+       "highPriceProductExchanging":"20000",
+       "highPriceProductRating": "4.5",
+       "highPriceProductReview" :"2,783 rating & 989 Reviews",
+       "highPricephoneFeature" :
+       [
+           {
+             "id" :1,
+             "highPriceFeatureName": "256GB ROM"
+           },
+           {
+              "id" :2,
+             "highPriceFeatureName": "4.7 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "highPriceFeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "highPriceFeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "highPriceFeatureName": "1 Year manufacture warranty"
+           }
+       ]
+    },
+    
+    {
+       "highPriceproductImg" : "image/apple-iphone-7-silver.jpeg",   
+       "highPricephoneType" : "Apple iPhone 7 (Gold,256 GB)",
+       "highPriceproductPrice" : "80,000",
+       "highPriceProductExchanging":"20000",
+       "highPriceProductRating": "4.5",
+       "highPriceProductReview" :"2,783 rating & 989 Reviews",
+       "highPricephoneFeature" :
+       [
+           {
+             "id" :1,
+             "highPriceFeatureName": "256GB ROM"
+           },
+           {
+              "id" :2,
+             "highPriceFeatureName": "4.7 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "highPriceFeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "highPriceFeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "highPriceFeatureName": "1 Year manufacture warranty"
+           }
+       ]
+    }
+    
+    
+    ],
+    
+     "newestFirstPhoneDetails" :[
+    {
+       "newestFirstproductImg" : "image/apple-iphone-7-rose-gold.jpeg",   
+       "newestFirstPricephoneType" : "Apple iPhone 7plus (Black,128 GB)",
+       "newestFirstPriceproductPrice" : "82,000",
+       "newestFirstProductExchanging":"4314/month",
+       "newestFirsteProductRating": "4.7",
+       "newestFirstProductReview" :"2,783 rating & 989 Reviews",
+       "newestFirstphoneFeature" :
+       [
+           {
+             "id" :1,
+             "newestFirstFeatureName": "128GB ROM"
+           },
+           {
+              "id" :2,
+             "newestFirstFeatureName": "5.5 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "newestFirstFeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "newestFirstFeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "newestFirstFeatureName": "1 Year manufacture warranty "
+           }
+       ]
+    },
+    
+     {
+       "newestFirstproductImg" : "image/apple-iphone-6s-space-grey.jpeg",   
+       "newestFirstPricephoneType" : "Apple iPhone 6s (space grey,32 GB)",
+       "newestFirstPriceproductPrice" : "48,999",
+       "newestFirstProductExchanging":"20000",
+       "newestFirsteProductRating": "4.4",
+       "newestFirstProductReview" :"2,783 rating & 989 Reviews",
+       "newestFirstphoneFeature" :
+       [
+           {
+             "id" :1,
+             "newestFirstFeatureName": "128GB ROM"
+           },
+           {
+              "id" :2,
+             "newestFirstFeatureName": "5.5 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "newestFirstFeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "newestFirstFeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "newestFirstFeatureName": "1 Year manufacture warranty "
+           }
+       ]
+    },
+    
+    {
+       "newestFirstproductImg" : "image/apple-iphone-6s-rose-gold.jpeg",   
+       "newestFirstPricephoneType" : "Apple iPhone 6s (Rose Gold,32 GB)",
+       "newestFirstPriceproductPrice" : "48,999",
+       "newestFirstProductExchanging":"23000",
+       "newestFirsteProductRating": "4.4",
+       "newestFirstProductReview" :"2,783 rating & 989 Reviews",
+       "newestFirstphoneFeature" :
+       [
+           {
+             "id" :1,
+             "newestFirstFeatureName": "128GB ROM"
+           },
+           {
+              "id" :2,
+             "newestFirstFeatureName": "5.5 inch Retina HD Display"
+           },
+           {
+               "id" :3,
+             "newestFirstFeatureName": "12MP Primary Camera | 7MP Front"
+           },
+           {
+               "id" :4,
+             "newestFirstFeatureName": "Li-Lon Battery"
+           },
+           {
+               "id" :5,
+             "newestFirstFeatureName": "1 Year manufacture warranty "
+           }
+       ]
+    }
+    
+    
+    ]
+    
+    
+   
+}

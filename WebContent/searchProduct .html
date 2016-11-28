@@ -1,4 +1,46 @@
 <div ng-controller="searchProductCtrl">
-hhhhhh
-   
+
+   <div style="padding-top: 200px">helloo</div>
+   <div class="retailer-img"  id="absoluteScroll" onscroll="myFunction()">
+ 
+		<div class="side-images">
+			<div class="two-wedges-img">
+				<img alt="" src="image/apple-iphone-6-original-small-images.jpeg"
+					ng-click="changeImage('image1')" id="image1">
+
+			</div>
+			<div class="original-img">
+				<img alt=""
+					src="image/apple-iphone-6-original-opp-small-images.jpeg"
+					ng-click="changeImage('image2')" id="image2">
+
+
+
+			</div>
+			<div class="side-img">
+				<img alt=""
+					src="image/apple-iphone-6-original-space-gray-small.jpeg"
+					ng-click="changeImage('image3')" id="image3">
+			</div>
+			<div class="opp-img">
+				<img alt="" src="image/apple-iphone-6-two-small-images.jpeg"
+					ng-click="changeImage('image4')" id="image4">
+			</div>
+		</div>
+
+		<div class="product-images">
+			<div class="display-product-img">
+
+				<img ng-elevate-zoom ng-src="{{data['small_image']}}"
+					zoom-image="{{data['large_image']}}" class="product-img"
+					id="phneImg" name="phneImg" width="250px" height="300px">
+
+			</div>
+
+			<div class="display-button">
+				<button type="button" class="add-cart">ADD TO CART</button>
+				<button type="button" class="buy-now">BUY NOW</button>
+			</div>
+		</div>
+		</div>
 </div>

@@ -1,4 +1,4 @@
-var retailApp = angular.module('retailApp', [ 'ngRoute' ])
+var retailApp = angular.module('retailApp', [ 'ngRoute','rzModule','ui.bootstrap' ])
 retailApp.config(function($routeProvider) {
 	$routeProvider.when('/', {
 		templateUrl : 'home.html'
@@ -29,8 +29,8 @@ retailApp.config(function($routeProvider) {
 	}).when('/allReviews', {
 		templateUrl : "allReviews.html"
 
-	}).when('/searchProduct', {
-		templateUrl : "searchProduct.html"
+	}).when('/searchProductDetails', {
+		templateUrl : "searchProductDetails.html"
 
 	}).otherwise({
 		redirectTo : '/'
@@ -238,10 +238,10 @@ retailApp.controller('homeCtrl', function($scope, $http,$location) {
 		$location.path('/productDetails')
 	}
 	
-	$scope.displaySearchProducts=function()
+	/*$scope.displaySearchProducts=function()
 	{
-		$location.path('/searchProduct');
-	}
+		$location.path('/searchProductDetails');
+	}*/
 	
 });
 var timer1;
@@ -580,10 +580,14 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 		    $anchorScroll();
 		  };
 		  
-		  $scope.emiDetails= true;
+		 /* $scope.emiDetails= true;
 		  $scope.toggleCustom = function() {
 	            $scope.emiDetails = $scope.emiDetails === false ? true: false;
-		  };
+		  };*/
+		  $scope.hiddenDiv = false;
+		    $scope.showDiv = function () {
+		        $scope.hiddenDiv = !$scope.hiddenDiv;
+		    };
 		  
 		  
 		
@@ -713,15 +717,24 @@ retailApp.controller('headerCtrl',function($scope,$location)
 	        	];
 	
 	   $scope.isSearch=true;
+	   $scope.searchString=""
 	   $scope.displaySearch= function()
 	   {
-		   $scope.isSearch = $scope.isSearch === false ? true: false;
-	   }
+		   console.log("$scope.searchString : " + $scope.searchString);
+            if($scope.searchString=="")
+            	{
+            	$scope.isSearch=true;
+            	}
+            else
+            	{
+                 	$scope.isSearch=false;
+            	}
+	   };
 	   
-	   /*$scope.displaySearchProducts=function()
+	   $scope.displaySearchProducts=function()
 		{
-			$location.path('/searchProduct');
-		}*/
+			$location.path('/searchProductDetails');
+		}
 	
 });
 
@@ -811,6 +824,9 @@ retailApp.filter('startFrom', function() {
    
 });
 console.log("after filter function");
+
+
+
 
 retailApp.controller('allReviewCtrl',function($scope,$http,$location, $timeout,
 		displayLoginService,$rootScope)
@@ -973,7 +989,158 @@ $(function () {
 
 });
 
-retailApp.controller('searchProductCtrl',function($scope)
+retailApp.controller('searchProductCtrl',function($scope,$http,$modal,$timeout,$location,displayLoginService,$rootScope)
 		{
-		
-		});
+	$scope.slider = {
+		    minValue: 0,
+		    maxValue: 100,
+		    options: {
+		        floor: 0,
+		        ceil: 100,
+		        step: 1,
+		        noSwitching: true
+		    }
+		};
+	
+	$http.get('searchProductDetails.json').success(function(response) {
+		$scope.filter = response.filter
+	});
+	
+	$scope.hiddenDiv = false;
+    $scope.showDiv = function () {
+        $scope.hiddenDiv = !$scope.hiddenDiv;
+    };
+    
+    $scope.CheckBoxChanged= function()
+    {
+    	 
+    }
+    
+    $scope.popoverIsVisible = false; 
+    $scope.showPopover = function() {
+    	  $scope.popoverIsVisible = true; 
+    	};
+
+    	$scope.hidePopover = function () {
+    	  $scope.popoverIsVisible = false;
+    	};
+    	
+    	$http.get('productDetails.json').success(function(response) {
+    		console.log("inside product details sucess");
+    		$scope.productRating = response.productDetail.productRating;
+    		
+    		console.log("product rating values for five star count in sucess ::"+$scope.productRating.fiveStarCount);
+    		console.log("after product details ajax call");
+    		$scope.fiveStarCount =$scope.productRating.fiveStarCount ;
+    		$scope.fourStarCount= $scope.productRating.fourStarCount
+    		$scope.threeStarCount=$scope.productRating.threeStarCount;
+    		$scope.twoStarCount=$scope.productRating.twoStarCount;
+    		$scope.oneStarCount=$scope.productRating.oneStarCount;
+    		console.log("product rating values for five star count"+$scope.productRating.fiveStarCount)
+    var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,$scope.twoStarCount,$scope.oneStarCount];
+    	
+    		
+    	 	function calculateMaximumRating(ratingArr)
+    	 {
+    		var i;
+    			var max;
+    			 
+    			 max=ratingArr[0];
+    			 for(i=1;i<5;i++)
+    				 {
+    				      if(ratingArr[i] > max)
+    				    	  {
+    				    	     max = ratingArr[i];
+    				    	  }
+    				 
+    				 }
+    			 return max;
+    	 };
+    	 $scope.maximumCount=calculateMaximumRating(ratingArr);
+    	
+    	$scope.fiveStar = $scope.fiveStarCount/$scope.maximumCount * 100;
+    	$scope.fourStar = $scope.fourStarCount/$scope.maximumCount * 100;
+    	$scope.threeStar =$scope.threeStarCount/$scope.maximumCount * 100;  
+    	$scope.twoStar = $scope.twoStarCount/$scope.maximumCount * 100;
+    	$scope.oneStar = $scope.oneStarCount/$scope.maximumCount * 100;
+    	
+    	$scope.sellerDetails = response.productDetail.sellerDetails;
+           
+    	 
+    	});
+    	
+    	$http.get('filterProductDetails.json').success(function(response) {
+    		$scope.phoneDetails = response.phoneDetails;
+    		$scope.popularityPhoneDetails = response.popularityPhoneDetails;
+    		$scope.lowPricePhoneDetails = response.lowPricePhoneDetails;
+    		$scope.highPricePhoneDetails = response.highPricePhoneDetails;
+    		$scope.newestFirstPhoneDetails = response.newestFirstPhoneDetails;
+    		
+    		$scope.isrelevance=true;
+    		$scope.isPopularity=false;
+    		$scope.islowPrice=false;
+    		$scope.isHighPrice=false;
+    		$scope.isnewest=false;
+    		
+    		$scope.displayRelevance=function()
+    		{
+    			$scope.isrelevance=true;
+        		$scope.isPopularity=false;
+        		$scope.islowPrice=false;
+        		$scope.isHighPrice=false;
+        		$scope.isnewest=false;
+    		}
+    		
+    		$scope.displayPopularity=function()
+    		{
+    			$scope.isrelevance=false;
+        		$scope.isPopularity=true;
+        		$scope.islowPrice=false;
+        		$scope.isHighPrice=false;
+        		$scope.isnewest=false;
+    		}
+    		
+    		$scope.displayLowPrice=function()
+    		{
+    			$scope.isrelevance=false;
+        		$scope.isPopularity=false;
+        		$scope.islowPrice=true;
+        		$scope.isHighPrice=false;
+        		$scope.isnewest=false;
+    		}
+    		
+    		$scope.displayLowPrice=function()
+    		{
+    			$scope.isrelevance=false;
+        		$scope.isPopularity=false;
+        		$scope.islowPrice=false;
+        		$scope.isHighPrice=true;
+        		$scope.isnewest=false;
+    		}
+    		
+    		$scope.displayNewest=function()
+    		{
+    			$scope.isrelevance=false;
+        		$scope.isPopularity=false;
+        		$scope.islowPrice=false;
+        		$scope.isHighPrice=false;
+        		$scope.isnewest=true;
+    		}
+    		
+    	});
+    	$scope.backToHome= function()
+    	{
+    		$location.path('/home');
+    	}
+    	$scope.backToProductDeatils= function()
+    	{
+    		$location.path('/productDetails')
+    	}
+    	 displayLoginService.setIsLoginVisible(false);
+ 		$rootScope.isLoginVisible = false;
+ 		$scope.dsiplaySignup = function() {
+ 			displayLoginService.setIsLoginVisible(true);
+ 			$rootScope.isLoginVisible = true;
+ 		}
+    
+});
