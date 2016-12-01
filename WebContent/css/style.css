@@ -996,3 +996,17 @@ nav > ul > li > a:HOVER {
 	position: fixed;
 }
 
+.home-Header
+{
+	
+	padding-top: 5px;
+	margin-left: 14%;
+	margin-right: 14%;
+	
+}
+.home-heade-cone
+{
+	padding-left: 7px;
+	border-left: 3px solid #f0f0f0;
+	cursor: pointer;
+}

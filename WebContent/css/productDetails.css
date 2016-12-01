@@ -1614,6 +1614,7 @@
       padding-top:10px;
       padding-left:10px;
       box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
+       background-color: #fff;
 }
 
 .categories
@@ -1707,6 +1708,7 @@
 {
 	padding-left: 30px;
 	padding-top: 10px;
+	width: 50%;
 }
 .list-filter-product-details
 {
@@ -1766,4 +1768,117 @@
 	color: blue !important;
 	
 	
+}
+.mobile-view-all
+{
+	background: #2874f0;
+    color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    border: none;
+  
+}
+.mobile-list
+{
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
+	width: 100%;
+	border-bottom: 1px solid #f0f0f0;
+	border-top: 1px solid #f0f0f0;
+}
+.show-mobiles-list
+{
+	padding-left: 2%;
+	padding-right: 1%;
+	padding-top: 2%;
+}
+
+.mobile-information
+{
+	width: 100%;
+	display: inline-flex;
+	padding: 0px;
+}
+
+.mobile-item
+{
+	text-align: center;
+    list-style: none;
+}
+
+.mobile-product-info
+{
+	/* width:16.66%;
+	height: 250px; */
+	display: inline-block;
+	 /* width:530px;
+    height:210px */;
+    margin: 5px 20px;
+}
+.mobile-img-box
+{
+
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.mobile-img-box:HOVER
+{
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.mobile-title
+{
+	font-weight: bold;
+	margin-left: 2%;
+}
+
+.phone-price
+{
+	color: #16be48;
+	margin-left: 2%;
+}
+
+.mobile-original-price
+{
+	text-decoration: line-through;
+	font-weight: bold;
+	margin-left: 2%;
+}
+
+.dispaly-first-list
+{
+	width: 100%;
+	padding-left: 25px;
+	padding-top: 25px;
+	padding-bottom: 20px;
+}
+.display-tv-list
+{
+	border-bottom: 1px solid #f0f0f0;
+}
+/* .show-tv-details
+{
+	background-color: #e4e4e4;
+} */
+.displayiproduct-image
+{
+	display: flex;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
+	padding-left: 2%;
+	width: 96%;
+}
+.tv-description
+{
+	background-color: #e4e4e4;
+}
+.display-right-side-tv-details
+{
+	width: 100%;
+}
+.view-trackorder
+{
+	padding-top: 30px;
 }
