@@ -1,0 +1,39 @@
+{"newLauncher": [
+	{
+		"id": 1,
+		"title": "Apple iPhone 7",
+		"image": "image/apple-iphone-4s-black.jpeg",
+		"price": "Flat rs 3,491 off",
+		"offer": "50,000"
+	},
+	{
+		"id": 2,
+		"title": "Panosonic mark",
+		"image": "image/panasonic-eluga.jpeg",
+		"price": "no cost EMI",
+		"offer": "10,499"
+	},
+	{
+		"id": 3,
+		"title": "Google Pixel XL",
+		"image": "image/google-pixel.jpeg",
+		"price": "From rs 57,00",
+		"offer": "15,500"
+	},
+	{
+		"id": 4,
+		"title": "Samsung On Nxt",
+		"image": "image/samsung-galaxy-on.jpeg",
+		"price": "Exchange offer",
+		"offer": "18,499"
+	},
+	{
+		"id": 2,
+		"title": "Panosonic mark",
+		"image": "image/panasonic-eluga.jpeg",
+		"price": "no cost EMI",
+		"offer": "10,499"
+	}
+	
+
+]}

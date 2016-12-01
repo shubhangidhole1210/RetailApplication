@@ -1,0 +1,129 @@
+<div ng-controller="tvDetailsCtrl">
+<div class="show-tv-details">
+
+<div style="background-color: #e4e4e4">
+    <div style="padding-top: 8px;padding-left: 8px;font-size: 12px; color: #878787;">
+      <span style="cursor: pointer;" ng-clcik="redirectToHome()">Home</span>
+      <span> > </span>
+      <span>Televisions</span>
+   </div>
+   <div  align="justify" style="font-size: 12px;margin-left: 1%;margin-right: 1%;padding-top: 13px">When it comes to TVs, there are choices galore on Flipkart. Browse from an extensive range from Vu, LG, Sony, Samsung, BPL, Videocon, Philips, Sansui, Onida and others. TVs are majorly differentiated based on screen type, resolution, screen size and value-added features. Most popular screen types are LED TV, Curved TV, and 3D TV. OLED TVs. Screen resolution varies between HD, HD Ready, Full HD TV, and 4K Ultra HD televisions. Screen size is a choice. It ranges from 21 to 55 inches and more.</div>
+ </div>     
+      
+      <div class="all-TV-details" style="display: flex">
+            <div class="filters-product">
+              <div style="padding-bottom: 12px;border-bottom: 1px solid #f0f0f0;padding: 16px;font-size: 14px;color: #212121;font-weight: bold;">Filters</div>
+              <div class="categories">
+              <div style="font-size: 12px;font-weight: 700" >
+                CATEGORIES 
+              </div>
+              <div style="padding: 5px 0;color: #878787"> < Mobiles & Accessories</div>
+                 <div style="padding: 5px 0;color: #212121;font-weight: 600;">Mobiles</div>
+              
+              </div>
+              <div class="Price-filter">
+                 <div style="font-size: 13px; font-weight: 600;">PRICE</div>
+                 <rzslider rz-slider-model="slider.minValue"
+          rz-slider-high="slider.maxValue"
+          rz-slider-options="slider.options"></rzslider>
+                
+                 
+               <div class="drop-down-price">  
+            <input type="number" ng-model="slider.minValue" class="minValueSelection"/>
+              <div style="padding-left: 10px;padding-right: 10px">to</div>
+            <input type="number" ng-model="slider.maxValue" class="maxValueSelection" />
+            </div>
+                 
+              </div>
+              
+              <div class="assured-check">
+                 <span><input type="checkbox"  ng-click="CheckBoxChanged()"></span>
+                 <span><img alt="" src="image/assured_img.png" width="82px" height="25px" style="padding-left: 10px"></span>
+                 <span><img alt="" src="image/ic_launcher_question_mark.png" width="40px" height="20px" style="padding-left: 15px"></span>
+              </div>
+              <div class="Brand">
+                 <div>
+                 <div ng-repeat="searchItem in filter">
+                  <span style="font-size: 13px; font-weight: 600;" >{{searchItem.filtertype}}</span>
+                  <span style="font-size: 13px; font-weight: 600; padding-left: 145px"><img alt="" src="image/ic_launcher_upper_bracket.png" width="20px" height="20px" ng-click="hiddenDiv = !hiddenDiv">
+                  </span>
+                  <div class="sub-brand" ng-repeat="searchItemDetails in searchItem.itemList " ng-show="hiddenDiv">
+                     <span><input type="checkbox"></span>
+                     <span class="brand-name" >{{searchItemDetails.itemName}}</span>
+                  </div>
+                  </div>
+                  
+         </div>
+         
+      </div>
+      <div class="product-help">
+      <div align="center">
+        <div style="font-size: 14px;cursor: pointer;">Need help?</div>
+        <div style="font-size: 18px;color: #2874f0;">Help me decide></div>
+        <img alt="" src="image/buying-guide-illustration_48642c.png" style="padding-top: 7px">
+      </div>  
+      </div>
+      </div>
+      
+      <div class="display-right-side-tv-details">
+         <div class="displayiproduct-image" style="" >
+            <div class="display-tv-logo" style="padding-left: 40px">
+                <img alt="" src="image/lg-logo.jpg" width="140px" height="90px">
+                <div style="padding-left: 30px;font-weight: 600">LG</div>
+            </div>
+            <div class="display-tv-logo" style="padding-left: 40px" >
+                <img alt="" src="image/vu.jpg" width="140px" height="90px">
+                <div style="padding-left: 30px;font-weight: 600">VU</div>
+            </div>
+             <div class="display-tv-logo" style="padding-left: 40px" >
+                <img alt="" src="image/panosonic-logo.jpg" width="140px" height="90px">
+                <div style="padding-left: 30px;font-weight: 600">Panosonic</div>
+            </div>
+            <div class="display-tv-logo" style="padding-left: 40px" >
+                <img alt="" src="image/svmsung-logo.jpg" width="140px" height="90px">
+                <div style="padding-left: 30px;font-weight: 600">Svmsung</div>
+            </div>
+            <div class="display-tv-logo" style="padding-left: 40px" >
+                <img alt="" src="image/micromax-tv-logo.jpg" width="140px" height="90px">
+                <div style="padding-left: 30px;font-weight: 600">Micromax</div>
+            </div>
+         </div>
+         <div class="display-tv-list" style="display: flex">
+         
+         <div class="dispaly-first-list">
+             <img alt="" src="image/micromax-tv.jpeg" width="230px" height="130px" style="padding-top: 5px">
+             <div>LeEco 138.8cm (55) Ultra HD (4K) </div>
+             <div>Smart LED TV</div>
+             <div style="padding-top: 3px">59,790</div>
+         </div>
+         
+         <div class="dispaly-first-list">
+             <img alt="" src="image/micromax-tv.jpeg" width="230px" height="130px">
+             <div>LeEco 138.8cm (55) Ultra HD (4K) </div>
+             <div>Smart LED TV</div>
+             <div style="padding-top: 3px">59,790</div>
+         </div>
+         <div class="dispaly-first-list">
+             <img alt="" src="image/micromax-tv.jpeg" width="230px" height="130px">
+             <div>LeEco 138.8cm (55) Ultra HD (4K) </div>
+             <div>Smart LED TV</div>
+             <div style="padding-top: 3px">59,790</div>
+         </div>
+         </div>
+         <div class="tv-description" style="width: 100%;padding-left: 20px">
+            <div style="font-size: 20px;font-weight: 600;padding-top: 50px;">Buy Televisions/TV's Online at Flipkart.com</div>
+<p style="font-size: 12px;text-align: justify;padding-top: 20px">What would you rather do on a humid day? Spend your day outdoors, getting more anxious and frustrated by the minute, or stay in at home under the cool comfort of the AC, with good TV shows to keep you company? If we had a choice, we would all opt for the latter. Comfortable clothing, good company, and sinful treats, these are three things that make for an enjoyable TV viewing experience. But you know whats also important? Its bringing home a high-resolution television. Whats the point of watching TV if the images are blurred and the sound muffled? To gift your family and yourself the best visual entertainment, we are here to indulge you with a wide range of televisions, in varying sizes and styles. Go ahead. Make the move and bring home the best in entertainment; because you deserve it.</p>         
+         <div style="font-size: 12px;color:color: #878787;padding-top: 20px">The size of your TV screen does matter
+         </div>
+         <div style="font-size: 12px;color:color: #878787;padding-top: 20px;text-align: justify;">Imagine watching a horror movie on a 54 inch TV screen? Sounds like fun, does not it? Documentaries, animated movies, music videos, and cricket matches, everything is more vivid and seems more interesting when you watch them on a TV that supports crisp images and clear sound. Want to install a TV in the kitchen so you can draw inspiration from your favourite chef as you cook? Install a medium-sized 21 inch, 22 inch, or 24 inches TV in the kitchen. For general viewing, larger-sized 31 inch, 32 inches TV, and 33 inch TV screens will give you the desired outcome. Not satisfied with playing video games on a 33-inch TV screen? There are televisions ranging from 40 inches TV to 55 inches and above that make console gaming more fun with highly detailed graphics.</div>
+        <div style="font-size: 12px;color:color: #878787;padding-top: 20px">What are the different TV resolution types?
+        </div>
+        <div style="font-size: 12px;color:color: #878787;padding-top: 20px;text-align: justify;padding-bottom: 20px">If you are looking for TVs for business-related purposes, WXGA resolution TVs are the ideal choice. These TVs come with a screen resolution of approximately 1280x800, and are ideal for watching DVDs. For regular home-viewing, you can choose from HD, HD Ready, Full HD TV, and 4K Ultra HD televisions. The picture-quality of a TV depends on its pixel quantity. The more pixels it has, the better its picture-clarity will be.</div>
+         </div>
+         
+         
+      </div>
+      </div>
+
+</div>
+</div>

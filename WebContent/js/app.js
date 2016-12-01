@@ -32,6 +32,15 @@ retailApp.config(function($routeProvider) {
 	}).when('/searchProductDetails', {
 		templateUrl : "searchProductDetails.html"
 
+	}).when('/mobileDetails', {
+		templateUrl : "mobileHome.html"
+
+	}).when('/TVDetails', {
+		templateUrl : "TVDetails.html"
+
+	}).when('/trackOrdedr', {
+		templateUrl : "trackOrdedr.html"
+
 	}).otherwise({
 		redirectTo : '/'
 	});
@@ -242,6 +251,14 @@ retailApp.controller('homeCtrl', function($scope, $http,$location) {
 	{
 		$location.path('/searchProductDetails');
 	}*/
+	$scope.displayMobileDeatils=function()
+	{
+		$location.path('/mobileDetails')
+	}
+	$scope.displayMobileDetails=function()
+	{
+		$location.path('/TVDetails')
+	}
 	
 });
 var timer1;
@@ -1004,6 +1021,65 @@ retailApp.controller('searchProductCtrl',function($scope,$http,$modal,$timeout,$
 	
 	$http.get('searchProductDetails.json').success(function(response) {
 		$scope.filter = response.filter
+		
+		$scope.phoneDetails = response.phoneDetails;
+		$scope.popularityPhoneDetails = response.popularityPhoneDetails;
+		$scope.lowPricePhoneDetails = response.lowPricePhoneDetails;
+		$scope.highPricePhoneDetails = response.highPricePhoneDetails;
+		$scope.newestFirstPhoneDetails = response.newestFirstPhoneDetails;
+		
+		$scope.isrelevance=true;
+		$scope.isPopularity=false;
+		$scope.islowPrice=false;
+		$scope.isHighPrice=false;
+		$scope.isnewest=false;
+		
+		$scope.displayRelevance=function()
+		{
+			$scope.isrelevance=true;
+    		$scope.isPopularity=false;
+    		$scope.islowPrice=false;
+    		$scope.isHighPrice=false;
+    		$scope.isnewest=false;
+		}
+		
+		$scope.displayPopularity=function()
+		{
+			$scope.isrelevance=false;
+    		$scope.isPopularity=true;
+    		$scope.islowPrice=false;
+    		$scope.isHighPrice=false;
+    		$scope.isnewest=false;
+		}
+		
+		$scope.displayLowPrice=function()
+		{
+			$scope.isrelevance=false;
+    		$scope.isPopularity=false;
+    		$scope.islowPrice=true;
+    		$scope.isHighPrice=false;
+    		$scope.isnewest=false;
+		}
+		
+		$scope.displayLowPrice=function()
+		{
+			$scope.isrelevance=false;
+    		$scope.isPopularity=false;
+    		$scope.islowPrice=false;
+    		$scope.isHighPrice=true;
+    		$scope.isnewest=false;
+		}
+		
+		$scope.displayNewest=function()
+		{
+			$scope.isrelevance=false;
+    		$scope.isPopularity=false;
+    		$scope.islowPrice=false;
+    		$scope.isHighPrice=false;
+    		$scope.isnewest=true;
+		}
+		
+		
 	});
 	
 	$scope.hiddenDiv = false;
@@ -1069,66 +1145,7 @@ retailApp.controller('searchProductCtrl',function($scope,$http,$modal,$timeout,$
     	 
     	});
     	
-    	$http.get('filterProductDetails.json').success(function(response) {
-    		$scope.phoneDetails = response.phoneDetails;
-    		$scope.popularityPhoneDetails = response.popularityPhoneDetails;
-    		$scope.lowPricePhoneDetails = response.lowPricePhoneDetails;
-    		$scope.highPricePhoneDetails = response.highPricePhoneDetails;
-    		$scope.newestFirstPhoneDetails = response.newestFirstPhoneDetails;
-    		
-    		$scope.isrelevance=true;
-    		$scope.isPopularity=false;
-    		$scope.islowPrice=false;
-    		$scope.isHighPrice=false;
-    		$scope.isnewest=false;
-    		
-    		$scope.displayRelevance=function()
-    		{
-    			$scope.isrelevance=true;
-        		$scope.isPopularity=false;
-        		$scope.islowPrice=false;
-        		$scope.isHighPrice=false;
-        		$scope.isnewest=false;
-    		}
-    		
-    		$scope.displayPopularity=function()
-    		{
-    			$scope.isrelevance=false;
-        		$scope.isPopularity=true;
-        		$scope.islowPrice=false;
-        		$scope.isHighPrice=false;
-        		$scope.isnewest=false;
-    		}
-    		
-    		$scope.displayLowPrice=function()
-    		{
-    			$scope.isrelevance=false;
-        		$scope.isPopularity=false;
-        		$scope.islowPrice=true;
-        		$scope.isHighPrice=false;
-        		$scope.isnewest=false;
-    		}
-    		
-    		$scope.displayLowPrice=function()
-    		{
-    			$scope.isrelevance=false;
-        		$scope.isPopularity=false;
-        		$scope.islowPrice=false;
-        		$scope.isHighPrice=true;
-        		$scope.isnewest=false;
-    		}
-    		
-    		$scope.displayNewest=function()
-    		{
-    			$scope.isrelevance=false;
-        		$scope.isPopularity=false;
-        		$scope.islowPrice=false;
-        		$scope.isHighPrice=false;
-        		$scope.isnewest=true;
-    		}
-    		
-    	});
-    	$scope.backToHome= function()
+    	    	$scope.backToHome= function()
     	{
     		$location.path('/home');
     	}
@@ -1144,3 +1161,52 @@ retailApp.controller('searchProductCtrl',function($scope,$http,$modal,$timeout,$
  		}
     
 });
+
+retailApp.controller('mobileDetailsCtrl',function($scope,$http,$modal,$timeout,$location,displayLoginService,$rootScope)
+		{
+	$http.get('searchProductDetails.json').success(function(response) {
+		$scope.filter = response.filter;
+	});      
+	
+	$scope.slider = {
+		    minValue: 0,
+		    maxValue: 100,
+		    options: {
+		        floor: 0,
+		        ceil: 100,
+		        step: 1,
+		        noSwitching: true
+		    }
+		};
+	
+	$http.get('mobileProductDetails.json').success(function(response) {
+		$scope.newLauncher = response.newLauncher;
+	});      
+	
+		});
+
+retailApp.controller('tvDetailsCtrl',function($scope,$http,$location)
+{
+	  $http.get('searchProductDetails.json').success(function(response)
+			  
+	  {
+		     $scope.filter=response.filter; 
+	  });
+	  
+	  $scope.slider = {
+			    minValue: 0,
+			    maxValue: 100,
+			    options: {
+			        floor: 0,
+			        ceil: 100,
+			        step: 1,
+			        noSwitching: true
+			    }
+			};
+});
+
+reatilApp.controller('trackOrderCtrl', function($scope,$http)
+{
+	
+});
+

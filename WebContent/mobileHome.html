@@ -1,0 +1,132 @@
+<div ng-controller="mobileDetailsCtrl">
+<div class="mobileHomeDetails" ">
+   <div style="padding-top: 8px;padding-left: 8px;font-size: 12px; color: #878787;">
+      <span style="cursor: pointer;" ng-clcik="redirectT">Home</span>
+      <span> > </span>
+      <span>Mobiles</span>
+   </div>
+   <div align="justify" style="font-size: 12px;margin-left: 1%;margin-right: 1%;padding-top: 13px">Loaded with features like dual SIM, 4G, wi-fi, touchscreen and more, Mobiles have brought the world to our fingertips. Besides voice calling, a mobile phone doubles up as a media player, music player, gaming device, camera, and alarm clock! , Flipkart offers a range of mobile phones as per your budget and preference. Android, Windows or iOS; Motorola, Apple or Samsung, the choice is yours. Avail jaw-dropping offers and deals when you buy Google Pixel online</div>
+<div class="all-mobile-details" style="display: flex">
+     <div class="filters-product">
+              <div style="padding-bottom: 12px;border-bottom: 1px solid #f0f0f0;padding: 16px;font-size: 14px;color: #212121;font-weight: bold;">Filters</div>
+              <div class="categories">
+              <div style="font-size: 12px;font-weight: 700" >
+                CATEGORIES 
+              </div>
+              <div style="padding: 5px 0;color: #878787"> < Mobiles & Accessories</div>
+                 <div style="padding: 5px 0;color: #212121;font-weight: 600;">Mobiles</div>
+              
+              </div>
+              <div class="Price-filter">
+                 <div style="font-size: 13px; font-weight: 600;">PRICE</div>
+                 <rzslider rz-slider-model="slider.minValue"
+          rz-slider-high="slider.maxValue"
+          rz-slider-options="slider.options"></rzslider>
+                
+                 
+               <div class="drop-down-price">  
+            <input type="number" ng-model="slider.minValue" class="minValueSelection"/>
+              <div style="padding-left: 10px;padding-right: 10px">to</div>
+            <input type="number" ng-model="slider.maxValue" class="maxValueSelection" />
+            </div>
+                 
+              </div>
+              
+              <div class="assured-check">
+                 <span><input type="checkbox"  ng-click="CheckBoxChanged()"></span>
+                 <span><img alt="" src="image/assured_img.png" width="82px" height="25px" style="padding-left: 10px"></span>
+                 <span><img alt="" src="image/ic_launcher_question_mark.png" width="40px" height="20px" style="padding-left: 15px"></span>
+              </div>
+              <div class="Brand">
+                 <div>
+                 <div ng-repeat="searchItem in filter">
+                  <span style="font-size: 13px; font-weight: 600;" >{{searchItem.filtertype}}</span>
+                  <span style="font-size: 13px; font-weight: 600; padding-left: 145px"><img alt="" src="image/ic_launcher_upper_bracket.png" width="20px" height="20px" ng-click="hiddenDiv = !hiddenDiv">
+                  </span>
+                  <div class="sub-brand" ng-repeat="searchItemDetails in searchItem.itemList " ng-show="hiddenDiv">
+                     <span><input type="checkbox"></span>
+                     <span class="brand-name" >{{searchItemDetails.itemName}}</span>
+                  </div>
+                  </div>
+                  
+         </div>
+         
+      </div>
+      <div class="product-help">
+      <div align="center">
+        <div style="font-size: 14px;cursor: pointer;">Need help?</div>
+        <div style="font-size: 18px;color: #2874f0;">Help me decide></div>
+        <img alt="" src="image/buying-guide-illustration_48642c.png" style="padding-top: 7px">
+      </div>  
+      </div>
+      </div>
+      
+      <div>
+      <div class="show-mobiles-list">
+           <div class="mobile-list">
+             <div style="border-bottom: 1px solid #f0f0f0;">
+                 <span style="font-size: 22px;font-weight: 600;">New Launches</span>
+                 <span style="padding-left: 700px"><button type="button" class="mobile-view-all">VIEW ALL</button></span>
+             </div>
+             <div class="mobile-information">
+                <div class="mobile-item" ng-repeat="mobileLauncherDetails in newLauncher">
+                  <div class="mobile-product-info">
+                      <img alt="" src="{{mobileLauncherDetails.image}}" class="mobile-img-box" height="160px" >
+                      <figcaption>
+                         <div class="mobile-title" style="font-weight: bold;">{{mobileLauncherDetails.title}}</div>
+							<div class="phone-price medium">{{mobileLauncherDetails.price}}</div>
+							<div class="mobile-original-price" style="text-decoration: none;">Price now
+								: &#8377; {{mobileLauncherDetails.offer}}</div>
+                      </figcaption>
+                  </div>
+                </div>
+             </div>
+           </div>
+      </div>
+      <div class="show-mobiles-list">
+           <div class="mobile-list">
+             <div style="border-bottom: 1px solid #f0f0f0;">
+                 <span style="font-size: 22px;font-weight: 600;">Only on flipkart</span>
+                 <span style="padding-left: 700px"><button type="button" class="mobile-view-all">VIEW ALL</button></span>
+             </div>
+             <div class="mobile-information">
+                <div class="mobile-item" ng-repeat="mobileLauncherDetails in newLauncher">
+                  <div class="mobile-product-info">
+                      <img alt="" src="{{mobileLauncherDetails.image}}" class="mobile-img-box" height="160px" >
+                      <figcaption>
+                         <div class="mobile-title" style="font-weight: bold;">{{mobileLauncherDetails.title}}</div>
+							<div class="phone-price medium">{{mobileLauncherDetails.price}}</div>
+							<div class="mobile-original-price" style="text-decoration: none;">Price now
+								: &#8377; {{mobileLauncherDetails.offer}}</div>
+                      </figcaption>
+                  </div>
+                </div>
+             </div>
+           </div>
+      </div>
+      <div class="show-mobiles-list">
+           <div class="mobile-list">
+             <div style="border-bottom: 1px solid #f0f0f0;">
+                 <span style="font-size: 22px;font-weight: 600;">No Cost EMI</span>
+                 <span style="padding-left: 700px"><button type="button" class="mobile-view-all">VIEW ALL</button></span>
+             </div>
+             <div class="mobile-information">
+                <div class="mobile-item" ng-repeat="mobileLauncherDetails in newLauncher">
+                  <div class="mobile-product-info">
+                      <img alt="" src="{{mobileLauncherDetails.image}}" class="mobile-img-box" height="160px" >
+                      <figcaption>
+                         <div class="mobile-title" style="font-weight: bold;">{{mobileLauncherDetails.title}}</div>
+							<div class="phone-price medium">{{mobileLauncherDetails.price}}</div>
+							<div class="mobile-original-price" style="text-decoration: none;">Price now
+								: &#8377; {{mobileLauncherDetails.offer}}</div>
+                      </figcaption>
+                  </div>
+                </div>
+             </div>
+           </div>
+      </div>
+      </div>
+</div>
+
+</div>
+</div>
