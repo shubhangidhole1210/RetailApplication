@@ -5,11 +5,11 @@ retailApp.config(function($routeProvider) {
 	}).when('/signUp', {
 		templateUrl : 'signUp.html',
 		controller : 'signController'
-	}).when('/Electronics', {
-		templateUrl : "Electronics.html"
+	}).when('/downloadApp', {
+		templateUrl : "downloadApp.html"
 
-	}).when('/Men', {
-		templateUrl : "Men.html"
+	}).when('/giftCard', {
+		templateUrl : "giftCard.html"
 
 	}).when('/productDetails', {
 		templateUrl : "productDetails.html"
@@ -20,11 +20,11 @@ retailApp.config(function($routeProvider) {
 	}).when('/sellerDetails', {
 		templateUrl : "seller.html"
 
-	}).when('/sellerTwoDetails', {
-		templateUrl : "sellerTwo.html"
+	}).when('/customerCare', {
+		templateUrl : "CustomerCare.html"
 
-	}).when('/sellerThreeDetails', {
-		templateUrl : "sellerThree.html"
+	}).when('/assured', {
+		templateUrl : "assured.html"
 
 	}).when('/allReviews', {
 		templateUrl : "allReviews.html"
@@ -1209,4 +1209,22 @@ reatilApp.controller('trackOrderCtrl', function($scope,$http)
 {
 	
 });
+reatilApp.controller('giftCardCtrl', function($scope,$http)
+		{
+			
+		});
 
+reatilApp.controller('downloadAppCtrl', function($scope,$http)
+		{
+			
+		});
+
+reatilApp.controller('customerCareCtrl', function($scope,$http)
+		{
+			
+		});
+
+reatilApp.controller('assuredCtrl', function($scope,$http)
+		{
+			
+		});

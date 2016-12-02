@@ -843,8 +843,11 @@ nav li:hover > ul{
 }
 nav li > ul > li ul  {
     display: none;
-   color: #ffe11b;
-   color: #ffe11b;
+  
+}
+nav>ul>li:HOVER >a
+{
+	color: #ffe11b;
 }
 nav li > ul > li:hover > ul  {
     position:absolute;
