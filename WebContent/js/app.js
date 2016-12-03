@@ -1,4 +1,5 @@
 var retailApp = angular.module('retailApp', [ 'ngRoute','rzModule','ui.bootstrap' ])
+
 retailApp.config(function($routeProvider) {
 	$routeProvider.when('/', {
 		templateUrl : 'home.html'
@@ -137,22 +138,7 @@ retailApp.controller('displayLoginCtrl', function($scope, displayLoginService,$r
 
 
 
-/*retailApp.controller(carouselCtrl, function($scope)
-		{
-	      $scope.myInterval = 3000;
-	      $scope.slides=
-	    	  [
 
-                    {
-                    	image: 'image/Galaxy S5-latest-samsung-phones.jpg/400/200'
-	                 },
-	                 {
-	                	 image: 'image/galaxy-alpha-unbox_1.jpg/400/200'
-	                 }
-	    	   ];
-	
-		});
-*/
 retailApp.controller('signCtrl', function($scope) {
 
 	$scope.submitForm = function() {
@@ -1219,8 +1205,13 @@ reatilApp.controller('downloadAppCtrl', function($scope,$http)
 			
 		});
 
-reatilApp.controller('customerCareCtrl', function($scope,$http)
+reatilApp.controller('customerCareCtrl', function($scope,$http,$location,$timeout)
 		{
+	$scope.isOrderHidden = true;
+    $scope.displayOrder = function () {
+        //If DIV is hidden it will be visible and vice versa.
+        $scope.isOrderHidden = $scope.isOrderHidden ? false : true;
+    }
 			
 		});
 
@@ -1228,3 +1219,12 @@ reatilApp.controller('assuredCtrl', function($scope,$http)
 		{
 			
 		});
+
+
+reatilApp.controller('retailHeaderCtrl', function($scope,$http,$location,$timeout)
+		{
+	           
+		});
+
+
+

@@ -771,7 +771,7 @@ margin-left: 10%;
 
 nav {
     background-color: #2874f0;
-    border: 1px solid #333;
+   /*  border: 1px solid #333; */
     color: #fff;
     display: block;
     margin: 0;
@@ -810,8 +810,8 @@ nav > ul > li > a :HOVER
 nav li > ul{
     display : none;
     margin-top:1px;
-    background-color: #bbb;
-   
+    background-color: white;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
 
 }
 
@@ -823,9 +823,13 @@ nav  li > ul li a {
     color: #111;
     display: block;
     line-height: 2em;
-    padding: 0.5em 2em;
+   /*  padding: 0.5em 2em; */
     text-decoration: none;
-    
+    text-align: justify;
+    padding-top: 3px;
+    padding-left: 13px;
+    padding-right: 20px;
+width: 100%    
 }
 nav  li > ul li a:HOVER
 {
@@ -1006,10 +1010,20 @@ nav > ul > li > a:HOVER {
 	margin-left: 14%;
 	margin-right: 14%;
 	
+	
 }
 .home-heade-cone
 {
 	padding-left: 7px;
 	border-left: 3px solid #f0f0f0;
 	cursor: pointer;
+}
+
+.cart-show-button
+{
+	padding-left: 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23),inset 1px 1px 0 0 hsla(0,0%,100%,.2);
+    padding: 0;
+    margin-left: 1%;
+        font-family: Roboto,Arial,sans-serif;
 }

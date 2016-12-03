@@ -3,72 +3,67 @@
 <div style="font-weight: bold;font-size: 17px">Help Centre</div>
 <div style="padding-top: 7px">Assistance at your finger tips</div>
 
-<div>
-<div>
-<div style="margin-top: 2% ">
- <!-- <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="What can  We help with ">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button" style="background-color: #565656;" >Go!</button>
-      </span>
+<div class="display-both-sided-customer-div" style="display: flex">
+<div class="display-leftSide-customer">
+    <div style="display: flex" class="textboxdiv" >
+        <input type="text" class="careText" placeholder="What Can We Help With?">
+        <a class="goButton">	GO</a>
     </div>
-  </div> -->
-  <div> 
-ex : Returns, Exchange, Damaged product</div>
-  </div>
-
-<div>
-   <div style="padding-top: 10px;font-weight: bold;">Look up by issue type</div>
-   <div class="browser-category">
-      <ul>
-         <li>
-           <a class="issue-type">Order</a>
-         </li>
-         <li>
-            <a>
-            Cancellation and return
-            </a>
-         </li>
-         <li>
-            <a>Payment</a>
-         </li>
-         <li>
-            <a>Shopping</a>
-         </li>
-         <li>
-             <a>wallet</a>
-         </li>
-         
-         <li>
-         <a>Other</a>
-         </li>
-      </ul>
+    <div style="padding-top: 5px;font-size: 13px">ex : Returns, Exchange, Damaged product</div>
+    <div style="padding-top: 25px;font-size: 14px;font-weight: bold;">Look up by issue type</div>
+   <div>
+    <div class="category-browse">
+       <div class="category-browse-row" ng-click="displayOrder()">
+           <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
+           <span style="padding-left: 10px">Order</span>
+       </div>
+    <div ng-hide="isOrderHidden">   
+       <div class="category-browse-row">
+           <span style="padding-left: 10px">How I do place an order?</span>
+           
+       </div>
+       <div class="category-browse-row">
+           <span style="padding-left: 10px">How can i track my order?</span>
+           
+       </div>
+   </div>  
    </div>
-</div>
-</div>
-<div class="frequnty-asked-side-div">
-    <div style="font-size: 17px;font-weight: bold;padding-left: 30px">Frequently Asked Questions</div>
-    <div class="question-categories">
-        <ul>
-            <li><a>How can i return or exchange an item?</a></li>
-            <li><a>What irms Can I Exchange?</a></li>
-            <li><a>I have requested for a return of my item. When will it happen?</a></li>
-            <li><a>
-                        Should I call the customer care number for installation once the product is delivered?
-                     </a></li>
-                     
-            <li><a>What items can I not return?</a></li> 
-            <li><a>
-                        Can I change the delivery date of my order?
-                     </a></li>        
-        </ul>
+       
+       <div class="category-browse-row">
+           <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
+           <span style="padding-left: 10px">Cancellation and Returns</span>
+       </div>
+       <div class="category-browse-row">
+           <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
+           <span style="padding-left: 10px">payment</span>
+       </div>
+       <div class="category-browse-row">
+           <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
+           <span style="padding-left: 10px">shopping</span>
+       </div>
+       <div class="category-browse-row">
+           <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
+           <span style="padding-left: 10px">wallet</span>
+       </div>
     </div>
 </div>
-<div class="third-block-care">
-  <div style="padding-top: 10px;font-size: 16px;font-weight: bold;padding-left: 20px">Issue still not resolved?</div>
-   <button type="button" class="contact-us-button">Contact Us</button>
+<div class="display-rightSide-customer">
+     <div style="font-weight: bold;padding-top: 15px">Frequently Asked Questions</div>
+     <div class="frequntly-asked-questions">
+         <div class="asked-question-name" style="padding-top: 15px">How Can i return or exchange an item?</div>
+         <div class="asked-question-name">What items can I exchange?</div>
+         <div class="asked-question-name">I have requested for a return of my item. when will it happen?</div>
+         <div class="asked-question-name">What items can i not return?</div>
+         <div class="asked-question-name">should i call the customer care number foe installation once the product is delivered ?</div>
+         <div class="asked-question-name">Can I change the delivery date of my order?</div>
+         <div class="asked-question-name">what are the modes of refund available after cancellation?</div>
+     </div>
 </div>
 </div>
+<div class="customer-third-block">
+   <div style="font-size: 14px;font-weight: bold;">Issue still not resolved?</div>
+   <button type="button" class="customer-care-contact">CONTACT US</button>
+</div>
+
 </div>
 </div>

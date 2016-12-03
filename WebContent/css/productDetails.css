@@ -1997,6 +1997,13 @@
 	padding-left: 15px;
     padding-right: 25px	
 }
+
+.display-first-os-img a:HOVER
+{
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
 .display-second-os-img a
 {
 	margin-left:20px;
@@ -2008,6 +2015,21 @@
 	padding-left: 15px;
     padding-right: 25px	
 }
+.display-third-os-img a:HOVER
+{
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	
+}
+.display-second-os-img a:HOVER
+{
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	
+}
+
 .display-third-os-img a
 {
 	margin-left:20px;
@@ -2077,7 +2099,7 @@
 }
 .frequnty-asked-side-div li {
 	list-style: none;
-	border-bottom: 1px solid #f0f0f0;;
+	border-bottom: 1px solid #f0f0f0;
 	padding-top: 15px;
 	border-top: 1px solid #f0f0f0;;
 	padding-left: 8px;
@@ -2107,4 +2129,100 @@
     border: 1px solid #2874f0;
     margin-left:25px;
     margin-top: 20px;
+}
+.gift-card-option li a:HOVER {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: #124969;
+}
+#egv-banner
+{
+	background: url(../image/egv-banner-background.png) repeat-x;
+    width: 100%;
+    height: 127px;
+    position: relative;
+}
+#egv-ribbon
+{
+	position: absolute;
+    top: -142px;
+    right: 0;
+}
+.display-leftSide-customer
+{
+	width: 50%;
+}
+.careText
+{
+	width: 500px;
+	height: 40px;
+	border: 1px solid #ccc;
+	border-radius: 3px 3px 3px 3px;
+	 background-color: #f6f6f6;
+	 margin-top: 10px;
+	
+}
+.goButton
+{
+	background-color: #565656;
+    color: white;
+    padding-top: 8px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    padding-left: 6px;
+    font-size: 13px;
+    border-radius: 3px 3px 3px 3px;
+    margin-top: 10px;
+}
+.textboxdiv a:HOVER {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+.category-browse
+{
+	background-color: #f6f6f6;
+}
+.category-browse-row
+{
+	padding: 8px;
+	border-bottom: 1px solid #ccc;
+}
+.display-rightSide-customer
+{
+	background-color: #f6f6f6;
+	padding-left: 20px;
+	margin-left: 10%;
+	width: 30%;
+}
+
+.asked-question-name
+{
+	font-size: 13px;
+	border-bottom: 1px solid #ccc;
+	padding-top: 15px;
+	padding-bottom: 8px;
+	
+}
+
+.customer-third-block
+{
+	background-color: #f6f6f6;
+	width: 30%;
+	margin-top: 2%;
+	padding-top: 15px;
+	margin-left: 15px;
+	margin-left: 61%;
+}
+
+.customer-care-contact
+{
+	border-color: #0061ff;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #004b91;
+	border-radius: 2px;
+	height: 45px;
 }
