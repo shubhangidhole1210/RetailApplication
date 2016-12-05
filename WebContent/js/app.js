@@ -6,12 +6,6 @@ retailApp.config(function($routeProvider) {
 	}).when('/signUp', {
 		templateUrl : 'signUp.html',
 		controller : 'signController'
-	}).when('/downloadApp', {
-		templateUrl : "downloadApp.html"
-
-	}).when('/giftCard', {
-		templateUrl : "giftCard.html"
-
 	}).when('/productDetails', {
 		templateUrl : "productDetails.html"
 
@@ -20,12 +14,6 @@ retailApp.config(function($routeProvider) {
 
 	}).when('/sellerDetails', {
 		templateUrl : "seller.html"
-
-	}).when('/customerCare', {
-		templateUrl : "CustomerCare.html"
-
-	}).when('/assured', {
-		templateUrl : "assured.html"
 
 	}).when('/allReviews', {
 		templateUrl : "allReviews.html"
@@ -39,8 +27,20 @@ retailApp.config(function($routeProvider) {
 	}).when('/TVDetails', {
 		templateUrl : "TVDetails.html"
 
-	}).when('/trackOrdedr', {
-		templateUrl : "trackOrdedr.html"
+	}).when('/trackOrder', {
+		templateUrl : "trackOrder.html"
+
+	}).when('/downloadApp', {
+		templateUrl : "downloadApp.html"
+
+	}).when('/giftCard', {
+		templateUrl : "giftCard.html"
+
+	}).when('/assured', {
+		templateUrl : "assured.html"
+
+	}).when('/customerCare', {
+		templateUrl : "CustomerCare.html"
 
 	}).otherwise({
 		redirectTo : '/'
@@ -152,10 +152,7 @@ retailApp.controller('signCtrl', function($scope) {
 
 });
 
-retailApp.controller('carouselCtrl',function($scope)
-		{
-		
-});
+
 
 
 retailApp.controller('searchCtrl', function($scope, $http) {
@@ -1191,21 +1188,18 @@ retailApp.controller('tvDetailsCtrl',function($scope,$http,$location)
 			};
 });
 
-reatilApp.controller('trackOrderCtrl', function($scope,$http)
-{
-	
-});
-reatilApp.controller('giftCardCtrl', function($scope,$http)
+
+retailApp.controller('giftCardCtrl', function($scope,$http)
 		{
 			
 		});
 
-reatilApp.controller('downloadAppCtrl', function($scope,$http)
+retailApp.controller('downloadAppCtrl', function($scope,$http)
 		{
 			
 		});
 
-reatilApp.controller('customerCareCtrl', function($scope,$http,$location,$timeout)
+retailApp.controller('customerCareCtrl', function($scope,$http,$location,$timeout)
 		{
 	$scope.isOrderHidden = true;
     $scope.displayOrder = function () {
@@ -1215,16 +1209,50 @@ reatilApp.controller('customerCareCtrl', function($scope,$http,$location,$timeou
 			
 		});
 
-reatilApp.controller('assuredCtrl', function($scope,$http)
+retailApp.controller('assuredCtrl', function($scope,$http)
 		{
 			
 		});
 
 
-reatilApp.controller('retailHeaderCtrl', function($scope,$http,$location,$timeout)
+retailApp.controller('retailHeaderCtrl', function($scope,$http,$location,$timeout)
 		{
 	           
 		});
 
+retailApp.factory('displaySignService', function() {
 
+	var data = {
+			isSignVisible : false
+	};
 
+	return {
+		isSignVisible : function() {
+			return data.isSignVisible;
+		},
+		setIsLoginVisible : function(isSignVisible) {
+			data.isSignVisible = isSignVisible;
+		}
+	};
+});
+
+retailApp.controller('signUpCtrl',function($scope,$http, displaySignService,$rootScope,$timeout)
+{
+	$scope.cancelLogin = function(){
+		$rootScope.isSignVisible = false;
+	};
+});
+
+retailApp.controller('displaySignCtrl', function($scope, displaySignService,$rootScope) {
+	displaySignService.setIsLoginVisible(false);
+	$rootScope.isSignVisible = false;
+	$scope.displaySignPop = function() {
+		displaySignService.setIsLoginVisible(true);
+		$rootScope.isSignVisible = true;
+	}
+
+});
+
+retailApp.controller('trackOrderCtrl',function($scope)
+{
+	});
