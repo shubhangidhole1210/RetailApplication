@@ -65,7 +65,7 @@
 <li><a href="#/downloadApp">Download App</a></li>
 <li><a href="#/giftCard">Gift Card</a></li>
 <li><a href="#/customerCare">Customer Care</a></li>
-<li><a href="#/trackOrder">Track order</a></li>
+<li ng-controller="indexTrackOrderCtrl"><a href="" ng-click="displayTrackOrder()">Track order</a></li>
 <li ng-controller="displaySignCtrl"><a href="" ng-click="displaySignPop()">Sign Up</a></li>
 
 
@@ -951,16 +951,13 @@
  <!-- <div class="form-group" ng-class="{ 'has-error' : myForm.userName.$invalid && !myForm.userName.$pristine }"> -->
 <div>
 <input type="text" id="userName" name="userName" placeholder="Enter Email/User Name"  ng-model="username"  class="text" required><br>
-<span class="error"ng-show="myForm.$submitted && myForm.username.$error.required">userName required</span>
-<!-- </div> -->
+
 </div>
- <!-- <span class="text-error" data-ng-show="myForm.submitted && myForm.userName.$invalid">username required</span><br/> -->
 
 <div class="password-container">
 <input type="password" id="Password" name="Password" placeholder="Enter Password"  ng-model="password" class="text" required>
 <span class="forgot"><a href="" class="forgotLink">Forgot?</a></span>
 </div>
- <!-- <span class="text-error" data-ng-show="myForm.submitted && myForm.Password.$invalid">First Name is required</span><br/> -->
 
 <label style="color: red;">{{errorMsg}}</label>
 

@@ -3,14 +3,15 @@
  <div style="font-weight: bold;font-size: 18px">LOGIN</div>
  <div class="main-details-trackorder" style="display: flex">
  <div class="trackorder-left-side">
+ <form action="" name="myForm"  novalidate>
  <div>
-    <input type="text" placeholder="Enter email/mobile" class="trackOrderText">
+    <input type="text" placeholder="Enter email/mobile" class="trackOrderText" ng-model="email" id="email" required>
     </div>
     <div style="margin-top: 10px">
-    <input type="text" placeholder="Enter password" class="trackOrderText">
+    <input type="password" placeholder="Enter password" class="trackOrderText" ng-model="username" id="password" required>
     </div>
     <div style="margin-top: 15px">
-       <span><button type="button" class="trackOrderButton">Login</button></span>
+       <span><button type="button" class="trackOrderButton" ng-clcik="trackOrderLogin()">Login</button></span>
        <span style="    font-size: 12px;padding-left: 20px;">forgot password?</span>
     </div>
     <div style="margin-top: 1%">
@@ -22,6 +23,7 @@
        <span><button type="button" class="social-media-button">Facebook</button></span>
        <span><button type="button" class="social-media-button" style="background-color: red;">Google+</button></span>
     </div>
+    </form>
  </div>
  
  <div class="trackorder-right-side">
@@ -39,8 +41,8 @@
             <img alt="" src="image/ic_launcher_bell_blue.png" width="50px" height="50px">
         </div>  
         <div class="display-track-data">
-           <div style="font-size: 14px;padding-bottom: 5px">Manage Your Orders</div>
-           <div style="font-size: 12px">Easily Track Orders, Create Returns</div>
+           <div style="font-size: 14px;padding-bottom: 5px">Make Informed Decisions</div>
+           <div style="font-size: 12px">Get Relevant Alerts And Recommendations</div>
         </div> 
     </div>
     <div style="display: flex;margin-top: 10%">
@@ -48,29 +50,12 @@
             <img alt="" src="image/ic_launcher_blue_heart.png" width="50px" height="50px">
         </div>  
         <div class="display-track-data">
-           <div style="font-size: 14px;padding-bottom: 5px">Manage Your Orders</div>
-           <div style="font-size: 12px">Easily Track Orders, Create Returns</div>
+           <div style="font-size: 14px;padding-bottom: 5px">Engage Socially</div>
+           <div style="font-size: 12px">With Wishlists, Reviews, Ratings</div>
         </div> 
     </div>
     </div>
  </div>
- 
-<!--  <div id="popTrackOrder" style="padding-top: 220px;padding-right: " ng-show="isTermsAndConditionVisible" ng-click="hideTermsAnsCondition()" >
-
-<div class="TrackOrder-container">
-
- <form class="TrackOrder-form" name="myForm"  novalidate>
-<fieldset>
-<div>
-
-</div>
-
-</fieldset>
-</form>
-<button class="cancel" ng-click="hideTermsAnsCondition()">&#10006;</button>
-</div>
-</div> -->
- 
- 
  </div>
+ 
 </div>

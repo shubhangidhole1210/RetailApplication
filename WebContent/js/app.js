@@ -27,6 +27,9 @@ retailApp.config(function($routeProvider) {
 	}).when('/TVDetails', {
 		templateUrl : "TVDetails.html"
 
+	}).when('/orderHistory', {
+		templateUrl : "orderHistory.html"
+
 	}).when('/trackOrder', {
 		templateUrl : "trackOrder.html"
 
@@ -71,7 +74,6 @@ retailApp.controller('loginCtrl', function($scope, $location, $http, $timeout,
 		$rootScope.isLoginVisible = false;
 	};
 	$scope.login = function() {
-		$scope.showSpinner = true;
 		var username = $scope.username;
 		var password = $scope.password;
 		$scope.errorMsg = '';
@@ -1253,6 +1255,39 @@ retailApp.controller('displaySignCtrl', function($scope, displaySignService,$roo
 
 });
 
-retailApp.controller('trackOrderCtrl',function($scope)
+retailApp.controller('trackOrderCtrl',function($scope,$location,$timeout)
+{
+	/*console.log("before login")
+	var username = $scope.email;
+	var password = $scope.password;
+    $scope.trackOrderLogin=function()
+    {
+    	
+         if($scope.email == 'admin' && $scope.password == 'admin')
+        	 {
+        	       $location.path('/orderHistory');
+        	       console.login("redirect oredr history")
+        	 }
+         console.log("in login");
+    };
+	console.log("after login");*/
+	$scope.trackOrderLogin=function()
+	{
+		$location.path('/orderHistory');
+	};
+});
+
+
+
+retailApp.controller('orderHistoryCtrl',function($scope)
 {
 	});
+
+
+retailApp.controller('indexTrackOrderCtrl',function($scope,$location)
+{
+      $scope.displayTrackOrder= function()
+      {
+    	  $location.path('/trackOrder');
+      }
+});
