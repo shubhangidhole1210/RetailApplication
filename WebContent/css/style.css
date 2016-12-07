@@ -37,14 +37,12 @@
 }
 .textBox
 {
-	border: 1px solid #999;
-	outline: 0;
 	height: 45px;
-	background-repeat: no-repeat; 
 	font-size: 15px;
 	padding: 0px 10px;
-    width: 750px;
+    width: 70%;
     color: black;
+    border:none;
 }
 .mainMenu
 {
@@ -111,7 +109,6 @@
 
 .app-header {
 	padding:10px;
-	border-bottom: 1px solid #c0c0c0;
 	background-size: 100% auto;
 	background-position: center top;
 	background-attachment: fixed;
@@ -137,14 +134,28 @@
 }
 
 .app-icon{
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	background: white;
-	display: table-cell;
+	width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    display: inline-block;
     vertical-align: middle;
 }
 
+.retailer-name{
+	text-align: center;
+    color: white;
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;
+}
+.retailer-name a, .retailer-name a:HOVER{
+	color: white;
+	text-decoration: none;
+}
 #footer
 {
 	background-color: #e4e4e4;
@@ -609,6 +620,7 @@
 	color: black;
 	font-weight: 500;
 	vertical-align: bottom;
+	padding: 15px 15px;
 }
 .cart 
 {
@@ -1019,9 +1031,9 @@ nav > ul > li > a:HOVER {
 {
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.23),inset 1px 1px 0 0 hsla(0,0%,100%,.2);
     padding: 0 5px;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-left: 2%;
     height: 45px;
     vertical-align: bottom;
+    padding-right: 15px;
     font-family: Roboto,Arial,sans-serif;
 }
