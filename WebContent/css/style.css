@@ -613,6 +613,8 @@
 }
 .main-view{
 	background: rgba(245, 245, 245, 0.36);
+	position: relative;
+    top: 150px;
 }
 .searchBox-button
 {
@@ -1023,8 +1025,8 @@ nav > ul > li > a:HOVER {
 .home-heade-cone
 {
 	padding-left: 7px;
-	border-left: 3px solid #f0f0f0;
-	cursor: pointer;
+    border-left: 1px solid #ada8a8;
+    cursor: pointer;
 }
 
 .cart-show-button
