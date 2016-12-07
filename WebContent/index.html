@@ -990,7 +990,7 @@
 <fieldset>
 <div align="center">
   <div>
-    <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Enter Monile Number"  ng-model="mobileNumber"  class="text" required><br>
+    <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Enter Monile Number"  ng-model="mobileNumber"  class="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required><br>
   </div>
   <button type="submit" ng-click="sign()"  class="btn btn-primary btn-lg btn-block">CONTINUE</button>
   <button class="signBtn">

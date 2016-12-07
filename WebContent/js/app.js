@@ -1240,7 +1240,7 @@ retailApp.factory('displaySignService', function() {
 
 retailApp.controller('signUpCtrl',function($scope,$http, displaySignService,$rootScope,$timeout)
 {
-	$scope.cancelLogin = function(){
+	$scope.cancelSign = function(){
 		$rootScope.isSignVisible = false;
 	};
 });
@@ -1251,8 +1251,8 @@ retailApp.controller('displaySignCtrl', function($scope, displaySignService,$roo
 	$scope.displaySignPop = function() {
 		displaySignService.setIsLoginVisible(true);
 		$rootScope.isSignVisible = true;
-	}
-
+	};
+	
 });
 
 retailApp.controller('trackOrderCtrl',function($scope,$location,$timeout)
