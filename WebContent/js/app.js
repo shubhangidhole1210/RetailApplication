@@ -1257,7 +1257,7 @@ retailApp.controller('displaySignCtrl', function($scope, displaySignService,$roo
 
 retailApp.controller('trackOrderCtrl',function($scope,$location,$timeout)
 {
-	/*console.log("before login")
+	console.log("before login")
 	var username = $scope.email;
 	var password = $scope.password;
     $scope.trackOrderLogin=function()
@@ -1270,7 +1270,7 @@ retailApp.controller('trackOrderCtrl',function($scope,$location,$timeout)
         	 }
          console.log("in login");
     };
-	console.log("after login");*/
+	console.log("after login");
 	$scope.trackOrderLogin=function()
 	{
 		$location.path('/orderHistory');
