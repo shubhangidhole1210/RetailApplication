@@ -1297,10 +1297,7 @@
    bottom: 0;
    padding: 10px;
    background: rgba(16, 12, 12, 0.49);
-    webkit-transition: max-height 0.8s ease-in-out;
-            -moz-transition: max-height 0.8s ease-in-out;
-            -o-transition: max-height 0.8s ease-in-out;
-            transition: max-height 0.8s ease-in-out;
+   
    
 }
 
@@ -1310,10 +1307,7 @@
     height: 80%;
     text-align: center;
     max-height: 500px;
-     webkit-transition: max-height 0.8s ease-in-out;
-            -moz-transition: max-height 0.8s ease-in-out;
-            -o-transition: max-height 0.8s ease-in-out;
-            transition: max-height 0.8s ease-in-out;
+     
 }
 .viewPlan-form
 {
@@ -1449,11 +1443,7 @@
    position: absolute;
    bottom: 0;
    padding: 10px;
-    webkit-transition: max-height 0.8s ease-in-out;
-            -moz-transition: max-height 0.8s ease-in-out;
-            -o-transition: max-height 0.8s ease-in-out;
-            transition: max-height 0.8s ease-in-out;
-   /* background: rgba(16, 12, 12, 0.49) */
+    
 }
 
 .terms-container
@@ -1462,9 +1452,7 @@
     height: 80%;
     text-align: center;
     max-height: 500px;
-     webkit-transition: max-height 0.8s ease-in-out;
-            -moz-transition: max-height 0.8s ease-in-out;
-            -o-transition: max-height 0.8s ease-in-out;
+    
 }
 
 .Terms-form
@@ -1503,10 +1491,7 @@
    bottom: 0;
    padding: 10px;
   /*  background: rgba(16, 12, 12, 0.49) */
-  webkit-transition: max-height 0.8s ease-in-out;
-            -moz-transition: max-height 0.8s ease-in-out;
-            -o-transition: max-height 0.8s ease-in-out;
-            transition: max-height 0.8s ease-in-out;
+ 
     
 }
 .popAssured-container
@@ -1515,10 +1500,7 @@
     height: 40%;
     text-align: center;
     max-height: 500px;
-      webkit-transition: max-height 0.8s ease-in-out;
-            -moz-transition: max-height 0.8s ease-in-out;
-            -o-transition: max-height 0.8s ease-in-out;
-            transition: max-height 0.8s ease-in-out;
+     
 }
 
 .assured-form

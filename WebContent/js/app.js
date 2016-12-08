@@ -24,6 +24,9 @@ retailApp.config(function($routeProvider) {
 	}).when('/mobileDetails', {
 		templateUrl : "mobileHome.html"
 
+	}).when('/menuDetails', {
+		templateUrl : "menuBar.html"
+
 	}).when('/TVDetails', {
 		templateUrl : "TVDetails.html"
 
@@ -71,9 +74,12 @@ retailApp.controller('loginCtrl', function($scope, $location, $http, $timeout,
 	$scope.test = 'test';
 	//$scope.isLoginVisible = displayLoginService.isLoginVisible();
 	$scope.cancelLogin = function(){
-		$rootScope.isLoginVisible = false;
+		$scope.isLoginVisible = false;
 	};
+	  
+	
 	$scope.login = function() {
+		
 		var username = $scope.username;
 		var password = $scope.password;
 		$scope.errorMsg = '';
@@ -108,9 +114,22 @@ retailApp.controller('loginCtrl', function($scope, $location, $http, $timeout,
 				document.getElementById("userName").className += " input-error";
 			document.getElementById("Password").className += " input-error";
 		}
-		
+	
 
 	};
+	
+	
+	 
+	$scope.displayMyAccount=function()
+	{
+		$rootScope.ismyAccountvisble=false;
+	};
+	
+	$scope.disableLogin= function()
+	{
+		$rootScope.isSignInVisibleLink=false;
+	}
+	
 	 $scope.signUp = function()
      {
     	 $location.path('/signUp')
@@ -131,6 +150,9 @@ retailApp.controller('loginCtrl', function($scope, $location, $http, $timeout,
 retailApp.controller('displayLoginCtrl', function($scope, displayLoginService,$rootScope) {
 	displayLoginService.setIsLoginVisible(false);
 	$rootScope.isLoginVisible = false;
+	$rootScope.isSignInVisibleLink=true;
+	
+	
 	$scope.displayLogin = function() {
 		displayLoginService.setIsLoginVisible(true);
 		$rootScope.isLoginVisible = true;
@@ -1291,3 +1313,30 @@ retailApp.controller('indexTrackOrderCtrl',function($scope,$location)
     	  $location.path('/trackOrder');
       }
 });
+
+retailApp.controller('myAccountCtrl',function($scope,$location,$rootScope)
+		{
+            	$rootScope.ismyAccountvisble=true
+		});
+
+
+retailApp.controller('menuCtrl',function($scope,$location)
+		{
+	$scope.showPopover = function() {
+		  $scope.popoverIsVisible = true; 
+		};
+
+		$scope.hidePopover = function () {
+		  $scope.popoverIsVisible = false;
+		};
+		
+		
+		/*$scope.showMenPopover = function() {
+			  $scope.menpopoverIsVisible = true; 
+			};
+
+			$scope.hideMenPopover = function () {
+			  $scope.menpopoverIsVisible = false;
+			};
+	*/
+		});

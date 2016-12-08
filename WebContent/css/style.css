@@ -1039,3 +1039,61 @@ nav > ul > li > a:HOVER {
     padding-right: 15px;
     font-family: Roboto,Arial,sans-serif;
 }
+
+#Electronicpop
+{
+	
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   bottom: 0;
+   padding: 10px;
+   padding-top: 145px;
+   padding-right: 60%;
+}
+
+.Electronic-container{
+	width: 100%;
+    height: 55%;
+    
+    max-height: 500px;
+}
+
+.Electronic-form{
+	background: white;
+    width: 820px;
+    margin: 0 auto;
+    
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+     box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
+}
+#menpopup
+{
+	
+   width: 100%;
+   height: 100%;
+   bottom: 0;
+   padding: 10px;
+ /*   padding-top: 145px; */
+   position: absolute;
+  
+}
+.men-container{
+	width: 100%;
+    height: 55%;
+    
+    max-height: 500px;
+}
+
+.men-form{
+	background: white;
+    width: 820px;
+    margin: 0 auto;
+    
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+     box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
+}

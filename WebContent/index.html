@@ -39,6 +39,7 @@
 
 <link href="css/rzslider.css" rel="stylesheet" type="text/css">
 
+
 <link href="css/productDetails.css" rel="stylesheet" type="text/css">
 
 <link href="css/sellerDetails.css" rel="stylesheet" type="text/css">
@@ -58,7 +59,8 @@
 <li ng-controller="displaySignCtrl"><a href="" ng-click="displaySignPop()">Sign Up</a></li>
 
 
-<li ng-controller="displayLoginCtrl"><a href="" ng-click="displayLogin()">Sign In</a></li>
+<li ng-controller="displayLoginCtrl"><a href="" ng-click="displayLogin()" ng-show="isSignInVisibleLink">Sign In</a></li>
+<li ng-controller="myAccountCtrl"><a ng-hide="ismyAccountvisble">MyAccount</a></li>
 </ul>
 </div>
 <div id="header-wrapper">
@@ -607,57 +609,36 @@
 
 
 
-<nav class="retailer-menu">
+<nav class="retailer-menu" ng-controller="menuCtrl">
     <ul>
-        <li class="sub">
+        <li class="sub"  ng-mouseover="showPopover()" ng-mouseleave="hidePopover()">
             <a href="Electronics.html">ELECTRONICS</a>
-            <ul>
-                <li class="sub">
-                    <a href="" style="font-weight: bold;">Mobiles</a>
-                   
-                    </li>
-                <li class="sub">
-                    <a href="">Svmsung</a>
-                </li>
-                
-                <li class="sub">
-                    <a href="">lenovo</a>
-                </li>
-                
-                <li class="sub">
-                    <a href="">Mi</a>
-                </li>
-                
-                <li class="sub">
-                    <a href="">Motorolo</a>
-                </li>
-                
-                 <li class="sub">
-                    <a href="">Apple</a>
-                </li>
-                <li class="sub">
-                    <a href="" style="font-weight: bold;">FK Exclusive Mobiles</a>
-                </li>
-                <li class="sub">
-                    <a href="" style="font-weight: bold;">New and popular Mobiles</a>
-                </li>
-                <li class="sub">
-                    <a href="">Lenonvo k6 power </a>
-                </li>
-                <li class="sub">
-                    <a href="">Zenfone 3 Max</a>
-                </li>
-                <li class="sub">
-                    <a href="">Honor Holly 3</a>
-                </li>
-            </ul>
-            
-        </li>
+					<div id="Electronicpop" ng-show="popoverIsVisible">
+
+						<div class="Electronic-container">
+
+							<form class="Electronic-form" name="myForm" novalidate>
+								<fieldset>
+									<div align="left">
+									<ul style="display: ">
+									    <li><a>Mobiles</a></li>
+									    <li><a>fyfg</a></li>
+									</ul>
+									
+										</div>
+
+								</fieldset>
+							</form>
+						</div>
+					</div>
+
+				</li>    
+        
         
        
-       <li class="sub">
+       <li class="sub" ng-mouseover="showMenPopover()" ng-mouseleave="hideMenPopover()">
             <a href="Men.html">MEN</a>
-             <ul>
+             <!-- <ul>
                 <li class="sub">
                     <a href="" style="font-weight: bold;">Footwear</a>
                    
@@ -694,13 +675,14 @@
                     <a href="">Sneakers</a>
                 </li>
                
-            </ul>
+            </ul> -->
+            
             
         </li>
       
         <li class="sub">
             <a href="women.html">WOMEN</a>
-           <ul>
+          <!--  <ul>
                 <li class="sub">
                     <a href="" style="font-weight: bold;">Clothing</a>
                    
@@ -740,11 +722,11 @@
                     <a href="" style="font-weight: bold;">Winter & seasonal Wear</a>
                 </li>
                
-            </ul>
+            </ul> -->
         </li>
          <li class="sub">
             <a href="kids.html">BABY & KIDS</a>
-              <ul>
+             <!--  <ul>
                 <li class="sub">
                     <a href="" style="font-weight: bold;">Kids Clothing</a>
                    
@@ -793,13 +775,13 @@
                     <a href="">Dressess</a>
                 </li>
                
-            </ul>
+            </ul> -->
             
         </li>
         
           <li class="sub">
             <a href="furniture.html">Home & Furniture</a>
-           <ul>
+          <!--  <ul>
                 <li class="sub">
                     <a href="" style="font-weight: bold;">Kitchen & Dinning</a>
                    
@@ -846,14 +828,14 @@
                 </li>
                 
                
-            </ul>
+            </ul> -->
         </li>
         
         
         
           <li class="sub">
             <a href="books.html">Books & More</a>
-            <ul>
+            <!-- <ul>
                 <li class="sub">
                     <a href="" style="font-weight: bold;">Books</a>
                    
@@ -900,18 +882,11 @@
                 </li>
                 
                
-            </ul>
+            </ul> -->
         </li>
     </ul>
+    
 </nav>
-
-
-
-
-
-
-
- 
 
 	</div>
 	
@@ -950,7 +925,7 @@
 
 <label style="color: red;">{{errorMsg}}</label>
 
-<button type="submit" ng-click="login()"  class="btn btn-primary btn-lg btn-block">Login</button>
+<button type="submit" ng-click="login();displayMyAccount();disableLogin()"  class="btn btn-primary btn-lg btn-block" >Login</button>
 <button class="signBtn" ng-click="signUp()">
 <span>New user? Sign in</span>
 </button>
