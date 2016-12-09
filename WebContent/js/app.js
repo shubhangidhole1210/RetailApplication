@@ -1331,12 +1331,13 @@ retailApp.controller('menuCtrl',function($scope,$location)
 		};
 		
 		
-		/*$scope.showMenPopover = function() {
+		$scope.showMenPopover = function() {
 			  $scope.menpopoverIsVisible = true; 
 			};
 
 			$scope.hideMenPopover = function () {
 			  $scope.menpopoverIsVisible = false;
 			};
-	*/
+			
+	
 		});
