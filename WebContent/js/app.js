@@ -1283,8 +1283,8 @@ retailApp.controller('trackOrderCtrl',function($scope,$location,$timeout)
 	  /*  var email = $scope.email;
 		var password = $scope.password;*/
 	
-	$scope.email = 'admin';
-	$scope.password = 'admin';
+	$scope.email = "admin";
+	$scope.password = "admin";
     $scope.trackOrderLogin=function()
     {
     	
@@ -1292,6 +1292,10 @@ retailApp.controller('trackOrderCtrl',function($scope,$location,$timeout)
         	 {
         	       $location.path('/orderHistory');
         	       console.login("redirect oredr history")
+        	 }
+         else
+        	 {
+        	    alert("invalide id or password")
         	 }
          console.log("in login");
     };
@@ -1341,3 +1345,54 @@ retailApp.controller('menuCtrl',function($scope,$location)
 			
 	
 		});
+
+
+retailApp.controller('menuDemorCtrl',function($scope)
+{
+	$scope.showMenuPopover = function() {
+		  $scope.isMenuDemoVisible = true; 
+		};
+
+		$scope.hideMenuPopover = function () {
+		  $scope.isMenuDemoVisible = false;
+		};
+		
+		
+		$scope.showMenPopover = function() {
+			  $scope.isMenVisible = true; 
+			};
+
+			$scope.hideMenPopover = function () {
+			  $scope.isMenVisible = false;
+			};
+			
+			
+			$scope.showomenPopover = function() {
+				  $scope.isWomenVisible = true; 
+				};
+
+				$scope.hidewomePopover = function () {
+				  $scope.isWomenVisible = false;
+				};
+				$scope.showBabyPopover = function() {
+					  $scope.isBabyVisible = true; 
+					};
+
+					$scope.hideBabyPopover = function () {
+					  $scope.isBabyVisible = false;
+					};
+					$scope.showHomePopover = function() {
+						  $scope.isHomeVisible = true; 
+						};
+
+						$scope.hideHomePopover = function () {
+						  $scope.isHomeVisible = false;
+						};
+						$scope.showBooksPopover = function() {
+							  $scope.isBooksVisible = true; 
+							};
+
+							$scope.hideBooksPopover = function () {
+							  $scope.isBooksVisible = false;
+							};
+});

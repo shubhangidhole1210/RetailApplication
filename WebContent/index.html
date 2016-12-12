@@ -28,6 +28,7 @@
  <script src="js/angular-spinkit.min.js"></script>
 
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/bundle.664ac1.css" rel="stylesheet" type="text/css">
 
 <!-- <link href="css/slider.css" rel="stylesheet" type="text/css"> -->
 
@@ -608,8 +609,8 @@
 
 
 
-
-<nav class="retailer-menu" ng-controller="menuCtrl">
+<div  ng-controller="menuDemorCtrl">
+<!-- <nav class="retailer-menu">
     <ul>
         <li class="sub"  ng-mouseover="showPopover()" ng-mouseleave="hidePopover()">
             <a href="Electronics.html">ELECTRONICS</a>
@@ -843,7 +844,7 @@
        
        <li class="sub" ng-mouseover="showMenPopover()" ng-mouseleave="hideMenPopover()">
             <a href="Men.html">MEN</a>
-             <!-- <ul>
+             <ul>
                 <li class="sub">
                     <a href="" style="font-weight: bold;">Footwear</a>
                    
@@ -880,8 +881,8 @@
                     <a href="">Sneakers</a>
                 </li>
                
-            </ul> -->
-            <div id="Menpop" ng-show="menpopoverIsVisible">
+            </ul>
+            <div id="Menpop" ng-show="menpopoverIsVisible" >
 
 						<div class="men-container">
 
@@ -891,11 +892,11 @@
 									<div align="left">
 									     <ul>
                 <li class="subMenus">
-                    <a href="" style="font-weight: bold;">Mobiles</a>
+                    <a href="" style="font-weight: bold;">Footwear</a>
                    
                     </li>
                 <li class="subMenus">
-                    <a href="">samsung</a>
+                    <a href="">Sport shoes</a>
                 </li>
                 
                 <li class="subMenus">
@@ -903,39 +904,27 @@
                 </li>
                 
                 <li class="subMenus">
-                    <a href="">lenovo</a>
+                    <a href="">Formal shoes</a>
                 </li>
                 
                 <li class="subMenus">
-                    <a href="">MI</a>
+                    <a href="">Sandals and Floaters</a>
                 </li>
                 
                  <li class="subMenus">
-                    <a href="">Motorola</a>
+                    <a href="">Flip-flop</a>
                 </li>
                 <li class="subMenus">
-                    <a href="">Apple</a>
+                    <a href="">Lofers</a>
                 </li>
                 <li class="subMenus">
-                    <a href="">Asus</a>
+                    <a href="">Boots</a>
                 </li>
                 <li class="subMenus">
-                    <a href="">Micromax</a>
+                    <a href="">Running shoes</a>
                 </li>
                 <li class="subMenus">
-                    <a href="" style="font-weight: bold;">FK Exclusives Mobiles</a>
-                </li>
-                <li class="subMenus">
-                    <a href="" style="font-weight: bold;">New and popular Mobiles</a>
-                </li>
-                 <li class="subMenus">
-                    <a href="">Lenovo K6 power</a>
-                </li>
-                 <li class="subMenus">
-                    <a href="">Honor Holly 3</a>
-                </li>
-                <li class="subMenus">
-                    <a href="">Zenfone 3 Max</a>
+                    <a href="">Sneakers</a>
                 </li>
                
             </ul> 
@@ -945,51 +934,39 @@
 										<div align="left" style="background-color: #f6f6f6;width: 25%">
 									     <ul>
                 <li class="subMenus">
-                    <a href="" style="font-weight: 600;">Mobile Accessories</a>
+                    <a href="" style="font-weight: 600;">Clothing</a>
                    
                     </li>
                 <li class="subMenus">
-                    <a href="">Headphone & Headsets</a>
+                    <a href="">T-shits</a>
                 </li>
                 
                 <li class="subMenus">
-                    <a href="">Power Banks</a>
+                    <a href="">Shirt</a>
                 </li>
                 
                 <li class="subMenus">
-                    <a href="">Mobile Cases</a>
+                    <a href="">Jeans</a>
                 </li>
                 
                 <li class="subMenus">
-                    <a href="">Screenguards</a>
+                    <a href="">Trousers</a>
                 </li>
                 
                  <li class="subMenus">
-                    <a href="">Memory cards</a>
+                    <a href="">Winter Wear</a>
                 </li>
                 <li class="subMenus">
-                    <a href="">Pendrives</a>
+                    <a href="">Sports Wear</a>
                 </li>
                 <li class="subMenus">
-                    <a href="">Cables</a>
+                    <a href="">Suits 7 Blazers</a>
                 </li>
                 <li class="subMenus">
-                    <a href="">Chargers</a>
+                    <a href="">Ethenic wear</a>
                 </li>
                 <li class="subMenus">
-                    <a href="">Selfie Sticks</a>
-                </li>
-                <li class="subMenus">
-                    <a href="" style="font-weight: bold;">Wearbles</a>
-                </li>
-                 <li class="subMenus">
-                    <a href="">smart Watches</a>
-                </li>
-                 <li class="subMenus">
-                    <a href="">Smart Brand</a>
-                </li>
-                <li class="subMenus">
-                    <a href="">Smart glasses</a>
+                    <a href="">Shorts, 4/4ths & cargos</a>
                 </li>
                
             </ul> 
@@ -1111,7 +1088,7 @@
       
         <li class="sub">
             <a href="women.html">WOMEN</a>
-          <!--  <ul>
+           <ul>
                 <li class="sub">
                     <a href="" style="font-weight: bold;">Clothing</a>
                    
@@ -1151,11 +1128,11 @@
                     <a href="" style="font-weight: bold;">Winter & seasonal Wear</a>
                 </li>
                
-            </ul> -->
+            </ul>
         </li>
          <li class="sub">
             <a href="kids.html">BABY & KIDS</a>
-             <!--  <ul>
+              <ul>
                 <li class="sub">
                     <a href="" style="font-weight: bold;">Kids Clothing</a>
                    
@@ -1204,13 +1181,13 @@
                     <a href="">Dressess</a>
                 </li>
                
-            </ul> -->
+            </ul>
             
         </li>
         
           <li class="sub">
             <a href="furniture.html">Home & Furniture</a>
-          <!--  <ul>
+           <ul>
                 <li class="sub">
                     <a href="" style="font-weight: bold;">Kitchen & Dinning</a>
                    
@@ -1257,14 +1234,14 @@
                 </li>
                 
                
-            </ul> -->
+            </ul>
         </li>
         
         
         
           <li class="sub">
             <a href="books.html">Books & More</a>
-            <!-- <ul>
+            <ul>
                 <li class="sub">
                     <a href="" style="font-weight: bold;">Books</a>
                    
@@ -1311,12 +1288,1347 @@
                 </li>
                 
                
-            </ul> -->
+            </ul>
         </li>
     </ul>
     
-</nav>
+</nav> -->
+<div class="zi6sUf">
+		<div class="_3Ed3Ub">
+			<ul class="_114Zhd">
+				<li class="Wbt_B2" ng-mouseover="showMenuPopover()"
+					ng-mouseleave="hideMenuPopover()"><a href="" class="_1QZ6fC">
+						<span class="">electronic</span>
 
+				</a>
+
+					<ul class="_3GtRpC">
+						<li class="_1GPxMV _3mmoXN">
+							<ul class="_2OZ78M _1fj2FQ" ng-show="isMenuDemoVisible">
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Mobiles</span>
+												<span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>samsung</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>lenovo</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Mi</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Motorola</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>LeCo</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Asus</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Micromax</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Exclusive
+													mobile</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>New
+													and populer model</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Lenovo
+													k6 power</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Lenovo
+													k6 power</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Zenpfone</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Honor
+													holly</span>
+										</a></li>
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Mobile
+													Accesories</span> <span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Headphone
+													and headset</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>powerbank</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>mobile
+													cases</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>screen
+													guards</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>memory
+													cards</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>go
+													pendrives</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Cables</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>chargers</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>selfie
+													sticks</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Wearables</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>smart
+													watches</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>smart
+													Bands</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>smart
+													glasses</span>
+										</a></li>
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Laptops</span>
+												<span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>computer
+													accesories</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>hard
+													disk</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>pendrives</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>laptop
+													bag</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>mouse</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>keyboards</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>computer
+													peripheral</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>printer
+													and ink</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>monitors</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>network
+													components</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Router</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Data
+													cards</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>speakers</span>
+										</a></li>
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>TV's</span>
+												<span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>computer
+													accesories</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>hard
+													disk</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>pendrives</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>HD
+													ready</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>full
+													HD</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>ultra
+													HD</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>camera</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Dslr</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>point
+													& shoot</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>sports
+													& lifestyle camera</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>camera
+													accessories</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>lenses</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>memory
+													card</span>
+										</a></li>
+									</ul>
+								</li>
+								<!-- <li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Featured</span>
+												<span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Flipkart SmartBuy 
+													</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Fliptech
+													</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>iPhone7</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>LeTV UHD smart
+													</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Mobile Exchange Offer
+													</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Laptop Exchange offer
+													HD</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>samsung Great fit 2</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Nikon</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Apple pads
+													</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Huawai smart Watches</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>
+													</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Flipkart Exclusive offer</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Nikon
+													</span>
+										</a></li>
+									</ul>
+								</li> -->
+							</ul>
+						</li>
+					</ul></li>
+					<li class="Wbt_B2" ng-mouseover="showMenuPopover()"
+					ng-mouseleave="hideMenuPopover()"><a href="" class="_1QZ6fC">
+						<span class="">appliances</span>
+
+				</a>
+
+					<ul class="_3GtRpC">
+						<li class="_1GPxMV _3mmoXN">
+							<ul class="_2OZ78M _1fj2FQ" ng-show="isMenuDemoVisible">
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Mobiles</span>
+												<span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>samsung</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>lenovo</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Mi</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Motorola</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>LeCo</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Asus</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Micromax</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Exclusive
+													mobile</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>New
+													and populer model</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Lenovo
+													k6 power</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Lenovo
+													k6 power</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Zenpfone</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Honor
+													holly</span>
+										</a></li>
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Mobile
+													Accesories</span> <span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Headphone
+													and headset</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>powerbank</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>mobile
+													cases</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>screen
+													guards</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>memory
+													cards</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>go
+													pendrives</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Cables</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>chargers</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>selfie
+													sticks</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Wearables</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>smart
+													watches</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>smart
+													Bands</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>smart
+													glasses</span>
+										</a></li>
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Laptops</span>
+												<span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>computer
+													accesories</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>hard
+													disk</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>pendrives</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>laptop
+													bag</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>mouse</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>keyboards</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>computer
+													peripheral</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>printer
+													and ink</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>monitors</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>network
+													components</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Router</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Data
+													cards</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>speakers</span>
+										</a></li>
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>TV's</span>
+												<span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>computer
+													accesories</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>hard
+													disk</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>pendrives</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>HD
+													ready</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>full
+													HD</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>ultra
+													HD</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>camera</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Dslr</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>point
+													& shoot</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>sports
+													& lifestyle camera</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>camera
+													accessories</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>lenses</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>memory
+													card</span>
+										</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul></li>
+					
+				<li class="Wbt_B2" ng-mouseover="showMenPopover()"
+					ng-mouseleave="hideMenPopover()"><a class="_1QZ6fC"> <span
+						class="">MEN</span>
+				</a>
+					<ul class="_3GtRpC">
+						<li class="_1GPxMV _3mmoXN">
+							<ul class="_2OZ78M _1fj2FQ" ng-show="isMenVisible">
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">FOOTWEAR</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Sports
+													Shoes</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>casual
+													Shoes</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Formal
+													Shoes</span>
+										</a></li>
+
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Sandles
+													& floaters </span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Flip-flop</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Lofers</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Boots</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Running
+													shoes</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Sneakers</span>
+										</a></li>
+
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Clothing</span>
+												<span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>T-Shirts</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Shirts</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Jeans</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Trousers</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>winter
+													wear</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>sports
+													wear</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Suits
+													& Blazers</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Ethnic
+													Wear</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Accessories</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>shorts
+													3/4ths</span>
+										</a></li>
+
+									</ul>
+								</li>
+
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>watches</span>
+												<span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Fastrack</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>casio</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Titan</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Fossil</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>sonata</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Accessories</span>
+												<span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Wallets</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Belts</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Sunglasses
+													and frames</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Luggage
+													and travels</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Jewellery</span>
+										</a></li>
+
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>personal
+													care and appliances </span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Trimmers</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Shavers</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>grooming</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Mens-grooming</span>
+												<span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Perfumes</span>
+										</a></li>
+									</ul>
+								</li>
+
+							</ul>
+						</li>
+					</ul></li>
+
+				<li class="Wbt_B2" ng-mouseover="showomenPopover()"
+					ng-mouseleave="hidewomePopover()"><a class="_1QZ6fC"> <span
+						class="">WOMEN</span>
+				</a>
+					<ul class="_3GtRpC">
+						<li class="_1GPxMV _3mmoXN">
+							<ul class="_2OZ78M _1fj2FQ" ng-show="isWomenVisible">
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Clothing</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Ethenic Wear</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Sarees</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>kurtas
+													& kurtis</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Dress
+													and materials</span>
+										</a></li>
+
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>salwar
+													suits</span>
+										</a></li>
+
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Western wears</span> <span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Shirts,Tops</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Dresses</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Jeans</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Skirts</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Winter and seasonal wear</span> <span
+												class="nsslWl"></span>
+										</a></li>
+
+
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>footewar</span>
+												<span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Flats</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Heels</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Sports
+													shoes</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>casual
+													shoes</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>wedges</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Ethnic
+													footwear </span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Boots</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>slippers
+													& flip-flops</span>
+										</a></li>
+
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Accessories</span> <span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Handbags</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>wallets
+													& Belts</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>sunglasses
+													& frames</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Luggage
+													& Travels</span>
+										</a></li>
+									</ul>
+								</li>
+
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>watches</span>
+												<span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Fastrack</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>casio</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Titan</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Fossil</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>sonata</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Beauty
+													& grooming</span> <span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Make-up</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Skin
+													care</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Sunglasses
+													and frames</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Hair
+													Care</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Perfumes</span>
+										</a></li>
+
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Jewellery</span>
+												<span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Precious
+													Jewellery</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>silver
+													Jewellery</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Artificial
+													Jewellery</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Gold
+													coins</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Personal
+													care Appliances</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Hair
+													straightner</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Hair
+													Dryer</span>
+										</a></li>
+									</ul>
+								</li>
+
+							</ul>
+						</li>
+					</ul></li>
+				<li class="Wbt_B2" ng-mouseover="showBabyPopover()"
+					ng-mouseleave="hideBabyPopover()"><a class="_1QZ6fC"> <span
+						class="">BABY & KIDS</span>
+				</a>
+					<ul class="_3GtRpC">
+						<li class="_1GPxMV _3mmoXN">
+							<ul class="_2OZ78M _1fj2FQ" ng-show="isBabyVisible">
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Books</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span
+												class="">Entrance Exam</span> 
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span
+												class="">Academic</span> 
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>History & politics</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Biographies
+													</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Children</span> 
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Business
+													</span>
+										</a></li>
+
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>
+													Comics</span>
+										</a></li>
+										
+
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Stationary</span> <span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Body
+													suits</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Pens
+													</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span
+												class="">Diaries</span> 
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Key Chains 
+													</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Caluclator</span>
+										</a></li>
+
+
+
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Gaming</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>ps3
+													</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>PS4
+											</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Xbox one
+													</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Xbox 360
+													</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Gaming & console </span>
+													
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Flats
+													& Bellies</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>sport
+													shoes </span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>school
+													shoes</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Baby
+													footewar</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Booties</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Character
+													shoes</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>School
+													Suppliers</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>school
+													Bags</span>
+										</a></li>
+
+
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>School
+													combo</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>wallets
+													& Belts</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Lunch
+													Box</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Kids
+													watches</span>
+										</a></li>
+									</ul>
+								</li>
+
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Toys</span>
+												<span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Remote
+													Control Toys</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Educational
+													Toys</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Soft
+													Toys</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>OutDoor
+													Toys</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Action
+													Figure</span>
+										</a></li>
+
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Board
+													Games</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Musical
+													Toys</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Puzzles</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>S.T.E.M
+													Toys </span>
+										</a></li>
+
+
+
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Baby
+													Care</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Diapers</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													bedding</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>feeding
+													& Nursing</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Baby
+													bath skin care </span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													grooming</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													Health</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													gifting sets</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													Toys</span>
+										</a></li>
+									</ul>
+								</li>
+
+							</ul>
+						</li>
+					</ul></li>
+				<li class="Wbt_B2" ng-mouseover="showHomePopover()"
+					ng-mouseleave="hideHomePopover()"><a class="_1QZ6fC"> <span
+						class="">Home & Furniture</span>
+				</a>
+					<ul class="_3GtRpC">
+						<li class="_1GPxMV _3mmoXN">
+							<ul class="_2OZ78M _1fj2FQ" ng-show="isHomeVisible">
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Kitchen & Dinning</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Pot's & pans</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span
+												class="">Pressure cookers</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Kitchen
+													Tools</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Gas
+													stoves</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class=""> Dinning & serving</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span
+												class="">coffee mugs</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Dinnerware
+													& Crockery</span>
+										</a></li>
+
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Bar
+													& Glassware</span>
+										</a></li>
+
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Kitchen & Storage</span> <span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>lunch
+													Boxes</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Flasks
+													& cassroles</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Containers
+													& Bottles</span>
+										</a></li>
+
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Furniture</span>
+												<span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Beds</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>sofas
+											</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Dining
+													Table</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>TV
+													cabinets</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Mattresses</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Coffee
+													and center tables </span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Bean
+													Bags</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>collapsible
+													wardrobes</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Inflatable
+													sofas</span>
+										</a></li>
+
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>House
+													keeping</span> <span class="nsslWl"></span>
+										</a></li>
+
+									</ul>
+								</li>
+
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Home
+													Decor</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Painting</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Clocks</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Wall
+													shelves</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>OutDoor
+													Toys</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Wall
+													Decals</span>
+										</a></li>
+
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Show
+													pieces</span>
+										</a></li>
+
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Lighting</span>
+												<span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>LED
+													& CFL</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Lighting
+													& Lamps</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Others</span>
+												<span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>S.T.E.M
+													Toys </span>
+										</a></li>
+
+
+
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Baby
+													Care</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Diapers</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													bedding</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>feeding
+													& Nursing</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Baby
+													bath skin care </span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													grooming</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													Health</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													gifting sets</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													Toys</span>
+										</a></li>
+									</ul>
+								</li>
+
+							</ul>
+						</li>
+					</ul></li>
+					<li class="Wbt_B2" ng-mouseover="showBooksPopover()"
+					ng-mouseleave="hideBooksPopover()"><a class="_1QZ6fC"> <span
+						class="">BOOKS & MORE</span>
+				</a>
+					<ul class="_3GtRpC">
+						<li class="_1GPxMV _3mmoXN">
+							<ul class="_2OZ78M _1fj2FQ" ng-show="isBooksVisible">
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Kitchen & Dinning</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Pot's & pans</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span
+												class="">Pressure cookers</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Kitchen
+													Tools</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Gas
+													stoves</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class=""> Dinning & serving</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span
+												class="">coffee mugs</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Dinnerware
+													& Crockery</span>
+										</a></li>
+
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Bar
+													& Glassware</span>
+										</a></li>
+
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span
+												class="">Kitchen & Storage</span> <span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>lunch
+													Boxes</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Flasks
+													& cassroles</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Containers
+													& Bottles</span>
+										</a></li>
+
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Furniture</span>
+												<span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Beds</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>sofas
+											</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Dining
+													Table</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>TV
+													cabinets</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Mattresses</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Coffee
+													and center tables </span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Bean
+													Bags</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>collapsible
+													wardrobes</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Inflatable
+													sofas</span>
+										</a></li>
+
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>House
+													keeping</span> <span class="nsslWl"></span>
+										</a></li>
+
+									</ul>
+								</li>
+
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Home
+													Decor</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Painting</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Clocks</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Wall
+													shelves</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>OutDoor
+													Toys</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Wall
+													Decals</span>
+										</a></li>
+
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Show
+													pieces</span>
+										</a></li>
+
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Lighting</span>
+												<span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>LED
+													& CFL</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Lighting
+													& Lamps</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Others</span>
+												<span class="nsslWl"></span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>S.T.E.M
+													Toys </span>
+										</a></li>
+
+
+
+									</ul>
+								</li>
+								<li class="_2GG4xt">
+									<ul class="QPOmNK">
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Baby
+													Care</span> <span class="nsslWl"></span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Diapers</span>
+										</a></li>
+
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													bedding</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>feeding
+													& Nursing</span>
+										</a></li>
+										<li class="_1KCOnI _1h5QLb"><a class="_3ZgIXy"> <span>Baby
+													bath skin care </span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													grooming</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													Health</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													gifting sets</span>
+										</a></li>
+										<li class="_1KCOnI"><a class="_3ZgIXy"> <span>Baby
+													Toys</span>
+										</a></li>
+									</ul>
+								</li>
+
+							</ul>
+						</li>
+					</ul></li>
+					<li class="Wbt_B2" 
+					><a href="" class="_1QZ6fC">
+						<span class="">offer zone</span>
+
+				</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
 	</div>
 	
 		
