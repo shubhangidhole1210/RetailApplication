@@ -19,32 +19,112 @@
        </div>
     <div ng-hide="isOrderHidden">   
        <div class="category-browse-row">
-           <span style="padding-left: 10px">How I do place an order?</span>
-           
+           <span style="padding-left: 10px" ng-click="displayPlaceOrder()">How I do place an order?</span>
+            <div class="question-answer" ng-hide="ishiddendisplayorder">
+               <div style="color: #848484;padding-top: 7px;padding-left: 10px" >Shopping from us is easy!</div>
+               <ul style="font-size: 13px;color: #848484;padding-top: 15px;padding-left: 10px" >
+                  <li>Select the product you'd like to buy and 'Check Availability at' your desired pincode</li>
+                  <li style="padding-top: 3px">Add products to your cart or just hit Buy Now</li>
+                  <li style="padding-top: 3px">Choose or Add delivery address</li>
+                  <li style="padding-top: 3px">Use a preferred payment mode and confirm the order
+                      Happy shopping.</li>
+               </ul>
+           </div>
        </div>
        <div class="category-browse-row">
-           <span style="padding-left: 10px">How can i track my order?</span>
-           
+           <span style="padding-left: 10px" ng-click="displayTrackOrder()">How can i track my order?</span>
+           <div style="color: #848484;padding-top: 7px;padding-left: 10px" ng-hide="istrckmyorderhidden">It's easy! Just go to My Orders & click on the Order you want to see.</div>
+       </div>
+       <div class="category-browse-row">
+           <span style="padding-left: 10px" ng-click="displayDelivery()">My order has reached the nearest hub why isn't it out for delivery yet?</span>
+            <div style="color: #848484;padding-top: 7px;padding-left: 10px" ng-show="ishiddenOutOfdelivery">Don't worry, your order will reach you on time like we promised. To know when your order is scheduled to be delivered, visit My Orders. </div>
        </div>
    </div>  
    </div>
        
-       <div class="category-browse-row">
+       <div class="category-browse-row" ng-click="displayCancellation()">
            <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
            <span style="padding-left: 10px">Cancellation and Returns</span>
        </div>
+       <div ng-hide="iscancellationHidden" >   
        <div class="category-browse-row">
+           <span style="padding-left: 10px" ng-click="hiddenDiv = !hiddenDiv">How does Retailer help in resolving any issue with a product?</span>
+           <div style="padding-left: 10px" ng-show="hiddenDiv">
+               <div style="font-size: 13px;color: #848484;padding-top: 15px;text-align: justify;">If you're facing any issues with a product purchased on Flipkart, we shall help by verifying and trying to resolve the issue as part of the return verification process. The Issue resolution steps may be shared with you as self-help, or with assistance over call or a Flipkart (or partner) personnel may visit your place. The seller will arrange for a replacement if the issue has not been resolved.</div>
+               <div style="font-size: 13px;color: #848484;padding-top: 15px;text-align: justify;padding-top: 7px">Issue resolution steps will be available for products like mobiles, tablets, laptops, large appliances, electronics, home appliances, furniture etc</div>
+           </div>
+       </div>
+       <div class="category-browse-row">
+           <span style="padding-left: 10px" ng-click="hiddenDiv1 = !hiddenDiv1">what is the replacement process for orders?</span>
+             <div style="padding-left: 10px;font-size: 13px;color: #848484;padding-top: 15px;" ng-show="hiddenDiv1">Flipkart's Replacement Guarantee depends on the product category and the seller. Products are eligible for replacement if they are Damaged, Defective or Not as Described.</div>
+       </div>
+       <div class="category-browse-row">
+           <span style="padding-left: 10px" ng-click="hiddenDiv2 = !hiddenDiv2">When are returns not possible?</span>
+           <div class="question-answer" ng-show="hiddenDiv2">
+              <div style="font-size: 13px;color: #848484;padding-top: 15px;padding-left: 10px">When product is damaged because of use or when product is not in the same condition as you received it</div>
+               <div style="font-size: 13px;color: #848484;padding-top: 10px;padding-left: 10px">When any consumable item has been used or installed</div>
+               <div style="font-size: 13px;color: #848484;padding-top: 10px;padding-left: 10px">When anything is missing from the package you've received including price tags, labels, original packing, freebies & accessories</div>
+                <div style="font-size: 13px;color: #848484;padding-top: 10px;padding-left: 10px">When non-returnable items are involved such as innerwear. lingerie etc.</div>
+           </div>
+       </div>
+   </div>  
+       <div class="category-browse-row" ng-click="displayPayment()">
            <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
            <span style="padding-left: 10px">payment</span>
        </div>
+       <div ng-hide="isPaymentHidden">   
        <div class="category-browse-row">
+           <span style="padding-left: 10px"ng-click="hiddenDiv3 = !hiddenDiv3">What is Cash on Delivery?</span>
+                <div ng-show="hiddenDiv3">
+                <div style="font-size: 13px;color: #848484;padding-top: 10px;padding-left: 10px">With Cash on Delivery (CoD), you can pay for your order in cash when it is actually being delivered.</div>
+     			 <div style="font-size: 13px;color: #848484;padding-top: 8px;padding-left: 10px">You can also pay with your Credit or Debit card if the courier person is carrying a card machine.</div>
+                </div>
+       </div>
+       <div class="category-browse-row">
+           <span style="padding-left: 10px" ng-click="hiddenDiv4 = !hiddenDiv3">What cards can I save on Retailer?</span>
+           <div style="font-size: 13px;color: #848484;padding-top: 10px;padding-left: 10px" ng-show="hiddenDiv4">You can save any Indian credit or debit card from MasterCard, VISA, Maestro or American Express.</div>
+       </div>
+       <div class="category-browse-row">
+           <span style="padding-left: 10px" ng-click="hiddenDiv5 = !hiddenDiv5">How many cards can I save on Retailer?</span>
+           <div style="font-size: 13px;color: #848484;padding-top: 10px;padding-left: 10px" ng-show="hiddenDiv5">You can save up to 10 cards using our Save Card option.</div>
+       </div>
+   </div>  
+       <div class="category-browse-row"  ng-click="displayShopping()">
            <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
            <span style="padding-left: 10px">shopping</span>
        </div>
+        <div  ng-show="isshoppinghidden">   
        <div class="category-browse-row">
+           <span style="padding-left: 10px"  ng-click="hiddenDiv6 = !hiddenDiv6">Why do I see different prices for the same product?</span>
+           <div style="font-size: 13px;color: #848484;padding-top: 10px;padding-left: 10px" ng-show="hiddenDiv6">You could see different prices for the same product, as it could be listed by many Sellers.</div>
+       </div>
+       <div class="category-browse-row">
+           <span style="padding-left: 10px" ng-click="hiddenDiv7 = !hiddenDiv7">What does 'Permanently Discontinued' or 'Out of Print' mean?</span>
+           <div style="font-size: 13px;color: #848484;padding-top: 10px;padding-left: 10px" ng-show="hiddenDiv7">This product is no longer available because it is obsolete and/or its production has been discontinued.</div>
+       </div>
+       <div class="category-browse-row">
+           <span style="padding-left: 10px"ng-click="hiddenDiv8 = !hiddenDiv8">Can I order a product that is 'Out of Stock' or 'Temporarily Unavailable'?</span>
+            <div style="font-size: 13px;color: #848484;padding-top: 10px;padding-left: 10px" ng-show="hiddenDiv8">Unfortunately, products listed as 'Out of Stock' or 'Temporarily Unavailable' are not available for sale. Please use the 'Notify Me' feature to be informed of the product's availability with Sellers on Flipkart.</div>
+       </div>
+   </div>  
+       <div class="category-browse-row" ng-click="displayWallet()">
            <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
            <span style="padding-left: 10px">wallet</span>
        </div>
+        <div ng-show="isWalletHidden">   
+       <div class="category-browse-row">
+           <span style="padding-left: 10px" ng-click="hiddenDiv9 = !hiddenDiv9"> Is Wallet a secure payment method??</span>
+           <div style="font-size: 13px;color: #848484;padding-top: 10px;padding-left: 10px" ng-show="hiddenDiv9">Yes, your Wallet is a secure mode of payment with the highest standards of security currently offered. It is fully compliant with RBI guidelines and has stringent checks to prevent misuse.</div>
+       </div>
+       <div class="category-browse-row">
+           <span style="padding-left: 10px" ng-click="hiddenDiv10 = !hiddenDiv10">Is the money in my Wallet safe?</span>
+           <div style="font-size: 13px;color: #848484;padding-top: 10px;padding-left: 10px" ng-show="hiddenDiv10">Yes, the money in your Wallet is completely safe and can only be used by you through your Flipkart account..</div>
+       </div>
+       <div class="category-browse-row">
+           <span style="padding-left: 11px" ng-click="hiddenDiv11 = !hiddenDiv11">What should I do if the balance in my Wallet is not enough to pay for my order?</span>
+           <div style="font-size: 13px;color: #848484;padding-top: 10px;padding-left: 11px" ng-show="hiddenDiv11">You can make a part of the payment using your Wallet if the balance is not enough, and pay the remaining amount using any other prepaid payment mode like Credit/Debit Cards, Flipkart Gift Cards, and Netbanking</div>
+       </div>
+   </div>  
     </div>
 </div>
 <div class="display-rightSide-customer">
@@ -54,16 +134,30 @@
          <div class="asked-question-name">What items can I exchange?</div>
          <div class="asked-question-name">I have requested for a return of my item. when will it happen?</div>
          <div class="asked-question-name">What items can i not return?</div>
-         <div class="asked-question-name">should i call the customer care number foe installation once the product is delivered ?</div>
-         <div class="asked-question-name">Can I change the delivery date of my order?</div>
-         <div class="asked-question-name">what are the modes of refund available after cancellation?</div>
+         <div class="asked-question-name">
+         <div >should i call the customer care number foe installation once the product is delivered ?</div>
+           <div style="color: #848484; font-size: 13px;padding-top: 10px">To make sure that you have a smooth and hassle-free experience, the installation is automatically arranged for your product within 2-5 business after it's delivered.</div>
+         </div>
+         <div class="asked-question-name">
+        <div style="color: #848484; font-size: 13px;padding-top: 10px"> Can I change the delivery date of my order?</div>
+        <div>
+            <div style="color: #848484; font-size: 13px;padding-top: 10px">Unfortunately, we are unable to honor requests for specific delivery dates, however rest assured that we will deliver by the promised delivery date.</div>
+             <div style="color: #848484; font-size: 13px;padding-top: 10px">For delivery of Large items like TV, Washing machine, Refrigerator etc. you can login and choose your delivery slot at any given time from your orders page.  </div>
+        </div>
+         </div>
+         
+         <div class="asked-question-name">
+         <div>what are the modes of refund available after cancellation?</div>
+             <div style="color: #848484; font-size: 13px;padding-top: 10px">t's easy! Just go to My Orders & click on the Order you want to see.</div>
+         </div>
      </div>
-</div>
-</div>
-<div class="customer-third-block">
-   <div style="font-size: 14px;font-weight: bold;">Issue still not resolved?</div>
+     <div class="customer-third-block">
+   <div style="font-size: 12px;font-weight: bold;">Issue still not resolved?</div>
    <button type="button" class="customer-care-contact">CONTACT US</button>
 </div>
+</div>
+</div>
+
 
 </div>
 </div>

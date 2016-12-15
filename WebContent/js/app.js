@@ -1229,8 +1229,61 @@ retailApp.controller('customerCareCtrl', function($scope,$http,$location,$timeou
     $scope.displayOrder = function () {
         //If DIV is hidden it will be visible and vice versa.
         $scope.isOrderHidden = $scope.isOrderHidden ? false : true;
-    }
-			
+    };
+    
+    $scope.iscancellationHidden=true;
+    $scope.displayCancellation=function()
+    {
+    	$scope.iscancellationHidden = $scope.iscancellationHidden ? false : true;
+    };
+    $scope.isPaymentHidden=true;
+    $scope.displayPayment=function()
+    {
+    	$scope.isPaymentHidden = $scope.isPaymentHidden ? false : true;
+    };
+    $scope.isPaymentHidden=true;
+    $scope.displayShopping=function()
+    {
+    	$scope.isshoppinghidden = $scope.isshoppinghidden ? false : true;
+    };
+    $scope.isPaymentHidden=true;
+    $scope.displayWallet=function()
+    {
+    	$scope.isWalletHidden = $scope.isWalletHidden ? false : true;
+    };
+    $scope.ishiddendisplayorder=true;
+    $scope.displayPlaceOrder=function()
+    {
+    	$scope.ishiddendisplayorder = $scope.ishiddendisplayorder ? false : true;
+    	
+    };
+    $scope.istrckmyorderhidden=true;
+    $scope.displayTrackOrder=function()
+    {
+    	$scope.istrckmyorderhidden = $scope.istrckmyorderhidden ? false : true;
+    };
+    $scope.istrckmyorderhidden=true;
+    $scope.displayDelivery=function()
+    {
+    	$scope.ishiddenOutOfdelivery = $scope.ishiddenOutOfdelivery ? false : true;
+    };
+    
+    $scope.hiddenDiv = false;
+    $scope.hiddenDiv1 = false;
+    $scope.hiddenDiv2 = false;
+    $scope.hiddenDiv3 = false;
+    $scope.hiddenDiv4 = false;
+    $scope.hiddenDiv5 = false;
+    $scope.hiddenDiv6 = false;
+    $scope.showDiv = function () {
+        $scope.hiddenDiv = !$scope.hiddenDiv;
+        $scope.hiddenDiv1 = !$scope.hiddenDiv1;
+        $scope.hiddenDiv2 = !$scope.hiddenDiv2;
+        $scope.hiddenDiv3 = !$scope.hiddenDiv3;
+        $scope.hiddenDiv4 = !$scope.hiddenDiv4;
+        $scope.hiddenDiv5 = !$scope.hiddenDiv5;
+        $scope.hiddenDiv6 = !$scope.hiddenDiv6;
+    };
 		});
 
 retailApp.controller('assuredCtrl', function($scope,$http)
