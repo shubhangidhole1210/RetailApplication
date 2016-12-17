@@ -14,29 +14,33 @@
   </div>
    <ul class="gift-card-option">
      <li style="display: inline-block;">
-        <a class="buy-retail-gift-card">Buy a Retail Gift Card</a>
+        <a class="buy-retail-gift-card" ng-click="displayRetailGiftCard()">Buy a Retail Gift Card</a>
      </li>
      <li style="display: inline-block;">
-        <a class="check-balance">Check Balance</a>
+        <a class="check-balance" ng-click="displayCheckBalance()">Check Balance</a>
      </li>
      <li style="display: inline-block;">
-        <a class="asked-question">Asked Question</a>
+        <a class="asked-question" ng-click="displayFrequntlyaskedQuestion()">Frequently Asked Question</a>
      </li>
      <li style="display: inline-block;">
-     <a class="corporate-requirement">Corporate Requirements</a>
+     <a class="corporate-requirement" ng-click="displayCorporateRequiremnet()">Corporate Requirements</a>
      </li>
    </ul>
-   <div id="egv-banner">
+   <div id="egv-banner" style="margin-left: 8px">
       <img alt="" src="image/flipkart-gift-card.png" id="egv-ribbon">
    </div>
-   
+   <div ng-show="retailGiftCard">
+   <form action="" name="userForm"  ng-submit="submitTrackOrderForm()" novalidate>
    <div class="gift-card-info">
       <div style="font-weight: 16px;font-weight: bold;padding-top: 20px">Enter Gift Card Details</div>
    
    <div class="gift-card-info-1">
+   <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
      <div style="padding-top: 30px">
         <span >Receiver's Email <span style="color: red">*</span>  </span>
-        <span style="padding-left: 20px"><input type="text"></span>
+        <span style="padding-left: 20px"><input type="email" placeholder="example123@gmail.com"></span>
+        <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+     </div>
      </div>
      <div style="padding-top: 30px">
       <span style="padding-left: 100px">Value of Gift Card (Rs) <span style="color: red">*</span></span>
@@ -55,7 +59,7 @@
    <div class="gift-card-info-1">
      <div style="padding-top: 30px">
         <span>Re-type Email <span style="color: red">*</span>  </span>
-        <span style="padding-left: 35px"><input type="text"></span>
+        <span style="padding-left: 35px"><input type="text" placeholder="Confirm Email"></span>
      </div>
      <div style="padding-top: 30px">
       <span style="padding-left: 100px">Number of Gift Cards</span>
@@ -64,7 +68,7 @@
    </div>
    <div class="gift-card-info-1">
      <div style="padding-top: 30px">
-         <span><input type="checkbox"></span>
+         <span><input type="checkbox" ng-click="displayCheckItem()"></span>
         <span> Personalize your Gift Card </span>
      </div>
      <div style="padding-top: 30px">
@@ -72,16 +76,16 @@
      </div>
    </div>
    
-   <div class="gift-card-info-2" style="display: flex">
+   <div class="gift-card-info-2" style="display: flex" ng-hide="isgiftInfoHidden">
    
         <div>
            <div style="padding-top: 20px">
               <span style="padding-left: 10px" >To(Name)<span style="color: red;">*</span></span>
-              <span style="padding-left: 55px"><input type="text"></span>
+              <span style="padding-left: 55px"><input type="text" placeholder="Reciver's Name"></span>
            </div>
            <div style="padding-top: 30px">
               <span style="padding-left: 10px">From(Name)<span style="color: red;">*</span></span>
-              <span style="padding-left: 40px"><input type="text"></span>
+              <span style="padding-left: 40px"><input type="text" placeholder="Sender's Name"></span>
            </div>
         </div>
         <div style="padding-left: 5%;">
@@ -100,6 +104,7 @@
        </div>
    </div>
   </div> 
+  </form>
    <div class="gift-card-description">
    <div style="font-size: 12px;padding-left: 9px">TERMS AND CONDITIONS APPLICABLE ON GIFT CARDS</div>
    <div class="card-description">1.Flipkart Gift Cards ('GCs"Gift Cards"') are issued by QwikCilver Solutions Pvt. Ltd ("Qwikcilver") which is a private limited company incorporated under the laws of India, and is authorized by the Reserve Bank of India ("RBI") to issue such Gift Cards.</div>
@@ -120,5 +125,215 @@
      <div class="card-description">17.If the order value exceeds the Gift Card amount, the balance must be paid by Credit Card/Debit Card/Internet Banking. Cash on Delivery payment option cannot be used to pay the balance amount.</div>
   
    </div>
+   
+   </div>
+   <div ng-show="isCheckBalance">
+     <div class="check-balance-details">
+       <div class="check-balnace-gift-card">
+         <div style="font-size: 16px;font-weight: bold;">View your Gift Card Details</div>
+         <div style="font-size: 11px;margin-bottom: 27px;padding-top: 7px">Check your gift card balance and validity</div>
+         <div class="check-gift-card-details">
+           <div >
+              <span>Gift Card Number <span style="color: red;">*</span></span>
+              <span style="margin-left: 14%"><input type="text"></span>
+           </div>
+           <div style="margin-top: 3%">
+              <span>Gift Card PIN <span style="color: red;">*</span></span>
+              <span style="margin-left: 17%"><input type="text"></span>
+           </div>
+         </div>
+       </div>
+        <div class="gift-card-description">
+   <div style="font-size: 12px;padding-left: 9px">TERMS AND CONDITIONS APPLICABLE ON GIFT CARDS</div>
+   <div class="card-description">1.Flipkart Gift Cards ('GCs"Gift Cards"') are issued by QwikCilver Solutions Pvt. Ltd ("Qwikcilver") which is a private limited company incorporated under the laws of India, and is authorized by the Reserve Bank of India ("RBI") to issue such Gift Cards.</div>
+    <div class="card-description">2.The Gift Cards can be redeemed online against Sellers listed on www.flipkart.com or Flipkart Mobile App or Flipkart m-site ("Platform") only.</div>
+    <div class="card-description">3.Gift Cards can be purchased on www.flipkart.com or Flipkart Mobile App using the following payment modes only - Credit Card, Debit Card and Net Banking.</div>
+    <div class="card-description">4.Gift Cards can be redeemed by selecting the payment mode as Gift Card. Gift Card payment option is not available for single order with multiple sellers.</div>
+    <div class="card-description">5.Gift Cards cannot be used to purchase other Flipkart Gift Cards or Flipkart First subscriptions.</div>
+    <div class="card-description" >6.Gift Cards cannot be used to make bulk purchases on the Platform.</div>
+     <div class="card-description">7.If the order value exceeds the Gift Card amount, the balance must be paid by Credit Card/Debit Card/Internet Banking. Cash on Delivery payment option cannot be used to pay the balance amount.</div>
+      <div class="card-description" >8.If the order value is less than the amount of the Gift Card, the outstanding balance (after deduction of order value) will reflect under the same Gift Card and can be used for subsequent transactions.</div>
+       <div class="card-description">9.Gift Cards will expire after 12 months from the date of issue and any corresponding unused balance shall be forfeited thereafter.</div>
+  <div class="card-description">10.Flipkart Gift Cards ('GCs"Gift Cards"') are issued by QwikCilver Solutions Pvt. Ltd ("Qwikcilver") which is a private limited company incorporated under the laws of India, and is authorized by the Reserve Bank of India ("RBI") to issue such Gift Cards.</div>
+    <div class="card-description">12.The Gift Cards can be redeemed online against Sellers listed on www.flipkart.com or Flipkart Mobile App or Flipkart m-site ("Platform") only.</div>
+    <div class="card-description">13.Gift Cards can be purchased on www.flipkart.com or Flipkart Mobile App using the following payment modes only - Credit Card, Debit Card and Net Banking.</div>
+    <div class="card-description">14.Gift Cards can be redeemed by selecting the payment mode as Gift Card. Gift Card payment option is not available for single order with multiple sellers.</div>
+    <div class="card-description">15.Gift Cards cannot be used to purchase other Flipkart Gift Cards or Flipkart First subscriptions.</div>
+    <div class="card-description" >16.Gift Cards cannot be used to make bulk purchases on the Platform.</div>
+     <div class="card-description">17.If the order value exceeds the Gift Card amount, the balance must be paid by Credit Card/Debit Card/Internet Banking. Cash on Delivery payment option cannot be used to pay the balance amount.</div>
+  
+   </div>
+     </div>
+   </div>
+   
+   <div ng-show="isCorporateRequirement">
+      <div class="corporate-requirement-details">
+          <div style="font-size: 16px;font-weight: bold;">Flipkart Gift Cards for Businesses</div>
+          <div class="corporate-info" style="display: flex">
+              <div class="left-sided-corporate">
+                  <div style="padding-top: 20px">
+                     <span>First Name<span style="color: red;">*</span></span>
+                     <span style="margin-left: 95px"><input type="text" width="220px"></span>
+                  </div>
+                  <div style="padding-top: 15px">
+                      <span>Last Name</span>
+                      <span style="margin-left: 100px"><input type="text" width="220px"></span>
+                  </div>
+                   <div style="padding-top: 15px">
+                       <span>Mobile<span style="color: red;">*</span></span>
+                       <span style="padding-left: 121px"><input type="text" width="220px"></span>
+                   </div>
+                   <div style="padding-top: 15px">
+                      <span>Email<span style="color: red;">*</span></span>
+                      <span style="padding-left: 127px"><input type="text" placeholder="example123@gmail.com" width="220px"></span>
+                   </div>
+                  
+              </div>
+              
+              <div class="right-sided-corporate" style="margin-left: 4%">
+                  <div style="padding-top: 20px">
+                  <span>Estimated Order Value:</span>
+                  <span>
+                    <select style="margin-left: 100px" >
+                           <option value="volvo">--None--</option>
+  							<option value="saab">0-5Lakh</option>
+ 							 <option value="opel">5-20Lakh</option>
+ 							 <option value="audi">20-50Lakh</option>
+  							 <option value="audi">50 lakh-1Cr</option>
+   							 <option value="audi">1Cr +</option>
+					</select>
+                  </span>
+                  </div>
+                  <div style="padding-top: 15px">
+                 <span>Location<span style="color: red;">*</span></span>
+                 <span style="margin-left: 185px">
+                           <select >
+                           <option value="volvo">--None--</option>
+  							<option value="saab">Maharashtra</option>
+ 							 <option value="opel">Gujrat</option>
+ 							 <option value="audi">J & K</option>
+  							 <option value="audi">Bihar</option>
+   							 <option value="audi">Uttarpradesh</option>
+   							 <option value="audi">Madyapradesh</option>
+   							 <option value="audi">Hariyana</option>
+   							 <option value="audi">Goa</option>
+   							 <option value="audi">Kerla</option>
+   							 <option value="audi">Banglor</option>
+   							 <option value="audi">Chennai</option>
+   							 <option value="audi">Delhi</option>
+					</select>
+                 
+                 </span>
+              </div>
+              <div style="padding-top: 15px">
+              <span>Purpose of Purchase</span>
+              <span style="margin-left: 114px">
+                       <select >
+                           <option value="volvo">--None--</option>
+  							<option value="saab">channel RNR program</option>
+ 							 <option value="opel">Employee RNR program</option>
+ 							 <option value="audi">Seasonal Corporate Gifting</option>
+  							 <option value="audi">Corporate consumption</option>
+   							 <option value="audi">sales promotion</option>
+   							 <option value="audi">Personal</option>
+   							 <option value="audi">Other</option>
+					</select>
+              </span>
+              </div>
+              <div style="padding-top: 15px">
+                 <span>Company<span style="color: red;">*</span></span>
+                 <span style="margin-left: 180px"><input type="text" width="400px"></span>
+              </div>
+                <div style="padding-top: 15px;padding-bottom: 15px">
+                   <button type="submit" class="gift-submit-details">SUBMIT DETAILS</button>
+                </div>
+              
+              </div>
+              
+          </div>
+          
+      </div>
+   </div>
+   
+   
+   <div ng-show="isFrequntlyAskedQuestions">
+        <div class="display-frequntly-asked-question">
+           <div class="gift-card-asked-questions" style="display: flex">
+              <div class="left-side-giftcard-question" style="width: 45%">
+                   <div class="need-help" style="padding-left: 3px">
+                      <div style="font-size: 16px;font-weight: bold;">Need Help?</div>
+                      <div>
+                         <span style="font-size: 11px">Have Flipkart Gift Card related queries?</span>
+                         <span style="color: black;"><a style="font-size: 12px;color: black;" ng-click="redirectCustomerCare()">Contact Us</a></span>
+                      </div>
+                      <div>
+                         <span style="font-size: 11px">Bulk sales enquiries can be sent to</span>
+                         <span><a style="font-size: 12px">egvmarketing@flipkart.com</a></span>
+                      </div>
+                   </div>
+                   
+                   <div class="buy-retail-gift-card-details">
+                      <div style="font-weight: bold;padding-top: 15px">How do I buy / gift a Flipkart Gift Card?</div>
+                        <ul style="padding-left: 25px;padding-top: 15px">
+                           <li style="list-style-type: disc;font-size: 12px;">Enter the name and email address of the person you want to send the Flipkart Gift Card to.</li>
+                           <li style="list-style-type: disc;font-size: 12px;">Enter the value of the card you would like to purchase then click "Proceed To Pay".</li>
+                           <li style="list-style-type: disc;font-size: 12px;">You'll now see the payment options. You can pay by Credit Card / Debit Card / ATM Card / Netbanking. Proceed to pay using your preferred choice. If you need to make any changes to the Gift Card value, you can always click "Edit" to modify it.</li>
+                        </ul>
+                        <div style="font-size: 12px">Complete the checkout process to receive an email with the Gift Card details.</div>
+                   </div>
+                   <div class="buy-retail-gift-card-details">
+                      <div style="font-weight: bold;padding-top: 15px">How do I pay with a Flipkart Gift Card?</div>
+                      <ul style="padding-left: 25px;padding-top: 15px">
+                           <li style="list-style-type: disc;font-size: 12px;">Go to flipkart.com and select the items you want to purchase. When you are ready to checkout, click "Proceed To Pay".</li>
+                           <li style="list-style-type: disc;font-size: 12px;">Select the "Pay By Gift Card" option.</li>
+                           <li style="list-style-type: disc;font-size: 12px;">Enter your 16-digit gift card number and the corresponding 6-digit PIN number when prompted</li>
+                        </ul>
+                        <div>
+                          <span>NOTE:</span>
+                          <span> Funds will be deducted from your Flipkart Gift Card at the time you place your order. In case of any adjustment or cancellation at a later stage, we will credit the refund back to your Gift Card.</span>
+                        </div>
+                        
+                   </div>
+                   
+                   
+              </div>
+              <div class="right-side-giftcard-question" style="width: 45%;margin-left: 5%;margin-top: 6%" >
+                <div class="buy-retail-gift-card-details">
+                <div style="font-weight: bold;padding-top: 15px">Does my Flipkart Gift Card expire?</div>
+                <div style="font-size: 12px;padding-top: 7px">All Flipkart Gift Cards expire 1 year from the date of their creation.</div>
+                </div>
+                <div class="buy-retail-gift-card-details">
+                <div style="font-weight: bold;padding-top: 15px">Can I use promotional codes when paying with a Flipkart Gift Card?</div>
+                <div style="font-size: 12px;padding-top: 7px">Yes, absolutely!</div>
+                </div>
+                <div class="buy-retail-gift-card-details">
+                <div style="font-weight: bold;padding-top: 15px">Is there a limit on how many Gift Cards that can be used per Order?</div>
+                <div style="font-size: 12px;padding-top: 7px;text-align: justify;">You can combine a maximum of 15 Gift Cards in a single order at the time of checkout. In case you wish to redeem more number of Gift Cards on a single order, please add your Gift Cards to the Wallet.</div>
+                </div>
+                <div class="buy-retail-gift-card-details">
+                      <div style="font-weight: bold;padding-top: 15px">How do I buy / gift a Flipkart Gift Card?</div>
+                        <ul style="padding-left: 25px;padding-top: 15px">
+                           <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">Flipkart Gift Cards ('GCs"Gift Cards"') are issued by QwikCilver Solutions Pvt. Ltd ("Qwikcilver") which is a private limited company incorporated under the laws of India, and is authorized by the Reserve Bank of India ("RBI") to issue such Gift Cards.</li>
+                           <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">The Gift Cards can be redeemed online against Sellers listed on www.flipkart.com or Flipkart Mobile App or Flipkart m-site ("Platform") only.</li>
+                           <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">Gift Cards can be purchased on www.flipkart.com or Flipkart Mobile App using the following payment modes only - Credit Card, Debit Card and Net Banking.</li>
+                            <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">Gift Cards can be redeemed by selecting the payment mode as Gift Card. Gift Card payment option is not available for single order with multiple sellers.</li>
+                            <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">Gift Cards cannot be used to purchase other Flipkart Gift Cards or Flipkart First subscriptions.</li>
+                            <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">If the order value exceeds the Gift Card amount, the balance must be paid by Credit Card/Debit Card/Internet Banking. Cash on Delivery payment option cannot be used to pay the balance amount.</li>
+                            <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">If the order value is less than the amount of the Gift Card, the outstanding balance (after deduction of order value) will reflect under the same Gift Card and can be used for subsequent transactions.</li>
+                            <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">Gift Cards will expire after 12 months from the date of issue and any corresponding unused balance shall be forfeited thereafter.</li>
+                            <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">Gift Cards cannot be redeemed for Cash or Credit.</li>
+                            <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">You are solely responsible for the safety and security of the Gift Cards. Flipkart.com/QwikCilver Solutions are not responsible for any acts of omission or commission if Gift Card is lost, stolen or used without permission.</li>
+                            <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">Once the Gift Card has been sent to you, you are bound to protect the Gift Card PIN or Gift Card number as confidential. In the event of any misuse of Gift Card due to loss of any such confidential details due to the fault of the purchaser, Flipkart/ QwikCilver Solutions Pvt. Ltd shall not be responsible for the same and no refund can be issued.</li>
+                            <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">You can combine a maximum of 15 Gift Cards in a single order at the time of checkout. In case you wish to redeem more number of Gift Cards on a single order, please add your Gift Cards to the Wallet.</li>
+                            <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">Flipkart.com/QwikCilver Solutions assume no responsibility for the products purchased using the Gift Cards and any liability thereof is expressly disclaimed.</li>
+                            <li style="font-size: 12px;list-style-type: decimal;text-align: justify;">TValidity of Gift Cards cannot be extended; new Gift Cards cannot be provided against the expired/unused Gift Cards.</li>
+                            
+                        </ul>
+                   </div>
+              </div>
+           </div>
+        </div>
+   </div>
+   
 </div>
 </div>

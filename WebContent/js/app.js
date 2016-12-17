@@ -1213,9 +1213,55 @@ retailApp.controller('tvDetailsCtrl',function($scope,$http,$location)
 });
 
 
-retailApp.controller('giftCardCtrl', function($scope,$http)
+retailApp.controller('giftCardCtrl', function($scope,$http,$location)
 		{
-			
+	 $scope.isgiftInfoHidden=true;
+	    $scope.displayCheckItem=function()
+	    {
+	    	$scope.isgiftInfoHidden = $scope.isgiftInfoHidden ? false : true;
+	    };
+	    $scope.retailGiftCard=true;
+	    $scope.isCheckBalance=false;
+	    $scope.isCorporateRequirement=false;
+	    $scope.isFrequntlyAskedQuestions=false;
+	    $scope.displayRetailGiftCard=function()
+	    {
+	    	$scope.retailGiftCard=true;
+	    	$scope.isCheckBalance=false;
+	    	$scope.isCorporateRequirement=false;
+	    	$scope.isFrequntlyAskedQuestions=false;
+	    };
+	    
+	    $scope.displayCheckBalance=function()
+	    {
+	    	$scope.retailGiftCard=false;
+	    	$scope.isCheckBalance=true;
+	    	$scope.isCorporateRequirement=false;
+	    	$scope.isFrequntlyAskedQuestions=false;
+	    };
+	    
+	    $scope.displayCorporateRequiremnet=function()
+	    {
+	    	$scope.retailGiftCard=false;
+	    	$scope.isCheckBalance=false;
+	    	$scope.isCorporateRequirement=true;
+	    	$scope.isFrequntlyAskedQuestions=false;
+	    };
+	    $scope.displayFrequntlyaskedQuestion=function()
+	    {
+	    	$scope.retailGiftCard=false;
+	    	$scope.isCheckBalance=false;
+	    	$scope.isCorporateRequirement=false;
+	    	$scope.isFrequntlyAskedQuestions=true;
+	    	
+	    };
+	    $scope.redirectCustomerCare=function()
+	    {
+	    	  $location.path=('/customerCare');
+	    };
+	  
+	    
+	    
 		});
 
 retailApp.controller('downloadAppCtrl', function($scope,$http)
@@ -1336,8 +1382,8 @@ retailApp.controller('trackOrderCtrl',function($scope,$location,$timeout)
 	  /*  var email = $scope.email;
 		var password = $scope.password;*/
 	
-	$scope.email = "admin";
-	$scope.password = "admin";
+	$scope.email = '';
+	$scope.password = 'admin';
     $scope.trackOrderLogin=function()
     {
     	

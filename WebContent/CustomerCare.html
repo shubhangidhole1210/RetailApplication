@@ -11,11 +11,13 @@
     </div>
     <div style="padding-top: 5px;font-size: 13px">ex : Returns, Exchange, Damaged product</div>
     <div style="padding-top: 25px;font-size: 14px;font-weight: bold;">Look up by issue type</div>
-   <div>
+   <div style="box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);">
     <div class="category-browse">
        <div class="category-browse-row" ng-click="displayOrder()">
+       <div class="category-browse-row1">
            <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
            <span style="padding-left: 10px">Order</span>
+           </div>
        </div>
     <div ng-hide="isOrderHidden">   
        <div class="category-browse-row">
@@ -43,8 +45,10 @@
    </div>
        
        <div class="category-browse-row" ng-click="displayCancellation()">
+       <div class="category-browse-row1">
            <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
            <span style="padding-left: 10px">Cancellation and Returns</span>
+           </div>
        </div>
        <div ng-hide="iscancellationHidden" >   
        <div class="category-browse-row">
@@ -69,8 +73,10 @@
        </div>
    </div>  
        <div class="category-browse-row" ng-click="displayPayment()">
+       <div class="category-browse-row1">
            <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
            <span style="padding-left: 10px">payment</span>
+           </div>
        </div>
        <div ng-hide="isPaymentHidden">   
        <div class="category-browse-row">
@@ -90,8 +96,10 @@
        </div>
    </div>  
        <div class="category-browse-row"  ng-click="displayShopping()">
+       <div class="category-browse-row1">
            <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
            <span style="padding-left: 10px">shopping</span>
+           </div>
        </div>
         <div  ng-show="isshoppinghidden">   
        <div class="category-browse-row">
@@ -108,8 +116,10 @@
        </div>
    </div>  
        <div class="category-browse-row" ng-click="displayWallet()">
+       <div class="category-browse-row1">
            <span><img alt="" src="image/ic_launcher_truck.png" width="40px" height="40px" ></span>
            <span style="padding-left: 10px">wallet</span>
+           </div>
        </div>
         <div ng-show="isWalletHidden">   
        <div class="category-browse-row">
@@ -130,34 +140,56 @@
 <div class="display-rightSide-customer">
      <div style="font-weight: bold;padding-top: 15px">Frequently Asked Questions</div>
      <div class="frequntly-asked-questions">
-         <div class="asked-question-name" style="padding-top: 15px">How Can i return or exchange an item?</div>
-         <div class="asked-question-name">What items can I exchange?</div>
-         <div class="asked-question-name">I have requested for a return of my item. when will it happen?</div>
-         <div class="asked-question-name">What items can i not return?</div>
-         <div class="asked-question-name">
-         <div >should i call the customer care number foe installation once the product is delivered ?</div>
-           <div style="color: #848484; font-size: 13px;padding-top: 10px">To make sure that you have a smooth and hassle-free experience, the installation is automatically arranged for your product within 2-5 business after it's delivered.</div>
+         <div class="asked-question-name" style="padding-top: 15px">
+        <div ng-click="hiddenDiv12 = !hiddenDiv12"> How Can i return or exchange an item?</div>
+        <div class="exchnage-item-answer" ng-show="hiddenDiv12">
+           <div style="color: #848484; font-size: 13px;padding-top: 6px">Go to My Orders</div>
+           <div style="color: #848484; font-size: 13px;padding-top: 6px">Choose the item you wish to return or exchange </div>
+           <div style="color: #848484; font-size: 13px;padding-top: 6px">Fill in the details </div>
+           <div style="color: #848484; font-size: 13px;padding-top: 6px">Choose Request Return</div>
+           <div><img src="image/G1-web_570.jpeg" width="100%"></div>
+        </div>
          </div>
          <div class="asked-question-name">
-        <div style="color: #848484; font-size: 13px;padding-top: 10px"> Can I change the delivery date of my order?</div>
+        <div ng-click="hiddenDiv13 = !hiddenDiv13"> What items can I exchange?</div>
+        <div style="color: #848484; font-size: 13px;padding-top: 6px;text-align: justify;" ng-show="hiddenDiv13">You can exchange items such as Apparels & Footwear for size/color of your choice.
+For information on other items you can exchange, please check the Exchange or Return policy on the product page.</div>
+         </div>
+         <div class="asked-question-name">
+        <div ng-click="hiddenDiv14 = !hiddenDiv14"> I have requested for a return of my item. when will it happen?</div>
+         <div style="color: #848484; font-size: 13px;padding-top: 6px;text-align: justify;" ng-show="hiddenDiv14">You can now track the status of your return the easy way right from your Flipkart account or mobile app. Just visit the order details page to see its status along with the date of pick-up and status of your refund if applicable. You will also receive an email & SMS with the details of your return.  </div>
+         </div>
+         <div class="asked-question-name">
+        <div> What items can i not return?</div>
         <div>
+        
+        </div>
+         </div>
+         <div class="asked-question-name">
+         <div ng-click="hiddenDiv15 = !hiddenDiv15" >should i call the customer care number foe installation once the product is delivered ?</div>
+           <div style="color: #848484; font-size: 13px;padding-top: 10px" ng-show="hiddenDiv15">To make sure that you have a smooth and hassle-free experience, the installation is automatically arranged for your product within 2-5 business after it's delivered.</div>
+         </div>
+         <div class="asked-question-name">
+        <div style=" font-size: 13px;padding-top: 10px" ng-click="hiddenDiv16 = !hiddenDiv16"> Can I change the delivery date of my order?</div>
+        <div ng-show="hiddenDiv16" >
             <div style="color: #848484; font-size: 13px;padding-top: 10px">Unfortunately, we are unable to honor requests for specific delivery dates, however rest assured that we will deliver by the promised delivery date.</div>
              <div style="color: #848484; font-size: 13px;padding-top: 10px">For delivery of Large items like TV, Washing machine, Refrigerator etc. you can login and choose your delivery slot at any given time from your orders page.  </div>
         </div>
          </div>
          
          <div class="asked-question-name">
-         <div>what are the modes of refund available after cancellation?</div>
-             <div style="color: #848484; font-size: 13px;padding-top: 10px">t's easy! Just go to My Orders & click on the Order you want to see.</div>
+         <div ng-click="hiddenDiv17 = !hiddenDiv17">what are the modes of refund available after cancellation?</div>
+             <div style="color: #848484; font-size: 13px;padding-top: 10px" ng-show="hiddenDiv17" >t's easy! Just go to My Orders & click on the Order you want to see.</div>
          </div>
      </div>
-     <div class="customer-third-block">
-   <div style="font-size: 12px;font-weight: bold;">Issue still not resolved?</div>
-   <button type="button" class="customer-care-contact">CONTACT US</button>
-</div>
-</div>
+    
 </div>
 
+</div>
 
+ <div class="customer-third-block">
+   <div style="font-size: 14px;font-weight: bold;padding-left: 15px">Issue still not resolved?</div>
+   <button type="button" class="customer-care-contact" style="margin-left: 15px">CONTACT US</button>
+</div>
 </div>
 </div>
