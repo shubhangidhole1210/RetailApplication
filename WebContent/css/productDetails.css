@@ -1887,6 +1887,32 @@
 	margin-left: 4px;
 }
 
+/* .check-balance a:FOCUS
+{
+	background-color: #124969;;
+	color: white;
+	padding:13px;
+	border-radius: 3px 3px 0 0;
+	margin-left: 4px;
+}
+.check-balance a:target
+{
+	background-color: #124969;;
+	color: white;
+	padding:13px;
+	border-radius: 3px 3px 0 0;
+	margin-left: 4px;
+} */
+/* .gift-card-option:FOCUS{
+	background-color: #124969;;
+	color: white;
+	padding:13px;
+	border-radius: 3px 3px 0 0;
+	margin-left: 4px;
+} */
+
+
+
 .buy-retail-gift-card
 {
 	background-color: #124969;
@@ -1918,13 +1944,11 @@
 }
 .gift-card-info
 {
-	padding-left: 40px;
 	width: 100%;
-	background-color: #f2f2f2;
-	margin-left:1%;
 	margin-top: 1%;
 	padding-bottom: 10px;
-	padding-right: 10px;
+    padding-right:20px;
+	margin-left: 10px;
 }
 .gift-card-info-1
 {
@@ -2124,6 +2148,43 @@
 	cursor: pointer;
 	background-color: #124969;
 }
+.gift-card-option li a:VISITED {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: #124969;
+}
+.gift-card-option li a:ACTIVE {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: #124969;
+}
+
+/* .gift-card-option li a:FOCUS {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: #124969;
+}
+
+.gift-card-option li a:target  {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: #124969;
+} */
+
+
+/* a.buy-retail-gift-card li:FOCUS
+{
+	background-color: #124969;
+} */
+/* .gift-card-option li.selected a
+{
+	background-color: #124969;
+} */
+
 #egv-banner
 {
 	background: url(../image/egv-banner-background.png) repeat-x;
@@ -2398,4 +2459,24 @@ div .category-browse-row1:FOCUS{
 .buy-retail-gift-card-details
 {
 	padding-top: 6px;
+}
+
+.display-error-msg
+{
+	width: 30%;
+	border-bottom: red;
+}
+.gift-card-block
+{
+	background-color: #eae9e9;
+    border-top: dashed 2px #fff;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+
+.mainRetailerMenu
+{
+	margin: 0;
+	padding: 0;
 }

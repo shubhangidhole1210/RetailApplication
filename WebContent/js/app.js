@@ -1213,13 +1213,42 @@ retailApp.controller('tvDetailsCtrl',function($scope,$http,$location)
 });
 
 
-retailApp.controller('giftCardCtrl', function($scope,$http,$location)
+retailApp.controller('giftCardCtrl', ['$scope', function($scope,$http,$location)
 		{
+	 $scope.choices = [];
+	  
+	  $scope.addNewChoice = function() {
+	    var newItemNo = $scope.choices.length+1;
+	    $scope.choices.push({newItemNo});
+	  };
+	    
+	  $scope.removeChoice = function() {
+	    var lastItem = $scope.choices.length-1;;
+	    $scope.choices.splice(lastItem);
+	  };
 	 $scope.isgiftInfoHidden=true;
 	    $scope.displayCheckItem=function()
 	    {
 	    	$scope.isgiftInfoHidden = $scope.isgiftInfoHidden ? false : true;
 	    };
+	    
+	    $scope.ishidesecondGiftCard=true;
+	    $scope.displaySecondGift=function()
+	    {
+	    	$scope.ishidesecondGiftCard = $scope.ishidesecondGiftCard ? false : true;
+	    };
+	    $scope.ishideThirdGiftCard=true;
+	    $scope.displayThirdGift=function()
+	    {
+	    	$scope.ishideThirdGiftCard = $scope.ishideThirdGiftCard ? false : true;
+	    };
+	    
+	    $scope.ishideFourthGiftCard=true;
+	    $scope.displayFourthGift=function()
+	    {
+	    	$scope.ishideFourthGiftCard = $scope.ishideFourthGiftCard ? false : true;
+	    };
+	    
 	    $scope.retailGiftCard=true;
 	    $scope.isCheckBalance=false;
 	    $scope.isCorporateRequirement=false;
@@ -1255,14 +1284,45 @@ retailApp.controller('giftCardCtrl', function($scope,$http,$location)
 	    	$scope.isFrequntlyAskedQuestions=true;
 	    	
 	    };
+	    
+	    
+	    
 	    $scope.redirectCustomerCare=function()
 	    {
 	    	  $location.path=('/customerCare');
 	    };
-	  
 	    
+	        
 	    
-		});
+	    $scope.master = {};
+	   
+		  $scope.update = function(user) {
+		    $scope.master = angular.copy(user);
+		   
+		  };
+		  
+		 /* $scope.checkDetails = {};
+		   
+		  $scope.getDetails = function(user1) {
+		    $scope.checkDetails = angular.copy(user1);
+		   
+		  };*/
+	    
+		}]);
+var counter = 0;
+var numBoxes = 4;
+function toggle4(showHideDiv) {
+       var ele = document.getElementById(showHideDiv + counter);
+       if(ele.style.display == "block") {
+              ele.style.display = "none";
+       }
+       else {
+              ele.style.display = "block";
+       }
+       if(counter == numBoxes) {
+                document.getElementById("toggleButton").style.display = "none";
+       }
+}
 
 retailApp.controller('downloadAppCtrl', function($scope,$http)
 		{
@@ -1494,4 +1554,37 @@ retailApp.controller('menuDemorCtrl',function($scope)
 							$scope.hideBooksPopover = function () {
 							  $scope.isBooksVisible = false;
 							};
+							 $scope.master = {};
+							$scope.update = function(user) {
+							    $scope.master = angular.copy(user);
+							  };
 });
+
+
+retailApp.controller('retailGiftCardCtrl', ['$scope', function($scope) {
+	  $scope.master = {};
+       $scope.isHide=false;
+	  $scope.update = function(user) {
+	    $scope.master = angular.copy(user);
+	    $scope.isHide=true;
+	  };
+
+	 
+	}]);
+
+
+retailApp.controller('MainCtrl', function($scope) {
+
+	  $scope.choices = [{id: 'choice0'}, {id: 'choice1'}];
+	  
+	  $scope.addNewChoice = function() {
+	    var newItemNo = $scope.choices.length+1;
+	    $scope.choices.push({'id':'choice'+newItemNo});
+	  };
+	    
+	  $scope.removeChoice = function() {
+	    var lastItem = $scope.choices.length-1;
+	    $scope.choices.splice(lastItem);
+	  };
+	  
+	});

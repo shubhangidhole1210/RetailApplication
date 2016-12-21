@@ -1,0 +1,85 @@
+{
+    "filter" :[
+        
+        {
+           "filtertype" :"Brand",
+           "itemList" :[
+                  {  
+                      "id"       : "1",
+                     "itemName" : "Apple"      
+                  },
+                 {
+                       "id"  : "2",
+                      "itemName" : "MAXX"
+                 },
+                 {
+                          "id": "3",
+                         "itemName" : "A & K"
+                 } ,
+                 {
+                          "id": "4",
+                        "itemName" : "Acer"
+                 },
+                 {
+                         "id": "5",
+                        "itemName" : "BLU"
+                 },
+                 {
+                          "id": "6",
+                         "itemName" : "Colors"
+                 }
+           
+           ]  
+          }, 
+       
+        {
+           "filtertype" :"Offers",   
+           "itemList" :[
+              {
+                   "id" : "1",
+                  "itemName" : "Exchange Offer" 
+              },
+               {
+                   "id" : "2",
+                  "itemName" : "No Cost EMI" 
+              },
+               {
+                  "id" : "3",
+                  "itemName" : "Special Price" 
+              },
+               {
+               
+                   "id" : "4",
+                  "itemName" : "Bank Offer" 
+              }
+           ]
+         },  
+           
+      {     
+        
+        "filtertype" :"RAM",
+        "itemList" :[
+               {
+                  "id" : "1",
+                  "itemName" : "1 GB - 2GB" 
+              },
+               {
+                  "id" : "2",
+                  "itemName" : "2 GB - 3GB" 
+              },
+               {
+                  "id" : "3",
+                  "itemName" : "3 GB - 4GB" 
+              }
+        
+        ]
+        }
+        
+        
+        
+    
+    
+    ]
+   
+}
+
