@@ -206,227 +206,17 @@
    </div>
    
    
-   <!-- </div> -->
-    <!--  <div ng-show="hiddenDiv1"> -->
-  <!--  <div class="gift-card-block" style="background-color: #f2f2f2;" id="div2">
-    <div ng-show="myForm.$submitted || myForm.reciverEmail2.$touched" style="color: red; font-size: 12px">
-      <span ng-show="myForm.reciverEmail2.$error.required">*Invalid recipient Email ID. Please check and try again</span>
-      <span ng-show="myForm.reciverEmail2.$error.email" >*Invalid recipient Email ID. Please check and try again</span>
-       
-    </div>
-     <div ng-show="myForm.$submitted || myForm.confirmEmail2.$touched" style="color: red; font-size: 12px">
-      <span ng-show="myForm.confirmEmail2.$error.required">*Invalid recipient Email ID. Please check and try again</span>
-      <span ng-show="myForm.confirmEmail2.$error.email" >*Invalid recipient Email ID. Please check and try again</span>
-      <span ng-show="myForm.confirmEmail2.$error.pattern" >* Email IDs do not match, please check and try again.</span>
-    </div>
-   <div align="right">
-          <img alt="" src="image/ic_launcher_gray_close.png" width="25px;" height="25px" style="margin-right: 35px">
-       </div>
-   <div class="gift-card-info-1">
-   <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
-     <div style="padding-top: 30px">
-        <span >Receiver's Email <span style="color: red">*</span>  </span>
-        <span style="padding-left: 20px"><input type="email" placeholder="example123@gmail.com" ng-model="reciverEmail2" name="reciverEmail2" required="required"></span>
-     </div>
-     </div>
-     <div style="padding-top: 30px">
-      <span style="padding-left: 100px">Value of Gift Card (Rs) <span style="color: red">*</span></span>
-        <span style="padding-left: 20px"><select ng-model="number1" >
-  <option value="">select Value</option>
-  <option value="25">25</option>
-  <option value="50">50</option>
-  <option value="100">100</option>
-   <option value="500">500</option>
-    <option value="1000">1000</option>
-     <option value="5000">5000</option>
-      <option value="10000">10000</option>
-</select></span>
-     </div>
-   </div>
-    <div class="gift-card-info-1">
-     <div style="padding-top: 30px">
-        <span>Re-type Email <span style="color: red">*</span>  </span>
-        <span style="padding-left: 35px"><input type="text" placeholder="Confirm Email" ng-model="confirmEmail2" name="confirmEmail2" required="" ng-pattern="reciverEmail2" ></span>
-     </div>
-     <div style="padding-top: 30px">
-      <span style="padding-left: 100px">Number of Gift Cards</span>
-        <span style="padding-left: 35px"><input type="text" value="1" class="txtinfo"></span>
-     </div>
-   </div>
-     <div class="gift-card-info-1">
-     <div style="padding-top: 30px">
-         <span><input type="checkbox" ng-click="displaySecondGift()" ></span>
-        <span> Personalize your Gift Card </span>
-     </div>
-     <div style="padding-top: 30px">
-      <span style="padding-left: 228px;font-weight: bold;">Total Amount (Rs): {{number1}}</span>
-     </div>
-   </div>
-      <div class="gift-card-info-2" style="display: flex" ng-hide="ishidesecondGiftCard">
-   
-        <div>
-           <div style="padding-top: 20px">
-              <span style="padding-left: 10px" >To(Name)<span style="color: red;">*</span></span>
-              <span style="padding-left: 55px"><input type="text" placeholder="Reciver's Name"></span>
-           </div>
-           <div style="padding-top: 30px">
-              <span style="padding-left: 10px">From(Name)<span style="color: red;">*</span></span>
-              <span style="padding-left: 40px"><input type="text" placeholder="Sender's Name"></span>
-           </div>
-        </div>
-        <div style="padding-left: 5%;">
-        <span>Message:</span>
-        <span><input type="text" placeholder="Add a personalize message (in English)-limt-of 140 character" class="msg-box"></span>
-        </div>
-   </div>
-   </div> -->
-  <!--  </div> -->
+  
    
    
-   <!-- <div ng-show="hiddenDiv2"> -->
-      <!-- <div class="gift-card-block" id="div3">
-      <div ng-show="myForm.$submitted || myForm.reciverEmail3.$touched" style="color: red; font-size: 12px">
-      <span ng-show="myForm.reciverEmail3.$error.required">*Invalid recipient Email ID. Please check and try again</span>
-      <span ng-show="myForm.reciverEmail3.$error.email" >*Invalid recipient Email ID. Please check and try again</span>
-       
-    </div>
-     <div ng-show="myForm.$submitted || myForm.confirmEmail3.$touched" style="color: red; font-size: 12px">
-      <span ng-show="myForm.confirmEmail3.$error.required">*Invalid recipient Email ID. Please check and try again</span>
-      <span ng-show="myForm.confirmEmail3.$error.email" >*Invalid recipient Email ID. Please check and try again</span>
-      <span ng-show="myForm.confirmEmail3.$error.pattern" >* Email IDs do not match, please check and try again.</span>
-    </div>
-      <div align="right">
-          <img alt="" src="image/ic_launcher_gray_close.png" width="25px;" height="25px" style="margin-right: 35px">
-       </div>
-   <div class="gift-card-info-1">
-   <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
-     <div style="padding-top: 30px">
-        <span >Receiver's Email <span style="color: red">*</span>  </span>
-        <span style="padding-left: 20px"><input type="email" placeholder="example123@gmail.com" ng-model="confirmEmail3" name="confirmEmail3" required="required"></span>
-     </div>
-     </div>
-     <div style="padding-top: 30px">
-      <span style="padding-left: 100px">Value of Gift Card (Rs) <span style="color: red">*</span></span>
-        <span style="padding-left: 20px"><select ng-model="number2" >
-  <option value="">select Value</option>
-  <option value="25">25</option>
-  <option value="50">50</option>
-  <option value="100">100</option>
-   <option value="500">500</option>
-    <option value="1000">1000</option>
-     <option value="5000">5000</option>
-      <option value="10000">10000</option>
-</select></span>
-     </div>
-   </div>
-    <div class="gift-card-info-1">
-     <div style="padding-top: 30px">
-        <span>Re-type Email <span style="color: red">*</span>  </span>
-        <span style="padding-left: 35px"><input type="text" placeholder="Confirm Email" ng-model="confirmEmail3" name="confirmEmail3" required="" ng-pattern="reciverEmail3"></span>
-     </div>
-     <div style="padding-top: 30px">
-      <span style="padding-left: 100px">Number of Gift Cards</span>
-        <span style="padding-left: 35px"><input type="text" value="1" class="txtinfo" ng-model="giftCards"></span>
-     </div>
-   </div>
-     <div class="gift-card-info-1">
-     <div style="padding-top: 30px">
-         <span><input type="checkbox" ng-click="displayThirdGift()" ></span>
-        <span> Personalize your Gift Card </span>
-     </div>
-     <div style="padding-top: 30px">
-      <span style="padding-left: 228px;font-weight: bold;">Total Amount (Rs): {{number2*giftCards}}</span>
-     </div>
-   </div>
-      <div class="gift-card-info-2" style="display: flex" ng-hide="ishideThirdGiftCard">
    
-        <div>
-           <div style="padding-top: 20px">
-              <span style="padding-left: 10px" >To(Name)<span style="color: red;">*</span></span>
-              <span style="padding-left: 55px"><input type="text" placeholder="Reciver's Name"></span>
-           </div>
-           <div style="padding-top: 30px">
-              <span style="padding-left: 10px">From(Name)<span style="color: red;">*</span></span>
-              <span style="padding-left: 40px"><input type="text" placeholder="Sender's Name"></span>
-           </div>
-        </div>
-        <div style="padding-left: 5%;">
-        <span>Message:</span>
-        <span><input type="text" placeholder="Add a personalize message (in English)-limt-of 140 character" class="msg-box"></span>
-        </div>
-   </div>
-   </div> -->
-   <!-- </div> -->  
-  <!--  <div ng-show="hiddenDiv3"> -->
-    <!-- <div class="gift-card-block" style="background-color: #f2f2f2;padding-left: 30px;padding-bottom: 30px" id="div4">
-    
-   <div align="right">
-          <img alt="" src="image/ic_launcher_gray_close.png" width="25px;" height="25px" style="margin-right: 35px">
-       </div>
-   <div class="gift-card-info-1">
-   <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
-     <div style="padding-top: 30px">
-        <span >Receiver's Email <span style="color: red">*</span>  </span>
-        <span style="padding-left: 20px"><input type="email" placeholder="example123@gmail.com"></span>
-     </div>
-     </div>
-     <div style="padding-top: 30px">
-      <span style="padding-left: 100px">Value of Gift Card (Rs) <span style="color: red">*</span></span>
-        <span style="padding-left: 20px"><select >
-  <option value="">select Value</option>
-  <option value="25">25</option>
-  <option value="50">50</option>
-  <option value="100">100</option>
-   <option value="500">500</option>
-    <option value="1000">1000</option>
-     <option value="5000">5000</option>
-      <option value="10000">10000</option>
-</select></span>
-     </div>
-   </div>
-    <div class="gift-card-info-1">
-     <div style="padding-top: 30px">
-        <span>Re-type Email <span style="color: red">*</span>  </span>
-        <span style="padding-left: 35px"><input type="text" placeholder="Confirm Email"></span>
-     </div>
-     <div style="padding-top: 30px">
-      <span style="padding-left: 100px">Number of Gift Cards</span>
-        <span style="padding-left: 35px"><input type="text" value="1" class="txtinfo" ng-model="giftCrads"></span>
-     </div>
-   </div>
-     <div class="gift-card-info-1">
-     <div style="padding-top: 30px">
-         <span><input type="checkbox" ng-click="displayFourthGift()" ></span>
-        <span> Personalize your Gift Card </span>
-     </div>
-     <div style="padding-top: 30px">
-      <span style="padding-left: 228px;font-weight: bold;">Total Amount (Rs): 0</span>
-     </div>
-   </div>
-      <div class="gift-card-info-2" style="display: flex" ng-hide="ishideFourthGiftCard">
-   
-        <div>
-           <div style="padding-top: 20px">
-              <span style="padding-left: 10px" >To(Name)<span style="color: red;">*</span></span>
-              <span style="padding-left: 55px"><input type="text" placeholder="Reciver's Name"></span>
-           </div>
-           <div style="padding-top: 30px">
-              <span style="padding-left: 10px">From(Name)<span style="color: red;">*</span></span>
-              <span style="padding-left: 40px"><input type="text" placeholder="Sender's Name"></span>
-           </div>
-        </div>
-        <div style="padding-left: 5%;">
-        <span>Message:</span>
-        <span><input type="text" placeholder="Add a personalize message (in English)-limt-of 140 character" class="msg-box"></span>
-        </div>
-   </div>
-   </div> -->
-   <!-- </div> -->
+ 
+     
    
    
    
       <div class="add-gift">
-          <div style="padding: 14px;font-size: 14px" ng-click="addNewChoice()">[+] Add another Gift Card</div>
+          <div style="padding: 14px;font-size: 14px;cursor: pointer;" ng-click="addNewChoice()">[+] Add another Gift Card</div>
       </div>
    <div align="right">
        <div style="margin-top: 5%">
@@ -518,24 +308,7 @@
       <div class="corporate-requirement-details">
           <div style="font-size: 16px;font-weight: bold;">Flipkart Gift Cards for Businesses</div>
           <form name="form" novalidate>
-          <!-- <div class="display-error-msg">
-            <div ng-show="form.$submitted || form.firstName.$touched">
-      <div ng-show="form.firstName.$error.required" style="color: red; ">Please enter the first name</div>
-    </div>
-    <div ng-show="form.$submitted || form.mobileNumber.$touched">
-      <div ng-show="form.mobileNumber.$error.required" style="color: red; ">Please enter valid mobile number</div>
-    </div>
-    <div ng-show="form.$submitted || form.email.$touched" style="color: red; ">
-      <span ng-show="form.email.$error.required">Please enter valid email</span>
-      <span ng-show="form.email.$error.email">Please enter valid email</span>
-    </div>
-    <div ng-show="form.$submitted || form.location.$touched">
-      <div ng-show="form.location.$error.required" style="color: red; ">Please select location</div>
-    </div>
-     <div ng-show="form.$submitted || form.comapny.$touched">
-      <div ng-show="form.comapny.$error.required" style="color: red; ">Please select comapny</div>
-    </div>
-          </div> -->
+        
           
           
           <div class="corporate-info" style="display: flex">
@@ -559,13 +332,14 @@
       <div ng-show="form.mobileNumber.$error.required" style="color: red; ">Please enter valid mobile number</div>
     </div>
                    
-                   <div style="padding-top: 15px">
+                   <div style="padding-top: 15px;">
                       <span>Email<span style="color: red;">*</span></span>
-                      <span style="padding-left: 127px"><input type="text" placeholder="example123@gmail.com" width="220px" ng-model="user.email" name="email" required=""></span>
+                      <span style="margin-left: 125px"><input type="email" placeholder="example123@gmail.com" ng-model="email" name="email" required></span>
                    </div>
-                     <div ng-show="form.$submitted || form.email.$touched" style="color: red; ">
-      <span ng-show="form.email.$error.required">Please enter valid email</span>
-      <span ng-show="form.email.$error.email">Please enter valid email</span>
+                    <div ng-show="form.$submitted || form.email.$touched" style="color: red; font-size: 12px">
+      <span ng-show="form.email.$error.required">*Invalid recipient Email ID. Please check and try again</span>
+      <span ng-show="form.email.$error.email" >*Invalid recipient Email ID. Please check and try again</span>
+       
     </div>
               </div>
               

@@ -532,16 +532,16 @@
 	padding-right: 5px;
 	
 }
-.cartDetails
+/* .cartDetails
 {
 	
 	background-color:white;
 	margin-top: 1%;
 	border-left:1px solid rgba(153, 153, 153, 0.19) ;
 	border-right:1px solid rgba(153, 153, 153, 0.19) ;
-}
+} */
 
-.cart1
+/* .cart1
 {
 	color: #fff;
     background: #666;
@@ -552,8 +552,8 @@
     padding-left: 3px;
     padding-right: 3px;
     border-bottom: 1px solid #333;
-}
-.item-list
+} */
+/* .item-list
 {
 	background-color: #f2f2f2;
 	margin-top: 1%;
@@ -561,29 +561,29 @@
 	border-top: 1px solid rgba(153, 153, 153, 0.19) ;;
 	border-bottom:1px solid rgba(153, 153, 153, 0.19) ; ;
 	padding: 5px 5px 5px 5px;
-}
-.qty
+} */
+/* .qty
 {
 	margin-left: 25%;
 	border-left: 1px solid rgba(153, 153, 153, 0.95);
 	padding-right: 10px;
 	padding: 5px 5px 5px 5px;
-}
-.price
+} */
+/* .price
 {
 	margin-left: 5%;
 	border-left: 1px solid rgba(153, 153, 153, 0.95);padding: 5px 5px 5px 5px;
-}
-.deivery-details
+} */
+/* .deivery-details
 {
 	margin-left: 9%;
 	border-left: 1px solid rgba(153, 153, 153, 0.95);padding: 5px 5px 5px 5px;
-}
-.subtotal
+} */
+/* .subtotal
 {
 	margin-left: 13%;
 	border-left: 1px solid rgba(153, 153, 153, 0.95);padding: 5px 5px 5px 5px;
-}
+} */
 .emi-info
 {
 	display: inline-block;
@@ -1024,7 +1024,7 @@
 	margin-left: 10%;
 }
 	
-.cart-item-summery
+/* .cart-item-summery
 {
 	border-bottom:1px solid rgba(153, 153, 153, 0.19) ;
     border-left:1px solid rgba(153, 153, 153, 0.19) ;
@@ -1032,13 +1032,13 @@
     border-right: 1px solid rgba(153, 153, 153, 0.19);
     background: #f2f2f2;
     padding: 15px 15px 15px 15px ;
-}
+} */
 
-.retailer-cart-details
+/* .retailer-cart-details
 {
 	margin-left: 15%;
 	margin-right: 15%;
-}
+} */
 .retailer-images
 {
 	display: flex;
@@ -2142,46 +2142,17 @@
     margin-left:25px;
     margin-top: 20px;
 }
-.gift-card-option li a:HOVER {
+.gift-card-option li a:HOVER, .gift-card-option li:ACTIVE  a  {
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
 	background-color: #124969;
 }
-.gift-card-option li a:VISITED {
-	color: white;
-	text-decoration: none;
-	cursor: pointer;
-	background-color: #124969;
-}
-.gift-card-option li a:ACTIVE {
-	color: white;
-	text-decoration: none;
-	cursor: pointer;
-	background-color: #124969;
-}
-
-/* .gift-card-option li a:FOCUS {
-	color: white;
-	text-decoration: none;
-	cursor: pointer;
-	background-color: #124969;
-}
-
-.gift-card-option li a:target  {
-	color: white;
-	text-decoration: none;
-	cursor: pointer;
-	background-color: #124969;
-} */
-
-
-/* a.buy-retail-gift-card li:FOCUS
+/* .gift-card-option li.selected  a 
 {
-	background-color: #124969;
-} */
-/* .gift-card-option li.selected a
-{
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
 	background-color: #124969;
 } */
 
@@ -2479,4 +2450,8 @@ div .category-browse-row1:FOCUS{
 {
 	margin: 0;
 	padding: 0;
+}
+.add-cart-item
+{
+	background: #f7f5ee;
 }

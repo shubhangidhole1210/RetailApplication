@@ -1,23 +1,40 @@
-<div ng-controller="cartDetailsCtrl">
-   <div class="retailer-cart-details">
-     <div class="cartDetails">
-        <a href="" class="cart1">Cart(1)</a>
-         <div class="item-list">
-              <div class="item">ITEM</div>
-              <div class="qty">QTY</div>
-              <div class="price">PRICE</div>
-              <div class="deivery-details">DELIVERY DETAILS</div>
-              <div class="subtotal">SUBTOTAL</div>
-         </div>  
-       
+<div ng-controller="cartDetailsCtrl" style="background: #f7f5ee;">
+
+   <div class="add-cart-item" >
+     <div class="add-cart-item-firstRow" style="background: white">
+        <div class="cartDetails" style="border-bottom: 2px solid #333;">
+           <span class="cartdetails1"><a style="padding-top: 20px;padding-bottom: ">Cart (1)</a></span>
+           <span ><a>Digital Cart (0)</a></span>
+        </div>
+        <div class="display-cart-list">
+        <span class="display-cart-list-item" style="padding-right: 40%;padding-left: 80px" >ITEM</span>
+     <span>   <span class="display-cart-list-item" style="border-left:  1px solid #e4e4e4;padding-left: 10px;padding-right: 10px">QTY</span></span>
+        <span class="display-cart-list-item" style="border-left:  1px solid #e4e4e4;padding-left: 10px;padding-right: 40px">PRICE</span>
+        <span class="display-cart-list-item" style="border-left:  1px solid #e4e4e4;padding-left: 10px;padding-right: 20px">DELIVERY DETAILS</span>
+        <span class="display-cart-list-item" style="border-left:  1px solid #e4e4e4;padding-left: 10px;padding-right: 10px">SUBTOTAL</span>
+        </div>
+        <div class="display-cart-list-item-details">
+           <div><img src="image/hp-pavilion-notebook-75x75-imaen2wznhmnkjc6.jpeg"></div>
+           <div class="add-cart-product-description" style="width: 47%;padding-left: 10px">
+               <div style="color: #333;font-size: 14px">HP Pavilion Core i5 6th Gen - (8 GB/1 TB HDD/.....</div>
+               <div style="font-size: 11px;color:#848484;">15.6 inch, Natural SIlver, 2.03 kg</div>
+               <div><span style="font-size: 12px;">Seller:</span><span style="font-weight: bold;">RetailNet</span></div>
+               <div style="font-size: 11px;color: #54a442;text-decoration: none;">You are eligible for 1 offer!</div>
+           </div>
+           <div class="cart-qty">1</div>
+           <div class="add-cart-price">Rs. 53,990</div>
+           <div class="cart-deliverDetails">
+              <div style="color: #54a442;font-size: 13px;font-weight: bold; ">Free</div>
+              <div style="font-size: 11px;color: #848484;">Delivery by Tue, Dec 27</div>
+           </div>
+           <div style="width: 15%;padding-left: 28px">Rs. 53,990</div>
+        </div>
+        <div align="right">
+        <div class="cart-amountPayable">
+           <span style="color: #999;font-size: 21px">Amount Payable:</span>
+           <span style="font-weight: bold;font-size: 21px">Rs. 53,990</span>
+        </div>
+        </div>
      </div>
-     <div align="right">
-     <div class="cart-item-summery">
-      <div class="estimated-price">
-        <span class="estimated-total">Estimated Total:</span>
-        <span class="estimated-total-price">Rs. 58,010</span>
-      </div>
-     </div>
-     </div>
-     </div>
+   </div>
  </div>

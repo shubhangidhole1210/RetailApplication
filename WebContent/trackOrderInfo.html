@@ -1,0 +1,120 @@
+<div ng-controller="trackOrderInfo">
+<div class="display-trackOrder-info">
+   <div class="firstRow-display-trackOrder-info">
+      <span>Home</span>
+      <span>></span>
+      <span>My Account</span>
+      <span>></span>
+      <span>My Orders</span>
+      <span>></span>
+      <span>OD307241597196054000</span>
+   </div>
+   <div class="SecondRow-display-trackOrder-info">
+     <div style="font-size: 22px;font-weight: bold;">Order Details</div>
+     <div class="trackOrder-info-oredr-details">
+        <div class="trackOrder-info-oredr-details-leftSide">
+             <div style="border-bottom: 1px solid #f2f2f2;padding-top: 10px">
+                 <span style="color: #666;font-size: 13px">Order ID:</span>
+                 <span style="font-size: 13px;margin-left: 15%"> OD307241597196054000 </span>
+             </div>
+             <div style="border-bottom: 1px solid #f2f2f2;margin-top: 2%">
+                 <span style="color: #666;font-size: 13px">Order Date:</span>
+                 <span style="font-size: 13px;margin-left: 11%"> 4 October, 2016 11:31 AM</span>
+             </div>
+             <div style="border-bottom: 1px solid #f2f2f2;margin-top: 2%">
+                 <span style="color: #666;font-size: 13px">Ammount Paid:</span>
+                 <!-- <span><img src="image/ic_launcher_right_blue.png" width="20px" height="20px"></span> -->
+                 <span style="font-size: 17px;font-weight: bold;margin-left: 25px">Rs. 764</span>
+                 <span style="color: #666">through Cash on delivery</span>
+             </div>
+        </div>
+        <div class="trackOrder-info-oredr-details-rightside">
+           <div class="customerName-phoneNo">
+               <span style="font-size: 21px">Shubhangi Dhole</span>
+               <span style="margin-left: 5px;color: #666">9970407799</span>
+               
+           </div>
+           <div class="customer-address">office no-10,4th floor,Raj heights,near shivaji putla ,karve putla DP road pune 
+Pune, Maharashtra - 411038</div>
+        </div>
+        
+     </div>
+   </div>
+   <div class="ThirdRow-display-trackOrder-info">
+     <div class="manageOrder">
+        MANAGE ORDER
+     </div>
+     <div class="manage-order-details">
+          <div class="manage-order-details-first-column">
+              <div style="padding-left: 20px"><img alt="" src="image/ic_launcher_printer.png" width="50px" height="50px"></div>
+              <div>PRINT ORDER</div>
+          </div>
+           <div class="manage-order-details-first-column">
+              <div style="padding-left: 20px"><img alt="" src="image/ic_launcher_email_voice.png" width="50px" height="50px"></div>
+              <div>EMAIL INVOICE</div>
+          </div>
+          <div class="manage-order-details-first-column" ng-click="redirectcustomerCare()">
+              <div style="padding-left: 20px"><img alt="" src="image/ic_launcher_phone.png" width="50px" height="50px"></div>
+              <div>CONTACT US</div>
+          </div>
+     </div>
+     
+         
+     
+   </div>
+   
+   <div class="fourthRow-display-trackOrder-info">
+     <div class="manageOrder">
+        <span>PRODUCT DETAILS</span>
+        <span style="margin-left: 30%;">APPROVAL</span>
+        <span style="margin-left: 3%">PROCESSING</span>
+        <span style="margin-left: 3%">SHIPPING</span>
+        <span style="margin-left: 3%;width: 35%">DELIVERY</span>
+        <span style="margin-left: 3%">SUBTOTAL</span>
+     </div>
+     <div class="manageOrder-details">
+     <div style="width: 40%;
+	border-right: 1px dotted #d3cbb8;">
+        <div class="manageorderDetails-firstColumn" style="display: flex">
+            <div><img src="image/apple-iphone-4s-black.jpeg" style="width: 30px;height: 50px;margin-left: 50px"></div>
+           <div style="padding-left: 50px">
+               <div style="font-size: 13px;color: #666;">Apple iPhone 7</div>
+              <!--  <div style="font-size: 11px;padding-top: 5px;color: #848484;">Color: Jet Black   ROM: 128GB   Qty: 1  </div> -->
+              <div style="font-size: 11px;padding-top: 5px;color: #848484;">
+                  <span>Color: Jet Black</span>
+                  <span style="padding-left: 6px">ROM: 128GB</span>
+                  <span style="padding-left: 6px">Qty: 1</span>
+              </div>
+               <div style="font-size: 11px;color: #848484;">Seller: SuperComNet</div>
+           </div>
+        </div>
+        <div style="padding-left: 10px">
+            <span>
+              <button style="height: 40px;background-color: #f9f9f9;color: #b3b3b3;border: 1px solid #c9c9c9;">RETURN</button>
+            </span>
+            <span>
+               <button style="height: 40px;background-color: #f9f9f9; color: #b3b3b3;border: 1px solid #c9c9c9;" ng-click="redirectCustomerReview()">REVIEW PRODUCT</button>
+            </span>
+        </div>
+        </div>
+        <div class="manageorderDetails-thirdColumn" style="margin-left: 35%;margin-top: 2%">
+            <div class="orderDates">
+               <p class="deliveryDate"> on Wed, 12th Oct </p>
+               <p class="deliveryDate-strike"> by Mon, 17th Oct </p>
+            </div>
+        </div>
+        <div class="manageorderDetails-fourthColumn">
+           <span style="font-size: 13px;color: black;font-weight: bold;">Rs65,000</span>
+           <span style="color: #666">[?]</span>
+        </div>
+     </div>
+     <div align="right">
+        <div class="manager-order-total">
+           <span>Total</span>
+           <span style="font-size: 24px;font-weight: bold;">RS.65,000</span>
+        </div>
+     </div>
+   </div>
+   
+</div>
+</div>

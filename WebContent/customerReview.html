@@ -1,0 +1,111 @@
+<div ng-controller="customerReview">
+	<div class="customer-review-info">
+		<div class="customer-review-info-column1">
+			<div style="font-size: 22px; color: #212121; font-weight: 500">Ratings
+				& Reviews</div>
+
+			<div style="margin-left: 70%; display: flex">
+
+				<div>
+					<div style="font-size: 16px">Apple iPhone7</div>
+					<div class="customer-give-rating">
+						<span><a>4.5</a></span> <span>(13,001)</span>
+					</div>
+				</div>
+				<div>
+					<img alt=""
+						src="image/apple-iphone-6-original-imaeymdqs5gm5xkz.jpeg"
+						width="30px" height="40px">
+				</div>
+			</div>
+
+		</div>
+
+		<div class="customer-review-info-column2">
+			<div class="customer-review-informaion-column2-leftSide">
+				<div class="customerreview-question">
+					<div
+						style="font-size: 18px; font-weight: bold; border-bottom: 1px solid #e0e0e0; padding-left: 10px">What
+						makes a good review</div>
+				</div>
+				<div class="customerreview-question1"
+					style="border-bottom: 1px solid #e0e0e0;">
+					<div style="font-size: 18px; padding-left: 10px">Have you
+						used this product?</div>
+					<div
+						style="padding-left: 10px; padding-top: 8px; font-size: 14px; border-bottom: 1px solid #e0e0e0; padding-top: 20px; padding-bottom: 20px">Your
+						review should be about your experience with the product.</div>
+				</div>
+				<div class="customerreview-question1"
+					style="border-bottom: 1px solid #e0e0e0; padding-top: 20px; padding-bottom: 20px">
+					<div style="font-size: 18px; padding-left: 10px">Why review a
+						product?</div>
+					<div style="padding-left: 10px; padding-top: 8px; font-size: 14px">Your
+						valuable feedback will help fellow shoppers decide!.</div>
+				</div>
+				<div class="customerreview-question1"
+					style="border-bottom: 1px solid #e0e0e0; padding-top: 20px">
+					<div style="font-size: 18px; padding-left: 10px">How to
+						review a product?</div>
+					<div
+						style="padding-left: 10px; padding-top: 8px; font-size: 14px; text-align: justify; padding-bottom: 60px">Your
+						review should include facts. An honest opinion is always
+						appreciated. If you have an issue with the product or service
+						please contact us from the help centre.</div>
+				</div>
+			</div>
+			<div class="customer-review-informaion-column2-rightSide">
+				<div class="Rating-this-product">
+					<div style="color: #212121; font-size: 18px">Rate this
+						product</div>
+					<div ng-init="rating = star.rating + 1"></div>
+
+					<div class="star-rating1" star-rating rating-value="rating"
+						data-max="5" on-rating-selected="rateFunction(rating)">
+						</div>
+						
+				</div>
+				
+				
+				<div class="Review-this-product">
+				<form  name="customerReviewForm" novalidate >
+					<div style="font-size: 18px; font-weight: 500; color: #212121;">Review
+						this product</div>
+					<div class="customer-sending-review">
+						<div class="title-customer-review"
+							style="border-bottom: 1px solid #c0c0c0; border: 1px solid #c0c0c0">
+							<div class="customer-review-title">Title (optional)</div>
+							<div class="customer-review-review">Review title...</div>
+						</div>
+
+						<div class="title-customer-review"
+							style="border: 1px solid #c0c0c0; padding-bottom: 100px">
+							<div class="customer-review-title">Description</div>
+							<input type="text" placeholder="description" style="border: none;width: 100%;padding-bottom: 60px"height="130px" ng-module="customerdescription" name="customerdescription" required="required">
+						</div>
+						 <div ng-show="customerReviewForm.$submitted || customerReviewForm.customerdescription.$touched">
+                               <div ng-show="customerReviewForm.customerdescription.$error.required" style="color: red; ">gift card number required</div>
+                          </div>
+						
+						<div class="title-customer-review"
+							style="border: 1px solid #c0c0c0;">
+							<div class="customer-review-title">Name</div>
+							<div class="customer-review-review">Name..</div>
+						</div>
+
+						<div align="right">
+							<button type="submit" class="customer-button" ng-click="submitted=true">SUBMIT</button>
+						</div>
+					</div>
+					</form>
+				</div>
+				
+				
+			</div>
+			
+		</div>
+
+
+	</div>
+
+</div>
