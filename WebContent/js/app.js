@@ -101,7 +101,7 @@ retailApp.controller('loginCtrl', function($scope, $location, $http, $timeout,
 		}
 		else if ($scope.username == 'admin' && $scope.password == 'admin') {
 			$http.get("login.json").then(function(response) {
-
+     
 				/*console.log((response.data.data.errorcode != '0000'));*/
 				if (response.data.data.errorcode != '0000') {
 					console.log("Error occurred!!!");
@@ -1221,6 +1221,10 @@ retailApp.controller('tvDetailsCtrl',function($scope,$http,$location)
 
 retailApp.controller('giftCardCtrl', ['$scope', function($scope,$http,$location)
 		{
+	
+	$scope.regEx="/^[0-9]{10,10}$/;"
+	
+	
 	 $scope.choices = [];
 	  
 	  $scope.addNewChoice = function() {
@@ -1265,6 +1269,9 @@ retailApp.controller('giftCardCtrl', ['$scope', function($scope,$http,$location)
 	    	$scope.isCheckBalance=false;
 	    	$scope.isCorporateRequirement=false;
 	    	$scope.isFrequntlyAskedQuestions=false;
+	    	
+	    	
+	    	
 	    };
 	    
 	    $scope.displayCheckBalance=function()
@@ -1273,7 +1280,26 @@ retailApp.controller('giftCardCtrl', ['$scope', function($scope,$http,$location)
 	    	$scope.isCheckBalance=true;
 	    	$scope.isCorporateRequirement=false;
 	    	$scope.isFrequntlyAskedQuestions=false;
+	    	
+	    	if ($scope.class1 == "check-balance")
+	            $scope.class1 = "change-check-balance ";
+	         else
+	            $scope.class1 = "check-balance";
+	    	
 	    };
+	    
+	    $scope.changeClass= function() {
+	    	
+		}
+	    
+	    
+	    $scope.changeDisplayCheck= function () {
+			
+	    	if($scope.class=="check-balance")
+	    		   $scope.class = "change-check-balance";
+	    	else
+	    		   $scope.class= "check-balance";
+		}
 	    
 	    $scope.displayCorporateRequiremnet=function()
 	    {
@@ -1587,7 +1613,7 @@ retailApp.controller('retailGiftCardCtrl', ['$scope', function($scope) {
 
 retailApp.controller('MainCtrl', function($scope) {
 
-	  $scope.choices = [{id: 'choice0'}, {id: 'choice1'}];
+	/*  $scope.choices = [{id: 'choice0'}, {id: 'choice1'}];
 	  
 	  $scope.addNewChoice = function() {
 	    var newItemNo = $scope.choices.length+1;
@@ -1597,7 +1623,12 @@ retailApp.controller('MainCtrl', function($scope) {
 	  $scope.removeChoice = function() {
 	    var lastItem = $scope.choices.length-1;
 	    $scope.choices.splice(lastItem);
-	  };
+	  };*/
+	
+	$scope.display=function()
+	{
+		
+	}
 	  
 	});
 
@@ -1622,7 +1653,13 @@ retailApp.controller('customerReview',function($scope)
     	$scope.errorMsg= 'you give rating'
     };
 		});
-
+retailApp.controller('customerReview',function($scope)
+		{
+	               $scope.display=function()
+	               {
+	            	   
+	               };
+		});
 
 /*retailApp.controller('customerReview', ['$scope', function($scope) {
 	  $scope.master = {};

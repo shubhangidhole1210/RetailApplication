@@ -1,5 +1,6 @@
 <div ng-controller="giftCardCtrl">
 <div class="giftCardDetails">
+
   <div style="padding-top: 8px;padding-left: 8px;font-size: 12px; color: #878787;font-weight: 500">
   <span>Home</span>
   <span> > </span>
@@ -14,18 +15,23 @@
   </div>
    <ul class="gift-card-option">
      <li style="display: inline-block;">
-        <a class="buy-retail-gift-card" ng-click="displayRetailGiftCard()">Buy a Retail Gift Card</a>
+        <a class="buy-retail-gift-card" ng-click="displayRetailGiftCard()"  >Buy a Retail Gift Card</a>
+     </li>
+     <li style="display: inline-block;" >
+        <a class="check-balance" id="checkBalance" 
+       ng-class="{changeCheckBalance : selected=='checkBalance'}" ng-click="selected='checkBalance';displayCheckBalance()">Check Balance</a>
      </li>
      <li style="display: inline-block;">
-        <a class="check-balance" ng-click="displayCheckBalance()">Check Balance</a>
+        <a class="check-balance"  id="askedQuestion" 
+       ng-class="{changeCheckBalance : selected=='askedQuestion'}" ng-click="selected='askedQuestion';displayFrequntlyaskedQuestion()">Frequently Asked Question</a>
      </li>
      <li style="display: inline-block;">
-        <a class="check-balance" ng-click="displayFrequntlyaskedQuestion()">Frequently Asked Question</a>
-     </li>
-     <li style="display: inline-block;">
-     <a class="check-balance" ng-click="displayCorporateRequiremnet()">Corporate Requirements</a>
+     <a class="check-balance"  id="corporateRequirement" 
+       ng-class="{changeCheckBalance : selected=='corporateRequirement'}" ng-click="selected='corporateRequirement';displayCorporateRequiremnet()">Corporate Requirements</a>
      </li>
    </ul>
+   
+    
    <div id="egv-banner" style="margin-left: 8px">
       <img alt="" src="image/flipkart-gift-card.png" id="egv-ribbon">
    </div>
@@ -65,7 +71,7 @@
      
      <div style="padding-top: 30px">
       <span style="padding-left: 100px">Value of Gift Card (Rs) <span style="color: red">*</span></span>
-        <span style="padding-left: 20px"><select ng-model="number0" name="giftCardValue" required="required">
+        <span style="padding-left: 20px"><select ng-model="firstGiftNumber" name="giftCardValue" required="required" ng-init="firstGiftNumber=1">
   <option value="45">select Value</option>
   <option value="25">25</option>
   <option value="50">50</option>
@@ -86,7 +92,7 @@
     
      <div style="padding-top: 30px">
       <span style="padding-left: 100px">Number of Gift Cards</span>
-        <span style="padding-left: 35px"><input type="text" value="1" class="txtinfo" ng-model="giftcard0"></span>
+        <span style="padding-left: 35px"><input type="text" value="1" class="txtinfo" ng-model="firstGiftCard" ng-init="firstGiftCard=1"></span>
      </div>
    </div>
      <div class="gift-card-info-1">
@@ -95,7 +101,7 @@
         <span> Personalize your Gift Card </span>
      </div>
      <div style="padding-top: 30px">
-      <span style="padding-left: 228px;font-weight: bold;">Total Amount (Rs): {{number0*giftcard0}}</span>
+      <span style="padding-left: 228px;font-weight: bold;">Total Amount (Rs): {{ firstGiftNumber * firstGiftCard }}</span>
      </div>
    </div>
       <div class="gift-card-info-2" style="display: flex" ng-hide="ishidesecondGiftCard">
@@ -154,8 +160,8 @@
      </div>
      <div style="padding-top: 30px">
       <span style="padding-left: 100px">Value of Gift Card (Rs) <span style="color: red">*</span></span>
-        <span style="padding-left: 20px"><select  style="width: 100px" ng-model="choice.number" >
-  <option value="500">500</option>
+        <span style="padding-left: 20px"><select  style="width: 100px" ng-model="giftCardValue" ng-init="giftCardValue=0" >
+  <option value="">500</option>
   <option value="25">25</option>
   <option value="50">50</option>
   <option value="100">100</option>
@@ -174,7 +180,7 @@
      </div>
      <div style="padding-top: 30px">
       <span style="padding-left: 100px">Number of Gift Cards</span>
-        <span style="padding-left: 35px"><input type="text" value="1" class="txtinfo" ng-model="choice.giftCards1"></span>
+        <span style="padding-left: 35px"><input type="text" value="1" class="txtinfo" ng-model="giftCardNumber" ng-init="giftCardNumber=0"></span>
      </div>
    </div>
      <div class="gift-card-info-1">
@@ -183,7 +189,7 @@
         <span> Personalize your Gift Card </span>
      </div>
      <div style="padding-top: 30px">
-      <span style="padding-left: 228px;font-weight: bold;">Total Amount (Rs): {{number*giftCards1}}</span>
+      <span style="padding-left: 228px;font-weight: bold;">Total Amount (Rs): {{giftCardValue*giftCardNumber}}</span>
      </div>
    </div>
       <div class="gift-card-info-2" style="display: flex" ng-hide="ishidesecondGiftCard">
@@ -220,7 +226,7 @@
       </div>
    <div align="right">
        <div style="margin-top: 5%">
-         <span style="font-weight: bold;">Amount Payable: Rs </span>
+         <span style="font-weight: bold;">Amount Payable: Rs:{{firstGiftNumber * firstGiftCard  }} </span>
          <span style="padding-left: 20px"><button class="gift-button" ng-click="update(user)" type="submit">BUY GIFT CARD</button></span>
        </div>
    </div>
@@ -276,7 +282,7 @@
           <!--  <span ng-show="checkForm.cardPin.$touched && checkForm.cardPin.$error.required">Pin card required</span> -->
     
     
-           <div style="margin-left: 258px;padding-top: 25px;padding-bottom: 10px"><button type="submit" style="height: 37px;color: white;font-size: 12px;border: 1px solid #2874f0;background: #2874f0;border-radius:2px " ng-click="submitted=true" >GET DETAILS</button></div>
+           <div style="margin-left: 258px;padding-top: 25px;padding-bottom: 10px"><button type="submit" class="get-card-details" ng-click="submitted=true" >GET DETAILS</button></div>
          </div>
          
          </form>
@@ -326,7 +332,7 @@
                   </div>
                    <div style="padding-top: 15px">
                        <span>Mobile<span style="color: red;">*</span></span>
-                       <span style="padding-left: 121px"><input type="number" width="220px" ng-model="user.Mnumber" name="mobileNumber" ng-pattern="regEx" required="" ></span>
+                       <span style="padding-left: 121px"><input type="text" width="220px" ng-model="user.Mnumber" name="mobileNumber"  required=""  ng-pattern="regEx"></span>
                    </div>
                    <div ng-show="form.$submitted || form.mobileNumber.$touched">
       <div ng-show="form.mobileNumber.$error.required" style="color: red; ">Please enter valid mobile number</div>

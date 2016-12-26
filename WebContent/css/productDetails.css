@@ -1887,6 +1887,15 @@
 	margin-left: 4px;
 }
 
+.changeCheckBalance 
+{
+	background-color: #124969;
+	color: white;
+	padding:13px;
+	border-radius: 3px 3px 0 0;
+	margin-left: 4px;
+}
+
 /* .check-balance a:FOCUS
 {
 	background-color: #124969;;
@@ -2454,4 +2463,50 @@ div .category-browse-row1:FOCUS{
 .add-cart-item
 {
 	background: #f7f5ee;
+}
+
+.active {
+    color:red;
+}
+
+.get-card-details
+{
+	background-color: #2874f0;
+	color: #fff;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+    border: 1px solid #2874f0;
+    padding: 6px 12px 4px;
+    font-size: 11px;
+}
+
+.btn-continue-shopping
+{
+	height: 41px;
+	background: #f9f9f9;
+	color: #333;
+	border: 1px solid #c9c9c9;
+	font-size: 14px;
+	padding: 6px 12px 4px;
+	width: 250px;
+}
+
+.btn-place-order
+{
+	width: 250px;
+	height: 41px;
+	font-size: 18px;
+	 padding: 8px 0;
+	 background: #f75b16;
+	  border: 1px solid #ec6723;
+	  background: -webkit-linear-gradient(top,#f77219 1%,#fec6a7 3%,#f77219 7%,#f75b16 100%);
+	  color: white;
+	  font-weight: bold;
+}
+
+.cart-price-row
+{
+	margin-top: 10px;
+	padding-bottom:2%;
+	margin-left: 6px;
+	margin-right: 6px
 }
