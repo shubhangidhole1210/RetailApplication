@@ -1219,23 +1219,65 @@ retailApp.controller('tvDetailsCtrl',function($scope,$http,$location)
 });
 
 
-retailApp.controller('giftCardCtrl', ['$scope', function($scope,$http,$location)
+retailApp.controller('giftCardCtrl', ['$scope', function($scope,$http,$location,SelectOption)
 		{
 	
-	$scope.regEx="/^[0-9]{10,10}$/;"
-	
+	 function SelectOption($scope) {
+		    
+		    $scope.giftCardValue = [
+		      { id: 1, name: '25' },
+		      { id: 2, name: '50' },
+		      { id: 3, name: '100' },
+		      { id: 4, name: '500' },
+		      { id: 5, name: '1000' }
+		      ];
+		     
+		   
+
+		  }
+	/*$scope.prop = {
+		    "type": "select", 
+		    "name": "Service",
+		    "value": "Service 3", 
+		    "values": [ "Service 1", "Service 2", "Service 3", "Service 4"] 
+		  };
+	*/
 	
 	 $scope.choices = [];
-	  
+	 $scope.amountPayable = 0;
+	 
+	 
 	  $scope.addNewChoice = function() {
 	    var newItemNo = $scope.choices.length+1;
-	    $scope.choices.push({newItemNo});
+	    var giftCard = {};
+	    giftCard.giftCardValue = 0 ;
+	    giftCard.giftCardNumber = 0 ;
+	    giftCard.totalAmount = 0;
+	    $scope.choices.push(giftCard);
+	    $scope.calculateTotalAmount();
 	  };
 	    
 	  $scope.removeChoice = function() {
 	    var lastItem = $scope.choices.length-1;;
 	    $scope.choices.splice(lastItem);
+	    $scope.calculateTotalAmount();
 	  };
+	  
+
+	  $scope.calculateTotalAmount = function() {
+		var i;
+		$scope.amountPayable = 0;
+		for (i = 0; i < $scope.choices.length; i++) {
+			$scope.choices[i].totalAmount = $scope.choices[i].giftCardValue	* $scope.choices[i].giftCardNumber;
+			$scope.amountPayable += $scope.choices[i].totalAmount;
+		}
+		
+	  };
+	  
+	  
+	  
+	  
+	  
 	 $scope.isgiftInfoHidden=true;
 	    $scope.displayCheckItem=function()
 	    {
@@ -1340,7 +1382,7 @@ retailApp.controller('giftCardCtrl', ['$scope', function($scope,$http,$location)
 		   
 		  };*/
 	    
-		}]);
+		}])
 var counter = 0;
 var numBoxes = 4;
 function toggle4(showHideDiv) {

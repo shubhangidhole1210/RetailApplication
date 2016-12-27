@@ -15,18 +15,19 @@
   </div>
    <ul class="gift-card-option">
      <li style="display: inline-block;">
-        <a class="buy-retail-gift-card" ng-click="displayRetailGiftCard()"  >Buy a Retail Gift Card</a>
+        <a class="buy-retail-gift-card" ng-click="displayRetailGiftCard()" id="buyRetailGift"
+        ng-class="{}" >Buy a Retail Gift Card</a>
      </li>
      <li style="display: inline-block;" >
-        <a class="check-balance" id="checkBalance" 
+        <a class="checkBalance" id="checkBalance" 
        ng-class="{changeCheckBalance : selected=='checkBalance'}" ng-click="selected='checkBalance';displayCheckBalance()">Check Balance</a>
      </li>
      <li style="display: inline-block;">
-        <a class="check-balance"  id="askedQuestion" 
+        <a class="checkBalance"  id="askedQuestion" 
        ng-class="{changeCheckBalance : selected=='askedQuestion'}" ng-click="selected='askedQuestion';displayFrequntlyaskedQuestion()">Frequently Asked Question</a>
      </li>
      <li style="display: inline-block;">
-     <a class="check-balance"  id="corporateRequirement" 
+     <a class="checkBalance"  id="corporateRequirement" 
        ng-class="{changeCheckBalance : selected=='corporateRequirement'}" ng-click="selected='corporateRequirement';displayCorporateRequiremnet()">Corporate Requirements</a>
      </li>
    </ul>
@@ -71,8 +72,9 @@
      
      <div style="padding-top: 30px">
       <span style="padding-left: 100px">Value of Gift Card (Rs) <span style="color: red">*</span></span>
-        <span style="padding-left: 20px"><select ng-model="firstGiftNumber" name="giftCardValue" required="required" ng-init="firstGiftNumber=1">
-  <option value="45">select Value</option>
+        <span style="padding-left: 20px">
+ <select  ng-model="giftCardValue" ng-init="giftCardValue=0" name="giftCardValue" required="required" >
+  <option value=""  >select Value</option>
   <option value="25">25</option>
   <option value="50">50</option>
   <option value="100">100</option>
@@ -80,7 +82,10 @@
     <option value="1000">1000</option>
      <option value="5000">5000</option>
       <option value="10000">10000</option>
-</select></span>
+      
+  
+</select>
+</span>
      </div>
       
    </div>
@@ -92,7 +97,7 @@
     
      <div style="padding-top: 30px">
       <span style="padding-left: 100px">Number of Gift Cards</span>
-        <span style="padding-left: 35px"><input type="text" value="1" class="txtinfo" ng-model="firstGiftCard" ng-init="firstGiftCard=1"></span>
+        <span style="padding-left: 35px"><input type="text" " class="txtinfo" ng-model="giftcardCount" ng-init="giftcardCount=0"></span>
      </div>
    </div>
      <div class="gift-card-info-1">
@@ -101,7 +106,7 @@
         <span> Personalize your Gift Card </span>
      </div>
      <div style="padding-top: 30px">
-      <span style="padding-left: 228px;font-weight: bold;">Total Amount (Rs): {{ firstGiftNumber * firstGiftCard }}</span>
+      <span style="padding-left: 228px;font-weight: bold;">Total Amount (Rs): {{ giftCardValue * giftcardCount }}</span>
      </div>
    </div>
       <div class="gift-card-info-2" style="display: flex" ng-hide="ishidesecondGiftCard">
@@ -160,8 +165,8 @@
      </div>
      <div style="padding-top: 30px">
       <span style="padding-left: 100px">Value of Gift Card (Rs) <span style="color: red">*</span></span>
-        <span style="padding-left: 20px"><select  style="width: 100px" ng-model="giftCardValue" ng-init="giftCardValue=0" >
-  <option value="">500</option>
+        <span style="padding-left: 20px"><select  style="width: 100px" ng-model="choice.giftCardValue" ng-change="calculateTotalAmount()" ng-init="500">
+  <option value="500">500</option>
   <option value="25">25</option>
   <option value="50">50</option>
   <option value="100">100</option>
@@ -180,7 +185,7 @@
      </div>
      <div style="padding-top: 30px">
       <span style="padding-left: 100px">Number of Gift Cards</span>
-        <span style="padding-left: 35px"><input type="text" value="1" class="txtinfo" ng-model="giftCardNumber" ng-init="giftCardNumber=0"></span>
+        <span style="padding-left: 35px"><input type="text" value="1" class="txtinfo" ng-model="choice.giftCardNumber" ng-change="calculateTotalAmount()" ng-init="1"></span>
      </div>
    </div>
      <div class="gift-card-info-1">
@@ -189,7 +194,7 @@
         <span> Personalize your Gift Card </span>
      </div>
      <div style="padding-top: 30px">
-      <span style="padding-left: 228px;font-weight: bold;">Total Amount (Rs): {{giftCardValue*giftCardNumber}}</span>
+      <span style="padding-left: 228px;font-weight: bold;">Total Amount (Rs): {{choice.giftCardNumber*choice.giftCardValue}}</span>
      </div>
    </div>
       <div class="gift-card-info-2" style="display: flex" ng-hide="ishidesecondGiftCard">
@@ -226,7 +231,8 @@
       </div>
    <div align="right">
        <div style="margin-top: 5%">
-         <span style="font-weight: bold;">Amount Payable: Rs:{{firstGiftNumber * firstGiftCard  }} </span>
+         <span style="font-weight: bold;">Amount Payable: Rs:{{amountPayable +giftCardValue * giftcardCount }} </span>
+<!--          <span style="font-weight: bold;">Amount Payable: Rs:{{}} </span> -->
          <span style="padding-left: 20px"><button class="gift-button" ng-click="update(user)" type="submit">BUY GIFT CARD</button></span>
        </div>
    </div>
