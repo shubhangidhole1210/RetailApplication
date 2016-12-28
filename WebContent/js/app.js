@@ -21,8 +21,14 @@ retailApp.config(function($routeProvider) {
 	}).when('/searchProductDetails', {
 		templateUrl : "searchProductDetails.html"
 
-	}).when('/mobileDetails', {
-		templateUrl : "mobileHome.html"
+	}).when('/orderSummery', {
+		templateUrl : "orderSummery.html"
+
+	}).when('/placeOrder', {
+		templateUrl : "placeOrder.html"
+
+	}).when('/menuDetails', {
+		templateUrl : "menuBar.html"
 
 	}).when('/menuDetails', {
 		templateUrl : "menuBar.html"
@@ -768,8 +774,49 @@ retailApp.controller('headerCtrl',function($scope,$location)
 	
 });
 
-retailApp.controller('cartDetailsCtrl',function($scope,$http)
-{
+retailApp.controller('cartDetailsCtrl',function($scope,$http,$location)
+{  
+	$scope.productSubTotal=0;
+	$http.get('Cartdetails.json').success(function(response) {
+		console.log("inside cart details sucess");
+		$scope.cartDetails = response.cartDetails;
+		console.log("after product details ajax call");
+    $scope.productSubTotal= $scope.cartDetails.productSubTotal;
+	var cartDetails=[$scope.productSubTotal]	
+	
+	 $scope.totalAmountPayable=function(cartDetails)
+	{
+		console.log("in total amount function")
+		var i;
+		$scope.amountPayable = 0;
+		for(i=0;i<cartDetails.length;i++)
+			{
+			     $scope.amountPayable += $scope.cartDetails[i].productSubTotal;
+			}
+			
+	}
+	
+	
+	});
+	
+	$scope.iscartDetails=true;
+	$scope.isDigitalCartDetails=false;
+	$scope.displayCartDetails=function()
+	{
+		$scope.iscartDetails=true;
+		$scope.isDigitalCartDetails=false;
+	};
+	
+	$scope.displayDigitalCartDetails=function()
+	{
+		$scope.iscartDetails=false;
+		$scope.isDigitalCartDetails=true;
+	};
+	
+	$scope.redirectHome=function()
+	{
+		$location.path('/home')
+	}
 	
 });
 
@@ -1767,3 +1814,40 @@ retailApp.controller('customerReview',function($scope)
 		};
 	}
 );
+  
+  retailApp.controller('dCtrl', ['$scope', invoice]);
+
+  function invoice($scope) {
+      $scope.items = [{
+          name: 'Baseball Bats',
+          quantity: 2,
+          unitCost: 75
+      }, {
+          name: 'Soccer Balls',
+          quantity: 5,
+          unitCost: 15
+      }, {
+          name: 'Baseball Gloves',
+          quantity: 3,
+          unitCost: 40
+      }];
+      
+      $scope.invoiceCount = 0;
+      $scope.invoiceTotal = 0;
+      
+      $scope.setTotals = function(item){
+          if (item){
+              $scope.invoiceCount += item.quantity;
+              
+          }
+      }
+  }
+  
+  retailApp.controller('placeOrderCtrl',function($scope)
+	{
+	  
+	});
+  retailApp.controller('orderSummeryCtrl',function($scope)
+	{
+			  
+	});

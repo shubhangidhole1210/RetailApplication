@@ -1,57 +1,145 @@
 <div ng-controller="cartDetailsCtrl" style="background: #f7f5ee;">
 
    <div class="add-cart-item" >
-     <div class="add-cart-item-firstRow" style="background: white">
-        <div class="cartDetails" style="border-bottom: 2px solid #333;">
-           <span class="cartdetails1"><a style="padding-top: 20px;padding-bottom: ">Cart (1)</a></span>
-           <span ><a>Digital Cart (0)</a></span>
+   
+     <div class="add-cart-item-firstRow" style="">
+        <div class="cartDetails" style="">
+           <span class="cartdetails1" ng-click="displayCartDetails()"><a style=" " >Cart(5)</a></span>
+           <span ng-click="displayDigitalCartDetails()" class="digitalCart"><a>Digital Cart (0)</a></span>
         </div>
+        
+        
+        <div ng-show="iscartDetails">
         <div class="display-cart-list">
-        <span class="display-cart-list-item" style="padding-right: 40%;padding-left: 80px" >ITEM</span>
-     <span>   <span class="display-cart-list-item" style="border-left:  1px solid #e4e4e4;padding-left: 10px;padding-right: 10px">QTY</span></span>
-        <span class="display-cart-list-item" style="border-left:  1px solid #e4e4e4;padding-left: 10px;padding-right: 40px">PRICE</span>
-        <span class="display-cart-list-item" style="border-left:  1px solid #e4e4e4;padding-left: 10px;padding-right: 20px">DELIVERY DETAILS</span>
-        <span class="display-cart-list-item" style="border-left:  1px solid #e4e4e4;padding-left: 10px;padding-right: 10px">SUBTOTAL</span>
+        <span class="display-cart-list-item1" style="" >ITEM</span>
+     <span>   <span class="display-cart-list-item2" style="">QTY</span></span>
+        <span class="display-cart-list-item3" style="">PRICE</span>
+        <span class="display-cart-list-item4" style="">DELIVERY DETAILS</span>
+        <span class="display-cart-list-item5" style="">SUBTOTAL</span>
         </div>
-        <div class="display-cart-list-item-details">
-           <div><img src="image/hp-pavilion-notebook-75x75-imaen2wznhmnkjc6.jpeg"></div>
-           <div class="add-cart-product-description" style="width: 47%;padding-left: 10px">
-               <div style="color: #333;font-size: 14px">HP Pavilion Core i5 6th Gen - (8 GB/1 TB HDD/.....</div>
-               <div style="font-size: 11px;color:#848484;">15.6 inch, Natural SIlver, 2.03 kg</div>
-               <div><span style="font-size: 12px;">Seller:</span><span style="font-weight: bold;">RetailNet</span></div>
+        <div class="display-cart-list-item-details" ng-repeat="cartData in cartDetails">
+           <div><img ng-src="{{cartData.productImg}}"></div>
+           <div class="add-cart-product-description">
+               <div class="cartProductName">{{cartData.productName}}</div>
+               <div  class="cartProductInfo">{{cartData.productInfo}}</div>
+               <div><span style="font-size: 12px;">Seller:</span><span class="cartSellerName">{{cartData.sellerName}}</span></div>
                <div style="font-size: 11px;color: #54a442;text-decoration: none;">You are eligible for 1 offer!</div>
            </div>
-           <div class="cart-qty">1</div>
-           <div class="add-cart-price">Rs. 53,990</div>
+           <div class="cart-qty">{{cartData.productQty}}</div>
+           <div class="add-cart-price">Rs. {{cartData.productPrice}}</div>
            <div class="cart-deliverDetails">
-              <div style="color: #54a442;font-size: 13px;font-weight: bold; ">Free</div>
-              <div style="font-size: 11px;color: #848484;">Delivery by Tue, Dec 27</div>
+              <div style="" class="cartsFreeDetails" >Free</div>
+              <div  class="cartDeliveryDetails">{{cartData.productDeliveryDetails}}</div>
            </div>
-           <div style="width: 15%;padding-left: 28px">Rs. 53,990</div>
+           <div style="" class="cartprice">Rs. {{cartData.productSubTotal}}</div>
         </div>
+        
         <div align="right">
         <div class="cart-amountPayable">
-           <span style="color: #999;font-size: 21px">Amount Payable:</span>
-           <span style="font-weight: bold;font-size: 21px">Rs. 53,990</span>
+           <span style="" class="amountPayable">Amount Payable:</span>
+           <span style="font-weight: bold;font-size: 21px">Rs.{{amountPayable}}</span>
         </div>
         </div>
+       
+        
         <div class="cart-price-row">
           <span><img alt="" src="image/ic_launcher_track.png" width="15px" height="15px"></span>
           <span>Shipping to:</span>
-          <span style="font-weight: bold;">411038</span>
-          <span style="font-size: 13px; text-decoration: underline;">Change</span>
-          <span style="margin-left: 19%"><button type="button" class="btn-continue-shopping">CONTINUE SHOPPING</button></span>
-          <span style="margin-left: 13px"><button type="button" class="btn-place-order">PLACE ORDER</button></span>
+          <span style=""class="area-pin">411038</span>
+          <span style="" class="cartdetailChange">Change</span>
+          <span style=""><button type="button" class="btn-continue-shopping" ng-click="redirectHome()">CONTINUE SHOPPING</button></span>
+          <span style=""><button type="button" class="btn-place-order">PLACE ORDER</button></span>
         </div>
+        </div>
+         <div ng-show="isDigitalCartDetails">
+           <div class="digital-cart-details">
+           <div align="center">
+                <div class="digital-cart-details-firstRow">
+                   <div class="digital-cart-count"> There are no items in this cart. </div>
+                   <div><button type="button" class="digital-continue-shopping" ng-click="redirectHome()">CONTINUE SHOPPING</button></div>
+                </div>
+                
+              </div>  
+              
+              <div class="browse-categories-details">
+                 <div class="browse-categories">Browse Categories</div>
+                 <div class="browse-categories-details-list">
+                        <div class="browse-categories-details-list-first-column">
+                           <div>
+                              <span class="bullet">>></span>
+                              <span><a>Books</a></span>
+                           </div>
+                            <div>
+                              <span class="bullet">>></span>
+                              <span><a> Mobiles</a></span>
+                           </div>
+                            <div>
+                              <span class="bullet">>></span>
+                              <span><a>Mobile Accessories</a></span>
+                           </div>
+                            <div>
+                              <span class="bullet">>></span>
+                              <span><a>Movies</a></span>
+                           </div>
+                            <div>
+                              <span class="bullet">>></span>
+                              <span><a>Personal & Health Care</a></span>
+                           </div>
+                        </div>
+                        <div class="browse-categories-details-list-first-column">
+                           <div>
+                              <span class="bullet">>></span>
+                              <span><a>Cameras</a></span>
+                           </div>
+                            <div>
+                              <span class="bullet">>></span>
+                              <span><a> Camera Accessories</a></span>
+                           </div>
+                            <div>
+                              <span class="bullet">>></span>
+                              <span><a>Games</a></span>
+                           </div>
+                            <div>
+                              <span class="bullet">>></span>
+                              <span><a>Gaming Consoles</a></span>
+                           </div>
+                            <div>
+                              <span class="bullet">>></span>
+                              <span><a>Home Appliances</a></span>
+                           </div>
+                        </div>
+                        <div class="browse-categories-details-list-first-column">
+                           <div>
+                              <span class="bullet">>></span>
+                              <span><a>Music CDs, DVDs & Vinyl</a></span>
+                           </div>
+                            <div>
+                              <span class="bullet">>></span>
+                              <span><a> iPods & MP3 Player</a></span>
+                           </div>
+                            <div>
+                              <span class="bullet">>></span>
+                              <span><a>Laptops</a></span>
+                           </div>
+                            <div>
+                              <span class="bullet">>></span>
+                              <span><a>Laptop Accessories</a></span>
+                           </div>
+                            
+                        </div>
+                 </div>
+              </div>
+           </div>
+       </div>
         <div class="cart-feature-row">
             <div class="cart-feature-row-firstColumn">
                <div>
                  <img alt="" src="image/ic_launcher_lock.png" width="24px" height="24px"> 
                </div>
                <div>
-                   <span style="font-weight: bold;color: #949494">SECURE</span>
+                   <span style="" class="cart-sequre">SECURE</span>
                    <br>
-                   <span style="font-size: 9px;color:#949494 ">PAYMENTS</span>
+                   <span style=" " class="cart-paymrnts">PAYMENTS</span>
                </div>
             </div>
             <div class="cart-feature-row-firstColumn">
@@ -59,9 +147,9 @@
                  <img alt="" src="image/ic_launcher_round.png" width="24px" height="24px"> 
                </div>
                <div>
-                   <span style="font-weight: bold;color: #949494">ORIGINAL</span>
+                   <span style="" class="cart-origial">ORIGINAL</span>
                    <br>
-                   <span style="font-size: 9px;color:#949494 ">PRODUCTS</span>
+                   <span style="" class="cartproducts">PRODUCTS</span>
                </div>
             </div>
             <div class="cart-feature-row-firstColumn">
@@ -69,37 +157,41 @@
                  <img alt="" src="image/ic_launcher_sync.png" width="24px" height="24px"> 
                </div>
                <div>
-                   <span style="font-weight: bold;color: #949494;font-size: 8px">FREE & EASY</span>
+                   <span style="" class="cart-free-easy">FREE & EASY</span>
                    <br>
-                   <span style="color:#949494 ">RETURNS</span>
+                   <span style=" " class="cart-returns">RETURNS</span>
                </div>
             </div>
-            <div class="cart-feature-row-firstColumn" style="padding-right: 0px">
+            <div class="cart-feature-row-firstColumn" >
                <div>
                  <img alt="" src="image/ic_launcher_yes.png" width="24px" height="24px"> 
                </div>
                <div>
-                   <span style="font-weight: bold;color: #949494">100% BUYER</span>
+                   <span style="" class="cart-buyer">100% BUYER</span>
                    <br>
-                   <span style="font-size: 9px;color:#949494 ">PROTECTION</span>
+                   <span style=" " class="cart-protection">PROTECTION</span>
                </div>
             </div>
         </div>
         
         <div class="cart-details-policies">
-           <span style="font-weight: bold;">Policies:</span>
-           <span><a style="color: #666;font-size: 13px">Return Policy</a></span>
-           <span><a style="color: #666;font-size: 13px">Terms of use </a></span>
-           <span><a style="color: #666;font-size: 13px"> Security </a></span>
-           <span><a style="color: #666;font-size: 13px">Privacy </a></span>
-           <span><a style="color: #666;font-size: 13px">Infringement </a></span>
-           <span style="font-size: 11px;margin-left: 20px">@ 2007-2016 Flipkart.com.</span>
+           <span style="" class="cartPolcies">Policies:</span>
+           <span><a style="" class="cart-policy-list">Return Policy</a></span>
+           <span><a class="cart-policy-list">Terms of use </a></span>
+           <span><a class="cart-policy-list"> Security </a></span>
+           <span><a class="cart-policy-list">Privacy </a></span>
+           <span><a class="cart-policy-list">Infringement </a></span>
+           <span style="" class="retail-com">@ 2007-2016 Retail.com.</span>
         </div>
         
-        <div>
-        
-        </div>
+       
+      
+       
+       
         
      </div>
+     
+     
+     
    </div>
  </div>

@@ -1,4 +1,4 @@
-<div ng-controller="MainCtrl">
+<!-- <div ng-controller="MainCtrl">
   
   <div class="button-bar">
     <a class="button button-energized" id="weak" 
@@ -15,3 +15,35 @@
     </a>
 </div>
   </div>
+ -->
+ 
+ 
+ <div ng-controller="dCtrl" class="container">
+        <table class="table table-condense">
+            <caption>ozkary.com Sports Products Invoice</caption>
+            <thead>
+                <tr class="bg-primary">
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Item Cost</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in items" ng-init="setTotals(item)">
+                    <td>{{item.name}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>{{item.unitCost | number:2}}</td>
+                    <td>{{item.total | number:2}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="bg-warning">
+                    <td>Totals</td>
+                    <td>{{invoiceCount}}</td>
+                    <td></td>                    
+                    
+                </tr>
+            </tfoot>
+        </table>
+    </div>

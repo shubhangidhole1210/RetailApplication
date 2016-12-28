@@ -1,0 +1,53 @@
+{"cartDetails":[
+{
+      "productImg": "image/hp-pavilion-imaen2wznh.jpeg",
+	   "productName": "HP Pavilion Core i5 6th Gen - (8 GB/1 TB HDD",
+		"productInfo": "15.6 inch, Natural SIlver, 2.03 kg",
+		"sellerName": "Min 70",
+		"productQty": "1",
+		"productPrice": "53,990",
+		"productDeliveryDetails": "Delivery by tomorrow, Thu",
+		"productSubTotal": "53,990"
+},
+{
+      "productImg": "image/led-tv.jpeg",
+	   "productName": "LG 80cm (32) HD Ready LED TV (32LH564A",
+		"productInfo": "15.6 inch, Natural SIlver, 2.03 kg",
+		"sellerName": "OmniTechRetail",
+		"productQty": "1",
+		"productPrice": "19,490",
+		"productDeliveryDetails": "Delivery by tomorrow, Thu",
+		"productSubTotal": "19,490"
+},
+{
+      "productImg": "image/nikon-dslr.jpeg",
+	   "productName": "Nikon D3300 (Body with AF-P DX NIKKOR 18",
+		"productInfo": "15.6 inch, Natural SIlver, 2.03 kg",
+		"sellerName": "RetailNet",
+		"productQty": "1",
+		"productPrice": "25,499",
+		"productDeliveryDetails": "Delivery by tomorrow, Thu",
+		"productSubTotal": "25,499"
+},
+ {      
+       "productImg": "image/micromax-canvas-tab.jpeg",
+	   "productName": "Micromax Canvas Tab P701 8 GB 7 inch with Wi",
+		"productInfo": "15.6 inch, Natural SIlver, 2.03 kg",
+		"sellerName": "DealMerchants",
+		"productQty": "1",
+		"productPrice": "6,750",
+		"productDeliveryDetails": "Delivery by tomorrow, Thu",
+		"productSubTotal": "6,750"
+},
+{
+      "productImg": "image/hp-pavilion-imaen2wznh.jpeg",
+	   "productName": "HP Pavilion Core i5 6th Gen - (8 GB/1 TB HDD",
+		"productInfo": "15.6 inch, Natural SIlver, 2.03 kg",
+		"sellerName": "Min 70",
+		"productQty": "1",
+		"productPrice": "53,990",
+		"productDeliveryDetails": "Delivery by tomorrow, Thu",
+		"productSubTotal": "53,990"
+}
+
+]}
