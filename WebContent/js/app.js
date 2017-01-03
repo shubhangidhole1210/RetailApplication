@@ -780,22 +780,44 @@ retailApp.controller('cartDetailsCtrl',function($scope,$http,$location)
 	$http.get('Cartdetails.json').success(function(response) {
 		console.log("inside cart details sucess");
 		$scope.cartDetails = response.cartDetails;
+		
 		console.log("after product details ajax call");
-    $scope.productSubTotal= $scope.cartDetails.productSubTotal;
-	var cartDetails=[$scope.productSubTotal]	
-	
-	 $scope.totalAmountPayable=function(cartDetails)
-	{
-		console.log("in total amount function")
-		var i;
-		$scope.amountPayable = 0;
-		for(i=0;i<cartDetails.length;i++)
+		
+		  var i;
+		  $scope.productSubTotal=0;
+		  console.log("product sub total"+ $scope.productSubTotal);
+		  $scope.calculateAmmountpayable();
+		  
+		  $scope.removeCartItem = function(index) {
+			    var lastItem = $scope.cartDetails.length;
+			    $scope.cartDetails.splice(index,1);
+			   
+			    $scope.calculateAmmountpayable();
+			    
+				  $scope.displayCartEmpty();
+			    
+			  };
+			  
+			  $scope.displayCartEmpty=function()
+			  {
+				  if($scope.cartDetails.length==0)
+					  {
+					  $scope.iscartDetails=false;
+					    $scope.isDigitalCartDetails=true;
+					  }
+			  };
+			  
+			$scope.displayQuantityTotal=function()
 			{
-			     $scope.amountPayable += $scope.cartDetails[i].productSubTotal;
-			}
-			
-	}
+				var i;
+				for (i = 0; i < $scope.cartDetails.length; i++)
+					{
+					   $scope.cartDetails[i].productSubTotal=$scope.cartDetails[i].productQty * $scope.cartDetails[i].productPrice;
+					}
+				$scope.calculateAmmountpayable();
+			};
 	
+			
 	
 	});
 	
@@ -816,6 +838,41 @@ retailApp.controller('cartDetailsCtrl',function($scope,$http,$location)
 	$scope.redirectHome=function()
 	{
 		$location.path('/home')
+	};
+	
+	$scope.displayPlaceOrder=function()
+	{
+		$location.path('/placeOrder')
+	}
+	
+	$scope.isCartPricePin=false;
+	$scope.ischeckcustomerpin=true;
+	$scope.displayChangePin=function()
+	{
+		$scope.isCartPricePin=true;
+		$scope.ischeckcustomerpin=false;
+	}
+	
+	$scope.redirectPin=function()
+	{
+		$scope.isCartPricePin=false;
+		$scope.ischeckcustomerpin=true;
+	}
+	$scope.isSave=false;
+	$scope.displaySavebutton=function()
+	{
+		$scope.isSave=true;
+	};
+	
+	$scope.calculateAmmountpayable=function()
+	{
+		var i;
+		  $scope.productSubTotal=0;
+		  console.log("product sub total"+ $scope.productSubTotal);
+		  for (i = 0; i < $scope.cartDetails.length; i++)
+			  {
+			      $scope.productSubTotal += $scope.cartDetails[i].productSubTotal;
+			  }
 	}
 	
 });
@@ -1282,13 +1339,7 @@ retailApp.controller('giftCardCtrl', ['$scope', function($scope,$http,$location,
 		   
 
 		  }
-	/*$scope.prop = {
-		    "type": "select", 
-		    "name": "Service",
-		    "value": "Service 3", 
-		    "values": [ "Service 1", "Service 2", "Service 3", "Service 4"] 
-		  };
-	*/
+	
 	
 	 $scope.choices = [];
 	 $scope.amountPayable = 0;
@@ -1317,6 +1368,7 @@ retailApp.controller('giftCardCtrl', ['$scope', function($scope,$http,$location,
 		for (i = 0; i < $scope.choices.length; i++) {
 			$scope.choices[i].totalAmount = $scope.choices[i].giftCardValue	* $scope.choices[i].giftCardNumber;
 			$scope.amountPayable += $scope.choices[i].totalAmount;
+			console.log()
 		}
 		
 	  };
@@ -1847,7 +1899,57 @@ retailApp.controller('customerReview',function($scope)
 	{
 	  
 	});
-  retailApp.controller('orderSummeryCtrl',function($scope)
+  retailApp.controller('orderSummeryCtrl',function($scope,$http)
 	{
-			  
+	  $http.get('Cartdetails.json').success(function(response) {
+			$scope.cartDetails = response.cartDetails
+		});
+	  $scope.isFirstRowVisible=true;
+	  $scope.isOrderHideRowVisible=false;
+	  
+	  $scope.displayLoginHideRow=function()
+	  {
+		  $scope.isFirstRowVisible=false;
+		  $scope.isOrderHideRowVisible=true;
+	  };
+	  
+	  $scope.displayFirstRow=function()
+	  {
+		  $scope.isFirstRowVisible=true;
+		  $scope.isOrderHideRowVisible=false;
+	  }
+	  
+	  $scope.isSecondOrderRow=true;
+	  $scope.isHideSecondOrderRow=false;
+	   $scope.displayAdreessDetials=function()
+	   {
+		   $scope.isSecondOrderRow=false;
+			  $scope.isHideSecondOrderRow=true;
+	   }
+	   
+	   $scope.displayDeliveryAdd=function()
+	   {
+		   $scope.isSecondOrderRow=true;
+			  $scope.isHideSecondOrderRow=false;
+	   }
+	   $scope.isViewShippingAdd=false;
+	   $scope.hideShippingAdd=function()
+	   {
+		    console.log("in hide function");
+		   $scope.isViewShippingAdd=false;
+	   };
+	   
+	   $scope.displayShippingAdd=function()
+	   {
+		   console.log("in show function")
+		   $scope.isViewShippingAdd=true;
+	   };
+	
+	   $scope.master = {};
+	   
+		  $scope.update = function(user) {
+		    $scope.master = angular.copy(user);
+		   
+		  };
 	});
+  

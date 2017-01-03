@@ -1,20 +1,163 @@
 <div ng-controller="orderSummeryCtrl">
    <div class="order-summery-details">
       <div class="order-summery-first-block">
+      <div class="order-summery-first-row-hide" ng-show="isOrderHideRowVisible">
+             <div class="place-order-headding">
+                 1. BEFORE YOU PLACE YOUR ORDER! 
+             </div>
+             <div class="place-order-headding-body">
+                 <div class="login-details">
+                   <span style="font-size: 17px">Logged in as </span>
+                   <span style="font-weight: bold;font-size: 17px">9970407799</span>
+                 </div>
+                 <div class="order-summery-information">
+                           Please note that upon clicking "Sign out" you will lose items in your cart and will be redirected to Flipkart home page.
+                 </div>
+                 
+                 <div class="order-signout-information">
+                     <span><button class="prder-signout-info-btn">SIGN OUT</button></span>
+                     <span style="color: #666;text-decoration: underline;" ng-click="displayFirstRow()">Continue with checkout</span>
+                 </div>
+             </div>
+         </div>
+         <div ng-show="isFirstRowVisible">
          <div class="order-summery-first-row">
             <span class="login-id">1.LOGIN ID</span>
             <span class="order-number">9970407799</span>
-            <span class="change-login"><button class="change-login-button">CHANGE LOGIN</button></span>
-           <!--  <span class="change-address"><button class="change-address-button">CHANGE ADDRESS</button></span> -->
+            <span class="change-login"><button class="change-login-button" ng-click="displayLoginHideRow()">CHANGE LOGIN</button></span>
          </div>
-         <div class="order-summery-second-row">
-           <div class="login-id">2.DELIERY ADDRESS</div>
+         </div>
+         
+         <div class="order-summery-second-row-hide" ng-show="isHideSecondOrderRow">
+                  <div class="place-order-headding">
+                 2. DELIVERY ADDRESS
+             </div>
+             <div class="place-order-second-row-heading-body">
+                  <div class="delivery-address-column">
+                      <div class="delivery-address-first-row">
+                        <span style="color: #565656;font-size: 17px;font-weight: bold;">SHUBHANGI DHOLE</span>
+                        <span><img src="image/ic_launcher_delete.png" width="16px" height="16px"></span>
+                        <span><img src="image/ic_launcher_edit.png" width="16px" height="16px"  ng-click="displayShippingAdd()"></span>
+                      </div>
+                      <div class="delivery-address-first-row">office no-10,4th floor,Raj heights,near shivaji putla ,karve putla BP road pune411038, PuneMaharashtra</div>
+                    <div class="delivery-address-first-row">9970407799</div>
+                    <div class="delivery-address-row">
+                          <button type="button" class="placeOrder-continue-button" ng-click="displayDeliveryAdd()">CONTINUE</button>
+                    </div>
+                 
+                  </div>
+                  
+                  <div style="margin-left: 35%;margin-bottom: 20px"><button class="add-address-btn" ng-click="displayShippingAdd()">+ADD NEW ADDRESS</button></div>
+             
+             </div>
+         </div>
+         <div class="order-summery-second-row" ng-show="isSecondOrderRow">
+           <div class="login-id" style="width: 25%;padding-left: 8px">2.DELIERY ADDRESS</div>
            <div class="order-customer-name">
                <div style="font-weight: bold;color: #565656;font-size: 15px;">SHUBHANGI DHOLE</div>
                <div class="order-address">office no-10,4th floor,Raj heights,near shivaji putla ,karve putla BP road pune411038, PuneMaharashtra</div>
            </div>
-           <div><button class="change-add-btn">CHANGE ADDRESS</button></div>
+           <div class="order-change-add"><button class="change-add-btn" ng-click="displayAdreessDetials()">CHANGE ADDRESS</button></div>
          </div>
+         
+ <div id="popShippingAdd" style="" ng-show="isViewShippingAdd">
+
+<div class="addShiping-container">
+
+ <form class="addShiping-form" name="myForm"  novalidate>
+<fieldset>
+<div class="shippingAdress">
+<div class="new-shipping-add">Enter a new shipping address</div>
+<div class="shipping-add-details">
+   <div class="name-details">
+       <span>Name</span>
+      <span style="margin-left: 4%"> <input type="text" placeholder="" style="width: 280px"></span>
+   </div>
+   <div class="name-details">
+          <span>Pincode</span>
+          <span style="margin-left: 8px"><input type="text" style="width: 280px;height: "></span>
+   </div>
+   <div class="name-details">
+   <span style="margin-left: 10px">Address</span>
+      <span><input type="text" style="width: 280px;height: 70px"></span>
+   </div>
+   <!-- <div class="shipping-landmark">
+      <span>Landmark</span>
+      <span style="margin-left: 10px"><input type="text" placeholder="optional"></span>
+   </div> -->
+   <div class="name-details">
+   <span style="">Country</span>
+      <span style="font-weight: bold;margin-left: 7px">India</span>
+      <span>(Services available only in India )</span>
+   </div>
+   <div class="name-details">
+        <span>phone</span>
+        <span style="margin-left: 20px"><input type="text" style="width: 280px"></span>
+   </div>
+   <button type="button" class="shipping-btn" ng-click="update(user)">SAVE & CONTINUE</button>
+</div>
+
+
+</div>
+
+</fieldset>
+</form>
+<button class="cancel" ng-click="hideShippingAdd()" >&#10006;</button>
+</div>
+</div>
+         
+         
+         <div class="order-summery-third-row">
+              3. ORDER SUMMARY
+         </div>
+          <div class="order-summery-fourth-row">
+        <div class="display-cart-list">
+        <span class="display-cart-list-item1" style="" >ITEM</span>
+     <span>   <span class="display-cart-list-item2" style="">QTY</span></span>
+        <span class="display-cart-list-item3" style="">PRICE</span>
+        <span class="display-cart-list-item4" style="">DELIVERY DETAILS</span>
+        <span class="display-cart-list-item5" style="">SUBTOTAL</span>
+        </div>
+        <div class="display-cart-list-item-details" ng-repeat="cartData in cartDetails">
+           <div><img ng-src="{{cartData.productImg}}"></div>
+           <div class="add-cart-product-description">
+               <div class="cartProductName">{{cartData.productName}}</div>
+               <div  class="cartProductInfo">{{cartData.productInfo}}</div>
+               <div><span style="font-size: 12px;">Seller:</span><span class="cartSellerName">{{cartData.sellerName}}</span></div>
+               <div style="font-size: 11px;color: #54a442;text-decoration: none;">You are eligible for 1 offer!</div>
+           </div>
+           <div class="cart-qty">{{cartData.productQty}}</div>
+           <div class="add-cart-price">Rs. {{cartData.productPrice}}</div>
+           <div class="cart-deliverDetails">
+              <div style="" class="cartsFreeDetails" >Free</div>
+              <div  class="cartDeliveryDetails">{{cartData.productDeliveryDetails}}</div>
+           </div>
+           <div style="" class="cartprice">Rs. {{cartData.productSubTotal}}</div>
+        </div>
+        
+        <div align="right">
+        <div class="cart-amountPayable">
+           <span style="" class="amountPayable">Amount Payable:</span>
+           <span style="font-weight: bold;font-size: 21px">Rs.{{amountPayable}}</span>
+        </div>
+        </div>
+       
+        </div>
+        <div class="order-summery-fifth-row">
+           <div>
+              <span>Order confirmation email will be sent to</span>
+              <span style="font-weight: bold;">dholeshubhangi293@gmail.com</span>
+           </div>
+        </div>
+        
+        <div class="order-summery-sixth-row">
+             <span class=""><button class="place-order-continue-btn">CONTINUE</button></span>
+             <span class="order-amount-payable">Amount Payable: </span>
+             <span class="order-amount-rs">Rs.70000</span>
+        </div>
+      </div>
+      <div class="order-summery-second-block">
+           4.Payment Method
       </div>
    </div>
 </div>

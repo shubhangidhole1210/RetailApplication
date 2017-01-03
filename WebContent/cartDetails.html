@@ -4,8 +4,10 @@
    
      <div class="add-cart-item-firstRow" style="">
         <div class="cartDetails" style="">
-           <span class="cartdetails1" ng-click="displayCartDetails()"><a style=" " >Cart(5)</a></span>
-           <span ng-click="displayDigitalCartDetails()" class="digitalCart"><a>Digital Cart (0)</a></span>
+           <!-- <span class="cartdetails1" ng-click="displayCartDetails()"><a style=" " >Cart(5)</a></span> -->
+           <!-- <span " class="digitalCart"><a>Digital Cart (0)</a></span> -->
+            <button class="cart-button" ng-click="displayCartDetails()" >Cart({{cartDetails.length}})</button>
+            <button class="digital-button"  id="digitalCartChange" ng-class="{cartChangebutton : selected=='digitalCartChange'}" ng-click="selected='digitalCartChange';displayDigitalCartDetails()" >Digital Cart(0)</button>
         </div>
         
         
@@ -24,31 +26,42 @@
                <div  class="cartProductInfo">{{cartData.productInfo}}</div>
                <div><span style="font-size: 12px;">Seller:</span><span class="cartSellerName">{{cartData.sellerName}}</span></div>
                <div style="font-size: 11px;color: #54a442;text-decoration: none;">You are eligible for 1 offer!</div>
+          <a style="margin-left: 50%;cursor: pointer;" ng-click="removeCartItem($index)">Remove</a>
            </div>
-           <div class="cart-qty">{{cartData.productQty}}</div>
-           <div class="add-cart-price">Rs. {{cartData.productPrice}}</div>
+           <input class="cart-qty" ng-model="cartData.productQty" value="{{cartData.productQty}}" ng-focus="displaySavebutton()">
+           <a style="color: #666;cursor: pointer;" ng-show="isSave" ng-click="displayQuantityTotal()">save</a>
+           <div class="add-cart-price">Rs. {{cartData.itemSubTotal}}</div>
            <div class="cart-deliverDetails">
               <div style="" class="cartsFreeDetails" >Free</div>
               <div  class="cartDeliveryDetails">{{cartData.productDeliveryDetails}}</div>
            </div>
            <div style="" class="cartprice">Rs. {{cartData.productSubTotal}}</div>
+           
         </div>
         
         <div align="right">
         <div class="cart-amountPayable">
            <span style="" class="amountPayable">Amount Payable:</span>
-           <span style="font-weight: bold;font-size: 21px">Rs.{{amountPayable}}</span>
+           <span style="font-weight: bold;font-size: 21px">Rs.{{productSubTotal}}</span>
         </div>
         </div>
        
         
         <div class="cart-price-row">
+       <form action="" name="cartform" novalidate>
+        <div ng-show="isCartPricePin">
           <span><img alt="" src="image/ic_launcher_track.png" width="15px" height="15px"></span>
           <span>Shipping to:</span>
-          <span style=""class="area-pin">411038</span>
-          <span style="" class="cartdetailChange">Change</span>
-          <span style=""><button type="button" class="btn-continue-shopping" ng-click="redirectHome()">CONTINUE SHOPPING</button></span>
-          <span style=""><button type="button" class="btn-place-order">PLACE ORDER</button></span>
+          <span style=""class="area-pin">{{pinNumber}}</span>
+          <span style="cursor: pointer;" class="cartdetailChange" ng-click="redirectPin()">Change</span>
+          </div>
+          <div class="check-customer-pin" ng-show="ischeckcustomerpin">
+               <input type="text" placeholder="Enter Your Pincode" style="width: 220px" ng-model="pinNumber" >
+               <button type="button" class="cart-check-pin-btn" ng-click="displayCheck();displayChangePin()">CHECK</button>
+          </div>
+          </form>
+          <div style="margin-left: 15%"><button type="button" class="btn-continue-shopping" ng-click="redirectHome()">CONTINUE SHOPPING</button></div>
+          <div style=""><button type="button" class="btn-place-order" ng-click="displayPlaceOrder()">PLACE ORDER</button></div>
         </div>
         </div>
          <div ng-show="isDigitalCartDetails">

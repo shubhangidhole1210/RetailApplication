@@ -5,9 +5,9 @@
 		"productInfo": "15.6 inch, Natural SIlver, 2.03 kg",
 		"sellerName": "Min 70",
 		"productQty": "1",
-		"productPrice": "53,990",
+		"productPrice": 53990,
 		"productDeliveryDetails": "Delivery by tomorrow, Thu",
-		"productSubTotal": "53,990"
+		"productSubTotal": 53990
 },
 {
       "productImg": "image/led-tv.jpeg",
@@ -15,9 +15,9 @@
 		"productInfo": "15.6 inch, Natural SIlver, 2.03 kg",
 		"sellerName": "OmniTechRetail",
 		"productQty": "1",
-		"productPrice": "19,490",
+		"productPrice": 19490,
 		"productDeliveryDetails": "Delivery by tomorrow, Thu",
-		"productSubTotal": "19,490"
+		"productSubTotal": 19490
 },
 {
       "productImg": "image/nikon-dslr.jpeg",
@@ -25,9 +25,9 @@
 		"productInfo": "15.6 inch, Natural SIlver, 2.03 kg",
 		"sellerName": "RetailNet",
 		"productQty": "1",
-		"productPrice": "25,499",
+		"productPrice": 25499,
 		"productDeliveryDetails": "Delivery by tomorrow, Thu",
-		"productSubTotal": "25,499"
+		"productSubTotal": 25499
 },
  {      
        "productImg": "image/micromax-canvas-tab.jpeg",
@@ -35,9 +35,9 @@
 		"productInfo": "15.6 inch, Natural SIlver, 2.03 kg",
 		"sellerName": "DealMerchants",
 		"productQty": "1",
-		"productPrice": "6,750",
+		"productPrice": 6750,
 		"productDeliveryDetails": "Delivery by tomorrow, Thu",
-		"productSubTotal": "6,750"
+		"productSubTotal": 6750
 },
 {
       "productImg": "image/hp-pavilion-imaen2wznh.jpeg",
@@ -45,9 +45,9 @@
 		"productInfo": "15.6 inch, Natural SIlver, 2.03 kg",
 		"sellerName": "Min 70",
 		"productQty": "1",
-		"productPrice": "53,990",
+		"productPrice": 53990,
 		"productDeliveryDetails": "Delivery by tomorrow, Thu",
-		"productSubTotal": "53,990"
+		"productSubTotal": 53990
 }
 
 ]}
