@@ -4,11 +4,44 @@
                1.BEFORE YOUR PLACE YOUR ORDER!
            </div>
            <div class="place-order-first">
-             <div class="place-order-first-firstColumn">
+             <div class="place-order-first-firstColumn" ng-show="isPhoneNumberVisible">
                 <div class="place-order-service-head">Get started with our secure login flow</div>
-               <div><input type="text" placeholder="Enter mobile number" style="width: 90%;margin-top: 1%" required="required"></div>
-               <div style="margin-top: 3%"><button type="button" class="placeOrder-continue" ng-click="verifyNumber();redirectOrderSummery()">CONTINUE</button></div>
+               <div><input type="text" placeholder="Enter mobile number" style="width: 90%;margin-top: 1%" ng-model="userPhoneNumber"></div>
+               <div style="margin-top: 3%"><button type="submit" class="placeOrder-continue" ng-click="passwordLogin()">CONTINUE</button></div>
              </div>
+             
+             <div class="place-order-firstColumn-password" ng-show="isPasswordVisible">
+                   <div >
+                      <span class="user-phone-number">{{userPhoneNumber}}</span>
+                      <span class="change-user-number"><a ng-click="changeNumber()">Change</a></span>
+                   </div>
+                   <div style="font-size: 17px">Enter Password*</div>
+                   <div><input type="text" style="width: 270px"></div>
+                   <div><button type="button" class="place-order-signin-btn" ng-click="redirectOrderSummery()">SIGN IN</button></div>
+                   <a ng-click="forgetpasswordRecover()" style="cursor: pointer;">forgot password?</a>
+             </div>
+             <div class="place-order-firstColumn-password" ng-show="isforgotPassword">
+               <div style="font-size: 13px">For security reasons, we've sent a Verification Code to </div>
+               <div >
+                      <span class="user-phone-number">{{userPhoneNumber}}</span>
+                      <span class="change-user-number"><a ng-click="changeNumber()">Change</a></span>
+                   </div>
+                   <div style="font-size: 17px;margin-top: 7px">Enter the Code</div>
+                  <div>
+                     <span><input type="text"></span>
+                     <span style="margin-left: 5px"> Enter a 6-digit OTP</span>
+                  </div>
+                  <div style="margin-top: 7px">
+                     <span style="color: #848484;font-size: 12px">Trouble receiving Code? </span>
+                     <span class="resend-code"><a>Resend Code</a></span>
+                  </div>
+                  <div class="text-details">Set Password*</div>
+                  <input type="text" style="width: 250px" disabled="disabled">
+                   <div class="text-details">Confirm Password*</div>
+                   <input type="text" style="width: 250px" disabled="disabled">
+                   <button type="button" class="place-order-signin-btn" style="margin-bottom: 25" disabled="disabled">CONTINUE</button>
+             </div>
+             
              <div class="place-order-second-column">
                  <div class="advantage-sign"> Advantages of Sign Up</div>
                  <div class="advantage-sign-details">
@@ -39,7 +72,10 @@
            <div style="    padding: 10px 5px 10px 20px;font-weight: bold;">2. DELIVERY ADDRESS</div>
        </div>
        <div class="place-order-second">
-           <div style="    padding: 10px 5px 10px 20px;font-weight: bold;">3. ORDER SUMMERY</div>
+           <span style="    padding: 10px 5px 10px 20px;font-weight: bold;">3. ORDER SUMMERY</span>
+            <span style="color: #666">{{cartDetails.length}} items</span>
+             <span style="color: #666">Total Rs.{{productSubTotal}}</span>
+           
        </div>
        <div class="place-order-second">
            <div style="    padding: 10px 5px 10px 20px; color: #666">4. PAYMENT METHOD</div>

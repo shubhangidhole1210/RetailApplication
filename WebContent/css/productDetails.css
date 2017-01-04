@@ -2823,16 +2823,20 @@ div .category-browse-row1:FOCUS{
 .place-order-second
 {
 	box-shadow: 0 5px 15px #888;
+/* 	display: flex; */
+padding-bottom: 10px;
+padding-top: 10px;
 }
 
 .order-summery-details
 {
 	margin-left: 10%;
 	margin-right: 10%;
+	box-shadow: 0 5px 15px #888;
 }
 .order-summery-first-block
 {
-	box-shadow: 0 5px 15px #888;
+	/* box-shadow: 0 5px 15px #888; */
 }
 
 .change-login-button
@@ -2942,7 +2946,7 @@ div .category-browse-row1:FOCUS{
 
 .order-amount-payable
 {
-	margin-left: 60%;
+	margin-left: 55%;
 }
 
 .order-amount-rs
@@ -2976,7 +2980,6 @@ div .category-browse-row1:FOCUS{
 .place-order-headding-body
 {
 	padding: 10px 80px 0;
-	box-shadow: 0 5px 15px #888;
 }
 .login-details
 {
@@ -3143,4 +3146,234 @@ div .category-browse-row1:FOCUS{
     font-size: 18px;
    /*  border: 0; */
     padding: 8px 20px;
+}
+
+.user-phone-number
+{
+	font-size: 18px;
+	font-weight: bold;
+}
+.change-user-number a
+{
+	color: #666;
+	text-decoration: underline;
+}
+.change-user-number
+{
+	margin-left: 30px;
+	cursor: pointer;
+}
+.place-order-signin-btn
+{
+	width: 234px;
+	border: 1px solid #e26b00;
+	background: linear-gradient(to bottom,#fdcdad 0,#fdcdad 3%,#fc8332 3%,#fc8332 100%);
+	font-size: 20px;
+	padding: 6px 25px;
+	    color: #f9f9f9;
+	        border-radius: 2px;
+	        margin-top: 6%;
+}
+.resend-code a
+{
+	
+	text-decoration: underline;
+	color: #848484;
+	cursor: pointer;
+	font-size: 12px;
+}
+.resend-code a:HOVER
+{
+	color: blue;
+}
+.text-details
+{
+	color: #999;
+	font-size: 17px;
+	margin-top: 17px;
+}
+#popShippingEditingAdd
+{
+	
+   width: 90%;
+   height: 100%;
+   position: absolute;
+   bottom: 0;
+   /* padding: 10px; */
+   background: rgba(16, 12, 12, 0.49);
+}
+.addEditiShiping-container
+{
+	width: 100%;
+    height: 80%;
+    text-align: center;
+    max-height: 600px;
+     
+}
+.addEditShiping-form
+{
+	background: white;
+    width: 500px;
+    margin: 0 auto;
+   /*  padding: 50px 50px; */
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+      box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
+        border-radius: 5px;
+        text-align: left;
+   
+}
+
+.order-summery-fourth_hide-row
+{
+	display: flex;
+	margin-left: 1%;
+    width: 99%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+.review-order-btn
+{
+	padding: 7px 0 6px;
+    width: 140px;
+    color: #565656;
+    border: 1px solid #c9c9c9;
+    background: linear-gradient(to bottom,#fff 0,#fff 3%,#f2f2f2 3%,#f2f2f2 100%);
+    margin-left: 407px;
+}
+.fourt-payment-method-heading
+{
+	width: 100%;
+    font-size: 18px;
+    padding: 11px 20px 11px 25px;
+    color: #fff;
+    background-color: #16b594;
+  
+}
+.fourt-hpayment-method-firstBlock
+{
+	width: 20%;
+	background-color: #f2f2f2;
+	padding-left: 5px;
+}
+
+.payment-details
+{
+	font-size: 15px;
+	
+	padding: 0 15px;
+    height: 50px;
+    line-height: 50px;
+    color: #333;
+    border-bottom: solid 1px #c9c9c9;
+    border-right: solid 1px #c9c9c9;
+    text-decoration: none;
+    cursor: pointer;
+}
+.fourt-payment-method-secondBlock-creadit
+{
+	width: 60%;
+	margin-left: 3%;
+	margin-right: 3%
+}
+.fourth-payment-method-block
+{
+	display: flex;
+}
+.fourt-payment-method-secondBlock-creadit-secondRow
+{
+	width: 63%;
+	background:  #f2f2f2;
+	padding-left: 2%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	border-radius: 10px;
+	margin-left: 7%;
+	margin-top: 4%;
+}
+
+.credit-card-text
+{
+	width: 338px;
+    font-size: 15px;
+
+}
+.sav-pay-btn
+{
+	background: #d56012;
+	width: 338px;
+	    margin: 10px 0;
+	    padding: 8px;
+	    border-radius: 5px;
+	    color: #fff;
+	    font-size: 16px;
+	    cursor: pointer;
+}
+.fourt-payment-method-thirdBlock-creadit
+{
+	width: 20%;
+	background:  #f2f2f2;
+	/* padding-left: 4px; */
+	padding-top: 3px;
+}
+
+.fourt-payment-method-thirdBlock-creadit-firstrow
+{
+	border-left: solid 1px #e6e6e6;
+	padding: 10px 10px 15px 15px;
+}
+.fourt-payment-method-thirdBlock-creadit-secondrow
+{
+	font: 19px arial,sans-serif;
+	background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: right;
+    padding: 15px 10px 15px 15px;
+    background: #f9f9f9;
+}
+.fourt-payment-method-thirdBlock-creadit-thirdrow
+{
+	background-color: #f9f9f9;
+    font-size: 11px;
+    color: #848484;
+    border-top: solid 1px #e6e6e6;
+    padding: 10px 40px;
+	
+}
+.fourt-payment-method-secondBlock-netBank-firstRow
+{
+	margin-top: 2%;
+	 border-bottom: 1px solid #e6e6e6;
+	padding-bottom: 6px;
+}
+.list-bank-image
+{
+	margin-left: 5%;
+	margin-right: 5%;
+	
+	
+}
+.net-bank-btn
+{
+	background: #d56012;
+	width: 364px;
+	padding: 8px;
+	color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+.emi-info
+{
+	color: #000;
+    background: #fffed5;
+    border: 1px solid #f9e2b2;
+    width: 470px;
+    margin: 10px 5px;
+    padding: 5px;
+    line-height: 1.5;
+    font-size: 12px;
+    margin-top: 3%;
 }

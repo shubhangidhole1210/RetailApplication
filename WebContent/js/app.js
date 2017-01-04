@@ -1895,14 +1895,96 @@ retailApp.controller('customerReview',function($scope)
       }
   }
   
-  retailApp.controller('placeOrderCtrl',function($scope)
+  retailApp.controller('placeOrderCtrl',function($scope,$http,$location)
 	{
+	     $scope.isPhoneNumberVisible=true;
+	     $scope.isPasswordVisible=false;
+	     $scope.passwordLogin=function()
+	     {
+	    	 $scope.isPhoneNumberVisible=false;
+		     $scope.isPasswordVisible=true;
+	     };
+	     
+	     $scope.changeNumber=function()
+	     {
+	    	 $scope.isPhoneNumberVisible=true;
+		     $scope.isPasswordVisible=false;
+		     $scope.isforgotPassword=false;
+	     }
+	     $scope.isforgotPassword=false;
+	     
+	     $scope.forgetpasswordRecover=function()
+	     {
+	    	 $scope.isforgotPassword=true;
+	    	 $scope.isPasswordVisible=false;
+	     }
+	     
+	     $http.get('Cartdetails.json').success(function(response) {
+	 		$scope.cartDetails = response.cartDetails;
+	 		
+	 		var i;
+			  $scope.productSubTotal=0;
+			  $scope.calculateAmmountpayable();
+			  $scope.displayQuantityTotal=function()
+				{
+					var i;
+					for (i = 0; i < $scope.cartDetails.length; i++)
+						{
+						   $scope.cartDetails[i].productSubTotal=$scope.cartDetails[i].productQty * $scope.cartDetails[i].productPrice;
+						}
+					$scope.calculateAmmountpayable();
+				};
+	 	});
+	     $scope.calculateAmmountpayable=function()
+	 	{
+	 		var i;
+	 		  $scope.productSubTotal=0;
+	 		  console.log("product sub total"+ $scope.productSubTotal);
+	 		  for (i = 0; i < $scope.cartDetails.length; i++)
+	 			  {
+	 			      $scope.productSubTotal += $scope.cartDetails[i].productSubTotal;
+	 			  }
+	 	};
+	 	
+	 	$scope.redirectOrderSummery=function()
+	 	{
+	 		$location.path('/orderSummery');
+	 	}
+
 	  
 	});
-  retailApp.controller('orderSummeryCtrl',function($scope,$http)
+  retailApp.controller('orderSummeryCtrl',function($scope,$http,$location)
 	{
 	  $http.get('Cartdetails.json').success(function(response) {
 			$scope.cartDetails = response.cartDetails
+			
+			var i;
+			  $scope.productSubTotal=0;
+			  $scope.calculateOrderSummeryAmountPay();
+			
+			  $scope.removeOrderSummeryItem = function(index) {
+			    var lastItem = $scope.cartDetails.length;
+			    $scope.cartDetails.splice(index,1);
+			    $scope.emptyOrderSummery();
+			    $scope.calculateOrderSummeryAmountPay();
+			  };
+			  $scope.emptyOrderSummery=function()
+			  {
+				  if($scope.cartDetails.length==0)
+					  {
+					     $location.path('/cartDetails')
+					  }
+			  };
+				$scope.saveQuantityTotall=function()
+				{
+					var i;
+					for (i = 0; i < $scope.cartDetails.length; i++)
+						{
+						   $scope.cartDetails[i].productSubTotal=$scope.cartDetails[i].productQty * $scope.cartDetails[i].productPrice;
+						}
+					$scope.calculateOrderSummeryAmountPay();
+				};
+			
 		});
 	  $scope.isFirstRowVisible=true;
 	  $scope.isOrderHideRowVisible=false;
@@ -1945,11 +2027,61 @@ retailApp.controller('customerReview',function($scope)
 		   $scope.isViewShippingAdd=true;
 	   };
 	
-	   $scope.master = {};
+	   $scope.redirectHome=function()
+	   {
+		   $location.path('/home');
+	   };
+	   $scope.isViewEditShippingAdd=false;
+	   $scope.displayEditingShippingAdd=function()
+	   {
+		   $scope.isViewEditShippingAdd=true;
+	   };
+	   $scope.hideShippingEditAdd=function()
+	   {
+		   $scope.isViewEditShippingAdd=false;
+	   };
 	   
-		  $scope.update = function(user) {
-		    $scope.master = angular.copy(user);
-		   
-		  };
+	   $scope.calculateOrderSummeryAmountPay=function()
+	   {
+		   var i;
+			  $scope.productSubTotal=0;
+			  console.log("product sub total"+ $scope.productSubTotal);
+			  for (i = 0; i < $scope.cartDetails.length; i++)
+				  {
+				      $scope.productSubTotal += $scope.cartDetails[i].productSubTotal;
+				  }
+	   };
+	   
+	   $http.get('addressDetails.json').success(function(response) {
+			$scope.addressDetails = response.addressDetails;
+		});
+	   $scope.displaySaveButton=function()
+	   {
+		   $scope.isSave=true;
+	   };
+	   
+	   $scope.isThirdOrderSummeryDetails=true;
+	   $scope.isThirdordersummery=false;
+	   
+	   $scope.continueOrder=function()
+	   {
+		   $scope.isThirdOrderSummeryDetails=false;
+		   $scope.isThirdordersummery=true;
+	   };
+	   
+	   $scope.displayReviewOrder=function()
+	   {
+		   $scope.isThirdOrderSummeryDetails=true;
+		   $scope.isThirdordersummery=false;
+	   };
+	   $scope.isCreadit=false;
+	   $scope.isNetBank=false
+	   $scope.isEMI=false;
+	   $scope.isCashOnDelivery=true
+	   $scope.displaycreaditDetails=function()
+	   {
+		   $scope.isCreadit=true;
+	   }
+		  
 	});
   
