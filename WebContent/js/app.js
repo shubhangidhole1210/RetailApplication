@@ -1899,11 +1899,26 @@ retailApp.controller('customerReview',function($scope)
 	{
 	     $scope.isPhoneNumberVisible=true;
 	     $scope.isPasswordVisible=false;
-	     $scope.passwordLogin=function()
+	    /* $scope.passwordLogin=function()
 	     {
 	    	 $scope.isPhoneNumberVisible=false;
 		     $scope.isPasswordVisible=true;
-	     };
+	     };*/
+	     $scope.submitForm = function(isValid) {
+	    	   if (isValid) {
+	    		   $scope.isPhoneNumberVisible=false;
+	  		     $scope.isPasswordVisible=true;
+	  		     console.log("in submit function")
+	    		   
+	    	   }
+	    	};
+	     
+	    	$scope.redirectOrderSummery = function(isValid) {
+	    		   if (isValid) {
+	    			   $location.path('/orderSummery');
+	    		   }
+	    		};
+	    	
 	     
 	     $scope.changeNumber=function()
 	     {
@@ -1946,10 +1961,10 @@ retailApp.controller('customerReview',function($scope)
 	 			  }
 	 	};
 	 	
-	 	$scope.redirectOrderSummery=function()
+	 	/*$scope.redirectOrderSummery=function()
 	 	{
 	 		$location.path('/orderSummery');
-	 	}
+	 	}*/
 
 	  
 	});

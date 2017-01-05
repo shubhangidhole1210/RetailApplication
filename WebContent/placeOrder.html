@@ -4,21 +4,44 @@
                1.BEFORE YOUR PLACE YOUR ORDER!
            </div>
            <div class="place-order-first">
+           <form action="" name="placeOrderFirstform" ng-submit="submitForm(placeOrderFirstform.$valid)" novalidate>
              <div class="place-order-first-firstColumn" ng-show="isPhoneNumberVisible">
                 <div class="place-order-service-head">Get started with our secure login flow</div>
-               <div><input type="text" placeholder="Enter mobile number" style="width: 90%;margin-top: 1%" ng-model="userPhoneNumber"></div>
-               <div style="margin-top: 3%"><button type="submit" class="placeOrder-continue" ng-click="passwordLogin()">CONTINUE</button></div>
+               <div><input type="text" placeholder="Enter mobile number" style="width: 90%;margin-top: 1%" ng-model="phone" name="phone" ng-minlength="10" ng-pattern="/^[0-9]+$/" required></div>
+              
+              <span style="color:red" ng-show="placeOrderFirstform.phone.$dirty && placeOrderFirstform.phone.$invalid">
+<span ng-show="placeOrderFirstform.phone.$error.required">Phone is required.</span>
+<span ng-show="placeOrderFirstform.phone.$error.pattern">Phone must be numeric.</span>
+<span ng-show="placeOrderFirstform.phone.$error.minlength">Phone must be min 10 char.</span>
+</span>
+              
+              
+              
+              
+               <div style="margin-top: 3%"><button type="submit" class="placeOrder-continue">CONTINUE</button></div>
              </div>
-             
+            </form> 
              <div class="place-order-firstColumn-password" ng-show="isPasswordVisible">
+             
+                   <form action="" name="placeOrderSecondForm" ng-submit="redirectOrderSummery(placeOrderSecondForm.$valid)" novalidate>           
                    <div >
-                      <span class="user-phone-number">{{userPhoneNumber}}</span>
+                      <span class="user-phone-number">{{phone}}</span>
                       <span class="change-user-number"><a ng-click="changeNumber()">Change</a></span>
                    </div>
                    <div style="font-size: 17px">Enter Password*</div>
-                   <div><input type="text" style="width: 270px"></div>
-                   <div><button type="button" class="place-order-signin-btn" ng-click="redirectOrderSummery()">SIGN IN</button></div>
+                   <div><input type="password" style="width: 270px" ng-model="userPassword" name="userPassword" ng-minlength="6" ng-maxlength="10"></div>
+                   <span style="color:red" ng-show="placeOrderSecondForm.userPassword.$dirty && placeOrderSecondForm.userPassword.$invalid">
+                     <span ng-show="placeOrderSecondForm.userPassword.$error.required">password is required.</span>
+                        <span ng-show="placeOrderSecondForm.userPassword.$error.minlength">password should be minimum 6 character</span>
+                       <span ng-show="placeOrderSecondForm.userPassword.$error.maxlength">password should be maximum 10 character.</span>
+                   </span>
+                   
+                   
+                   
+                   <div><button type="submit" class="place-order-signin-btn">SIGN IN</button></div>
                    <a ng-click="forgetpasswordRecover()" style="cursor: pointer;">forgot password?</a>
+            </form>
+            
              </div>
              <div class="place-order-firstColumn-password" ng-show="isforgotPassword">
                <div style="font-size: 13px">For security reasons, we've sent a Verification Code to </div>
