@@ -610,11 +610,11 @@ var ratingArr= [$scope.fiveStarCount,$scope.fourStarCount,$scope.threeStarCount,
 		}
 		
 		
-		$scope.scrollBar = function(id) {
+		/*$scope.scrollBar = function(id) {
 		    $location.hash(id);
 		    console.log($location.hash());
 		    $anchorScroll();
-		  };
+		  };*/
 		  
 		 /* $scope.emiDetails= true;
 		  $scope.toggleCustom = function() {
@@ -1904,7 +1904,7 @@ retailApp.controller('customerReview',function($scope)
 	    	 $scope.isPhoneNumberVisible=false;
 		     $scope.isPasswordVisible=true;
 	     };*/
-	     $scope.submitForm = function(isValid) {
+	    /* $scope.submitForm = function(isValid) {
 	    	   if (isValid) {
 	    		   $scope.isPhoneNumberVisible=false;
 	  		     $scope.isPasswordVisible=true;
@@ -1917,8 +1917,29 @@ retailApp.controller('customerReview',function($scope)
 	    		   if (isValid) {
 	    			   $location.path('/orderSummery');
 	    		   }
-	    		};
+	    		};*/
 	    	
+	     $scope.submitPhone= function() {
+
+	            
+	            if ($scope.placeOrderFirstform.$valid) {
+	            	$scope.isPhoneNumberVisible=false;
+		  		     $scope.isPasswordVisible=true;
+	            }
+
+	        };
+	        
+            $scope.changePassword= function() {
+
+	            
+	            if ($scope.placeOrderSecondForm.$valid) {
+	            	 $location.path('/orderSummery');
+	            }
+
+	        };
+	        
+	     
+	     
 	     
 	     $scope.changeNumber=function()
 	     {
@@ -2066,10 +2087,34 @@ retailApp.controller('customerReview',function($scope)
 				      $scope.productSubTotal += $scope.cartDetails[i].productSubTotal;
 				  }
 	   };
-	   
+	   $scope.newAddress = {};
 	   $http.get('addressDetails.json').success(function(response) {
 			$scope.addressDetails = response.addressDetails;
+			 $scope.saveNewAdrress();
+			 
+			 
+			
 		});
+	   
+	   $scope.saveNewAdrress = function(){
+		   if(!angular.equals($scope.newAddress,{})){
+			   $scope.addressDetails.push($scope.newAddress);
+			   $scope.newAddress = {};
+		   }
+		   
+	   };
+	   
+	   $scope.submitAddress= function() {
+
+           
+           if ($scope.addressForm.$valid) {
+        	   
+        	   console.log("in submit add");
+           	
+           }
+
+       };
+	   
 	   $scope.displaySaveButton=function()
 	   {
 		   $scope.isSave=true;
@@ -2089,14 +2134,57 @@ retailApp.controller('customerReview',function($scope)
 		   $scope.isThirdOrderSummeryDetails=true;
 		   $scope.isThirdordersummery=false;
 	   };
-	   $scope.isCreadit=false;
-	   $scope.isNetBank=false
+	   
+	   $scope.isCreadit=true;
+	   $scope.isNetBank=false;
 	   $scope.isEMI=false;
-	   $scope.isCashOnDelivery=true
+	   $scope.iscashon=false;
+	   $scope.isGiftCard=false;
+	   
+	   $scope.displayNetbankDetails=function()
+	   {
+		   $scope.isCreadit=false;
+		   $scope.isNetBank=true;
+		   $scope.isEMI=false;
+		   $scope.iscashon=false;
+		   $scope.isGiftCard=false;
+	   };
+	  
+	   $scope.displayEMIDetails=function()
+	   {
+		   $scope.isCreadit=false;
+		   $scope.isNetBank=false;
+		   $scope.isEMI=true;
+		   $scope.iscashon=false;
+		   $scope.isGiftCard=false;
+	   };
+	   
 	   $scope.displaycreaditDetails=function()
 	   {
 		   $scope.isCreadit=true;
-	   }
+		   $scope.isNetBank=false;
+		   $scope.isEMI=false;
+		   $scope.iscashon=false;
+		   $scope.isGiftCard=false;
+	   };
+	   
+	   $scope.displayCashOnDetails=function()
+	   {
+		   $scope.isCreadit=false;
+		   $scope.isNetBank=false;
+		   $scope.isEMI=false;
+		   $scope.iscashon=true;
+		   $scope.isGiftCard=false;
+	   };
+	   $scope.displayFiftCarddetails=function()
+	   {
+		   $scope.isCreadit=false;
+		   $scope.isNetBank=false;
+		   $scope.isEMI=false;
+		   $scope.iscashon=false;
+		   $scope.isGiftCard=true;
+	   };
+	   
 		  
 	});
   

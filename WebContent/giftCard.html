@@ -271,12 +271,13 @@
          <div class="check-gift-card-details">
            <div >
               <span>Gift Card Number <span style="color: red;">*</span></span>
-              <span style="margin-left: 14%"><input type="text" ng-model="cardNumber" name="cardNumber" required=""></span>
+              <span style="margin-left: 14%"><input type="text" ng-model="cardNumber" name="cardNumber" ng-minlength="4" required=""></span>
            </div>
            <div ng-show="checkForm.$submitted || checkForm.cardNumber.$touched">
       <div ng-show="checkForm.cardNumber.$error.required" style="color: red; ">gift card number required</div>
+       <div ng-show="checkForm.cardNumber.$error.minlength" style="color: red; ">gift card number minimum 4 digit</div>
     </div>
-            <!-- <span ng-show="checkForm.cardNumber.$touched && checkForm.cardNumber.$error.required">Card number required.</span> -->
+           
     
            <div style="margin-top: 3%">
               <span>Gift Card PIN <span style="color: red;">*</span></span>
