@@ -2091,29 +2091,47 @@ retailApp.controller('customerReview',function($scope)
 	   $http.get('addressDetails.json').success(function(response) {
 			$scope.addressDetails = response.addressDetails;
 			 $scope.saveNewAdrress();
-			 
-			 
+			 $scope.deleteAddress= function(index) {
+				    var lastItem = $scope.addressDetails.length;
+				    $scope.addressDetails.splice(index,1);
+				  };
 			
 		});
+	   $scope.resetAddressData=function()
+		{
+			$scope.customerName=null;
+			$scope.pincode=null;
+			$scope.Address=null;
+			$scope.customerCity=null;
+			$scope.CustomerState=null;
+			$scope.customerPhone=null;
+		};
+	   $scope.submitAddress=function()
+		 {
+		   console.log("in submit address function")
+			 if ($scope.addressForm.$valid) 
+				 {
+				  $scope.saveNewAdrress ();
+				 console.log("in if condition")
+				 $scope.hideShippingAdd();
+				 }
+			 else
+				 {
+				 console.log("in else condition");
+				 console.log("in if condition");
+				 }
+		 };
 	   
 	   $scope.saveNewAdrress = function(){
 		   if(!angular.equals($scope.newAddress,{})){
-			   $scope.addressDetails.push($scope.newAddress);
+			   $scope.addressDetails.push($scope.newAddress);	
 			   $scope.newAddress = {};
+			   
 		   }
 		   
 	   };
 	   
-	   $scope.submitAddress= function() {
-
-           
-           if ($scope.addressForm.$valid) {
-        	   
-        	   console.log("in submit add");
-           	
-           }
-
-       };
+	  
 	   
 	   $scope.displaySaveButton=function()
 	   {
@@ -2184,7 +2202,11 @@ retailApp.controller('customerReview',function($scope)
 		   $scope.iscashon=false;
 		   $scope.isGiftCard=true;
 	   };
-	   
+	   $scope.isBankDetails=true;
+	   $scope.displayAxisBankPlan=function()
+	   {
+		   $scope.isBankDetails=true;
+	   }
 		  
 	});
   

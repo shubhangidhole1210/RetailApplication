@@ -36,7 +36,7 @@
                   <div class="delivery-address-column" ng-repeat="addressInfo in addressDetails">
                       <div class="delivery-address-first-row">
                         <span style="color: #565656;font-size: 17px;font-weight: bold;">{{addressInfo.customerName}}</span>
-                        <span><img src="image/ic_launcher_delete.png" width="16px" height="16px"></span>
+                        <span><img src="image/ic_launcher_delete.png" width="16px" height="16px" ng-click="deleteAddress()"></span>
                         <span><img src="image/ic_launcher_edit.png" width="16px" height="16px"  ng-click="displayEditingShippingAdd()"></span>
                       </div>
                       <div class="delivery-address-first-row">{{addressInfo.Address}},{{addressInfo.customerCity}}, {{addressInfo.pincode}}
@@ -76,29 +76,48 @@
 <div class="shipping-add-details">
    <div class="name-details">
        <span>Name</span>
-      <span style="margin-left: 4%"> <input type="text" placeholder="" style="width: 280px" ng-model="newAddress.customerName" required="required"></span>
-        <div ng-show="addressForm.$submitted || addressForm.customerName.$touched" style="color: red">
-                  <div ng-show="addressForm.customerName.$error.required" class="">phone number required.</div>
+      <span style="margin-left: 4%"> <input type="text" placeholder="" style="width: 280px" ng-model="newAddress.customerName" name="customerName" id="customerName" required></span>
+   </div>
+   <div ng-show="addressForm.$submitted || addressForm.customerName.$touched" style="color: red;font-size: 12px">
+                  <div ng-show="addressForm.customerName.$error.required" class="">Please Enter Your valid name</div>
                 
                </div>
-  
-   </div>
    <div class="name-details">
           <span>Pincode</span>
-          <span style="margin-left: 8px"><input type="text" style="width: 280px;height:" ng-model="newAddress.pincode" ></span>
+          <span style="margin-left: 8px"><input type="text" style="width: 280px;height:" ng-model="newAddress.pincode" id="pincode" name="pincode" ng-minlength="6" ng-maxlength="6" required ></span>
    </div>
+   <div ng-show="addressForm.$submitted || addressForm.pincode.$touched" style="color: red;font-size: 12px">
+                  <div ng-show="addressForm.pincode.$error.required" class="">Please enter your valid six-digit pincode.</div>
+                <div ng-show="addressForm.pincode.$error.minlength" class="">Please enter your valid six-digit pincode</div>
+                 <div ng-show="addressForm.pincode.$error.maxlength" class="">Please enter your valid six-digit pincode</div>
+               </div>
    <div class="name-details">
    <span style="margin-left: 10px">Address</span>
-      <span><input type="text" style="width: 280px;height: 70px" ng-model="newAddress.Address"></span>
+      <span><input type="text" style="width: 280px;height: 70px" ng-model="newAddress.Address" name="Address" required="required"></span>
    </div>
+   <div ng-show="addressForm.$submitted || addressForm.Address.$touched" style="color: red;font-size: 12px">
+       <div ng-show="addressForm.Address.$error.required" class="">Please enter your valid address - Your order will be delivered here</div>
+               </div>
         <div class="name-details">
       <span>City</span>
-      <span style="margin-left: 40px"><input type="text" style="width: 280px" value="{{adddetail.customerCity}}"></span>
+      <span style="margin-left: 40px"><input type="text" style="width: 280px" ng-model="newAddress.customerCity" name="customerCity"  required="required"></span>
    </div>
+   <div ng-show="addressForm.$submitted || addressForm.customerCity.$touched" style="color: red;font-size: 12px">
+                  <div ng-show="addressForm.customerCity.$error.required" class="">	Please enter your valid city</div>
+                
+               </div>
+   
+   
     <div class="name-details">
       <span>State</span>
-      <span style="margin-left: 35px"><input type="text" style="width: 280px" value="{{adddetail.CustomerState}}"></span>
+      <span style="margin-left: 35px"><input type="text" style="width: 280px" ng-model="newAddress.CustomerState" name="CustomerState" required="required"></span>
    </div>
+   
+   <div ng-show="addressForm.$submitted || addressForm.CustomerState.$touched" style="color: red;font-size: 12px">
+                  <div ng-show="addressForm.CustomerState.$error.required" class="">Please select a state</div>
+                
+               </div>
+   
    <div class="name-details">
    <span style="">Country</span>
       <span style="font-weight: bold;margin-left: 7px">India</span>
@@ -106,9 +125,16 @@
    </div>
    <div class="name-details">
         <span>phone</span>
-        <span style="margin-left: 20px"><input type="text" style="width: 280px" ng-model="newAddress.customerPhone"></span>
+        <span style="margin-left: 20px"><input type="text" style="width: 280px" ng-model="newAddress.customerPhone" name="customerPhone" ng-minlength="10" ng-maxlength="10" ng-pattern="/^[0-9]+$/" required="required"></span>
    </div>
-   <button type="button" class="shipping-btn" ng-click="submitAddress(addressForm.$valid)">SAVE & CONTINUE</button>
+   
+   <div ng-show="addressForm.$submitted || addressForm.customerPhone.$touched" style="color: red;font-size: 12px">
+                  <div ng-show="addressForm.customerPhone.$error.required" class="">Please enter your valid phone number - Required for order related updates</div>
+                   <div ng-show="addressForm.customerPhone.$error.minlength" class="">Please enter your valid phone number - Required for order related updates</div>
+                    <div ng-show="addressForm.customerPhone.$error.maxlength" class="">Please enter your valid phone number - Required for order related updates</div>
+                     <div ng-show="addressForm.customerPhone.$error.pattern" class="">Please enter your valid phone number - Required for order related updates</div>
+               </div>
+   <button type="submit" class="shipping-btn" ng-click="submitAddress(addressForm.$valid)">SAVE & CONTINUE</button>
 </div>
 
 
@@ -116,7 +142,7 @@
 
 </fieldset>
 </form>
-<button class="cancel" ng-click="hideShippingAdd()" >&#10006;</button>
+<button class="cancel" ng-click="hideShippingAdd();resetAddressData()" >&#10006;</button>
 </div>
 </div>
 
@@ -240,35 +266,35 @@
        <div class="order-summery-fourth_hide-row" style="border-top: solid 1px #999">
            
             <div class="" style="font-weight: bold;">3. ORDER SUMMARY</div>
-            <div class="" style="font-weight: bold;font-size: 17px;margin-left: 103px">5 Items</div>
-            <div style="font-weight: bold;font-size: 17px;margin-left: 17px" >Total Rs.11111111</div>
+            <div class="" style="font-weight: bold;font-size: 17px;margin-left: 103px">{{cartDetails.length}} Items</div>
+            <div style="font-weight: bold;font-size: 17px;margin-left: 17px" >Total Rs.{{productSubTotal}}</div>
             <div class=""><button class="review-order-btn" ng-click="displayReviewOrder()" >Review Order</button></div>
         </div>
         <div class="fourth-payment-method">
             <div class="fourt-payment-method-heading">4. PAYMENT METHOD</div>
             <div class="fourth-payment-method-block">
                  <div class="fourt-hpayment-method-firstBlock">
-                     <div class="payment-details" ng-click="displaycreaditDetails()">
+                     <div class="payment-details" id="creaditCard" ng-class="{changePaymentDetails: selected=='creaditCard'}" ng-click="selected='creaditCard';displaycreaditDetails()">
                        <span><img src="image/ic_launcher_card.png" width="30px" height="30px"></span>
                        <span class="card-name">Creadit Card</span>
                      </div>
-                     <div class="payment-details" ng-click="displayNetbankDetails()">
+                     <div class="payment-details" id="netBank" ng-class="{changePaymentDetails: selected=='netBank'}" ng-click="selected='netBank';displayNetbankDetails()">
                        <span><img src="image/ic_launcher_card.png" width="30px" height="30px"></span>
                        <span class="card-name">Net Banking</span>
                      </div>
-                     <div class="payment-details" ng-click="displayEMIDetails()">
+                     <div class="payment-details"  id="emi" ng-class="{changePaymentDetails: selected=='emi'}" ng-click="selected='emi';displayEMIDetails()">
                        <span><img src="image/ic_launcher_card.png" width="30px" height="30px"></span>
                        <span class="card-name">EMI</span>
                      </div>
-                     <div class="payment-details" ng-click="displaycreaditDetails()">
+                     <div class="payment-details"  id="debitCard" ng-class="{changePaymentDetails: selected=='debitCard'}" ng-click="selected='debitCard';displaycreaditDetails()">
                        <span><img src="image/ic_launcher_card.png" width="30px" height="30px"></span>
                        <span class="card-name">Debit Card</span>
                      </div>
-                     <div class="payment-details" ng-click="displayCashOnDetails()">
+                     <div class="payment-details"  id="cashOn" ng-class="{changePaymentDetails: selected=='cashOn'}" ng-click="selected='cashOn';displayCashOnDetails()">
                        <span><img src="image/ic_launcher_card.png" width="30px" height="30px"></span>
                        <span class="card-name">Cash On Delivery</span>
                      </div>
-                     <div class="payment-details" ng-click="displayFiftCarddetails()">
+                     <div class="payment-details"  id="giftCard" ng-class="{changePaymentDetails: selected=='giftCard'}" ng-click="selected='giftCard';displayFiftCarddetails()">
                        <span><img src="image/ic_launcher_card.png" width="30px" height="30px"></span>
                        <span class="card-name">Gift Card</span>
                      </div>
@@ -276,23 +302,39 @@
                   <div class="fourt-payment-method-secondBlock-creadit" ng-show="isCreadit">
                 <div class="fourt-payment-method-secondBlock-creadit-firstRow" style="border-bottom: dashed 1px #e6e6e6;">
                    <span style="font-size: 12px">Pay using Credit Card</span>
-                   <span><img src="image/visa-card.gif" width="40px" height="32px"></span>
-                   <span><img src="image/mastercard-logo.gif" width="40px" height="32px"></span>
-                   <span><img src="image/visa-card.gif" width="40px" height="32px"></span>
-                   <span><img src="image/mastercard-logo.gif" width="40px" height="32px"></span>
+                   <span><img src="image/visa-card.gif" width="35px" height="32px"></span>
+                   <span><img src="image/mastercard-logo.gif" width="35px" height="32px"></span>
+                   <span><img src="image/visa-card.gif" width="35px" height="32px"></span>
+                   <span><img src="image/mastercard-logo.gif" width="35px" height="32px"></span>
                    <span style="font-size: 12px">(Only Indian Cards are supported)</span>
                 </div>
                 <div class="fourt-payment-method-secondBlock-creadit-secondRow">
-                   <form action="" name="myform">
-                    <div> <input type="text" class="credit-card-text" placeholder="card number"></div>
+                   <form  name="creaditCardForm" novalidate >
+                    <div> <input type="text" class="credit-card-text" placeholder="Card number" ng-model="creaditCardnumber" name="creaditCardnumber" ng-minlength="8" required></div>
+                    <div ng-show="creaditCardForm.$submitted ||creaditCardForm.creaditCardnumber.$touched">
+                      <div ng-show="creaditCardForm.creaditCardnumber.$error.required" style="color: red; "> card number required</div>
+                      <div ng-show="creaditCardForm.creaditCardnumber.$error.minlength" style="color: red; ">card number invalid</div>
+                   </div>
                     <div style="margin-top: 10px">
-                        <span><input type="text" style="width: 90px"></span>
+                        <span><input type="date" style="width: 90px" ng-model="expireDate" name="expireDate" required="required"></span>
                         <span style="width: 10px">Expiry Date</span>
-                        <span style="margin-left: 35px"><input type="text" style="width: 90px"></span>
+                        <span style="margin-left: 35px"><input type="text" style="width: 90px" placeholder="cvv" ng-model="cvvNo" name="cvvNo" ng-minlength="3" ng-maxlength="3" required="required"></span>
                         <span><img alt="" src="image/visa-cvv-new.gif" width="40px" height="40px"></span>
                     </div>
-                    <div style="margin-top: 10px"> <input type="text" class="credit-card-text" placeholder="card number"></div>
-                    <div><button type="button" class="sav-pay-btn">Save and pay</button></div>
+                    <div ng-show="creaditCardForm.$submitted ||creaditCardForm.expireDate.$touched">
+                      <div ng-show="creaditCardForm.expireDate.$error.required" style="color: red; "> card expiry date required</div>
+                   </div>
+                    <div ng-show="creaditCardForm.$submitted ||creaditCardForm.cvvNo.$touched">
+                      <div ng-show="creaditCardForm.cvvNo.$error.required" style="color: red; "> card number required</div>
+                      <div ng-show="creaditCardForm.cvvNo.$error.minlength" style="color: red; ">CVV no invalid please enter correct cvv number</div>
+                      <div ng-show="creaditCardForm.cvvNo.$error.maxlength" style="color: red; ">CVV no invalid please enter correct cvv number</div>
+                   </div>
+                   
+                    <div style="margin-top: 10px"> <input type="text" class="credit-card-text" placeholder="Name On Card" ng-model="cardName" name="cardName" required="required"></div>
+                      <div ng-show="creaditCardForm.$submitted ||creaditCardForm.cardName.$touched">
+                      <div ng-show="creaditCardForm.cardName.$error.required" style="color: red; "> Please Enter Card Name</div>
+                   </div>
+                    <div><button type="submit" class="sav-pay-btn" ng-click="submitted=true">Save and pay</button></div>
                     <div style="font-size: 14px">This card will be securely saved for a faster payment experience. CVV number will not be saved.</div>
                    </form>
                    
@@ -304,18 +346,18 @@
                <div class="fourt-payment-method-secondBlock-netBank-firstRow">Pay using Net Banking</div>
                <div style="margin-top: 3%">Popular banks</div>
                <div class="list-bank-image">
-                  <div>
-                      <span><img alt="" src="image/2000px-Axis_Bank_logo.svg.png" width="100px" height="40px"></span>
-                      <span style="margin-left: 10px"><img alt="" src="image/citi-bank.png" width="100px" height="40px"></span>
-                      <span style="margin-left: 10px"><img alt="" src="image/hdfc-bank-logo.png" width="100px" height="40px"></span>
+                  <div style="display: flex">
+                      <div class="bank-name-background"><img alt="" src="image/2000px-Axis_Bank_logo.svg.png" width="100px" height="20px"></div>
+                      <div class="bank-name-background" style="margin-left: 10px"><img alt="" src="image/citi-bank.png" width="100px" height="20px"></div>
+                      <div class="bank-name-background" style="margin-left: 10px"><img alt="" src="image/hdfc-bank-logo.png" width="100px" height="20px"></div>
                   </div>
-                  <div style="margin-top: 1%">
-                 <span><img alt="" src="image/icici-bank-img.png" width="100px" height="40px"></span>
-                      <span style="margin-left: 10px"><img alt="" src="image/kotak-bank.png" width="100px" height="40px"></span>
-                      <span style="margin-left: 10px"><img alt="" src="image/state_bank_of_india_logo_3898.png" width="100px" height="40px"></span>
+                  <div style="margin-top: 1%;display: flex" >
+                 <div class="bank-name-background"><img alt="" src="image/icici-bank-img.png" width="100px" height="20px"></div>
+                      <div class="bank-name-background" style="margin-left: 10px"><img alt="" src="image/kotak-bank.png" width="100px" height="20px"></div>
+                      <div class="bank-name-background" style="margin-left: 10px"><img alt="" src="image/state_bank_of_india_logo_3898.png" width="100px" height="20px"></div>
                   </div>
                </div>
-               <div style="margin-top: 7%">
+               <div style="margin-top: 7%;margin-left: 10px">
                   <span>All banks</span>
                  <span> 
                  <select style="width: 260px">
@@ -326,12 +368,16 @@
                  <option>Allhbad bank</option>
                  <option>Bank Of Bardara </option>
                  <option>Allhbad bank</option>
-                 <option>City bank</option>
+                 <option>Citi bank</option>
                  <option>kotak bank</option>
+                 <option>HDFC bank</option>
+                 <option>state bank of india</option>
+                 <option>HDFC bank</option>
+                 <option>icici bank</option>
                </select>
                </span>
                </div>
-               <button type="button" class="net-bank-btn">CONTINUE</button>
+               <button type="button" class="net-bank-btn" style="margin-left: 10px">CONTINUE</button>
               
             </div>
             
@@ -339,7 +385,7 @@
             
             
             
-            <div class="fourt-payment-method-secondBlock-creadit" ng-show="isEMI">
+            <div class="fourt-payment-method-secondBlock-creadit" ng-show="isEMI" style="margin-bottom: 15%">
                    <div class="fourt-payment-method-secondBlock-creadit-firstRow" style="border-bottom: dashed 1px #e6e6e6;">
                    <span style="font-size: 12px">Pay using Credit Card</span>
                    <span><img src="image/visa-card.gif" width="40px" height="32px"></span>
@@ -355,10 +401,10 @@
                <div class="select-emi-option">
                   <div style="    font-size: 14px;
     font-weight: 700;
-    padding: 10px 0 10px 24px;">Select EMI Option</div>
-               <select style="width: 250px;margin-left: 20px" >
-                 <option>---Select Bank---</option>
-                 <option>Axis Bank</option>
+    padding: 10px 0 10px 24px;">1.Select EMI Option</div>
+               <select style="width: 250px;margin-left: 20px;margin-bottom: 2%" >
+                 <option >---Select Bank---</option>
+                 <option  >Axis Bank</option>
                   <option>Citi Bank</option>
                    <option>HDFC Bank</option>
                     <option>Axis Bank</option>
@@ -366,6 +412,56 @@
                       <option>Kotak Bank</option>
                </select>
     
+               </div>
+               
+               <div class="select-emi-plan-axisBank" ng-show="isBankDetails">
+                    <div style="    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 0 10px 24px;">1.Select EMI Option</div>
+                    <div class="bankplan-details" >
+                        <div class="bankplan-details-heading">
+                            <span style="margin-left: 9px">EMI Tenure</span>
+                            <span style="padding-left: 9px">Bank Rate</span>
+                            <span style="padding-left: 9px">Monthly Installments</span>
+                            <span style="padding-left: 9px">Interest paid to bank</span>
+                        </div>
+                        <div class="bankplan-details-heading">
+                          <span><input type="radio"></span>
+                          <span>3 Months</span>
+                          <span  style="margin-left: 20px">13%</span>
+                          <span style="margin-left: 50px">Rs.43,876.00</span>
+                          <span style="margin-left: 50px">Rs.2,802.00</span>
+                        </div>
+                        <div class="bankplan-details-heading">
+                          <span><input type="radio"></span>
+                          <span>6 Months</span>
+                          <span  style="margin-left: 20px">17%</span>
+                          <span style="margin-left: 50px">Rs.43,876.00</span>
+                          <span style="margin-left: 50px">Rs.2,802.00</span>
+                        </div>
+                        <div class="bankplan-details-heading">
+                          <span><input type="radio"></span>
+                          <span>9 Months</span>
+                          <span  style="margin-left: 20px">14%</span>
+                          <span style="margin-left: 50px">Rs.43,876.00</span>
+                          <span style="margin-left: 50px">Rs.2,802.00</span>
+                        </div>
+                         <div class="bankplan-details-heading">
+                          <span><input type="radio"></span>
+                          <span>12 Months</span>
+                          <span  style="margin-left: 20px">12%</span>
+                          <span style="margin-left: 50px">Rs.43,876.00</span>
+                          <span style="margin-left: 50px">Rs.2,802.00</span>
+                        </div>
+                         <div class="bankplan-details-heading">
+                          <span><input type="radio"></span>
+                          <span>24 Months</span>
+                          <span  style="margin-left: 20px">14%</span>
+                          <span style="margin-left: 50px">Rs.43,876.00</span>
+                          <span style="margin-left: 50px">Rs.2,802.00</span>
+                        </div>
+                    </div>
+               
                </div>
                 
             </div>
@@ -383,11 +479,11 @@
             <div class="fourt-payment-method-thirdBlock-creadit">
                 <div class="fourt-payment-method-thirdBlock-creadit-firstrow">
                    <span>Total</span>
-                   <span style="margin-left: 50px">RS.*********</span>
+                   <span style="margin-left: 50px">RS.{{productSubTotal}}</span>
                 </div>
                 <div class="fourt-payment-method-thirdBlock-creadit-secondrow">
                    <div>Amount Payable</div>
-                   <div style="color: red">Rs. 124238465</div>
+                   <div style="color: red">Rs. {{productSubTotal}}</div>
                 </div>
             </div>
             

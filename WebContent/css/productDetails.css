@@ -3066,7 +3066,7 @@ padding-top: 10px;
 	width: 100%;
     height: 80%;
     text-align: center;
-    max-height: 600px;
+    min-height: 600px;
      
 }
 
@@ -3271,6 +3271,19 @@ padding-top: 10px;
     text-decoration: none;
     cursor: pointer;
 }
+.changePaymentDetails
+{
+	color: #fff;
+    background: #4d4d4d;
+    position: relative;
+    text-decoration: none;
+    cursor: default;
+    font-size: 15px;
+    padding: 0 15px;
+    line-height: 50px;
+}
+
+
 .fourt-payment-method-secondBlock-creadit
 {
 	width: 60%;
@@ -3383,6 +3396,7 @@ padding-top: 10px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 2%;
+    margin-bottom: 4%;
 }
 
 .emi-information
@@ -3406,4 +3420,29 @@ padding-top: 10px;
     padding: 5px 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-};
+}
+.bank-name-background
+{
+	width: 145px;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    border: solid 2px #e6e6e6;
+    background-color: #f9f9f9;
+    margin: 5px;
+}
+.select-emi-option
+{
+	border-bottom: 1px dashed #bbb9b9;
+}
+
+.bankplan-details-heading
+{
+	cursor: pointer;
+	color: #848484;
+	margin-left: 25px;
+	padding: 5px;
+    font-size: 14px;
+    border-bottom: 1px solid #bbb9b9;
+}
